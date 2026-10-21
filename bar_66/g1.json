@@ -1,0 +1,123 @@
+{
+ "clip_id": "bar_66",
+ "version": "g1_r_u_v1",
+ "intent": "To contextualize the corporate tax rate reduction and the predictions made by its supporters regarding economic benefits for workers and corporations.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the final corporate tax rate of 21% be explicitly displayed as a number or label?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the comparative claim that workers would benefit the most be included as a prediction?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The corporate tax rate shown in the chart is 21%.",
+   "basis": [
+    {
+     "entity": "Corporate tax rate",
+     "x": "value",
+     "field": "value",
+     "value": 21.0,
+     "note": "Table value is 21.000; narration treats the unit as percent."
+    }
+   ],
+   "accept": [
+    "corporate tax rate is 21%",
+    "the rate was lowered to 21 percent",
+    "post-cut corporate tax rate: 21%"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A bar, label, or on-screen number for Corporate tax rate must read 21% or 21.0."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": false,
+   "claim": "Supporters predicted that workers would benefit the most from the corporate tax cut.",
+   "basis": [
+    {
+     "entity": "Corporate tax rate",
+     "x": "supporters' prediction",
+     "field": "narration",
+     "value": null,
+     "note": "Original narration states workers would benefit the most."
+    }
+   ],
+   "accept": [
+    "workers would benefit the most",
+    "the biggest gains were predicted for workers",
+    "supporters claimed workers would be the main beneficiaries"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A text, icon, or callout must show workers as the group predicted to benefit most, attributed to supporters.",
+   "hardcase": true,
+   "hardcase_reason": "Legacy G1 has no source-visual basis or depends on narration-only data."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "The clip may mention the GM Lordstown plant shutdown as temporal context.",
+  "The clip may use the color #3C3B6E for the Corporate tax rate bar, but this is not semantic."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 1,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "legacy_units_without_visual_basis",
+  "unit_ids": [
+   "U2"
+  ],
+  "reason": "Some required units lack a table-grounded visual basis."
+ },
+ "hardcases": [
+  {
+   "unit_id": "U2",
+   "type": "required_unit_without_visual_basis",
+   "handling": "must_be_visualized=false pending human review."
+  }
+ ]
+}

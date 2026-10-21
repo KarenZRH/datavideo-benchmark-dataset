@@ -1,0 +1,188 @@
+{
+ "clip_id": "bar_160",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that in comparable international contexts, teachers earn a pay ratio close to that of college graduates, contrasting with the lower ratio in the United States.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the full top-to-bottom ranking required, or only the USA bottom position?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video show USA below every other entity, or only below the OECD aggregate?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the quantitative USA-OECD gap required, or just the qualitative lower-than-OECD comparison?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Germany has the highest relative value, 0.6667, and the United States has the lowest, 0.4333, among the eight listed entities.",
+   "basis": [
+    {
+     "entity": "DEU",
+     "x": "DEU",
+     "field": "relative_value",
+     "value": 0.6667,
+     "note": "highest listed relative value"
+    },
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "lowest listed relative value"
+    }
+   ],
+   "accept": [
+    "The relative ranking runs from Germany at 0.6667 down to the USA at 0.4333.",
+    "Germany is top and the USA is bottom.",
+    "The endpoints of the ordering are Germany 0.6667 and the USA 0.4333.",
+    "The USA anchors the bottom of the ranking, below all others."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The ordering must visibly place DEU at or near the top and USA at the bottom."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The United States relative value, 0.4333, is lower than every other listed entity and the OECD aggregate; the next-lowest values are New Zealand and OECD at 0.5867.",
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "lowest value"
+    },
+    {
+     "entity": "NZL",
+     "x": "NZL",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "tied next-lowest value"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "tied next-lowest value"
+    }
+   ],
+   "accept": [
+    "USA is below all non-US entities, including OECD and New Zealand at 0.5867.",
+    "Every other entity exceeds the USA relative value.",
+    "The USA is the sole bottom value; OECD and NZL are the closest above it at 0.5867.",
+    "No other listed entity is as low as the USA."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The USA mark must be visibly lower than every other listed entity, including NZL and OECD."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "The relative gap between the United States value, 0.4333, and the OECD aggregate value, 0.5867, is 0.1534.",
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.4333,
+     "note": "lower value in the difference"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5867,
+     "note": "higher value in the difference"
+    }
+   ],
+   "accept": [
+    "USA is about 0.15 lower than OECD.",
+    "OECD's relative value exceeds USA by 0.1534.",
+    "The USA-OECD difference is 0.1534 on the relative measure.",
+    "USA trails OECD by 0.1534."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A comparison or gap annotation between USA and OECD must be visible, or the two values must be directly comparable."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Highlight the tie between New Zealand and OECD at 0.5867.",
+  "Show Finland at 0.6533 and Germany at 0.6667 as the top two non-US values.",
+  "Show the full ordered list: DEU 0.6667, FIN 0.6533, ISR 0.6400, AUS 0.6267, UK 0.6133, NZL/OECD 0.5867, USA 0.4333.",
+  "Use the USA-OECD contrast as the main comparative frame."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

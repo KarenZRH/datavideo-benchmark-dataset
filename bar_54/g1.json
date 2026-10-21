@@ -1,0 +1,282 @@
+{
+ "clip_id": "bar_54",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that the United States tax system is largely flat rather than progressive when all tax types are combined, challenging the common perception that the wealthy pay a significantly higher share of their income.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video be required to convey the overall flat/moderate combined-burden pattern, or is that interpretation optional?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video make the Richest-below-Poorest comparison explicit, or only show overall flatness?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Should income-tax progressivity be included as required context for the contrast, or is it optional background?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Must the video show tax-mix composition differences, or is only the combined total required?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Combined tax burden across income groups is only modestly varying and not strongly progressive; it does not rise steadily with income.",
+   "basis": [
+    {
+     "entity": "Poorest",
+     "x": "Poorest",
+     "field": "value",
+     "value": 24.104,
+     "note": "sum of listed tax-type values: 1.003 + 10.602 + 12.499 = 24.104"
+    },
+    {
+     "entity": "5th",
+     "x": "5th",
+     "field": "value",
+     "value": 25.597,
+     "note": "5.997 + 2.201 + 10.399 + 7.0 = 25.597"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "value",
+     "value": 31.507,
+     "note": "17.998 + 9.201 + 0.303 + 1.003 + 3.002 = 31.507"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 23.7,
+     "note": "10.003 + 10.5 + 0.801 + 0.397 + 1.999 = 23.700"
+    }
+   ],
+   "accept": [
+    "Combined taxes stay in a moderate band, roughly 23.7% to 31.5% of income, rather than climbing steeply with income.",
+    "The overall tax burden does not rise steadily from poorest to richest; it is relatively flat with only modest variation.",
+    "When all tax types are combined, the pattern is not a strong progressive rise."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The total combined tax burden for each income group must be visually comparable across the distribution, at least for Poorest, 5th, 10th, and Richest."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The Richest income group's total tax burden is lower than the Poorest group's and lower than the 10th group's; it is the lowest total burden among the listed groups.",
+   "basis": [
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 23.7,
+     "note": "10.003 + 10.5 + 0.801 + 0.397 + 1.999 = 23.700"
+    },
+    {
+     "entity": "Poorest",
+     "x": "Poorest",
+     "field": "value",
+     "value": 24.104,
+     "note": "1.003 + 10.602 + 12.499 = 24.104"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "value",
+     "value": 31.507,
+     "note": "17.998 + 9.201 + 0.303 + 1.003 + 3.002 = 31.507"
+    }
+   ],
+   "accept": [
+    "Richest pays 23.7% of income in total taxes, below Poorest at 24.1% and far below the 10th group at 31.5%.",
+    "The richest group is the lowest total-tax group, not the highest.",
+    "The billionaire at the top pays a smaller overall share than everyone else, including the poorest."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The total-tax values for Richest, Poorest, and 10th must be visually comparable so the Richest-lower-than-Poorest and Richest-lower-than-10th relationships can be read."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Income taxes alone are progressive across most of the distribution, rising sharply from lower to higher income before the Richest group falls below the 10th group.",
+   "basis": [
+    {
+     "entity": "2nd",
+     "x": "2nd",
+     "field": "value",
+     "value": 1.003,
+     "note": "2nd-Income taxes"
+    },
+    {
+     "entity": "5th",
+     "x": "5th",
+     "field": "value",
+     "value": 5.997,
+     "note": "5th-Income taxes"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "value",
+     "value": 17.998,
+     "note": "10th-Income taxes"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.003,
+     "note": "Richest-Income taxes"
+    }
+   ],
+   "accept": [
+    "Income taxes rise from 1.003% for the 2nd group to 17.998% for the 10th group, then fall to 10.003% for the Richest.",
+    "Income taxes look strongly progressive up through the 10th group, but the Richest is lower than the 10th.",
+    "The progressive impression comes mainly from income taxes alone, not from all taxes combined."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The income-tax component must be visible or separable enough to show the rise from lower/middle groups to the 10th group and the drop at Richest."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "The tax mix differs by income: lower-income groups rely mostly on consumption and payroll taxes, while the Richest group relies more on corporate/property and income taxes.",
+   "basis": [
+    {
+     "entity": "Poorest",
+     "x": "Poorest",
+     "field": "relative_value",
+     "value": 0.5186,
+     "note": "Poorest-Consumption taxes share of Poorest tax mix"
+    },
+    {
+     "entity": "Poorest",
+     "x": "Poorest",
+     "field": "relative_value",
+     "value": 0.4398,
+     "note": "Poorest-Payroll taxes share of Poorest tax mix"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.4431,
+     "note": "Richest-Corporate and property taxes share of Richest tax mix"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.4221,
+     "note": "Richest-Income taxes share of Richest tax mix"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.0843,
+     "note": "Richest-Consumption taxes share of Richest tax mix"
+    },
+    {
+     "entity": "Richest",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.0167,
+     "note": "Richest-Payroll taxes share of Richest tax mix"
+    }
+   ],
+   "accept": [
+    "For the Poorest, consumption and payroll taxes are about 51.9% and 44.0% of the tax mix; for the Richest, corporate/property and income taxes are about 44.3% and 42.2%.",
+    "Lower-income groups pay mostly through consumption and payroll taxes, while the Richest pays mostly through corporate/property and income taxes.",
+    "The composition of taxes shifts from payroll/consumption at the bottom to income/corporate-property at the top."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The tax-type composition for at least Poorest and Richest must be visible so their different shares of the tax mix can be compared."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "Payroll taxes are a large but relatively stable percentage of income for most lower/middle groups, e.g. 10.602% for Poorest and 10.399% for 5th, before dropping to 0.397% for Richest.",
+  "Estate taxes appear only for the 10th group (0.303% of income) and Richest (0.801% of income) in the table.",
+  "Consumption tax burden falls from 12.499% for Poorest to 1.999% for Richest."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 45,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,130 @@
+{
+ "clip_id": "bar_92",
+ "version": "g1_r_u_v1",
+ "intent": "To highlight the critically low life expectancy and economic struggles of a specific country (Somalia) by comparing its health metrics with peer nations.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly identify Somalia's 55-year value?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the video show Somalia's relative rank among all four listed peers, including the fact that Ivory Coast and Nigeria are lower?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Somalia's plotted value is 55.0, matching the narration's 55-year life expectancy.",
+   "basis": [
+    {
+     "entity": "Somalia",
+     "x": "country",
+     "field": "value",
+     "value": 55.0,
+     "note": "Somalia row value=55.000; narration anchors this as 55-year life expectancy."
+    }
+   ],
+   "accept": [
+    "Somalia's life expectancy is 55 years.",
+    "Somalia sits at 55.",
+    "The chart shows Somalia at 55.",
+    "Somalia's bar endpoint is 55."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Somalia's bar or label must be visibly associated with the value 55."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "In the four-country peer set, Somalia is not the lowest; the ascending order is Ivory Coast 53, Nigeria 54, Somalia 55, Mozambique 57.",
+   "basis": [
+    {
+     "entity": "Ivory Coast",
+     "x": "country",
+     "field": "value",
+     "value": 53.0,
+     "note": "Ivory Coast row value=53.000."
+    },
+    {
+     "entity": "Nigeria",
+     "x": "country",
+     "field": "value",
+     "value": 54.0,
+     "note": "Nigeria row value=54.000."
+    },
+    {
+     "entity": "Somalia",
+     "x": "country",
+     "field": "value",
+     "value": 55.0,
+     "note": "Somalia row value=55.000."
+    },
+    {
+     "entity": "Mozambique",
+     "x": "country",
+     "field": "value",
+     "value": 57.0,
+     "note": "Mozambique row value=57.000."
+    }
+   ],
+   "accept": [
+    "Among these peers, Somalia is third-lowest, above Ivory Coast and Nigeria and below Mozambique.",
+    "The four-country order is Ivory Coast (53), Nigeria (54), Somalia (55), Mozambique (57).",
+    "Somalia is second-highest of the four listed countries.",
+    "Only Mozambique is higher than Somalia in this peer set."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "All four bars must be shown with values or a visibly ordered axis from 53 to 57."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "Somalia's table relative_value 0.6483 may be shown only if the chart defines what it is relative to; the table does not define that denominator.",
+  "The four bars may be colored and ordered exactly as in the table, including Somalia's #2E86C1 color.",
+  "The video may note that Somalia's 55 is close to Nigeria's 54 as an optional one-year nuance."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

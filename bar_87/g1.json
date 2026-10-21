@@ -1,0 +1,153 @@
+{
+ "clip_id": "bar_87",
+ "version": "g1_r_u_v1",
+ "intent": "To highlight the significant disparity between the prevalence of overweight cats and the low awareness of this issue among their owners.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video state 55% as the overweight prevalence among household cats?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video state 9% as the owner-awareness value?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the 46-percentage-point gap required to satisfy the intent, or can 55% and 9% alone suffice?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "55% of all household cats are overweight.",
+   "basis": [
+    {
+     "entity": "55% of all household cats are overweight",
+     "x": "640.0",
+     "field": "entity",
+     "value": "55%",
+     "note": "The table entity label carries the 55% prevalence; the table value=1.000 is a normalized bar value, not the percentage."
+    }
+   ],
+   "accept": [
+    "55% of household cats are overweight",
+    "Overweight prevalence among household cats is 55%",
+    "55 percent of all household cats are overweight",
+    "The cat overweight rate is 55%"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A value label or bar/segment for overweight-cat prevalence must read 55%."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Only 9% of the cats' owners know that.",
+   "basis": [
+    {
+     "entity": "9% of their owners know that",
+     "x": "640.0",
+     "field": "entity",
+     "value": "9%",
+     "note": "The table entity label carries the 9% owner-awareness value; the table value=1.000 is a normalized bar value, not the percentage."
+    }
+   ],
+   "accept": [
+    "Only 9% of owners know",
+    "9% of their owners are aware",
+    "Owner awareness is 9%",
+    "Just 9% of cat owners know"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A value label or bar/segment for owner awareness must read 9%."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The disparity between overweight prevalence and owner awareness is 46 percentage points.",
+   "basis": [
+    {
+     "entity": "55% of all household cats are overweight",
+     "x": "640.0",
+     "field": "entity",
+     "value": "55%",
+     "note": "First value used in the subtraction."
+    },
+    {
+     "entity": "9% of their owners know that",
+     "x": "640.0",
+     "field": "entity",
+     "value": "9%",
+     "note": "Second value used in the subtraction."
+    }
+   ],
+   "accept": [
+    "There is a 46-point gap between overweight prevalence and owner awareness",
+    "55% and 9% differ by 46 percentage points",
+    "Prevalence is 46 points higher than awareness",
+    "Only 9% aware versus 55% overweight — a 46-point disparity"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both 55% and 9% must be visible and comparable; the disparity should be shown as a gap/difference, not only as two isolated labels."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Framing the 55% value as a majority or more than half of household cats.",
+  "Expressing the disparity as a ratio of about 6.1x instead of only a 46-point gap.",
+  "Stating the U.S. context from the original narration, provided it is not presented as table-derived.",
+  "Showing both values in the same color because both table rows share color #C0392B."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

@@ -1,0 +1,152 @@
+{
+ "clip_id": "bar_99",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that wars between democratic nations are rare compared to other state-on-state conflicts.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the exact 22% value be required, or does 'minority/rare' suffice?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the exact 78% value be required, or can it be left unlabeled as the complement of 22%?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the majority/minority threshold claim required in addition to the raw shares?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Wars between democracies have a relative value/share of 0.22, i.e., about 22%.",
+   "basis": [
+    {
+     "entity": "Wars between democracies",
+     "x": "1000.0",
+     "field": "relative_value",
+     "value": 0.22,
+     "note": "printed relative share"
+    }
+   ],
+   "accept": [
+    "22%",
+    "0.22",
+    "about one-fifth",
+    "just over 20%"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The wars-between-democracies bar or segment must show 0.22 or 22%, or a length matching 0.22 on a 0-1 scale."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Other state-on-state wars have a relative value/share of 0.78, i.e., about 78%.",
+   "basis": [
+    {
+     "entity": "Other wars",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.78,
+     "note": "printed relative share"
+    }
+   ],
+   "accept": [
+    "78%",
+    "0.78",
+    "nearly four-fifths",
+    "more than three-quarters"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The other-wars bar or segment must show 0.78 or 78%, or a length matching 0.78 on a 0-1 scale."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "threshold_or_crossing",
+   "must_be_visualized": true,
+   "claim": "Wars between democracies are a minority while other state-on-state wars are the majority: 0.22 is below half and 0.78 is above half.",
+   "basis": [
+    {
+     "entity": "Wars between democracies",
+     "x": "1000.0",
+     "field": "relative_value",
+     "value": 0.22,
+     "note": "below-half share"
+    },
+    {
+     "entity": "Other wars",
+     "x": "540.0",
+     "field": "relative_value",
+     "value": 0.78,
+     "note": "above-half share"
+    }
+   ],
+   "accept": [
+    "Only a minority were between democracies",
+    "Other wars were the majority",
+    "Wars between democracies were less than half of the total",
+    "Other wars exceeded the 50% threshold"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both shares must be visible or inferable from a normalized 0-1/100% scale so the viewer can see 0.22 below and 0.78 above the halfway point."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "The gap between the shares is 0.56, i.e., 56 percentage points: 0.78 - 0.22 = 0.56.",
+  "The two shares sum to 1.00, so together they make the full state-on-state war breakdown.",
+  "The other-wars share is about 28% of the democratic-wars share? No: 0.22 / 0.78 = 0.282..., so this is not an intended comparison."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

@@ -1,0 +1,142 @@
+{
+ "clip_id": "bar_35",
+ "version": "g1_r_u_v1",
+ "intent": "To validate the use of objective standards in pretrial decisions by presenting encouraging data on defendant compliance and public safety.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the 94% pretrial release rate required in the final video?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video preserve the conditional denominator 'of released defendants' for the 88% figure?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video present 86% as a public-safety outcome for released defendants?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "The release rate: 94% of defendants were released pretrial.",
+   "basis": [
+    {
+     "entity": "Released Pretrial",
+     "x": "released-pretrial",
+     "field": "value",
+     "value": 94.0,
+     "note": "Table value is 94; narration supplies the percent sign."
+    }
+   ],
+   "accept": [
+    "94% of defendants were released pretrial",
+    "the pretrial release rate was 94%",
+    "about 94 out of every 100 defendants were released pretrial"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A bar or label for Released Pretrial must be visible with value 94 or 94%."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Among released defendants, 88% returned for every court date.",
+   "basis": [
+    {
+     "entity": "Returned for Every Court Date",
+     "x": "returned-for-every-court-date",
+     "field": "value",
+     "value": 88.0,
+     "note": "Table value is 88; narration indicates the denominator is released pretrial defendants."
+    }
+   ],
+   "accept": [
+    "88% of released defendants returned for every court date",
+    "of those released pretrial, 88% made every court date",
+    "nearly nine in ten released defendants returned for every court date"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show Returned for Every Court Date with 88 or 88% and, if possible, label it as conditional on released defendants."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Among released defendants, 86% were not arrested pretrial.",
+   "basis": [
+    {
+     "entity": "Not Arrested Pretrial",
+     "x": "not-arrested-pretrial",
+     "field": "value",
+     "value": 86.0,
+     "note": "Table value is 86; narration links the no-arrest period to released defendants."
+    }
+   ],
+   "accept": [
+    "86% of released defendants were not arrested pretrial",
+    "86% were not arrested during the pretrial period",
+    "about 86% of released defendants avoided pretrial arrest"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show Not Arrested Pretrial with 86 or 86% and avoid implying it is a rate for all defendants unless stated."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "The video may note that all three displayed rates are high or encouraging.",
+  "The video may show that the minimum displayed rate is 86%.",
+  "The video may use the table's relative_value fields for internal bar scaling without requiring viewers to read them."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 3,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

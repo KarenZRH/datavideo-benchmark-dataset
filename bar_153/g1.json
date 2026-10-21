@@ -1,0 +1,214 @@
+{
+ "clip_id": "bar_153",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the increasing proportion of voters residing in landslide counties from 1976 to 2016.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly convey monotonic increase across all three years?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the 1976 starting relative value required as a specific starting endpoint?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the 2016 ending relative value required as a specific ending endpoint?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Must the video quantify the total 1976-to-2016 increase, or is direction alone enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The relative value is higher in each later year than in the previous year, establishing an increasing trend/order: 1976 < 2012 < 2016.",
+   "basis": [
+    {
+     "entity": "1976",
+     "x": "1976",
+     "field": "relative_value",
+     "value": 0.2787,
+     "note": "lowest value in the ordered series"
+    },
+    {
+     "entity": "2012",
+     "x": "2012",
+     "field": "relative_value",
+     "value": 0.4976,
+     "note": "middle value in the ordered series"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "highest value in the ordered series"
+    }
+   ],
+   "accept": [
+    "The relative share rises in each successive year",
+    "Later years have higher relative values than earlier years",
+    "1976 is lowest, 2012 is middle, 2016 is highest",
+    "The proportion increases from 1976 to 2012 to 2016"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A viewer must be able to compare the three relative values and see the monotonic increase."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The starting endpoint in 1976 has relative value 0.2787.",
+   "basis": [
+    {
+     "entity": "1976",
+     "x": "1976",
+     "field": "relative_value",
+     "value": 0.2787,
+     "note": "1976 relative_value from table"
+    }
+   ],
+   "accept": [
+    "In 1976 the relative value is 0.2787",
+    "The starting relative share is 0.2787",
+    "1976 begins at a relative value of 0.2787"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 1976 data point's relative value must be visible or readable as 0.2787."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The ending endpoint in 2016 has relative value 0.5972.",
+   "basis": [
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "2016 relative_value from table"
+    }
+   ],
+   "accept": [
+    "In 2016 the relative value is 0.5972",
+    "The ending relative share is 0.5972",
+    "2016 ends at a relative value of 0.5972"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 2016 data point's relative value must be visible or readable as 0.5972."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "The total 1976-to-2016 increase is 0.3185 in relative value, and the 2016 relative value is about 2.14 times the 1976 relative value.",
+   "basis": [
+    {
+     "entity": "1976",
+     "x": "1976",
+     "field": "relative_value",
+     "value": 0.2787,
+     "note": "start value"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "end value"
+    }
+   ],
+   "accept": [
+    "The relative value increases by 0.3185 from 1976 to 2016",
+    "2016 relative value is about 2.14 times the 1976 relative value",
+    "The 1976-to-2016 rise is 0.5972 minus 0.2787 = 0.3185 relative units",
+    "The endpoint relative share is more than double the starting relative share"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The visual must allow seeing the magnitude of the 1976-to-2016 increase, not just its direction."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "The 2012 relative_value 0.4976 lies between the 1976 and 2016 values.",
+  "The 2012 relative_value 0.4976 is closer to the 2016 value than to the 1976 value: differences are 0.0996 versus 0.2189.",
+  "The 2012 relative_value 0.4976 is above the midpoint of the 1976 and 2016 endpoints: midpoint 0.43795."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 3,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "clip_id": "bar_144",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that the vast majority of vaccine doses scheduled for production in 2021 have already been purchased.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the exact value 0.1250 be conveyed, or is an approximate one-eighth sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The relative value for the 2021 row is 0.1250, the only endpoint in the data.",
+   "basis": [
+    {
+     "entity": "2021",
+     "x": "2021",
+     "field": "relative_value",
+     "value": 0.125,
+     "note": "only relative_value in table"
+    }
+   ],
+   "accept": [
+    "2021's relative value is 0.1250.",
+    "The single data point equals 0.1250.",
+    "The chart's only relative-value endpoint is 0.1250."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The sole data mark/label must encode or clearly correspond to 0.1250 on the relative-value scale."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The complement 0.8750 (seven-eighths) may be shown as the majority share if the chart depicts a whole.",
+  "The decimal 0.1250 may be displayed directly instead of as a fraction.",
+  "The clip may frame the 0.1250 segment as the small portion and the 0.8750 remainder as the large portion, provided no absolute percentage or purchased/dose label is added."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 1,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

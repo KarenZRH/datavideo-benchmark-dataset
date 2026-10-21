@@ -1,0 +1,213 @@
+{
+ "clip_id": "bar_60",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate Dubai's leading position in international visitor spending compared to other major global cities.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly state Dubai is first, rather than only showing a tall bar?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video preserve the full seven-city order, or is Dubai-first plus the New York/London comparison enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Should the 65% premium be interpreted as versus the London/New York average, or as two separate comparisons against London and New York?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Dubai has the highest international visitor spending value among all seven listed cities.",
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "highest value in the table"
+    },
+    {
+     "entity": "London",
+     "x": "value",
+     "field": "value",
+     "value": 0.628,
+     "note": "next-highest competitor value"
+    },
+    {
+     "entity": "Tokyo",
+     "x": "value",
+     "field": "value",
+     "value": 0.39,
+     "note": "lowest listed value, below Dubai"
+    }
+   ],
+   "accept": [
+    "Dubai ranks first in visitor spending among these cities.",
+    "Dubai tops the chart with a spending value of 1.000.",
+    "Dubai has the highest bar, ahead of London at 0.628 and New York at 0.581."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Dubai's bar must be visibly tallest or ranked first and labeled with 1.000."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The full descending ranking is Dubai, London, New York, Singapore, Bangkok, Paris, Tokyo.",
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "rank 1"
+    },
+    {
+     "entity": "London",
+     "x": "value",
+     "field": "value",
+     "value": 0.628,
+     "note": "rank 2"
+    },
+    {
+     "entity": "New York",
+     "x": "value",
+     "field": "value",
+     "value": 0.581,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Singapore",
+     "x": "value",
+     "field": "value",
+     "value": 0.549,
+     "note": "rank 4"
+    },
+    {
+     "entity": "Bangkok",
+     "x": "value",
+     "field": "value",
+     "value": 0.502,
+     "note": "rank 5"
+    },
+    {
+     "entity": "Paris",
+     "x": "value",
+     "field": "value",
+     "value": 0.437,
+     "note": "rank 6"
+    },
+    {
+     "entity": "Tokyo",
+     "x": "value",
+     "field": "value",
+     "value": 0.39,
+     "note": "rank 7"
+    }
+   ],
+   "accept": [
+    "Dubai is first, followed by London, New York, Singapore, Bangkok, Paris, and Tokyo.",
+    "The bars are ordered from Dubai down to Tokyo.",
+    "Top three are Dubai, London, New York, with Tokyo last."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Bars must be sorted or labeled in the descending order shown in the table."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "Dubai's spending value is about 65% higher than the average of London and New York.",
+   "basis": [
+    {
+     "entity": "Dubai",
+     "x": "value",
+     "field": "value",
+     "value": 1.0,
+     "note": "used as numerator baseline"
+    },
+    {
+     "entity": "London",
+     "x": "value",
+     "field": "value",
+     "value": 0.628,
+     "note": "used in London/New York average"
+    },
+    {
+     "entity": "New York",
+     "x": "value",
+     "field": "value",
+     "value": 0.581,
+     "note": "used in London/New York average"
+    }
+   ],
+   "accept": [
+    "Dubai is about 65% above the London/New York average.",
+    "Dubai is roughly 1.65 times the average of London and New York.",
+    "Dubai's value exceeds the London-New York benchmark by about 65%."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A visible London/New York average benchmark or annotation showing Dubai is about 65% above it."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Dubai also has the highest relative_value at 0.7416.",
+  "Tokyo is the lowest-ranked city at value 0.390.",
+  "London is about 8.1% above New York: (0.628 - 0.581) / 0.581 = 0.0809.",
+  "Singapore, Bangkok, and Paris occupy ranks 4, 5, and 6 respectively."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 7,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

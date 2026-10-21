@@ -1,0 +1,79 @@
+{
+ "clip_id": "bar_73",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that books often contain a disproportionate amount of filler compared to actual useful content, highlighting the inefficiency of reading full texts.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video quantify the gap as 64, or is visible inequality between 82 and 18 sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Filler is much larger than Actual content; the gap is 64 points (82 minus 18).",
+   "basis": [
+    {
+     "entity": "Filler",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 82.0,
+     "note": "Table value for Filler"
+    },
+    {
+     "entity": "Actual content",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 18.0,
+     "note": "Table value for Actual content"
+    }
+   ],
+   "accept": [
+    "Filler exceeds Actual content by 64.",
+    "Actual content is 64 less than Filler.",
+    "The gap between Filler and Actual content is 64 points."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The two bars must be visibly unequal, and the difference of 64 should be shown or inferable from labels 82 and 18."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Ranking: Filler is the largest category and Actual content is the smallest.",
+  "Total combined amount is 100 units (82 + 18).",
+  "The chart uses two categories only; no time trend is present."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

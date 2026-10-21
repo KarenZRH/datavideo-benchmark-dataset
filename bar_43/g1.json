@@ -1,0 +1,165 @@
+{
+ "clip_id": "bar_43",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the significant disparity in voter registration between white and nonwhite populations in Southern states in 1963, which resulted in political overrepresentation for the white electorate.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly compare the two registration rates, or is showing unequal bar heights sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video convey that most Nonwhite adults could not vote, not just their 40% registration rate?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video compare couldn't-vote shares across groups, or is the Nonwhite 60% figure alone sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "White voter registration was 74%, compared with 40% for Nonwhite adults.",
+   "basis": [
+    {
+     "entity": "White",
+     "x": "Registered",
+     "field": "value",
+     "value": 74.0,
+     "note": "relative_value 0.7400, i.e. 74% registered"
+    },
+    {
+     "entity": "Nonwhite",
+     "x": "Registered",
+     "field": "value",
+     "value": 40.0,
+     "note": "relative_value 0.4000, i.e. 40% registered"
+    }
+   ],
+   "accept": [
+    "White voter registration was 74%, versus 40% for Nonwhite adults.",
+    "74% of White adults were registered, compared with 40% of Nonwhite adults.",
+    "Nonwhite registration stood at 40% while White registration was 74%."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both registered segments must be visible/labeled at 74% for White and 40% for Nonwhite, ideally side by side."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Among Nonwhite adults, more were unable to vote than registered: 60% could not vote versus 40% registered.",
+   "basis": [
+    {
+     "entity": "Nonwhite",
+     "x": "Registered",
+     "field": "value",
+     "value": 40.0,
+     "note": "relative_value 0.4000, i.e. 40% registered"
+    },
+    {
+     "entity": "Nonwhite",
+     "x": "Couldn't vote",
+     "field": "value",
+     "value": 60.0,
+     "note": "relative_value 0.6000, i.e. 60% could not vote"
+    }
+   ],
+   "accept": [
+    "Among Nonwhite adults, 60% could not vote, compared with 40% who were registered.",
+    "A 60% majority of Nonwhite adults were not registered to vote.",
+    "Nonwhite non-registration (60%) exceeded Nonwhite registration (40%).",
+    "Only 40% of Nonwhite adults were registered; 60% could not vote."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Nonwhite bar must show a larger 'Couldn't vote' segment at 60% and a smaller 'Registered' segment at 40%."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Nonwhite adults were far more likely than White adults to be unable to vote: 60% versus 26%.",
+   "basis": [
+    {
+     "entity": "Nonwhite",
+     "x": "Couldn't vote",
+     "field": "value",
+     "value": 60.0,
+     "note": "relative_value 0.6000, i.e. 60% could not vote"
+    },
+    {
+     "entity": "White",
+     "x": "Couldn't vote",
+     "field": "value",
+     "value": 26.0,
+     "note": "relative_value 0.2600, i.e. 26% could not vote"
+    }
+   ],
+   "accept": [
+    "Nonwhite adults were more than twice as likely as White adults to be unable to vote: 60% versus 26%.",
+    "60% of Nonwhite adults couldn't vote, compared with 26% of White adults.",
+    "The couldn't-vote share was 60% for Nonwhite and 26% for White.",
+    "Nonwhite non-registration was 34 percentage points higher than White non-registration (60% versus 26%)."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both 'Couldn't vote' segments must be visible/labeled at 60% for Nonwhite and 26% for White, with the Nonwhite segment clearly larger."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "White registered share was 1.85 times Nonwhite registered share (74 ÷ 40 = 1.85).",
+  "White couldn't-vote share was less than half Nonwhite couldn't-vote share (26% versus 60%).",
+  "The registered and couldn't-vote shares are complements within each group: White 74/26, Nonwhite 40/60."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

@@ -1,0 +1,85 @@
+{
+ "clip_id": "bar_90",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that Israel's population is growing while most other developed nations are not.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the declining-with-age pattern required to support the growth message, or can the video just show one or two age groups?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Younger age groups are larger than older age groups; this is the pattern the video uses to convey that Israel's population is growing.",
+   "basis": [
+    {
+     "entity": "0-4",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.7438,
+     "note": "Youngest listed cohort, highest relative_value."
+    },
+    {
+     "entity": "95-99",
+     "x": "Male",
+     "field": "relative_value",
+     "value": 0.0084,
+     "note": "Oldest listed cohort, lowest relative_value."
+    },
+    {
+     "entity": "95-99",
+     "x": "Female",
+     "field": "relative_value",
+     "value": 0.0087,
+     "note": "Oldest listed cohort."
+    }
+   ],
+   "accept": [
+    "The age distribution has a broad base: younger cohorts have much larger bars than older cohorts.",
+    "Relative values decrease steadily as age increases.",
+    "The youngest listed age group is far larger than the oldest listed age group."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The bars must visibly decrease from the youngest age group toward the oldest age group."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The video may note that the youngest female cohort (0-4) is only slightly larger than the next youngest female cohort (5-9): 0.7438 vs 0.7262.",
+  "The video may emphasise that the male/female difference is small compared with the age-group differences."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 40,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

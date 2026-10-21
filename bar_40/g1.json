@@ -1,0 +1,135 @@
+{
+ "clip_id": "bar_40",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the disparity in wealth between two individuals with the same income to highlight a flaw in the tax system.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video show both exact values or relative values, or are labels and relative heights enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the ordering/taller-bar comparison required, or is showing both endpoints enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The chart shows two wealth bars: MY WEALTH = 0.373 and FRIEND'S WEALTH = 1.000 (relative_value 0.2639 and 0.7080).",
+   "basis": [
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 0.373,
+     "note": "table value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "table value"
+    },
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2639,
+     "note": "table relative_value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.708,
+     "note": "table relative_value"
+    }
+   ],
+   "accept": [
+    "My wealth is 0.373; friend's wealth is 1.000.",
+    "Bars are labeled MY WEALTH and FRIEND'S WEALTH.",
+    "Relative values are 0.2639 and 0.7080."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Two labeled bars are present, with MY WEALTH and FRIEND'S WEALTH values or relative values readable or implied."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "FRIEND'S WEALTH is greater than MY WEALTH; the friend's bar is the larger/taller one.",
+   "basis": [
+    {
+     "entity": "MY WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 0.373,
+     "note": "table value"
+    },
+    {
+     "entity": "FRIEND'S WEALTH",
+     "x": "",
+     "field": "value",
+     "value": 1.0,
+     "note": "table value"
+    }
+   ],
+   "accept": [
+    "Friend has more wealth than me.",
+    "My wealth is less than my friend's wealth.",
+    "The friend's bar is taller than my bar."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Friend bar is visibly taller/larger than MY WEALTH bar, making the order clear."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "Friend has 0.627 more wealth units than MY WEALTH (1.000 - 0.373 = 0.627).",
+  "Friend has about 168% more wealth than MY WEALTH ((1.000 - 0.373) / 0.373 = 1.681).",
+  "Same income tax treatment is the same for both, presented as context from the narration."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

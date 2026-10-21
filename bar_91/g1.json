@@ -1,0 +1,117 @@
+{
+ "clip_id": "bar_91",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that Japan's demographic challenge is the caregiving burden on its working-age population which hinders innovation, rather than a shortage of workers.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly quantify the working-age pool as more than half of the shown population, or only imply that it is large?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the elderly-to-working-age ratio the right way to convey caregiving burden, or is a simple count of elderly people enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Japan still has a large working-age population: the age groups 20-64 sum to 14.677 table-value units, which is more than half (about 0.58) of the combined total across all age groups (25.393).",
+   "basis": [
+    {
+     "entity": "20-64",
+     "x": "multiple",
+     "field": "value",
+     "value": 14.677,
+     "note": "Sum of value for age groups 20-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64 for both Male and Female series."
+    },
+    {
+     "entity": "all ages",
+     "x": "multiple",
+     "field": "value",
+     "value": 25.393,
+     "note": "Sum of value for all age groups 0-4 through 95-99 for both Male and Female series."
+    }
+   ],
+   "accept": [
+    "The 20-64 age groups total about 14.7, more than half of the total table value.",
+    "Working-age people are the largest block: about 58 per 100 of all table-value units shown.",
+    "There is no small working-age pool; ages 20-64 make up the majority of the distribution."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The combined 20-64 age groups must be encoded as a single quantity or highlighted as a group, and the total across all age groups must be available for comparison."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The elderly population is substantial: ages 65+ sum to 6.428 table-value units, about 0.44 times the 20-64 working-age sum (14.677).",
+   "basis": [
+    {
+     "entity": "65+",
+     "x": "multiple",
+     "field": "value",
+     "value": 6.428,
+     "note": "Sum of value for age groups 65-69, 70-74, 75-79, 80-84, 85-89, 90-95, 95-99 for both Male and Female series."
+    },
+    {
+     "entity": "20-64",
+     "x": "multiple",
+     "field": "value",
+     "value": 14.677,
+     "note": "Sum of value for age groups 20-24 through 60-64 for both Male and Female series."
+    }
+   ],
+   "accept": [
+    "65+ is about 44 per 100 of the working-age 20-64 total.",
+    "The elderly population is about 0.44 times the working-age population.",
+    "For every working-age person, there are roughly 0.44 elderly people."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 65+ age groups must be visually separable from the 20-64 age groups, and their combined size must be comparable to the 20-64 combined size."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 40,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

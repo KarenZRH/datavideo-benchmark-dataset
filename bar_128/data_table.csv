@@ -1,7 +1,7 @@
-clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
-bar_128,Hiroshima,hiroshima-instantly,,instantly,90,0.2778,dots,,svg_geometry
-bar_128,Hiroshima,hiroshima-3-weeks,,within 3 weeks,204,0.6296,dots,,svg_geometry
-bar_128,Hiroshima,hiroshima-after,,3+ weeks,30,0.0926,dots,,svg_geometry
-bar_128,Nagasaki,nagasaki-instantly,,instantly,60,0.2857,dots,,svg_geometry
-bar_128,Nagasaki,nagasaki-3-weeks,,within 3 weeks,132,0.6286,dots,,svg_geometry
-bar_128,Nagasaki,nagasaki-after,,3+ weeks,18,0.0857,dots,,svg_geometry
+entity,x,metric,value,unit,label,role
+Hiroshima,instantly,value,90,dots,,bar
+Hiroshima,within 3 weeks,value,204,dots,,bar
+Hiroshima,3+ weeks,value,30,dots,,bar
+Nagasaki,instantly,value,60,dots,,bar
+Nagasaki,within 3 weeks,value,132,dots,,bar
+Nagasaki,3+ weeks,value,18,dots,,bar

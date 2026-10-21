@@ -1,0 +1,150 @@
+{
+ "clip_id": "bar_98",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that cats are the most popular pet in America, outnumbering dogs, and to provide historical context of their arrival in the 1750s.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly rank cats above dogs, or is a taller cat bar sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must 88 million be explicitly labeled, or can the cat bar height alone imply it?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the 74 million dog value be shown explicitly, or can the comparison rely on relative bar heights?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Cats are America's most popular pet, ranking ahead of dogs.",
+   "basis": [
+    {
+     "entity": "Cats",
+     "x": "x_px=350.0",
+     "field": "value",
+     "value": 88.0,
+     "note": "Cat value is 88 million; higher than the 74 million row."
+    },
+    {
+     "entity": "74 million",
+     "x": "x_px=930.0",
+     "field": "value",
+     "value": 74.0,
+     "note": "Narration identifies this row as dogs; lower than cats."
+    }
+   ],
+   "accept": [
+    "Cats are America's most popular pet.",
+    "Cats rank above dogs as the top U.S. pet.",
+    "Cats outrank dogs in U.S. pet popularity."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The cat bar must be taller than the dog bar, or cats must be labeled/ranked first as most popular."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "There are 88 million cats kept as pets in America.",
+   "basis": [
+    {
+     "entity": "Cats",
+     "x": "x_px=350.0",
+     "field": "value",
+     "value": 88.0,
+     "note": "Table value for Cats."
+    }
+   ],
+   "accept": [
+    "There are 88 million cats kept as pets.",
+    "Cats: 88 million.",
+    "88M pet cats in America.",
+    "The U.S. cat population is 88 million."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The cat bar endpoint or label must show 88 million."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "There are 74 million dogs, compared with the 88 million cats.",
+   "basis": [
+    {
+     "entity": "74 million",
+     "x": "x_px=930.0",
+     "field": "value",
+     "value": 74.0,
+     "note": "Table row is labeled '74 million'; narration identifies this comparison as dogs."
+    }
+   ],
+   "accept": [
+    "There are 74 million dogs.",
+    "Dogs: 74 million.",
+    "74M dogs compared with cats.",
+    "The U.S. dog population is 74 million."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The dog bar endpoint or label must show 74 million."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Cats and dogs together represent 162 million pets (88 + 74 = 162).",
+  "Cats are about 54.3% of the combined cat-plus-dog total (88 / 162), while dogs are about 45.7% (74 / 162)."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

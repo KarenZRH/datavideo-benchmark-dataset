@@ -1,0 +1,206 @@
+{
+ "clip_id": "bar_69",
+ "version": "g1_r_u_v1",
+ "intent": "To compare the gross domestic product (GDP) of major global economies including the United States, the European Union, China, and Japan.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video enforce the table's USA→EU→China→Japan order even though the original spoken narration lists China right after the USA?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the video explicitly state the USA's 18.5 trillion value, not only show it as the tallest bar?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video include the EU as second place and compare it directly to China?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Should the video explicitly mark Japan as the lowest of the four?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The four listed economies are ordered by GDP as USA > European Union > China > Japan.",
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "300.0",
+     "field": "value",
+     "value": 18.5,
+     "note": "highest value in table"
+    },
+    {
+     "entity": "European Union",
+     "x": "540.0",
+     "field": "value",
+     "value": 15.4,
+     "note": "second-highest value in table"
+    },
+    {
+     "entity": "China",
+     "x": "780.0",
+     "field": "value",
+     "value": 11.8,
+     "note": "third-highest value in table"
+    },
+    {
+     "entity": "Japan",
+     "x": "1020.0",
+     "field": "value",
+     "value": 4.8,
+     "note": "lowest value in table"
+    }
+   ],
+   "accept": [
+    "USA first, EU second, China third, Japan fourth",
+    "Descending GDP order is United States, European Union, China, Japan",
+    "European Union ranks between the USA and China, with Japan last"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show a descending order by bar height or an explicit ranked list: USA tallest, EU second, China third, Japan shortest."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The USA has the largest GDP among the four listed economies, at 18.5 trillion.",
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "300.0",
+     "field": "value",
+     "value": 18.5,
+     "note": "largest value in table; narration states trillion"
+    }
+   ],
+   "accept": [
+    "USA is highest at about $18.5 trillion",
+    "United States leads with a GDP of 18.5 trillion",
+    "USA tops the comparison at 18.5"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "USA bar must be tallest and labeled 18.5 (or $18.5T)."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The European Union is second at 15.4 trillion, ahead of China's 11.8 trillion.",
+   "basis": [
+    {
+     "entity": "European Union",
+     "x": "540.0",
+     "field": "value",
+     "value": 15.4,
+     "note": "second-highest value in table"
+    },
+    {
+     "entity": "China",
+     "x": "780.0",
+     "field": "value",
+     "value": 11.8,
+     "note": "lower than EU"
+    }
+   ],
+   "accept": [
+    "EU ranks second with about 15.4 trillion, ahead of China's 11.8 trillion",
+    "European Union is the runner-up at 15.4T, with China third at 11.8T",
+    "EU's GDP of 15.4 is above China's 11.8 and below only the USA"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "EU bar/label must be 15.4 and visibly taller than China's 11.8; EU should appear second in the order."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Japan has the smallest GDP among the four at 4.8 trillion.",
+   "basis": [
+    {
+     "entity": "Japan",
+     "x": "1020.0",
+     "field": "value",
+     "value": 4.8,
+     "note": "lowest value in table"
+    }
+   ],
+   "accept": [
+    "Japan is lowest/fourth at about 4.8 trillion",
+    "Japan has the smallest GDP of the four at 4.8T",
+    "Japan's GDP is 4.8, the minimum in this comparison"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Japan bar must be shortest and labeled 4.8 (or $4.8T)."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "USA vs EU gap: 18.5 − 15.4 = 3.1 trillion (USA larger).",
+  "EU vs China gap: 15.4 − 11.8 = 3.6 trillion (EU larger).",
+  "China vs Japan gap: 11.8 − 4.8 = 7.0 trillion (China larger).",
+  "Share of combined four-economy GDP (sum = 18.5+15.4+11.8+4.8 = 50.5): USA 18.5/50.5 ≈ 36.6%, EU 15.4/50.5 ≈ 30.5%, China 11.8/50.5 ≈ 23.4%, Japan 4.8/50.5 ≈ 9.5%."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

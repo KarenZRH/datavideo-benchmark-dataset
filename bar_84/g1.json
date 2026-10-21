@@ -1,0 +1,188 @@
+{
+ "clip_id": "bar_84",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that younger generations are the primary drivers of Black migration to the South, supporting the narrator's explanation about increased educational opportunities for newer generations.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly identify 18-29 as the largest group and state 24%, or is the tallest mark enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the full age-group ranking be explicitly conveyed, or is highlighting the top group sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Should the video compare 18-29 against the two oldest groups combined (24 vs 22), or only show individual bars?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The 18-29 age group has the highest value in the chart, at 24%.",
+   "basis": [
+    {
+     "entity": "18-29",
+     "x": "18-29",
+     "field": "value",
+     "value": 24,
+     "note": "Table unit is %; this is the maximum value among the five age groups."
+    }
+   ],
+   "accept": [
+    "The 18-29 age group has the largest value, 24%.",
+    "18-29 is the top age bracket at 24%.",
+    "The highest value is the 18-29 group at 24%.",
+    "Adults 18-29 lead with 24%."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 18-29 mark must be visibly the highest and labeled or annotated with 24%."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The full ranking of age groups by value is 18-29 (24%) > 5-17 = 30-44 (17% each) > 60+ (13%) > 45-59 (9%).",
+   "basis": [
+    {
+     "entity": "18-29",
+     "x": "18-29",
+     "field": "value",
+     "value": 24,
+     "note": "Table unit is %."
+    },
+    {
+     "entity": "5-17",
+     "x": "5-17",
+     "field": "value",
+     "value": 17,
+     "note": "Table unit is %."
+    },
+    {
+     "entity": "30-44",
+     "x": "30-44",
+     "field": "value",
+     "value": 17,
+     "note": "Table unit is %."
+    },
+    {
+     "entity": "60+",
+     "x": "60+",
+     "field": "value",
+     "value": 13,
+     "note": "Table unit is %."
+    },
+    {
+     "entity": "45-59",
+     "x": "45-59",
+     "field": "value",
+     "value": 9,
+     "note": "Table unit is %."
+    }
+   ],
+   "accept": [
+    "Order from highest to lowest: 18-29 (24%), then 5-17 and 30-44 (17% each), then 60+ (13%), then 45-59 (9%).",
+    "The ranking is 18-29 > 5-17 = 30-44 > 60+ > 45-59.",
+    "18-29 leads; 5-17 and 30-44 tie for second; 60+ is fourth; 45-59 is last.",
+    "From highest to lowest, the values are 24%, 17%, 17%, 13%, and 9%."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative heights of all five age-group marks must match the ranking, or an on-screen ordered list or labels must show it."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The 18-29 group alone (24%) is larger than the 45-59 and 60+ groups combined (9% + 13% = 22%).",
+   "basis": [
+    {
+     "entity": "18-29",
+     "x": "18-29",
+     "field": "value",
+     "value": 24,
+     "note": "Table unit is %."
+    },
+    {
+     "entity": "45-59",
+     "x": "45-59",
+     "field": "value",
+     "value": 9,
+     "note": "Table unit is %."
+    },
+    {
+     "entity": "60+",
+     "x": "60+",
+     "field": "value",
+     "value": 13,
+     "note": "Table unit is %."
+    }
+   ],
+   "accept": [
+    "The 18-29 group alone (24%) is larger than the 45-59 and 60+ groups combined (9% + 13% = 22%).",
+    "24% for 18-29 exceeds the combined 22% for the two oldest groups.",
+    "The single 18-29 bracket outweighs the 45-59 and 60+ brackets together, 24 vs 22.",
+    "45-59 plus 60+ totals 22%, which is less than the 24% for 18-29 alone."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 18-29 mark must be shown as taller than the 45-59 and 60+ marks combined, or an annotation must state 24 vs 22."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "The 18-29 value is about 1.4 times the 17% values for 5-17 and 30-44 (24 / 17 = 1.41).",
+  "The 18-29 value is about 1.8 times the 13% for 60+ (24 / 13 = 1.85).",
+  "The 18-29 value is about 2.7 times the 9% for 45-59 (24 / 9 = 2.67).",
+  "The three age groups under 45 (5-17 + 18-29 + 30-44 = 17 + 24 + 17 = 58) sum to 58, compared with 22 for 45+ (45-59 + 60+ = 9 + 13 = 22)."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 5,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

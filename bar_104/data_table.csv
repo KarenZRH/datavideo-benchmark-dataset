@@ -1,4 +1,4 @@
-clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
-bar_104,400 richest tax rate,top400,,2008,18.1,,%,,printed
-bar_104,400 richest tax rate,top400,,2001,23,,%,,printed
-bar_104,$100k-$200k earners tax rate,middle,,2008,25,,%,,printed
+entity,x,metric,value,unit,label,role
+400 richest tax rate,2008,value,18.1,%,,bar
+400 richest tax rate,2001,value,23,%,,bar
+$100k-$200k earners tax rate,2008,value,25,%,,bar

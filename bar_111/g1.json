@@ -1,0 +1,163 @@
+{
+ "clip_id": "bar_111",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the disparity in access to clean water between populations, contextualizing Dewey's privileged background against a lower access statistic.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the clip explicitly contrast the higher and lower access values, or is showing only one value sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the clip explicitly identify 0.6250 as the highest access value?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the clip explicitly identify 0.4361 as the lowest access value?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "There is a disparity among the shown relative access values: one value is 0.6250 while another is 0.4361, so access is not uniform.",
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Higher relative access value."
+    },
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.4361,
+     "note": "Lower relative access value."
+    }
+   ],
+   "accept": [
+    "one access value is 0.6250 while another is 0.4361",
+    "the highest access value is about 0.63 and the lowest is about 0.44",
+    "there is a visible gap between a higher access value and a lower access value"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both the 0.6250 and 0.4361 relative values are represented, and the difference between them is visually apparent."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The highest relative access value shown is 0.6250; it appears twice in the table.",
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "Maximum relative value; appears in two rows."
+    }
+   ],
+   "accept": [
+    "the maximum relative access value is 0.6250",
+    "one access value reaches about 0.63",
+    "the highest shown access value is roughly 0.625"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 0.6250 value is shown as the highest or tied for highest."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The lowest relative access value shown is 0.4361.",
+   "basis": [
+    {
+     "entity": "access to clean water",
+     "x": "not used",
+     "field": "relative_value",
+     "value": 0.4361,
+     "note": "Minimum relative value."
+    }
+   ],
+   "accept": [
+    "the minimum relative access value is 0.4361",
+    "the lowest access figure is about 0.44",
+    "the smallest shown value is roughly 0.436"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 0.4361 value is shown as the lowest."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "The middle relative value 0.5986 is below the maximum 0.6250 but above the minimum 0.4361; it is about 0.96 times the maximum and about 1.37 times the minimum.",
+  "The absolute gap between the highest and lowest relative values is 0.1889 (0.6250 - 0.4361).",
+  "The two rows with 0.6250 indicate a tie for the maximum relative access value."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

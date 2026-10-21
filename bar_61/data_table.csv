@@ -1,7 +1,7 @@
-clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
-bar_61,1960s,1960s,239.2,,30.000,1.0000,,#f18fa9,printed
-bar_61,1970s,1970s,417.5,,25.000,0.8333,,#f18fa9,printed
-bar_61,1980s,1980s,595.9,,18.000,0.6000,,#f18fa9,printed
-bar_61,1990s,1990s,774.2,,18.000,0.6000,,#f18fa9,printed
-bar_61,2000-7*,2000-7,952.5,,5.000,0.1667,,#f18fa9,printed
-bar_61,2000s*,2000s,1130.9,,1.000,0.0333,,#f18fa9,printed
+entity,metric,value,unit,label,role
+1960s,us_job_creation,30.000,,,bar
+1970s,us_job_creation,25.000,,,bar
+1980s,us_job_creation,18.000,,,bar
+1990s,us_job_creation,18.000,,,bar
+2000-7*,us_job_creation,5.000,,,bar
+2000s*,us_job_creation,1.000,,,bar

@@ -1,0 +1,143 @@
+{
+ "clip_id": "bar_124",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the value of a metric in 1952 within the context of its historical trend from the 1950s to 2010.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video be required to state the exact 1952 value of $455 billion?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video explicitly place 1952 within the 1950–2010 timeline?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "In 1952, the metric reached nearly $455 billion in today's dollars.",
+   "basis": [
+    {
+     "entity": "$455 billion",
+     "x": "1137.8",
+     "field": "entity",
+     "value": 455.0,
+     "note": "Parsed from entity label '$455 billion' (billion USD)."
+    },
+    {
+     "entity": "1952",
+     "x": "1120.8",
+     "field": "entity",
+     "value": 1952.0,
+     "note": "Year entity tied to the $455 billion label."
+    }
+   ],
+   "accept": [
+    "In 1952, the metric reached nearly $455 billion in today's dollars.",
+    "The 1952 value was approximately $455 billion (adjusted for inflation).",
+    "By 1952, the metric had climbed to about $455 billion (today's dollars).",
+    "The chart highlights 1952 with a value of $455 billion."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 1952 data point must be annotated with a value of approximately $455 billion."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The 1952 value is situated within the broader historical trend from 1950 to 2010.",
+   "basis": [
+    {
+     "entity": "1952",
+     "x": "1120.8",
+     "field": "entity",
+     "value": 1952.0,
+     "note": "Year within range."
+    },
+    {
+     "entity": "1950",
+     "x": "158.5",
+     "field": "entity",
+     "value": 1950.0,
+     "note": "Lower bound."
+    },
+    {
+     "entity": "2010",
+     "x": "1154.6",
+     "field": "entity",
+     "value": 2010.0,
+     "note": "Upper bound."
+    }
+   ],
+   "accept": [
+    "1952 is shown as a point within the 1950–2010 timeline.",
+    "The 1952 value is situated in the broader historical context from 1950 to 2010.",
+    "The trend includes 1952 along with earlier and later years.",
+    "The 1952 data point is part of the full series from 1950 to 2010."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 1952 point must appear within the 1950–2010 axis range."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "Showing the $800 billion value as a peak or key point in the trend.",
+  "Including other year labels like 1955, 1960, 1965, etc. as part of the series."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 61,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,218 @@
+{
+ "clip_id": "bar_151",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that the recent increase in public confidence in scientists is uneven, driven primarily by Democrats while Republican confidence has remained stagnant or declined, highlighting a widening political divide.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the rising series' increase required to show the uptick?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should this decline be shown as stagnant or declining?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the flat series required to show stagnation?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Is the widening gap required to show the divide?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "One confidence series rises from Jan '19 to Nov '20, about 0.098 to 0.143 on relative scale.",
+   "basis": [
+    {
+     "entity": "rising series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.0976,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "rising series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.1425,
+     "note": "first occurrence"
+    }
+   ],
+   "accept": [
+    "increases from about 0.10 to about 0.14",
+    "rises across the period",
+    "the rising series is higher in Nov '20 than Jan '19"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The rising series must appear higher in Nov '20 than in Jan '19."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Another confidence series declines from Jan '19 to Nov '20, about 0.084 to 0.069.",
+   "basis": [
+    {
+     "entity": "declining series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.0844,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "declining series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.0686,
+     "note": "first occurrence"
+    }
+   ],
+   "accept": [
+    "declines from about 0.08 to about 0.07",
+    "drops over the period",
+    "the declining series is lower in Nov '20 than Jan '19"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The declining series must appear lower in Nov '20 than in Jan '19."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "A second series in the flat/declining group stays roughly unchanged, about 0.148 to 0.145.",
+   "basis": [
+    {
+     "entity": "flat series",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.1478,
+     "note": "first occurrence"
+    },
+    {
+     "entity": "flat series",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.1451,
+     "note": "first occurrence"
+    }
+   ],
+   "accept": [
+    "remains around 0.15",
+    "changes little across the period",
+    "stays roughly flat from Jan '19 to Nov '20"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The flat series must have similar relative height in Jan '19 and Nov '20."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "The gap between the rising series and the declining series widens from about 0.013 to about 0.074.",
+   "basis": [
+    {
+     "entity": "gap Jan '19",
+     "x": "Jan '19",
+     "field": "relative_value",
+     "value": 0.0132,
+     "note": "0.0976 - 0.0844"
+    },
+    {
+     "entity": "gap Nov '20",
+     "x": "Nov '20",
+     "field": "relative_value",
+     "value": 0.0739,
+     "note": "0.1425 - 0.0686"
+    }
+   ],
+   "accept": [
+    "divide widens from about 0.01 to about 0.07",
+    "the two series become more separated",
+    "difference grows over the period"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The separation between the rising and declining series must be larger in Nov '20 than Jan '19."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "The rising group's second series declines from about 0.132 to 0.095.",
+  "The absolute highest relative value overall is about 0.148 in Jan '19."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 36,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

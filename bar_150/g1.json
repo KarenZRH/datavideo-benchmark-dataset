@@ -1,0 +1,157 @@
+{
+ "clip_id": "bar_150",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that scientists and medical scientists are held in high public regard and command the highest levels of confidence among various groups to act in the public's best interest.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly identify Medical scientists as the highest 'A great deal' group, or is a general high-regard statement sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is a cross-group comparison required, or is the top rank alone enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Among the named groups, Medical scientists have the highest relative_value in the 'A great deal' confidence series (0.2188), slightly above Scientists and The military (each 0.2133).",
+   "basis": [
+    {
+     "entity": "Medical scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2188,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2133,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "The military",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2133,
+     "note": "named group, A great deal series"
+    }
+   ],
+   "accept": [
+    "Medical scientists top the 'A great deal' series at about 0.219, just ahead of Scientists and The military at about 0.213.",
+    "Medical scientists have the highest 'great deal' relative score among named groups."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative_value for Medical scientists in the 'A great deal' series must be visibly the highest among named groups."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Scientists and Medical scientists have 'A great deal' relative_values around 0.21, much larger than Business leaders (0.0273), Journalists (0.0492), and Elected officials (0.0219).",
+   "basis": [
+    {
+     "entity": "Scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2133,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Medical scientists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.2188,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Business leaders",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.0273,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Journalists",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.0492,
+     "note": "named group, A great deal series"
+    },
+    {
+     "entity": "Elected officials",
+     "x": "A great deal",
+     "field": "relative_value",
+     "value": 0.0219,
+     "note": "named group, A great deal series"
+    }
+   ],
+   "accept": [
+    "Scientists and Medical scientists score far higher than Business leaders, Journalists, and Elected officials on 'A great deal'.",
+    "The top two scientist groups have 'A great deal' relative values near 0.21, while the lowest groups are near 0.02–0.05."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the large relative_value gap between Scientists/Medical scientists and the lower groups visible."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 16,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "clip_id": "bar_42",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that UK government subsidies for fossil fuels are substantial and exceed those for renewable energy sources in 2016.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video state the fossil fuel value 10.5, or is showing that it is the largest bar sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video state the renewable value 7.3 to support the comparison?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the ranking/exceedance be explicitly stated, or is a taller fossil fuel bar enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "In 2016, UK government fossil fuel subsidies are 10.5, the larger of the two shown subsidy totals.",
+   "basis": [
+    {
+     "entity": "fossil fuels",
+     "x": "450.0",
+     "field": "value",
+     "value": 10.5,
+     "note": "Table value for fossil fuels; no unit specified."
+    }
+   ],
+   "accept": [
+    "Fossil fuel subsidies are 10.5 in 2016.",
+    "Fossil fuels receive 10.5 in subsidies.",
+    "The fossil fuel bar is labeled 10.5."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A bar/point labeled 'fossil fuels' must be visible with its value 10.5 (or a clearly equivalent label)."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "In 2016, UK government renewable energy subsidies are 7.3.",
+   "basis": [
+    {
+     "entity": "renewables",
+     "x": "830.0",
+     "field": "value",
+     "value": 7.3,
+     "note": "Table value for renewables; no unit specified."
+    }
+   ],
+   "accept": [
+    "Renewable energy subsidies are 7.3 in 2016.",
+    "Renewables receive 7.3 in subsidies.",
+    "The renewables bar is labeled 7.3."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A bar/point labeled 'renewables' must be visible with its value 7.3 (or a clearly equivalent label)."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Fossil fuel subsidies exceed renewable energy subsidies in 2016.",
+   "basis": [
+    {
+     "entity": "fossil fuels",
+     "x": "450.0",
+     "field": "value",
+     "value": 10.5,
+     "note": "Fossil fuel value."
+    },
+    {
+     "entity": "renewables",
+     "x": "830.0",
+     "field": "value",
+     "value": 7.3,
+     "note": "Renewable value."
+    }
+   ],
+   "accept": [
+    "Fossil fuel subsidies are higher than renewable subsidies.",
+    "Fossil fuels outrank renewables for subsidies.",
+    "The fossil fuel bar is taller than the renewables bar."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Fossil fuels and renewables must be shown in the same chart/scale, with fossil fuels visibly higher."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Optional share of combined two-category total: fossil fuels = 10.5 / (10.5 + 7.3) ≈ 59%, renewables = 7.3 / (10.5 + 7.3) ≈ 41%.",
+  "Optional relative-value ordering from the table: fossil fuels 0.3208 vs renewables 0.2231, if the chart displays relative_value."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

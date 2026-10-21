@@ -16,7 +16,8 @@
   "semantic.svg"
  ],
  "confidence": "high",
- "needs_review": false,
+ "needs_review": true,
  "note": "two time points overlaid on one bar, one plain bar",
- "time_behavior": "snapshot"
+ "time_behavior": "snapshot",
+ "batch_status": "agent_processed_pending_human_review"
 }

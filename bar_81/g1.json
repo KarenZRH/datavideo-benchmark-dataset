@@ -1,0 +1,80 @@
+{
+ "clip_id": "bar_81",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate the massive scale of the Congolese death toll by comparing it to the total population of Belgium.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the order/comparison (deaths > Belgium population) required, or can the video just show both bars?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "CONGOLESE DEATHS exceed BELGIAN POPULATION 1890 in the comparison: 1.000 is greater than 0.740.",
+   "basis": [
+    {
+     "entity": "CONGOLESE DEATHS",
+     "x": "395.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Higher table value."
+    },
+    {
+     "entity": "BELGIAN POPULATION 1890",
+     "x": "945.0",
+     "field": "value",
+     "value": 0.74,
+     "note": "Lower table value."
+    }
+   ],
+   "accept": [
+    "The Congolese death toll is larger than Belgium’s 1890 population.",
+    "Congolese deaths outweigh the Belgian population.",
+    "The deaths bar is taller than the Belgium population bar."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The CONGOLESE DEATHS bar must visibly be taller or higher than the BELGIAN POPULATION 1890 bar."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Displaying the exact table values 1.000 and 0.740 as labels.",
+  "Using the 74% share framing for the Belgian population comparison.",
+  "Using the 0.260 absolute gap framing for the two scaled values.",
+  "Showing source/color metadata such as printed source type and the two bar colors."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

@@ -1,0 +1,163 @@
+{
+ "clip_id": "bar_115",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the deep partisan divide in public confidence in police officers, demonstrating that Republicans are significantly more likely to have high confidence than Democrats.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly rank Republicans/Lean Rep above Democrats/Lean Dem, rather than only showing two separate values?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the video state the Republican/Lean Rep relative value itself, not just its higher rank?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Should the video state the Democratic/Lean Dem relative value itself, not just its lower rank?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Republicans/Lean Rep rank higher than Democrats/Lean Dem in relative confidence in police officers.",
+   "basis": [
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.4659,
+     "note": "higher of the two relative values"
+    },
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.1442,
+     "note": "lower of the two relative values"
+    }
+   ],
+   "accept": [
+    "Rep/Lean Rep is higher than Dem/Lean Dem",
+    "Republicans and Republican leaners are more likely than Democrats and Democratic leaners to have high confidence",
+    "the Republican/Lean Rep relative value is above the Democratic/Lean Dem relative value"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both groups must be identifiable, and their displayed relative values must let a viewer determine that the Republican/Lean Rep value is greater than the Democratic/Lean Dem value."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The Republican/Lean Rep relative confidence value is approximately 0.466 and is the highest of the two groups.",
+   "basis": [
+    {
+     "entity": "Rep/Lean Rep",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.4659,
+     "note": "highest relative value in the table"
+    }
+   ],
+   "accept": [
+    "about 0.47 on the relative-value scale",
+    "the larger relative value is 0.4659",
+    "the Republican/Lean Rep relative score is approximately 0.466"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Republican/Lean Rep relative value must be visible or inferable as the largest of the two displayed values."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The Democratic/Lean Dem relative confidence value is approximately 0.144 and is the lowest of the two groups.",
+   "basis": [
+    {
+     "entity": "Dem/Lean Dem",
+     "x": "party identification",
+     "field": "relative_value",
+     "value": 0.1442,
+     "note": "lowest relative value in the table"
+    }
+   ],
+   "accept": [
+    "about 0.14 on the relative-value scale",
+    "the smaller relative value is 0.1442",
+    "the Democratic/Lean Dem relative score is approximately 0.144"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Democratic/Lean Dem relative value must be visible or inferable as the smallest of the two displayed values."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "An optional annotation showing the exact table decimals 0.4659 and 0.1442.",
+  "An optional statement that the Democratic/Lean Dem value is less than one-third of the Republican/Lean Rep value, since 0.1442 / 0.4659 is about 0.31.",
+  "An optional note that the Republican/Lean Rep value is more than double the Democratic/Lean Dem value."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

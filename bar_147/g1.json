@@ -1,0 +1,232 @@
+{
+ "clip_id": "bar_147",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate the significant disparity in vaccine purchases between high-income nations and lower-income countries or international mechanisms like Covax.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video establish High income as the maximum relative value?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the High income versus Covax ratio required, or is Covax's lower ranking enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is preserving the full ordering required, especially Covax above Lower middle and Lower income?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Is the High income versus Lower income ratio required, or is the ranking alone sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "High income has the largest relative purchase level among all listed categories.",
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "largest relative_value in the table; no absolute value is available"
+    }
+   ],
+   "accept": [
+    "High income has the highest relative purchase level in the series, at 0.5353.",
+    "High income is the top category on the relative scale.",
+    "No other listed entity has a relative_value above 0.5353."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative magnitude for High income must be visibly greater than every other listed entity."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "High income's relative purchase level is about four times Covax's relative purchase level.",
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "Covax",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1253,
+     "note": "denominator for ratio"
+    }
+   ],
+   "accept": [
+    "High income's relative value is about 4.3 times Covax's.",
+    "Covax's relative value is roughly one-fourth of High income's.",
+    "High income is more than four times Covax on the relative scale."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the relative magnitude of High income and Covax directly comparable so the roughly fourfold gap is visible."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The full relative ordering is High income > Upper middle income > Covax > Lower middle income > Lower income.",
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "rank 1"
+    },
+    {
+     "entity": "Upper middle income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1367,
+     "note": "rank 2"
+    },
+    {
+     "entity": "Covax",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.1253,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Lower middle income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0535,
+     "note": "rank 4"
+    },
+    {
+     "entity": "Lower income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0353,
+     "note": "rank 5"
+    }
+   ],
+   "accept": [
+    "Order from highest to lowest: High income, Upper middle income, Covax, Lower middle income, Lower income.",
+    "High income is first, Upper middle income second, Covax third, Lower middle income fourth, and Lower income last.",
+    "Covax sits between Upper middle income and Lower middle income in the ranking."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative ordering of all five entities must be visually discernible."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "High income's relative purchase level is about fifteen times Lower income's relative purchase level.",
+   "basis": [
+    {
+     "entity": "High income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.5353,
+     "note": "numerator for ratio"
+    },
+    {
+     "entity": "Lower income",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.0353,
+     "note": "denominator for ratio"
+    }
+   ],
+   "accept": [
+    "High income's relative value is about 15 times Lower income's.",
+    "Lower income is the lowest relative value, roughly one-fifteenth of High income's.",
+    "High income is more than fifteen times Lower income on the relative scale."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the relative magnitudes of High income and Lower income comparable enough to show the roughly fifteenfold gap."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "Covax's relative value (0.1253) is greater than Lower middle income (0.0535) and Lower income (0.0353).",
+  "Upper middle income is the second-highest relative value (0.1367)."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 5,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

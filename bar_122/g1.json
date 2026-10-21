@@ -1,0 +1,89 @@
+{
+ "clip_id": "bar_122",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that Trump supporters' confidence in the accuracy of vote counting increased significantly after his 2016 election victory.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the within-group Aug-to-Nov increase in 'Very' required, or is showing only the higher Nov 'Very' value sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "The 'Very' confidence relative value for the group corresponding to Trump supporters (the group with the lower Aug 2016 'Very' value) increases substantially from Aug 2016 to Nov 2016: 0.0764 to 0.3264, roughly 4.3 times its earlier relative value.",
+   "basis": [
+    {
+     "entity": "Aug 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.0764,
+     "note": "Lower of the two Aug 2016 'Very' values; this is the rising group per intent."
+    },
+    {
+     "entity": "Nov 2016",
+     "x": "Very",
+     "field": "relative_value",
+     "value": 0.3264,
+     "note": "Higher of the two Nov 2016 'Very' values; same group as the Aug 0.0764 value."
+    }
+   ],
+   "accept": [
+    "The 'Very' relative value for the rising group jumps from 0.0764 in Aug 2016 to 0.3264 in Nov 2016.",
+    "Trump-support 'Very' confidence rises from a very low relative value to its highest Nov value.",
+    "The group with the lower Aug 'Very' value increases its 'Very' relative value roughly fourfold by Nov."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show the same group's 'Very' relative value at both Aug 2016 and Nov 2016, with the Nov value clearly greater than the Aug value."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

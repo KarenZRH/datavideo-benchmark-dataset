@@ -1,0 +1,221 @@
+{
+ "clip_id": "bar_77",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate the relatively small number of In-N-Out Burger locations compared to its major competitors in the United States market.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly rank all four chains, or is showing In-N-Out as the smallest sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the 40x McDonald's comparison required, or optional if the overall ranking already conveys In-N-Out's smallness?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the exact 2x Whataburger comparison required, or can it be omitted or rounded?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Is the exact 4x Five Guys comparison required, or can it be omitted or rounded?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Among the four chains, In-N-Out has the smallest location-count index, and the ordered ranking is In-N-Out < Whataburger < Five Guys < McDonald's.",
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "lowest value among the four chains"
+    },
+    {
+     "entity": "Whataburger",
+     "x": "x_px=281.5",
+     "field": "value",
+     "value": 2.0,
+     "note": "second-lowest value"
+    },
+    {
+     "entity": "Five Guys",
+     "x": "x_px=303.0",
+     "field": "value",
+     "value": 4.0,
+     "note": "third-lowest value"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "x_px=690.0",
+     "field": "value",
+     "value": 40.0,
+     "note": "highest value"
+    }
+   ],
+   "accept": [
+    "In-N-Out is the smallest of the four chains, followed by Whataburger, Five Guys, and McDonald's.",
+    "Ranking: In-N-Out (1.000) < Whataburger (2.000) < Five Guys (4.000) < McDonald's (40.000).",
+    "McDonald's is the largest, In-N-Out is the smallest, with Whataburger and Five Guys in between."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "All four bars must be visible in order, with In-N-Out shortest, then Whataburger, Five Guys, and McDonald's, or a ranked label must make this order explicit."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "McDonald's has 40 times as many locations as In-N-Out.",
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "reference value for the ratio"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "x_px=690.0",
+     "field": "value",
+     "value": 40.0,
+     "note": "numerator of the ratio"
+    }
+   ],
+   "accept": [
+    "McDonald's has 40 times as many locations as In-N-Out.",
+    "In-N-Out has 1/40 as many locations as McDonald's.",
+    "For every In-N-Out location, there are 40 McDonald's locations.",
+    "McDonald's is 40x In-N-Out."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "In-N-Out and McDonald's bars or values must be visible together with a 40x annotation or a scale that makes the 40-to-1 ratio readable."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Whataburger has twice as many locations as In-N-Out.",
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "reference value for the ratio"
+    },
+    {
+     "entity": "Whataburger",
+     "x": "x_px=281.5",
+     "field": "value",
+     "value": 2.0,
+     "note": "numerator of the ratio"
+    }
+   ],
+   "accept": [
+    "Whataburger has twice as many locations as In-N-Out.",
+    "Whataburger is 2x In-N-Out.",
+    "In-N-Out has half as many locations as Whataburger."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "In-N-Out and Whataburger bars or values must be visible together with a 2x annotation or equivalent length comparison."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Five Guys has four times as many locations as In-N-Out.",
+   "basis": [
+    {
+     "entity": "In-N-Out",
+     "x": "x_px=270.8",
+     "field": "value",
+     "value": 1.0,
+     "note": "reference value for the ratio"
+    },
+    {
+     "entity": "Five Guys",
+     "x": "x_px=303.0",
+     "field": "value",
+     "value": 4.0,
+     "note": "numerator of the ratio"
+    }
+   ],
+   "accept": [
+    "Five Guys has four times as many locations as In-N-Out.",
+    "Five Guys is 4x In-N-Out.",
+    "In-N-Out has one-quarter as many locations as Five Guys."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "In-N-Out and Five Guys bars or values must be visible together with a 4x annotation or equivalent length comparison."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "McDonald's is 20 times Whataburger (40 / 2 = 20).",
+  "McDonald's is 10 times Five Guys (40 / 4 = 10).",
+  "Five Guys is twice Whataburger (4 / 2 = 2).",
+  "McDonald's relative_value 1.0000 can be shown as the benchmark for the comparison."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

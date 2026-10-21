@@ -1,0 +1,310 @@
+{
+ "clip_id": "bar_75",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that music industry revenue has significantly declined since the late 1990s peak and that the transition to digital formats has not immediately replaced the revenue lost from the decline of physical media like CDs.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the CD-dominance period from 1988 to 2006 required, or can the clip show only the later decline?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the CD peak be anchored to 1998, as the table shows, rather than to the narration’s 1999 total-revenue peak?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the digital rise and 2007 crossover required, or optional context?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Should the benchmark require the combined-physical-vs-digital crossover, or is the simpler CD-vs-digital crossover enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "CD overtakes cassette in 1988 and remains the largest single format through 2006.",
+   "basis": [
+    {
+     "entity": "CD",
+     "x": "1987",
+     "field": "relative_value",
+     "value": 0.3769,
+     "note": "still below cassette in 1987"
+    },
+    {
+     "entity": "Cassette",
+     "x": "1987",
+     "field": "relative_value",
+     "value": 0.48,
+     "note": "largest in 1987"
+    },
+    {
+     "entity": "CD",
+     "x": "1988",
+     "field": "relative_value",
+     "value": 0.4671,
+     "note": "overtakes cassette"
+    },
+    {
+     "entity": "Cassette",
+     "x": "1988",
+     "field": "relative_value",
+     "value": 0.4488,
+     "note": "falls below CD"
+    },
+    {
+     "entity": "CD",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.5058,
+     "note": "still largest single format in 2006"
+    },
+    {
+     "entity": "Digital",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.485,
+     "note": "still below CD in 2006"
+    }
+   ],
+   "accept": [
+    "CD becomes the largest format in 1988 and stays largest until 2006.",
+    "After 1987, CD is the top single format for nearly two decades.",
+    "CD takes over from cassette in 1988 and is still the biggest single format as late as 2006."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show CD overtaking cassette around 1988 and remaining above other individual formats through 2006."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "CD’s relative_value peaks in 1998 at 0.96, then declines to 0.2001 by 2013, ending at about one-fifth of its peak.",
+   "basis": [
+    {
+     "entity": "CD",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.96,
+     "note": "highest CD relative_value"
+    },
+    {
+     "entity": "CD",
+     "x": "1999",
+     "field": "relative_value",
+     "value": 0.9209,
+     "note": "decline begins after 1998"
+    },
+    {
+     "entity": "CD",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.2001,
+     "note": "endpoint"
+    }
+   ],
+   "accept": [
+    "CD peaks in 1998 at 0.96 and falls to 0.2001 by 2013.",
+    "After 1998, CD’s relative_value drops to about one-fifth of its peak by 2013.",
+    "CD’s highest relative_value is 1998; by 2013 it is roughly a fifth of that level."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the 1998 CD peak and the subsequent downward path to 2013 visible."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Digital first appears in 1998 at 0.002, grows, overtakes CD in 2007, and reaches 0.7637 by 2013.",
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "1998",
+     "field": "relative_value",
+     "value": 0.002,
+     "note": "first appears"
+    },
+    {
+     "entity": "Digital",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.5561,
+     "note": "overtakes CD"
+    },
+    {
+     "entity": "CD",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.4349,
+     "note": "falls below digital"
+    },
+    {
+     "entity": "Digital",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.7637,
+     "note": "about three-quarters"
+    }
+   ],
+   "accept": [
+    "Digital is negligible in 1998, becomes the largest format in 2007, and is about three-quarters of the mix by 2013.",
+    "Digital emerges in 1998, passes CD in 2007, and continues rising through 2013.",
+    "The digital format starts near zero in 1998 and is the top format from 2007 onward."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show digital’s first appearance in 1998, its rise, and the 2007 crossover above CD."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "threshold_or_crossing",
+   "must_be_visualized": true,
+   "claim": "Digital stays below all physical formats combined through 2006 and only overtakes that combined physical total in 2007; this supports the “not immediately” replacement claim.",
+   "basis": [
+    {
+     "entity": "Digital",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.485,
+     "note": "below combined physical"
+    },
+    {
+     "entity": "CD",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.5058,
+     "note": "physical component"
+    },
+    {
+     "entity": "Cassette",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.0042,
+     "note": "physical component"
+    },
+    {
+     "entity": "LP/EP/8-Track",
+     "x": "2006",
+     "field": "relative_value",
+     "value": 0.0051,
+     "note": "physical component"
+    },
+    {
+     "entity": "Digital",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.5561,
+     "note": "above combined physical"
+    },
+    {
+     "entity": "CD",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.4349,
+     "note": "physical component"
+    },
+    {
+     "entity": "Cassette",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.003,
+     "note": "physical component"
+    },
+    {
+     "entity": "LP/EP/8-Track",
+     "x": "2007",
+     "field": "relative_value",
+     "value": 0.006,
+     "note": "physical component"
+    }
+   ],
+   "accept": [
+    "Digital is below all physical formats combined in 2006 and above them in 2007.",
+    "For 1998-2006, digital has not yet overtaken physical formats combined; the crossover is 2007.",
+    "The combined physical formats remain larger than digital until 2007."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the 2006-to-2007 threshold visible: digital moves from below the sum of physical formats to above it."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "Cassette’s relative_value falls from 0.566 in 1985 to 0.0008 in 2011.",
+  "LP/EP/8-Track’s relative_value falls from 0.5635 in 1982 to 0.003 in 1996.",
+  "CD remains larger than digital in every year from digital’s 1998 appearance through 2006."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 111,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,155 @@
+{
+ "clip_id": "bar_163",
+ "version": "g1_r_u_v1",
+ "intent": "To explain the construction and structure of a population pyramid by organizing a population by age and separating it by gender.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video show single-year ages from 1 to 100, or can it use age groups?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the overall young-high/old-low shape required, or is only the age/gender breakdown required?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The age dimension covers single years from 1 to 100, ordered by age, so each age has a row for each gender.",
+   "basis": [
+    {
+     "entity": "male",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "youngest age row"
+    },
+    {
+     "entity": "male",
+     "x": "100",
+     "field": "value",
+     "value": 3,
+     "note": "oldest age row"
+    },
+    {
+     "entity": "female",
+     "x": "50",
+     "field": "value",
+     "value": 51,
+     "note": "middle age example"
+    }
+   ],
+   "accept": [
+    "Ages are arranged from 1 to 100",
+    "The data covers single years of age across the full range",
+    "Every age from 1 through 100 appears for male and female"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show or label an age progression spanning 1 to 100, not just a few aggregated age bands."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The values are largest at the youngest ages and smallest at the oldest ages: the youngest ages reach 73 squares while the oldest ages are around 3 squares.",
+   "basis": [
+    {
+     "entity": "male",
+     "x": "100",
+     "field": "value",
+     "value": 3,
+     "note": "oldest male value"
+    },
+    {
+     "entity": "female",
+     "x": "97",
+     "field": "value",
+     "value": 3,
+     "note": "old female value"
+    },
+    {
+     "entity": "male",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "youngest male value"
+    },
+    {
+     "entity": "female",
+     "x": "1",
+     "field": "value",
+     "value": 73,
+     "note": "youngest female value"
+    }
+   ],
+   "accept": [
+    "Values decline from youngest to oldest ages",
+    "The youngest ages are much larger than the oldest ages",
+    "The series shrinks from about 73 squares at the youngest to about 3 squares at the oldest"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show a clear overall gradient from high values at the young end to low values at the old end."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "The unit of the values is squares, with the maximum 73 squares and minimum 3 squares.",
+  "Relative_value is 1.0000 at the maximum 73-square rows and about 0.0411 at the minimum 3-square rows."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 200,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

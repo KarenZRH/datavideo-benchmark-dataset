@@ -1,0 +1,85 @@
+{
+ "clip_id": "bar_131",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the massive scale of global nuclear arsenals that poses a threat of nuclear winter.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly convey the equality of all relative values?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "All listed entities share the same relative_value of 0.1111.",
+   "basis": [
+    {
+     "entity": "all listed entities",
+     "x": "all rows",
+     "field": "relative_value",
+     "value": 0.1111,
+     "note": "each row equals 0.1111"
+    }
+   ],
+   "accept": [
+    "All entities share the same relative value.",
+    "Each row is 0.1111 on the relative scale.",
+    "No entity differs from the others in relative size."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative magnitudes of all listed entities appear identical."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The entity labels mix country names with numeric or year-like strings.",
+  "The relative values sum to about 0.8888, below a full whole."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

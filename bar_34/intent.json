@@ -27,7 +27,7 @@
  "needs_video_escalation": false,
  "narrative_goal": "To demonstrate that Americans face the highest rates of skipping medication due to cost compared to residents of other developed nations, particularly those without insurance.",
  "intent_machine": "To demonstrate that adults in the United States have significantly higher rates of skipping medication due to cost compared to other developed nations, with uninsured Americans being the most likely to skip prescriptions.",
- "approved_by": null,
- "approved_at": null,
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
  "review_order": ["data_table","intent","g1"]
 }

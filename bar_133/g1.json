@@ -1,0 +1,183 @@
+{
+ "clip_id": "bar_133",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that the perceived risk of full-scale war is currently lower than it was during the Cold War.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly compare both USA and Russia, or is one series enough to support the claim?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video identify the exact 1990 Russia peak, or only a Cold War-era peak?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video quantify how much lower 2015 is, or is a qualitative 'lower' enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The current 2015 relative values for both USA and Russia are lower than their Cold War-era peak values.",
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0965,
+     "note": "USA series in 2015"
+    },
+    {
+     "entity": "USA",
+     "x": "1965",
+     "field": "relative_value",
+     "value": 0.3693,
+     "note": "USA series peak"
+    },
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0927,
+     "note": "Russia series in 2015"
+    },
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4504,
+     "note": "Russia series peak"
+    }
+   ],
+   "accept": [
+    "The 2015 values are lower than the Cold War-era peaks for both USA and Russia.",
+    "Today's risk is below the height of the Cold War.",
+    "Both current series values are well under their Cold War highs.",
+    "2015 USA and Russia are less than their respective 1965/1990 peaks."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show the 2015 values and the Cold War peak values for the compared series so the lower current values are visible."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The highest relative value in the dataset is Russia in 1990 at 0.4504, identifying the Cold War-era height.",
+   "basis": [
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4504,
+     "note": "highest relative value in the table"
+    }
+   ],
+   "accept": [
+    "The highest relative risk is Russia in 1990 at 0.4504.",
+    "Russia peaks in 1990, the largest value in the data.",
+    "The maximum of the series is about 0.45 for Russia around 1990.",
+    "No other point reaches Russia's 1990 value."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the 1990 Russia value identifiable as the highest in the data."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "Russia's 2015 relative value is about one-fifth of its 1990 peak value.",
+   "basis": [
+    {
+     "entity": "Russia",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.0927,
+     "note": "numerator"
+    },
+    {
+     "entity": "Russia",
+     "x": "1990",
+     "field": "relative_value",
+     "value": 0.4504,
+     "note": "denominator"
+    }
+   ],
+   "accept": [
+    "Russia's 2015 value is about one-fifth of its 1990 peak.",
+    "The 2015 Russia value is roughly 0.21 times the 1990 Russia value.",
+    "Russia's current risk is far below its Cold War high.",
+    "0.0927 is much smaller than 0.4504."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show both the 2015 Russia value and the 1990 Russia value so their ratio is visible."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 38,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

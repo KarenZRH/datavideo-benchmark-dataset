@@ -1,0 +1,137 @@
+{
+ "clip_id": "bar_156",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the financial risk of relying on high returns from reported assets to cover the gap between those assets and actual liabilities.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the equality of primary Reported Assets and Actual Liabilities be required, or is a general relative comparison enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the video be required to convey that actual liabilities exceed the backfilled reported-assets value?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Primary Reported Assets and Actual Liabilities have equal relative value, both 0.2632.",
+   "basis": [
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "reported-assets row"
+    },
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "actual-liabilities row"
+    }
+   ],
+   "accept": [
+    "Reported assets and actual liabilities are tied at about 0.263 on the relative scale.",
+    "The primary reported-assets value and actual-liabilities value are equal.",
+    "Both show the same relative magnitude, roughly 0.26.",
+    "No relative difference between the primary reported assets and actual liabilities."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show or label the primary Reported Assets and Actual Liabilities values as equal at 0.2632."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Actual Liabilities relative value (0.2632) exceeds the backfilled Reported Assets bar-3 relative value (0.2485) by 0.0147 relative units.",
+   "basis": [
+    {
+     "entity": "Actual Liabilities",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2632,
+     "note": "actual-liabilities row"
+    },
+    {
+     "entity": "Reported Assets",
+     "x": "",
+     "field": "relative_value",
+     "value": 0.2485,
+     "note": "backfilled bar-3 Reported Assets row"
+    }
+   ],
+   "accept": [
+    "Actual liabilities are about 0.015 higher than the backfilled reported-assets value.",
+    "The bar-3 Reported Assets value is lower than Actual Liabilities by roughly 0.015 relative units.",
+    "Liabilities exceed the secondary reported-assets value.",
+    "The backfilled reported-assets entry falls short of liabilities by about 0.015."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show Actual Liabilities as higher than the bar-3 Reported Assets value, or label the difference as 0.0147."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "Show the backfilled Reported Assets (bar-3) entry as secondary or uncertain because source_type is semantic_svg_order_backfill.",
+  "Mention that the relative values cluster around 0.25-0.26.",
+  "Note the tie for highest relative value without an explicit rank order."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 3,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "clip_id": "bar_64",
+ "version": "g1_r_u_v1",
+ "intent": "To explain the global prevalence of lactose intolerance and the biological mechanism behind it.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the 65% global prevalence of lactose intolerance obligatory in the video?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Lactose intolerance affects 65% of the global population.",
+   "basis": [
+    {
+     "entity": "Lactose Intolerant",
+     "x": "Lactose Intolerant",
+     "field": "value",
+     "value": 65,
+     "note": "Table value 65 with unit %"
+    }
+   ],
+   "accept": [
+    "Worldwide, about 65% of the population is lactose intolerant.",
+    "Lactose intolerance has a global prevalence of 65%.",
+    "Roughly two-thirds of people worldwide are lactose intolerant."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show the Lactose Intolerant category with a label, value, or mark at 65% (or the equivalent 0.65 share of the whole)."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

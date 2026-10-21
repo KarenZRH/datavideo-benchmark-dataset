@@ -1,0 +1,240 @@
+{
+ "clip_id": "bar_117",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that Black adults are significantly more likely than other racial or ethnic groups to report being unfairly stopped by the police due to their race or ethnicity.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video state that Black adults are the highest, or only that they are higher than the other groups shown?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the exact rank order be conveyed, or is it sufficient to show Black adults above the rest?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video quantify the multiples (about 2.4x and 2.8x), or is a qualitative 'much higher' enough for the non-White comparison groups?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Must the video state the fivefold Black-vs-White comparison, or is it optional context alongside the broader comparison?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Black adults have the highest relative_value on the unfair-stop measure among the four groups, at 0.5972.",
+   "basis": [
+    {
+     "entity": "Black adults",
+     "x": "Black adults",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "highest relative_value"
+    },
+    {
+     "entity": "Hispanic adults",
+     "x": "Hispanic adults",
+     "field": "relative_value",
+     "value": 0.2522,
+     "note": "next highest for context"
+    }
+   ],
+   "accept": [
+    "Black adults rank first on the relative measure (0.5972).",
+    "Black adults have the largest relative_value (0.5972).",
+    "No other group reaches Black adults' relative_value (0.5972)."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Black adults mark is visibly the highest among the four groups."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The groups order by relative_value on the unfair-stop measure as Black adults > Hispanic adults > Asian adults > White adults.",
+   "basis": [
+    {
+     "entity": "Black adults",
+     "x": "Black adults",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "rank 1"
+    },
+    {
+     "entity": "Hispanic adults",
+     "x": "Hispanic adults",
+     "field": "relative_value",
+     "value": 0.2522,
+     "note": "rank 2"
+    },
+    {
+     "entity": "Asian adults*",
+     "x": "Asian adults*",
+     "field": "relative_value",
+     "value": 0.2124,
+     "note": "rank 3"
+    },
+    {
+     "entity": "White adults",
+     "x": "White adults",
+     "field": "relative_value",
+     "value": 0.1194,
+     "note": "rank 4"
+    }
+   ],
+   "accept": [
+    "From highest to lowest: Black, Hispanic, Asian, White.",
+    "Black adults rank first, then Hispanic adults, then Asian adults, then White adults.",
+    "The relative order is Black > Hispanic > Asian > White."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The four groups appear in descending order from highest to lowest relative_value."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Black adults' relative_value on the unfair-stop measure is more than double both Hispanic adults' and Asian adults' relative_value.",
+   "basis": [
+    {
+     "entity": "Black adults",
+     "x": "Black adults",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "compared with Hispanic and Asian"
+    },
+    {
+     "entity": "Hispanic adults",
+     "x": "Hispanic adults",
+     "field": "relative_value",
+     "value": 0.2522,
+     "note": "comparison group"
+    },
+    {
+     "entity": "Asian adults*",
+     "x": "Asian adults*",
+     "field": "relative_value",
+     "value": 0.2124,
+     "note": "comparison group"
+    }
+   ],
+   "accept": [
+    "Black adults have more than twice the relative_value of Hispanic adults.",
+    "Black adults' relative_value is about 2.4x Hispanic adults' and 2.8x Asian adults'.",
+    "Black adults are more than double the Hispanic and Asian groups on this relative measure."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Black adults mark is visibly at least twice as high as the Hispanic and Asian marks."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Black adults' relative_value on the unfair-stop measure is about five times White adults' relative_value.",
+   "basis": [
+    {
+     "entity": "Black adults",
+     "x": "Black adults",
+     "field": "relative_value",
+     "value": 0.5972,
+     "note": "compared with White"
+    },
+    {
+     "entity": "White adults",
+     "x": "White adults",
+     "field": "relative_value",
+     "value": 0.1194,
+     "note": "comparison group"
+    }
+   ],
+   "accept": [
+    "Black adults' relative_value is roughly five times White adults'.",
+    "Black adults are about 5x White adults on this relative measure.",
+    "White adults' relative_value is about one-fifth of Black adults'."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Black adults mark is visibly about five times as high as the White adults mark."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "Hispanic adults and Asian adults have similar relative_values (0.2522 vs 0.2124), with Hispanic slightly higher.",
+  "White adults have the lowest relative_value (0.1194).",
+  "The gap between Black adults and Hispanic adults is 0.345 on the relative scale (0.5972 - 0.2522)."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,232 @@
+{
+ "clip_id": "bar_154",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the increasing trend of very unfavorable attitudes between Democrats and Republicans towards each other from 1994 to 2016.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the overall 1994-to-2016 increase for both series required, or is only one party's trend required?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the clip convey step-by-step monotonic increase, or is a single start-to-end upward trend sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is it required to identify 2016 as the peak for both series, or only to show an increase?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Both series have a higher relative_value in 2016 than in 1994, showing an overall upward trend.",
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1492,
+     "note": "start point for overall change"
+    },
+    {
+     "entity": "Series A",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5129,
+     "note": "end point for overall change"
+    },
+    {
+     "entity": "Series B",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1585,
+     "note": "start point for overall change"
+    },
+    {
+     "entity": "Series B",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5408,
+     "note": "end point for overall change"
+    }
+   ],
+   "accept": [
+    "Both series rise from 1994 to 2016.",
+    "The 2016 relative_value is higher than the 1994 relative_value for both series.",
+    "Each series shows an upward trajectory over the full period."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both series must show an increase from the first time point to the last."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Within each series, relative_value increases at every successive measured year: 1994 < 2008 < 2014 < 2016.",
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1492,
+     "note": "first measured year in Series A"
+    },
+    {
+     "entity": "Series A",
+     "x": "2008",
+     "field": "relative_value",
+     "value": 0.345,
+     "note": "second measured year in Series A"
+    },
+    {
+     "entity": "Series A",
+     "x": "2014",
+     "field": "relative_value",
+     "value": 0.401,
+     "note": "third measured year in Series A"
+    },
+    {
+     "entity": "Series A",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5129,
+     "note": "fourth measured year in Series A"
+    },
+    {
+     "entity": "Series B",
+     "x": "1994",
+     "field": "relative_value",
+     "value": 0.1585,
+     "note": "first measured year in Series B"
+    },
+    {
+     "entity": "Series B",
+     "x": "2008",
+     "field": "relative_value",
+     "value": 0.2985,
+     "note": "second measured year in Series B"
+    },
+    {
+     "entity": "Series B",
+     "x": "2014",
+     "field": "relative_value",
+     "value": 0.429,
+     "note": "third measured year in Series B"
+    },
+    {
+     "entity": "Series B",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5408,
+     "note": "fourth measured year in Series B"
+    }
+   ],
+   "accept": [
+    "Values rise at each measured step for both series.",
+    "1994 < 2008 < 2014 < 2016 for both series.",
+    "No measured year is lower than the previous measured year in either series."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Each series must show monotonic upward progression across the four displayed time points."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "For both series, the maximum relative_value in the displayed period occurs at 2016: 0.5129 for Series A and 0.5408 for Series B.",
+   "basis": [
+    {
+     "entity": "Series A",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5129,
+     "note": "maximum in Series A; earlier values are 0.1492, 0.3450, 0.4010"
+    },
+    {
+     "entity": "Series B",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.5408,
+     "note": "maximum in Series B; earlier values are 0.1585, 0.2985, 0.4290"
+    }
+   ],
+   "accept": [
+    "The 2016 value is the highest for each series.",
+    "Both series peak in 2016.",
+    "The displayed period ends at the series highs: 0.5129 and 0.5408."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The final year 2016 must be visibly the highest point in both series."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Ordering flip: Series A is higher than Series B at 2008 (0.3450 vs 0.2985), while Series B is higher at 1994 (0.1585 vs 0.1492), 2014 (0.4290 vs 0.4010), and 2016 (0.5408 vs 0.5129).",
+  "Largest annualized relative_value increase for both series occurs in the shortest final interval 2014–2016 (Series A: (0.5129 - 0.4010) / 2 = 0.05595 per year; Series B: (0.5408 - 0.4290) / 2 = 0.0559 per year)."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

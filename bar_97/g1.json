@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_97",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the sectarian power dynamic in Iraq where a Sunni minority suppressed the Shia majority.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly state Shia's 63 as the largest value, or is 'Shia majority/largest' enough without the number?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is Sunni's specific value of 20 required, or is the minority relation to Shia sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "SHIA has the largest value among the listed groups: 63, compared with SUNNI at 20 and KURDS (SUNNI) at 17.",
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value is 63."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value is 20."
+    },
+    {
+     "entity": "KURDS (SUNNI)",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 17.0,
+     "note": "Kurds (Sunni) value is 17."
+    }
+   ],
+   "accept": [
+    "Shia is the largest group at 63.",
+    "Shia has 63, more than Sunni's 20 and Kurds' 17.",
+    "Shia is the biggest listed group with a value of 63."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Shia bar/segment must be visibly the largest and carry the value 63 or an equivalent label."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "SUNNI is a minority at 20, lower than Shia at 63.",
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value is 20."
+    },
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value is 63."
+    }
+   ],
+   "accept": [
+    "Sunni is a minority at 20, below Shia's 63.",
+    "Sunni has 20, which is smaller than Shia's 63.",
+    "The Sunni bar is shorter than the Shia bar."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Sunni bar/segment must be visibly shorter than the Shia bar/segment and be labeled 20 or clearly identified as Sunni minority."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "Ordering the bars by size as Shia > Sunni > Kurds (Sunni).",
+  "Annotating the non-Shia listed total as 20 + 17 = 37, still below Shia's 63.",
+  "Using relative_value 0.9871 only for scaling or layout, not as a semantic data value."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 3,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

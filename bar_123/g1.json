@@ -1,0 +1,170 @@
+{
+ "clip_id": "bar_123",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the historical trend of U.S. military spending since World War II.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video state or label the full-period net increase from 85 to 580, or is an unlabeled rising line enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the 2009 maximum of 720 be explicitly marked, or may the peak be inferred visually?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the post-2009 decline to 580 required, or can the video end on the peak/overall rise?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "Over the full period, U.S. military spending rose substantially: from 85 billion in 1950 to 580 billion in 2013, an increase of 495 billion or about 582%.",
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "1950",
+     "field": "value",
+     "value": 85.0,
+     "note": "Start value in billion 2014 USD."
+    },
+    {
+     "entity": "military spending",
+     "x": "2013",
+     "field": "value",
+     "value": 580.0,
+     "note": "End value in billion 2014 USD."
+    }
+   ],
+   "accept": [
+    "From 1950 to 2013, spending rose from 85 to 580 billion 2014 USD, +495 billion.",
+    "Over the full period, military spending increased by about 582%, or about 6.8× its 1950 level.",
+    "The 2013 endpoint is 580 billion, 495 billion above the 1950 value of 85 billion."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 1950 and 2013 endpoints must be identifiable, labeled, or annotated on the same series."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The series reaches its maximum at 720 billion 2014 USD in 2009.",
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "2009",
+     "field": "value",
+     "value": 720.0,
+     "note": "Highest value in the 1950–2013 table."
+    }
+   ],
+   "accept": [
+    "The highest value in the series is 720 billion in 2009.",
+    "Spending peaks at 720 billion 2014 USD in 2009.",
+    "The maximum occurs in 2009 at 720 billion."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 2009 data point must be marked or annotated as the maximum."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "After the 2009 peak, spending fell by 140 billion to 580 billion in 2013, a decline of about 19% from the peak.",
+   "basis": [
+    {
+     "entity": "military spending",
+     "x": "2009",
+     "field": "value",
+     "value": 720.0,
+     "note": "Peak value in billion 2014 USD."
+    },
+    {
+     "entity": "military spending",
+     "x": "2013",
+     "field": "value",
+     "value": 580.0,
+     "note": "End value in billion 2014 USD."
+    }
+   ],
+   "accept": [
+    "After peaking at 720 in 2009, spending fell to 580 by 2013, down 140 billion.",
+    "From 2009 to 2013, military spending declined by about 19%, or to about 81% of its peak.",
+    "The 2013 endpoint is 140 billion below the 2009 peak."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 2009 peak and 2013 endpoint must both be visible and linked by a descending segment or annotation."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Threshold crossings: spending first exceeds 500 billion in 1984 (530) and first exceeds 700 billion in 2009 (720).",
+  "Post-Cold War decline: from 530 in 1984 to 350 in 1995, a fall of 180 billion, or about 34%.",
+  "The series is not monotonic; it has multiple declines, e.g., 1952–1954, 1984–1995, and 2009–2013."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 64,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

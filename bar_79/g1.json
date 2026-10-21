@@ -1,0 +1,79 @@
+{
+ "clip_id": "bar_79",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the massive scale of the Vision Fund relative to other major venture capital firms.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the absolute gap of 0.700 above the largest other fund required, or is the ratio in U3 sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Vision Fund is the extreme/largest in the comparison, exceeding the largest other shown VC fund by 0.700 normalized units.",
+   "basis": [
+    {
+     "entity": "Vision Fund",
+     "x": "690.0",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "maximum"
+    },
+    {
+     "entity": "VC Fund 1",
+     "x": "389.0",
+     "field": "relative_value",
+     "value": 0.3,
+     "note": "largest non-Vision fund"
+    }
+   ],
+   "accept": [
+    "Vision Fund is highest at 1.000, 0.700 above the largest other VC fund.",
+    "Vision Fund leads VC Fund 1 by 0.700 on the relative scale.",
+    "The largest comparison VC fund is 0.300, so Vision Fund is 0.700 higher."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Vision Fund bar must be visibly tallest, and the chart should support the gap of 0.700 to VC Fund 1 via annotation, difference marker, or readable scale."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Naming the five bars as Vision Fund plus four other major VC funds.",
+  "Showing that Vision Fund is about 3.57x VC Fund 2, 3.85x VC Fund 3, and 4.17x VC Fund 4, using 1.000/0.280, 1.000/0.260, and 1.000/0.240.",
+  "A subtitle that says the relative values are normalized and not dollar amounts."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 5,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

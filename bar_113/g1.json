@@ -1,0 +1,163 @@
+{
+ "clip_id": "bar_113",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that a majority of U.S. adults expressed at least some confidence in police officers to act in the public's best interests in late 2020.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the combined 74% at-least-some figure obligatory even though it is derived rather than printed?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the exact 26% great-deal value be shown?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the exact 48% fair-amount value be shown even though the narration does not name it?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Combining the two reported confidence levels, 74% of U.S. adults expressed at least some confidence in police to act in the public's best interests.",
+   "basis": [
+    {
+     "entity": "A great deal",
+     "x": "a-great-deal",
+     "field": "value",
+     "value": 26.0,
+     "note": "Great-deal share"
+    },
+    {
+     "entity": "A fair amount",
+     "x": "a-fair-amount",
+     "field": "value",
+     "value": 48.0,
+     "note": "Fair-amount share"
+    }
+   ],
+   "accept": [
+    "74% had at least some confidence",
+    "about three-quarters said a great deal or a fair amount",
+    "26% great deal plus 48% fair amount equals 74% at least some confidence"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show both the 26% and 48% components or a combined 74% 'at least some' segment."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "26% of U.S. adults said they had a great deal of confidence in police to act in the public's best interests.",
+   "basis": [
+    {
+     "entity": "A great deal",
+     "x": "a-great-deal",
+     "field": "value",
+     "value": 26.0,
+     "note": "Printed great-deal percentage"
+    }
+   ],
+   "accept": [
+    "26% said a great deal",
+    "about one-quarter reported a great deal of confidence",
+    "26 percent had a great deal"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 'A great deal' bar/segment must be labeled or readable as 26%."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "48% of U.S. adults said they had a fair amount of confidence in police to act in the public's best interests.",
+   "basis": [
+    {
+     "entity": "A fair amount",
+     "x": "a-fair-amount",
+     "field": "value",
+     "value": 48.0,
+     "note": "Printed fair-amount percentage"
+    }
+   ],
+   "accept": [
+    "48% said a fair amount",
+    "about half reported a fair amount of confidence",
+    "48 percent had a fair amount"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 'A fair amount' bar/segment must be labeled or readable as 48%."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "A fair amount was the most common of the two shown confidence levels (48%).",
+  "The great-deal share (26%) is about one-quarter of adults.",
+  "The fair-amount share (48%) is roughly half of adults."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

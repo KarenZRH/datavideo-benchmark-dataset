@@ -1,0 +1,149 @@
+{
+ "clip_id": "bar_45",
+ "version": "g1_r_u_v1",
+ "intent": "To explain that billionaires pay lower income tax rates than less wealthy individuals because their wealth is not derived from typical income.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the 400 RICHEST endpoint value 10.000 obligatory for the clip's core claim?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video identify RICHEST 10% as the highest comparator at 19.000?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the direct 400 RICHEST < RICHEST 10% comparison required, or are the two values enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The 400 RICHEST group (the billionaires/top 400 referenced by the narration) has a plotted income-tax-rate value of 10.000.",
+   "basis": [
+    {
+     "entity": "400 RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "Rightmost endpoint bar; value column is 10.000."
+    }
+   ],
+   "accept": [
+    "The top 400 richest are at 10.0 on the tax-rate scale.",
+    "Billionaires' plotted income-tax rate value is 10.000.",
+    "The far-right 400 RICHEST bar tops out at about 10."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The rightmost 400 RICHEST bar must be visible and labeled/readable at 10.000 (or about 10)."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The RICHEST 10% group has the highest plotted value among all listed groups: 19.000.",
+   "basis": [
+    {
+     "entity": "RICHEST 10%",
+     "x": "1074.1",
+     "field": "value",
+     "value": 19.0,
+     "note": "Highest value in the table; comparator for the billionaire-rate contrast."
+    }
+   ],
+   "accept": [
+    "RICHEST 10% peaks at 19.0.",
+    "The top 10% bar is the tallest at 19.000.",
+    "Richest 10% is 19.0, the maximum in the series."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The RICHEST 10% bar must be visible as the tallest bar, at 19.000."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The 400 RICHEST value (10.000) is lower than the RICHEST 10% value (19.000); the gap is 9.000 and the ratio is about 0.526.",
+   "basis": [
+    {
+     "entity": "400 RICHEST",
+     "x": "1171.4",
+     "field": "value",
+     "value": 10.0,
+     "note": "Lower bar in the key contrast."
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1074.1",
+     "field": "value",
+     "value": 19.0,
+     "note": "Higher comparator bar."
+    }
+   ],
+   "accept": [
+    "Billionaires are taxed at a lower rate than the richest 10%: 10 vs 19.",
+    "The 400 richest bar is about 9 points below the richest 10% bar.",
+    "Top 400 rate is roughly half the richest 10% rate (10/19)."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both the 400 RICHEST (10.000) and RICHEST 10% (19.000) bars must be visible together, with 400 RICHEST clearly lower."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Showing all 11 bars in order as context, including POOREST 10% at 1.000 and the intermediate groups.",
+  "Noting that the 400 RICHEST value 10.000 is higher than POOREST 10% 1.000, so the lower-rate claim is not universal across all less-wealthy groups.",
+  "Using relative_value (400 RICHEST 0.3333 vs RICHEST 10% 0.6333) as a normalized visual height if the chart's y-scale requires it."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 11,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

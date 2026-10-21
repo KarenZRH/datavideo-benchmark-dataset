@@ -1,0 +1,220 @@
+{
+ "clip_id": "bar_44",
+ "version": "g1_r_u_v1",
+ "intent": "To explain the concept of progressive taxation where tax rates increase as income levels rise.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video show the full monotonic sequence, or only the endpoint comparison?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the video quantify the gap/ratio between richest and poorest, or only say rich people pay more?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the top-end value 21.000 or 0.7000 required, or is it enough that the richest bar is tallest?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Across the displayed income groups, the value does not decrease from poorest 10% to richest 10%, rising from 1.000 up to 21.000.",
+   "basis": [
+    {
+     "entity": "POOREST 10%",
+     "x": "203.5",
+     "field": "value",
+     "value": 1.0,
+     "note": "first bottom value"
+    },
+    {
+     "entity": "POOREST 10%",
+     "x": "310.4",
+     "field": "value",
+     "value": 1.0,
+     "note": "duplicate/same-labeled bottom row; still 1.000"
+    },
+    {
+     "entity": "Group 3",
+     "x": "417.4",
+     "field": "value",
+     "value": 2.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 4",
+     "x": "524.5",
+     "field": "value",
+     "value": 3.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 5",
+     "x": "631.4",
+     "field": "value",
+     "value": 4.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 6",
+     "x": "738.4",
+     "field": "value",
+     "value": 6.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 7",
+     "x": "845.4",
+     "field": "value",
+     "value": 7.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 8",
+     "x": "952.4",
+     "field": "value",
+     "value": 9.0,
+     "note": "next value"
+    },
+    {
+     "entity": "Group 9",
+     "x": "1059.5",
+     "field": "value",
+     "value": 12.0,
+     "note": "next value"
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "top value"
+    }
+   ],
+   "accept": [
+    "The bars rise from the poorest group to the richest group.",
+    "Higher income groups have higher values, reaching 21 for the richest 10%.",
+    "There is no downward step in the sequence from 1 up to 21."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "All displayed income-group bars must be visible in income order with non-decreasing heights."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The richest 10% has a value of 21.000 versus 1.000 for the poorest 10%; this is 20.000 higher and 21 times larger.",
+   "basis": [
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "top endpoint"
+    },
+    {
+     "entity": "POOREST 10%",
+     "x": "203.5",
+     "field": "value",
+     "value": 1.0,
+     "note": "bottom endpoint"
+    }
+   ],
+   "accept": [
+    "The richest 10% pay 21 while the poorest 10% pay 1.",
+    "The richest 10% are 20 points higher than the poorest 10%.",
+    "The richest 10% value is 21 times the poorest 10% value."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both endpoint bars must be visible with their values or labels."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The richest 10% is the top endpoint, with the highest displayed value 21.000 and relative_value 0.7000.",
+   "basis": [
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "value",
+     "value": 21.0,
+     "note": "maximum value"
+    },
+    {
+     "entity": "RICHEST 10%",
+     "x": "1166.5",
+     "field": "relative_value",
+     "value": 0.7,
+     "note": "maximum relative_value"
+    }
+   ],
+   "accept": [
+    "The richest 10% have the highest value: 21.000.",
+    "The top group reaches a relative_value of 0.7000.",
+    "The richest bar is tallest at 21."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The richest 10% bar must be visibly the tallest and labeled 21.000 or 0.7000."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "The poorest 10% is the lowest endpoint at value 1.000 and relative_value 0.0333.",
+  "The full displayed value series can be shown: 1,1,2,3,4,6,7,9,12,21.",
+  "The full displayed relative_value series can be shown: 0.0333,0.0333,0.0667,0.1000,0.1333,0.2000,0.2333,0.3000,0.4000,0.7000.",
+  "The richest 10% relative_value 0.7000 is the maximum relative_value shown."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 10,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

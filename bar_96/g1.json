@@ -1,0 +1,150 @@
+{
+ "clip_id": "bar_96",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the power imbalance and sectarian conflict arising from the Shia majority taking control and oppressing the Sunni minority.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the exact Shia value 63 be shown, or is a qualitative 'majority' label enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the exact Sunni value 20 be shown, or is a qualitative 'minority' label enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the Shia > Sunni ranking required independently of the exact numbers?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The Shia value is 63 in the chart.",
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia row value from table."
+    }
+   ],
+   "accept": [
+    "Shia is 63.",
+    "The Shia bar reaches 63.",
+    "Shia value: 63."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A bar labeled SHIA must be visible and its value/annotation must show 63."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The Sunni value is 20 in the chart.",
+   "basis": [
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni row value from table."
+    }
+   ],
+   "accept": [
+    "Sunni is 20.",
+    "The Sunni bar reaches 20.",
+    "Sunni value: 20."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A bar labeled SUNNI must be visible and its value/annotation must show 20."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Shia is larger/higher than Sunni in the chart.",
+   "basis": [
+    {
+     "entity": "SHIA",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 63.0,
+     "note": "Shia value."
+    },
+    {
+     "entity": "SUNNI",
+     "x": "x_px=640.0",
+     "field": "value",
+     "value": 20.0,
+     "note": "Sunni value."
+    }
+   ],
+   "accept": [
+    "Shia outranks Sunni.",
+    "Shia is the larger of the two values.",
+    "Shia is higher than Sunni."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The SHIA bar must be visibly taller than the SUNNI bar."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Ratio: Shia is about 3.15 times Sunni (63 / 20 = 3.15).",
+  "Shia can be labeled a majority of the two-group total because 63/83 is about 76%.",
+  "Sunni can be labeled a minority of the two-group total because 20/83 is about 24%.",
+  "The table colors #C0392B for Shia and #2E8B57 for Sunni may be used as identity cues if consistent."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

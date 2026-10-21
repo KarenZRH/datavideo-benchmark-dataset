@@ -27,8 +27,8 @@
  "needs_video_escalation": true,
  "narrative_goal": "To demonstrate that the monthly price of the hepatitis C drug Sovaldi is higher in the United States than in other countries.",
  "intent_machine": "To compare the monthly price of the hepatitis C drug Sovaldi across several countries, highlighting that the cost in the United States is substantially higher than in Norway, Canada, France, the United Kingdom, and Germany.",
- "approved_by": null,
- "approved_at": null,
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
  "review_order": [
   "data_table",
   "intent",

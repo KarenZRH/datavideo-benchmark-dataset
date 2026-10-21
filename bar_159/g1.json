@@ -1,0 +1,141 @@
+{
+ "clip_id": "bar_159",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that while U.S. students score above the OECD average on PISA exams, they are outperformed by students in countries like Finland and Japan, which achieve higher scores with significantly fewer teaching hours.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly state or show that the U.S. is above the OECD average?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video show both Finland and Japan as higher than the U.S.?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The U.S. has a slightly higher relative PISA score than the OECD average.",
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.5932,
+     "note": "U.S. relative score"
+    },
+    {
+     "entity": "OECD",
+     "x": "OECD",
+     "field": "relative_value",
+     "value": 0.5851,
+     "note": "OECD average relative score"
+    }
+   ],
+   "accept": [
+    "The U.S. is slightly above the OECD average.",
+    "USA edges out the OECD on the relative PISA score.",
+    "USA (0.5932) is just above OECD (0.5851)."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "USA and OECD are both identifiable and their encoded values are visibly ordered with USA higher than OECD."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The U.S. is outperformed by Finland and Japan in relative PISA score.",
+   "basis": [
+    {
+     "entity": "USA",
+     "x": "USA",
+     "field": "relative_value",
+     "value": 0.5932,
+     "note": "U.S. relative score"
+    },
+    {
+     "entity": "FIN",
+     "x": "FIN",
+     "field": "relative_value",
+     "value": 0.6188,
+     "note": "Finland relative score"
+    },
+    {
+     "entity": "JPN",
+     "x": "JPN",
+     "field": "relative_value",
+     "value": 0.6232,
+     "note": "Japan relative score"
+    }
+   ],
+   "accept": [
+    "Finland and Japan score higher than the U.S.",
+    "The U.S. is below Finland and Japan.",
+    "Finland (0.6188) and Japan (0.6232) outperform USA (0.5932)."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Finland, Japan, and USA are all identifiable and both Finland and Japan have encoded values above USA."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "USA also trails UK and New Zealand in the listed relative scores.",
+  "Singapore has the highest relative value among the listed entities and the OECD has the lowest."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

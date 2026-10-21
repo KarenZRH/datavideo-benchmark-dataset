@@ -1,0 +1,176 @@
+{
+ "clip_id": "bar_36",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the relationship between educational attainment and Black migration rates from the South, highlighting the significance of 'some college' education in this trend since the 1960s.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly identify Some college as the top category?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the full rank order be conveyed, or is only the top category's position required?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Should the video explicitly contrast Some college with College graduate as the top two categories?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Some college is the highest educational-attainment category by value/relative_value.",
+   "basis": [
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "value",
+     "value": 27,
+     "note": "maximum value among the four categories"
+    },
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "relative_value",
+     "value": 0.6525,
+     "note": "maximum relative_value among the four categories"
+    }
+   ],
+   "accept": [
+    "Some college has the largest value, 27.",
+    "Some college is the top category, with relative_value 0.6525.",
+    "The tallest/largest bar is Some college."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Some college mark must be visually identifiable as the largest/tallest/longest among the four categories."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The four categories order from highest to lowest as Some college, College graduate, High school graduate, Less than high school.",
+   "basis": [
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "value",
+     "value": 27,
+     "note": "rank 1"
+    },
+    {
+     "entity": "College graduate",
+     "x": "College graduate",
+     "field": "value",
+     "value": 20,
+     "note": "rank 2"
+    },
+    {
+     "entity": "High school graduate",
+     "x": "High school graduate",
+     "field": "value",
+     "value": 9,
+     "note": "rank 3"
+    },
+    {
+     "entity": "Less than high school",
+     "x": "Less than high school",
+     "field": "value",
+     "value": 3,
+     "note": "rank 4"
+    }
+   ],
+   "accept": [
+    "The categories rank as Some college > College graduate > High school graduate > Less than high school.",
+    "College graduate is second, High school graduate third, and Less than high school fourth.",
+    "The bars are ordered from Some college down to Less than high school."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative heights/lengths of all four categories must make the full rank order visible."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Some college's value (27) is greater than College graduate's value (20), so the 'some college' category is the top category above 'college graduate'.",
+   "basis": [
+    {
+     "entity": "Some college",
+     "x": "Some college",
+     "field": "value",
+     "value": 27,
+     "note": "higher value"
+    },
+    {
+     "entity": "College graduate",
+     "x": "College graduate",
+     "field": "value",
+     "value": 20,
+     "note": "lower value"
+    }
+   ],
+   "accept": [
+    "Some college is higher than College graduate.",
+    "Some college exceeds College graduate by 7.",
+    "Some college is about 1.35 times College graduate."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Some college bar must be visibly taller/longer than the College graduate bar."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Showing exact relative_value labels 0.6525, 0.4834, 0.2175, 0.0725 for the four categories.",
+  "Showing the exact difference of 7 between Some college and College graduate when the bars visibly show that gap."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

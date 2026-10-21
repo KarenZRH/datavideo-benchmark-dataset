@@ -1,0 +1,92 @@
+{
+ "clip_id": "bar_83",
+ "version": "g1_r_u_v1",
+ "intent": "To explain the financial motivation behind the alcohol industry's opposition to marijuana by contrasting the current market revenues of alcohol and marijuana.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should exact endpoint values be shown, or are approximate bar heights enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The endpoint values on the table's scale are Beer = 1.000 and Cannabis = 0.049; using the relative_value field gives Beer = 1.0000 and Cannabis = 0.0485.",
+   "basis": [
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "value",
+     "value": 1.0,
+     "note": "Beer endpoint on table scale"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "value",
+     "value": 0.049,
+     "note": "Cannabis endpoint on table scale"
+    },
+    {
+     "entity": "Beer",
+     "x": "Beer",
+     "field": "relative_value",
+     "value": 1.0,
+     "note": "Beer relative value"
+    },
+    {
+     "entity": "Cannabis",
+     "x": "Cannabis",
+     "field": "relative_value",
+     "value": 0.0485,
+     "note": "Cannabis relative value"
+    }
+   ],
+   "accept": [
+    "Beer = 1.000; Cannabis = 0.049",
+    "Cannabis = 0.0485 relative to Beer = 1.0000",
+    "Beer baseline is 1.000; cannabis is about 0.049"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The endpoint values or clear value labels for both Beer and Cannabis must be visible."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Using the relative_value fields as the primary comparison: Beer = 1.0000, Cannabis = 0.0485.",
+  "Annotating that Beer is more than 20 times Cannabis revenue without stating an exact multiple."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

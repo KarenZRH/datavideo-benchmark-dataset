@@ -1,0 +1,80 @@
+{
+ "clip_id": "bar_72",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that books are often filled with unnecessary filler material like stories and repetition, leaving only a small portion as actual content.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the clip explicitly quantify actual content as 28% or 28 of 100, or is a qualitative small portion sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Actual content is only a small share of the book: 28 out of 100, or 28%.",
+   "basis": [
+    {
+     "entity": "Actual content",
+     "x": "share",
+     "field": "value",
+     "value": 28.0,
+     "note": "numerator for actual-content share"
+    },
+    {
+     "entity": "Filler",
+     "x": "share",
+     "field": "value",
+     "value": 72.0,
+     "note": "used with actual-content value to derive total 100"
+    }
+   ],
+   "accept": [
+    "Actual content makes up 28% of the book",
+    "Only 28 out of 100 parts are actual content",
+    "The actual-content share is about 28 percent",
+    "Actual content: 28 of the total 100"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A labeled actual-content segment or bar with value 28 must be visible against a total that is visibly 100, or the 28 and 72 categories must jointly establish the denominator."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Describing actual content as less than one-third because 28 < 33.3",
+  "Describing filler as more than two-thirds because 72 > 66.7",
+  "Using a stacked bar or whole-book visual to imply the 100 total"
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

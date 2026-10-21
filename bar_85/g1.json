@@ -1,0 +1,149 @@
+{
+ "clip_id": "bar_85",
+ "version": "g1_r_u_v1",
+ "intent": "To explain the relationship between the length of a day and a year on Mercury.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly state Mercury's orbital period as 88 days?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the video explicitly state Mercury's rotation period as 59 days?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video state that Mercury's year is longer than its rotation period?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Mercury's orbital period, i.e. its year, is 88 days.",
+   "basis": [
+    {
+     "entity": "Orbital period",
+     "x": "",
+     "field": "value",
+     "value": 88,
+     "note": "Table value for Orbital period, in days"
+    }
+   ],
+   "accept": [
+    "Mercury's orbital period is 88 days",
+    "A Mercury year lasts 88 days",
+    "The orbital period of Mercury is 88 days"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The value 88 days must be shown for Orbital period."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Mercury's rotation period, i.e. its day, is 59 days.",
+   "basis": [
+    {
+     "entity": "Rotation period",
+     "x": "",
+     "field": "value",
+     "value": 59,
+     "note": "Table value for Rotation period, in days"
+    }
+   ],
+   "accept": [
+    "Mercury's rotation period is 59 days",
+    "A Mercury day, as rotation period, lasts 59 days",
+    "The rotation period of Mercury is 59 days"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The value 59 days must be shown for Rotation period."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Mercury's orbital period is longer than its rotation period: 88 days versus 59 days.",
+   "basis": [
+    {
+     "entity": "Orbital period",
+     "x": "",
+     "field": "value",
+     "value": 88,
+     "note": "Table value for Orbital period, in days"
+    },
+    {
+     "entity": "Rotation period",
+     "x": "",
+     "field": "value",
+     "value": 59,
+     "note": "Table value for Rotation period, in days"
+    }
+   ],
+   "accept": [
+    "Mercury's year is longer than its day",
+    "The orbital period exceeds the rotation period",
+    "88 days is greater than 59 days"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both labeled quantities, 88 days and 59 days, must be visible so the ordering can be compared."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Both periods are expressed in days.",
+  "The orbital period is the larger of the two table values.",
+  "The rotation period is the smaller of the two table values."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

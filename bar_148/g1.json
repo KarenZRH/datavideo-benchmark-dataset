@@ -1,0 +1,228 @@
+{
+ "clip_id": "bar_148",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that high-income earners rely primarily on investment income taxed at lower rates, whereas the majority of the population relies on labor income taxed at higher rates, highlighting a disparity in tax treatment based on income source.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is it required to convey the bottom-fifth composition as a concrete split, or is the general majority-labor pattern for the lower groups enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Should the top-fifth intermediate composition be explicitly required, or is the top 1% extreme sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the top 1% composition required as the central high-income contrast, or could the top fifth suffice?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Is the overall downward trend across income groups required, or are the endpoint compositions enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "For the bottom fifth, labor income makes up the large majority of the income-source composition: about 0.82 of the total, while the other source is about 0.18.",
+   "basis": [
+    {
+     "entity": "Bottom fifth",
+     "x": "300.0",
+     "field": "relative_value",
+     "value": 0.82,
+     "note": "Labor income series; other source is 1 - 0.82 = 0.18, matching the paired non-labor row."
+    }
+   ],
+   "accept": [
+    "Bottom fifth relies mostly on labor income, roughly 4/5 vs 1/5.",
+    "For the bottom fifth, labor income is about 0.82 and the other source about 0.18.",
+    "The bottom fifth's labor share is around 0.82, with the remainder around 0.18."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The bottom-fifth composition must show a dominant labor segment near 0.82 and a small other segment near 0.18."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "For the top fifth, labor income is still the larger share but falls to about 0.62, while the other source rises to about 0.38.",
+   "basis": [
+    {
+     "entity": "Top fifth",
+     "x": "940.0",
+     "field": "relative_value",
+     "value": 0.62,
+     "note": "Labor income series; other source is 1 - 0.62 = 0.38, matching the paired non-labor row."
+    }
+   ],
+   "accept": [
+    "Top fifth: labor income about 0.62, other source about 0.38.",
+    "In the top fifth, labor share drops to roughly 3/5 while the other source is about 2/5.",
+    "Top fifth labor income is around 0.62, still a majority but lower than lower quintiles."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The top-fifth composition must show a labor segment near 0.62 and an other segment near 0.38."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "For the Top 1%, the other (investment/capital) source becomes the majority: about 0.65, while labor income is about 0.35.",
+   "basis": [
+    {
+     "entity": "Top 1%",
+     "x": "1100.0",
+     "field": "relative_value",
+     "value": 0.35,
+     "note": "Labor income series; other source is 1 - 0.35 = 0.65, matching the paired non-labor row."
+    }
+   ],
+   "accept": [
+    "Top 1% relies primarily on the other source, about 0.65, with labor around 0.35.",
+    "The top 1% is the only group where the non-labor source exceeds labor, roughly 2/3 vs 1/3.",
+    "For the top 1%, investment-type income is about 0.65 and labor about 0.35."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The top 1% composition must show the non-labor segment at about 0.65, exceeding the labor segment at about 0.35."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Labor-income share generally decreases as income group rises, dropping sharply after the fourth fifth: from about 0.81–0.85 in the lower four fifths to about 0.62 for the top fifth and about 0.35 for the top 1%.",
+   "basis": [
+    {
+     "entity": "Bottom fifth",
+     "x": "300.0",
+     "field": "relative_value",
+     "value": 0.82,
+     "note": "Labor income series."
+    },
+    {
+     "entity": "Second fifth",
+     "x": "460.0",
+     "field": "relative_value",
+     "value": 0.85,
+     "note": "Labor income series."
+    },
+    {
+     "entity": "Third fifth",
+     "x": "620.0",
+     "field": "relative_value",
+     "value": 0.82,
+     "note": "Labor income series."
+    },
+    {
+     "entity": "Fourth fifth",
+     "x": "780.0",
+     "field": "relative_value",
+     "value": 0.81,
+     "note": "Labor income series."
+    },
+    {
+     "entity": "Top fifth",
+     "x": "940.0",
+     "field": "relative_value",
+     "value": 0.62,
+     "note": "Labor income series."
+    },
+    {
+     "entity": "Top 1%",
+     "x": "1100.0",
+     "field": "relative_value",
+     "value": 0.35,
+     "note": "Labor income series."
+    }
+   ],
+   "accept": [
+    "Labor share is roughly flat and high for the bottom four fifths, then falls sharply for the top fifth and top 1%.",
+    "As income rises, labor income share declines, especially in the top fifth and top 1%.",
+    "The labor share drops from around 0.8 in the lower groups to 0.35 in the top 1%."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The visual must show the labor share remaining high for the first four groups and declining steeply for the top fifth and top 1%."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "Second fifth has the highest labor-income relative_value (0.85) among all income groups.",
+  "The bottom four fifths all show labor-income relative_value above 0.8 (0.81–0.85).",
+  "Top 1% is the only group where labor-income relative_value is below 0.5 (0.35).",
+  "At each income group, the two series' relative_values sum to 1.0.",
+  "The non-labor share rises from 0.18 at the bottom fifth to 0.65 at the top 1%."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 12,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

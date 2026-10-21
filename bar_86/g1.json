@@ -1,0 +1,166 @@
+{
+ "clip_id": "bar_86",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate public opinion poll results regarding the preferred direction of house prices in Britain.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly state the 7% Rise figure, or is a clearly shortest Rise bar sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video identify Fall as the most chosen answer at 42%, even though the provided narration only cites Rise?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video show all four categories in rank order, or can it omit the middle categories?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The Rise option is the least chosen answer, with only 7% saying rising prices would be good for Britain.",
+   "basis": [
+    {
+     "entity": "Rise",
+     "x": "rise",
+     "field": "value",
+     "value": 7.0,
+     "note": "Table value for Rise; the minimum among the four options."
+    }
+   ],
+   "accept": [
+    "Only 7% say rising house prices would be good for Britain",
+    "Just 7% choose the Rise option",
+    "Rise is the smallest group at 7%",
+    "7% favour prices continuing to rise"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Rise bar must be visible with its 7% value label and must read as the shortest/lowest option."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Fall is the most common answer, at 42%.",
+   "basis": [
+    {
+     "entity": "Fall",
+     "x": "fall",
+     "field": "value",
+     "value": 42.0,
+     "note": "Table value for Fall; the maximum among the four options."
+    }
+   ],
+   "accept": [
+    "Fall leads the poll at 42%",
+    "42% prefer falling house prices",
+    "The largest group, 42%, says prices should fall",
+    "Fall is the top answer with 42%"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Fall bar must be visible, labelled 42%, and must read as the tallest/highest option."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The full rank order from most to least chosen is Fall (42%), Stay (29%), Unsure (22%), Rise (7%).",
+   "basis": [
+    {
+     "entity": "Fall",
+     "x": "fall",
+     "field": "value",
+     "value": 42.0,
+     "note": "Largest value."
+    },
+    {
+     "entity": "Stay",
+     "x": "stay",
+     "field": "value",
+     "value": 29.0,
+     "note": "Second-largest value."
+    },
+    {
+     "entity": "Unsure",
+     "x": "unsure",
+     "field": "value",
+     "value": 22.0,
+     "note": "Third-largest value."
+    },
+    {
+     "entity": "Rise",
+     "x": "rise",
+     "field": "value",
+     "value": 7.0,
+     "note": "Smallest value."
+    }
+   ],
+   "accept": [
+    "Order from most to least: Fall, Stay, Unsure, Rise",
+    "Fall > Stay > Unsure > Rise",
+    "The ranking is Fall (42%), Stay (29%), Unsure (22%), Rise (7%)",
+    "Fall first, then Stay, then Unsure, then Rise"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "All four category bars/labels must be visible in a way that lets the viewer infer the descending order Fall, Stay, Unsure, Rise."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "A separate Stay callout at 29% as the second-most common answer.",
+  "A separate Unsure callout at 22% as the third-most common answer.",
+  "A combined Fall+Stay majority of 71% (42 + 29 = 71)."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

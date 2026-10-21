@@ -1,0 +1,93 @@
+{
+ "clip_id": "bar_107",
+ "version": "g1_r_u_v1",
+ "intent": "To contextualize the massive financial impact of increased tax cheating by comparing lost tax revenue to the Department of Education's annual budget.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video convey the direction of the comparison, or is the multiplier enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Taxes lost with 4 has a larger relative_value than Dept. of Education.",
+   "basis": [
+    {
+     "entity": "DEPT. OF EDUCATION",
+     "x": "dept-of-education",
+     "field": "relative_value",
+     "value": 0.1597,
+     "note": "relative-only row"
+    },
+    {
+     "entity": "TAXES LOST WITH 4",
+     "x": "taxes-lost-with-4",
+     "field": "relative_value",
+     "value": 0.5029,
+     "note": "relative-only row"
+    }
+   ],
+   "accept": [
+    "Taxes lost with 4 is larger than Dept. of Education.",
+    "Dept. of Education is the smaller of the two.",
+    "The taxes-lost relative magnitude exceeds the Education relative magnitude."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The video must show or state that the taxes-lost quantity is larger than the Education quantity."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Exact arithmetic difference: 0.5029 - 0.1597 = 0.3432.",
+  "Exact inverse ratio: 0.1597 / 0.5029 ≈ 0.318.",
+  "Both relative values are below 1.0 on the relative scale."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "clip_id": "bar_80",
+ "version": "g1_r_u_v1",
+ "intent": "To establish the millennial demographic as a mature generation of adults transitioning from education to the workforce and career paths.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the clip explicitly bound millennials as 20-24 through 40-44, or is one boundary sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "identity_or_series",
+   "must_be_visualized": true,
+   "claim": "The millennial cohort spans from the youngest age band 20-24 to the oldest age band 40-44.",
+   "basis": [
+    {
+     "entity": "20-24",
+     "x": "Male",
+     "field": "value",
+     "value": 0.866,
+     "note": "youngest millennial band, male"
+    },
+    {
+     "entity": "20-24",
+     "x": "Female",
+     "field": "value",
+     "value": 0.897,
+     "note": "youngest millennial band, female"
+    },
+    {
+     "entity": "40-44",
+     "x": "Male",
+     "field": "value",
+     "value": 0.763,
+     "note": "oldest millennial band, male"
+    },
+    {
+     "entity": "40-44",
+     "x": "Female",
+     "field": "value",
+     "value": 0.794,
+     "note": "oldest millennial band, female"
+    }
+   ],
+   "accept": [
+    "Millennials range from the 20-24 age band through the 40-44 age band.",
+    "The youngest millennials are in the 20-24 group and the oldest are in the 40-44 group.",
+    "The millennial span shown covers 20-24 to 40-44."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Age labels for 20-24 and 40-44 must be visible and visually connected to the millennial range."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 40,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

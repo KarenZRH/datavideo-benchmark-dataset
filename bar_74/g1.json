@@ -1,0 +1,93 @@
+{
+ "clip_id": "bar_74",
+ "version": "g1_r_u_v1",
+ "intent": "To explain how major fast-food chains generate high revenue through a massive number of global locations.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly establish the full ranking, or is it enough to show that Subway is largest?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The ranking by global location count is Subway (43,000) > McDonald's (37,000) > Starbucks (30,000) > KFC (20,000).",
+   "basis": [
+    {
+     "entity": "KFC",
+     "x": "global locations",
+     "field": "value",
+     "value": 20000.0,
+     "note": "lowest among the four"
+    },
+    {
+     "entity": "Starbucks",
+     "x": "global locations",
+     "field": "value",
+     "value": 30000.0,
+     "note": "third among the four"
+    },
+    {
+     "entity": "McDonald's",
+     "x": "global locations",
+     "field": "value",
+     "value": 37000.0,
+     "note": "second among the four"
+    },
+    {
+     "entity": "Subway",
+     "x": "global locations",
+     "field": "value",
+     "value": 43000.0,
+     "note": "highest among the four"
+    }
+   ],
+   "accept": [
+    "Subway is first with 43,000, then McDonald's with 37,000, Starbucks with 30,000, and KFC with 20,000",
+    "From most to fewest locations: Subway, McDonald's, Starbucks, KFC",
+    "Subway has the most locations and KFC the fewest among these four chains"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the full descending order clear, e.g., sorted bars or labels/annotations showing Subway > McDonald's > Starbucks > KFC."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "A combined four-chain total of 130,000 locations (20,000 + 30,000 + 37,000 + 43,000), if the video chooses to aggregate.",
+  "Bar lengths proportional to the table values or relative_value, provided the scale is not mislabeled as revenue or global market share.",
+  "A note that Subway's 43,000 is the largest and KFC's 20,000 is the smallest among these four chains."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

@@ -1,0 +1,89 @@
+{
+ "clip_id": "bar_141",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the partisan divide in perceptions of the U.S. economic system's fairness, demonstrating that Republicans are more likely than Democrats to view it as generally fair.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly show the comparison between the 'Is generally' bars for entity 29 and entity 12 as the core partisan divide?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "In the 'Is generally' series, the relative_value for entity 29 is higher than for entity 12, showing one group is more likely than the other to view the system as generally fair.",
+   "basis": [
+    {
+     "entity": "29",
+     "x": "Is generally",
+     "field": "relative_value",
+     "value": 0.1042,
+     "note": "relative_value for entity 29 in the 'Is generally' series"
+    },
+    {
+     "entity": "12",
+     "x": "Is generally",
+     "field": "relative_value",
+     "value": 0.0431,
+     "note": "relative_value for entity 12 in the 'Is generally' series"
+    }
+   ],
+   "accept": [
+    "Entity 29 has a higher relative_value than entity 12 in the 'Is generally' series (0.1042 vs 0.0431).",
+    "The 'Is generally' bar for 29 is taller than the bar for 12.",
+    "29 outranks 12 in the 'Is generally' series."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both bars for entity 29 and entity 12 in the 'Is generally' series must be visible and directly comparable; the bar for 29 must be taller than the bar for 12."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 6,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

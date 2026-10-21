@@ -1,0 +1,191 @@
+{
+ "clip_id": "bar_105",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate that individuals who do not attend college are concentrated in lower income brackets, supporting the argument that post-secondary training is economically necessary and student debt cancellation is irrelevant for this group.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the clip show the full downward trend, or is a single high-low endpoint contrast sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the low-end group comparison required, or is the overall non-college downward trend enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Is the top-end gap required to reinforce that non-college individuals are not concentrated in high brackets?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The DIDN'T ATTEND COLLEGE series is highest in the lowest income bracket and decreases monotonically across the income brackets, reaching its lowest value in the highest income bracket.",
+   "basis": [
+    {
+     "entity": "Less than $23,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "highest non-college relative_value; lowest income bracket"
+    },
+    {
+     "entity": "More than $176,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "lowest non-college relative_value; highest income bracket"
+    }
+   ],
+   "accept": [
+    "Non-college attendance peaks in the lowest income bracket and falls as income rises.",
+    "The DIDN'T ATTEND COLLEGE segment is most concentrated at the bottom of the income distribution and least at the top.",
+    "The non-college series slopes downward from the lowest bracket to the highest bracket."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The values for DIDN'T ATTEND COLLEGE must be shown descending from the lowest-income category to the highest-income category."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "In the lowest two income brackets, the DIDN'T ATTEND COLLEGE relative value is larger than the ATTENDED COLLEGE relative value.",
+   "basis": [
+    {
+     "entity": "Less than $23,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.75,
+     "note": "non-college value in lowest bracket"
+    },
+    {
+     "entity": "Less than $23,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.25,
+     "note": "college-attended value in lowest bracket"
+    },
+    {
+     "entity": "$23,000 to $42,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.65,
+     "note": "non-college value in second-lowest bracket"
+    },
+    {
+     "entity": "$23,000 to $42,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.35,
+     "note": "college-attended value in second-lowest bracket"
+    }
+   ],
+   "accept": [
+    "The non-college group is the larger group in the bottom two income brackets.",
+    "At the low end, DIDN'T ATTEND COLLEGE exceeds ATTENDED COLLEGE.",
+    "The non-college value is about three times the college-attended value in the lowest bracket."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "In the lowest two income categories, the DIDN'T ATTEND COLLEGE value must appear greater than the ATTENDED COLLEGE value."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "In the highest income bracket, the ATTENDED COLLEGE relative value is much larger than the DIDN'T ATTEND COLLEGE relative value; the gap is 0.55 minus 0.05.",
+   "basis": [
+    {
+     "entity": "More than $176,000",
+     "x": "ATTENDED COLLEGE",
+     "field": "relative_value",
+     "value": 0.55,
+     "note": "college-attended value in highest bracket"
+    },
+    {
+     "entity": "More than $176,000",
+     "x": "DIDN'T ATTEND COLLEGE",
+     "field": "relative_value",
+     "value": 0.05,
+     "note": "non-college value in highest bracket"
+    }
+   ],
+   "accept": [
+    "At the top income bracket, the college-attended group is far larger than the non-college group.",
+    "The non-college segment is smallest at the top, far below the college-attended segment.",
+    "The widest top-end gap between the two groups is in the highest income bracket."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "In the highest income category, the ATTENDED COLLEGE value must appear much greater than the DIDN'T ATTEND COLLEGE value."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "The middle-bracket equality at 0.50 can be omitted if the clip focuses only on the low-end concentration and top-end gap.",
+  "The plateau of ATTENDED COLLEGE in the top two brackets is optional detail.",
+  "The exact ordering of the ATTENDED COLLEGE values between the upper-middle and top brackets can be simplified if the main contrast is preserved."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 12,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

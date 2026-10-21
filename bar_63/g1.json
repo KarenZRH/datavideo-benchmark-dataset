@@ -1,0 +1,152 @@
+{
+ "clip_id": "bar_63",
+ "version": "g1_r_u_v1",
+ "intent": "To compare the estimated sales volumes and legal status of medical versus recreational marijuana markets.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video convey Medical's exact endpoint value of 55.0?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video convey the Dispensary/recreational endpoint value of 18.4?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video quantify the gap as 36.6, not just show two bars?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Medical estimated sales volume is 55.0 in the chart's unit.",
+   "basis": [
+    {
+     "entity": "Medical",
+     "x": "x_px=440.0",
+     "field": "value",
+     "value": 55.0,
+     "note": "Medical row value in table"
+    }
+   ],
+   "accept": [
+    "Medical sales: 55.0",
+    "Medical estimated volume is 55",
+    "About 55 (medical)",
+    "Medical is 55.0 units"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A labeled Medical bar/value at 55.0 must be visible or explicitly read out."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Dispensary/recreational estimated sales volume is 18.4 in the chart's unit.",
+   "basis": [
+    {
+     "entity": "Dispensary",
+     "x": "x_px=740.0",
+     "field": "value",
+     "value": 18.4,
+     "note": "Dispensary row value in table"
+    }
+   ],
+   "accept": [
+    "Dispensary/recreational sales: 18.4",
+    "Recreational estimated volume is 18.4",
+    "About 18.4 (dispensary/recreational)",
+    "Dispensary is 18.4"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A labeled Dispensary/recreational bar/value at 18.4 must be visible or explicitly read out."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "Medical volume is higher than Dispensary/recreational volume by 36.6 units.",
+   "basis": [
+    {
+     "entity": "Medical",
+     "x": "x_px=440.0",
+     "field": "value",
+     "value": 55.0,
+     "note": "Medical row value used in difference"
+    },
+    {
+     "entity": "Dispensary",
+     "x": "x_px=740.0",
+     "field": "value",
+     "value": 18.4,
+     "note": "Dispensary row value used in difference"
+    }
+   ],
+   "accept": [
+    "Medical exceeds recreational/dispensary by 36.6",
+    "There are 36.6 more medical than dispensary/recreational units",
+    "Medical is larger by about 36.6",
+    "Difference: 36.6"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Both endpoint values must be visible, or an explicit difference callout must show 36.6."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Combined Medical + Dispensary/recreational estimated sales volume totals 73.4 (55.0 + 18.4).",
+  "If the table's relative_value column is visualized, Medical = 0.4965 and Dispensary = 0.1661, but the denominator is undefined in the table.",
+  "Order/ranking: Medical > Dispensary/recreational."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

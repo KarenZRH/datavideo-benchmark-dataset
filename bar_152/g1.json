@@ -1,0 +1,128 @@
+{
+ "clip_id": "bar_152",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate the increasing trend of reported rape cases in India from 2008 to 2016.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video show an overall upward trend across the full 2008–2016 period, even if it does not annotate every year?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the 2016 endpoint value, and/or its status as the highest year, be explicitly conveyed?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Reported rape cases in India trend upward over 2008–2016, from 19,923.404 in 2008 to 37,923.404 in 2016.",
+   "basis": [
+    {
+     "entity": "2008",
+     "x": "2008",
+     "field": "value",
+     "value": 19923.404,
+     "note": "start year"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 37923.404,
+     "note": "end year"
+    }
+   ],
+   "accept": [
+    "Reported rape cases generally increased from 2008 to 2016.",
+    "The series rises overall from about 19,900 in 2008 to about 37,900 in 2016.",
+    "There is an upward trend across the period, despite year-to-year variation."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A line/bar series for 2008–2016 must visibly ascend overall; the start and end years should be identifiable."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The 2016 endpoint is the maximum shown: 37,923.404 reported cases, higher than all earlier years.",
+   "basis": [
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 37923.404,
+     "note": "final and highest year in the series"
+    }
+   ],
+   "accept": [
+    "In 2016, reported rape cases reached about 37,900.",
+    "The final year, 2016, ends at 37,923.404 cases.",
+    "2016 is the highest year shown, at roughly 37,900 reported cases."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 2016 bar/point must be labeled or clearly end the series at its highest level."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "2008 and 2009 are equal at 19,923.404 reported cases.",
+  "The total increase from 2008 to 2016 is 18,000 cases, about +90.3%.",
+  "2015 is lower than 2014 but still higher than 2013."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 9,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

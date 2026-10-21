@@ -1,0 +1,198 @@
+{
+ "clip_id": "bar_59",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the widespread geographic distribution of black population loss across major United States cities, reinforcing the narration's claim that this migration trend affects northern, southern, and western regions.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly group or label cities by region to support the north/south/west claim?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video show cities beyond the top two to support the claim that the trend is widespread?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The listed cities span northern, southern, and western regions, so the loss is not confined to one region.",
+   "basis": [
+    {
+     "entity": "Detroit",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Northern/other region example."
+    },
+    {
+     "entity": "Chicago",
+     "x": "718.5",
+     "field": "value",
+     "value": 0.921,
+     "note": "Northern/other region example."
+    },
+    {
+     "entity": "New Orleans",
+     "x": "596.5",
+     "field": "value",
+     "value": 0.616,
+     "note": "Southern region example."
+    },
+    {
+     "entity": "Los Angeles",
+     "x": "462.8",
+     "field": "value",
+     "value": 0.282,
+     "note": "Western region example."
+    },
+    {
+     "entity": "Oakland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Western region example."
+    },
+    {
+     "entity": "Atlanta",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Southern region example."
+    }
+   ],
+   "accept": [
+    "Loss appears in northern, southern, and western cities.",
+    "The bars include northern cities like Detroit and Chicago, southern cities like New Orleans and Atlanta, and western cities like Los Angeles and Oakland.",
+    "The geographic spread is not limited to one region."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "City labels include at least one northern/other city, one southern city, and one western city; optional region grouping or color makes the regional spread explicit."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Beyond Detroit and Chicago, seven additional cities are shown with positive loss values, from New Orleans (0.616) down to Oakland/Cleveland/Atlanta (0.154).",
+   "basis": [
+    {
+     "entity": "New Orleans",
+     "x": "596.5",
+     "field": "value",
+     "value": 0.616,
+     "note": "Third-highest city."
+    },
+    {
+     "entity": "New York",
+     "x": "554.6",
+     "field": "value",
+     "value": 0.511,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Los Angeles",
+     "x": "462.8",
+     "field": "value",
+     "value": 0.282,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Washington, DC",
+     "x": "422.1",
+     "field": "value",
+     "value": 0.18,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Oakland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Cleveland",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Atlanta",
+     "x": "411.6",
+     "field": "value",
+     "value": 0.154,
+     "note": "Additional city beyond top two."
+    },
+    {
+     "entity": "Detroit",
+     "x": "750.0",
+     "field": "value",
+     "value": 1.0,
+     "note": "Top city excluded from the seven-additional count."
+    },
+    {
+     "entity": "Chicago",
+     "x": "718.5",
+     "field": "value",
+     "value": 0.921,
+     "note": "Second city excluded from the seven-additional count."
+    }
+   ],
+   "accept": [
+    "Seven other cities also show loss beyond Detroit and Chicago.",
+    "The loss is not just in two or three cities: New Orleans, New York, Los Angeles, Washington DC, Oakland, Cleveland, and Atlanta are also listed.",
+    "Additional city values range from 0.616 down to 0.154."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "At least seven city bars beyond Detroit and Chicago are visible, with values or labels for New Orleans through the 0.154 tie."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "New York is fourth at 0.511, ahead of Los Angeles at 0.282.",
+  "Los Angeles is the highest western city by value at 0.282.",
+  "Oakland, Cleveland, and Atlanta tie at 0.154 on value and 0.0963 on relative_value."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 9,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

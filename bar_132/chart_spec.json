@@ -17,5 +17,6 @@
  ],
  "confidence": "medium",
  "needs_review": true,
- "time_behavior": "snapshot"
+ "time_behavior": "snapshot",
+ "batch_status": "agent_processed_pending_human_review"
 }

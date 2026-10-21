@@ -1,0 +1,236 @@
+{
+ "clip_id": "bar_57",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that the total tax burden is significantly higher for the richest individuals than for the poorest when combining income, corporate/property, and estate taxes.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly state the Poorest total (1.0%), or is it enough to show it implicitly for comparison?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the explicit Richest combined total (21.3%) mandatory, or can the video show only component values?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video quantify the Richest–Poorest gap as 20.3 pp or ~21×, or is a qualitative 'way more' enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Is the three-part composition of the Richest total mandatory, or is the combined total alone sufficient?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The Poorest group's total listed tax burden is 1.0% (from the table's only Poorest row, corporate and property taxes).",
+   "basis": [
+    {
+     "entity": "Poorest-Corporate and property taxes",
+     "x": "Poorest",
+     "field": "value",
+     "value": 1.0,
+     "note": "only Poorest row in table; total is this value"
+    }
+   ],
+   "accept": [
+    "Poorest total tax burden is 1.0%",
+    "Poorest face about 1% in combined taxes",
+    "Poorest's listed tax burden is 1.0%"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A Poorest total value/label of 1.0% must be visibly represented or recoverable from the visual encoding."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The Richest group's combined total tax burden is 21.3%, summing income taxes (10.0%), corporate/property taxes (10.5%), and estate taxes (0.8%).",
+   "basis": [
+    {
+     "entity": "Richest-Income taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.0,
+     "note": "income tax component"
+    },
+    {
+     "entity": "Richest-Corporate and property taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.5,
+     "note": "corporate/property tax component"
+    },
+    {
+     "entity": "Richest-Estate taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 0.8,
+     "note": "estate tax component"
+    }
+   ],
+   "accept": [
+    "Richest total tax burden is 21.3%",
+    "Combining all three taxes, Richest pay 21.3%",
+    "Richest total = 10.0 + 10.5 + 0.8 = 21.3%"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A Richest combined total of 21.3% must be visibly represented or labeled, with all three components contributing."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The Richest group's total tax burden (21.3%) exceeds the Poorest group's total (1.0%) by 20.3 percentage points, or about 21.3 times.",
+   "basis": [
+    {
+     "entity": "Richest-Income taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.0,
+     "note": "used in Richest total"
+    },
+    {
+     "entity": "Richest-Corporate and property taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 10.5,
+     "note": "used in Richest total"
+    },
+    {
+     "entity": "Richest-Estate taxes",
+     "x": "Richest",
+     "field": "value",
+     "value": 0.8,
+     "note": "used in Richest total"
+    },
+    {
+     "entity": "Poorest-Corporate and property taxes",
+     "x": "Poorest",
+     "field": "value",
+     "value": 1.0,
+     "note": "Poorest total"
+    }
+   ],
+   "accept": [
+    "Richest pay 20.3 percentage points more than Poorest",
+    "Richest total is about 21 times Poorest total",
+    "The gap is 21.3% vs 1.0%, i.e. 20.3 pp"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A direct Richest-vs-Poorest comparison must be visible, whether as side-by-side totals, a difference label, or a ratio."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "For Richest, the total tax burden is composed of income taxes (10.0%, 46.95% of Richest total), corporate/property taxes (10.5%, 49.3%), and estate taxes (0.8%, 3.76%).",
+   "basis": [
+    {
+     "entity": "Richest-Income taxes",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.4695,
+     "note": "share of Richest total"
+    },
+    {
+     "entity": "Richest-Corporate and property taxes",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.493,
+     "note": "share of Richest total"
+    },
+    {
+     "entity": "Richest-Estate taxes",
+     "x": "Richest",
+     "field": "relative_value",
+     "value": 0.0376,
+     "note": "share of Richest total"
+    }
+   ],
+   "accept": [
+    "Richest total consists of income 10.0%, corporate/property 10.5%, estate 0.8%",
+    "Richest composition is about 47% income, 49% corporate/property, 4% estate",
+    "Richest combined taxes include income, corporate/property, and estate components"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The Richest total must be decomposable into income, corporate/property, and estate components, with their relative sizes visible or labeled."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 23,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

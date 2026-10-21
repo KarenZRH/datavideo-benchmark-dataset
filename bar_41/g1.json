@@ -1,0 +1,205 @@
+{
+ "clip_id": "bar_41",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that traffic congestion on the Katy Freeway has worsened over time, with travel times increasing for both morning and afternoon commutes.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the morning-commute increase from 47 to 61 minutes required, or is a general both-series increase enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the afternoon-commute increase from 42 to 64 minutes required, or is a general both-series increase enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video show year-by-year monotonic increase, or only the 2011-to-2014 endpoints?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "Morning commute travel time increases from 47 minutes in 2011 to 61 minutes in 2014.",
+   "basis": [
+    {
+     "entity": "AM",
+     "x": "2011",
+     "field": "value",
+     "value": 47,
+     "note": "Morning 2011 travel time in minutes"
+    },
+    {
+     "entity": "AM",
+     "x": "2014",
+     "field": "value",
+     "value": 61,
+     "note": "Morning 2014 travel time in minutes"
+    }
+   ],
+   "accept": [
+    "The morning commute rises from 47 minutes in 2011 to 61 minutes in 2014.",
+    "AM travel time increases by 14 minutes over the period.",
+    "The morning commute is 14 minutes longer by 2014 than in 2011."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 2011 and 2014 AM values, or their difference, must be readable from the chart."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "Afternoon commute travel time increases from 42 minutes in 2011 to 64 minutes in 2014.",
+   "basis": [
+    {
+     "entity": "PM",
+     "x": "2011",
+     "field": "value",
+     "value": 42,
+     "note": "Afternoon 2011 travel time in minutes"
+    },
+    {
+     "entity": "PM",
+     "x": "2014",
+     "field": "value",
+     "value": 64,
+     "note": "Afternoon 2014 travel time in minutes"
+    }
+   ],
+   "accept": [
+    "The afternoon commute rises from 42 minutes in 2011 to 64 minutes in 2014.",
+    "PM travel time increases by 22 minutes over the period.",
+    "The afternoon commute is 22 minutes longer by 2014 than in 2011."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 2011 and 2014 PM values, or their difference, must be readable from the chart."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Both morning and afternoon travel times rise in each year from 2011 to 2014 without any yearly decline.",
+   "basis": [
+    {
+     "entity": "AM",
+     "x": "2011",
+     "field": "value",
+     "value": 47,
+     "note": "AM 2011"
+    },
+    {
+     "entity": "AM",
+     "x": "2012",
+     "field": "value",
+     "value": 54,
+     "note": "AM 2012"
+    },
+    {
+     "entity": "AM",
+     "x": "2013",
+     "field": "value",
+     "value": 58,
+     "note": "AM 2013"
+    },
+    {
+     "entity": "AM",
+     "x": "2014",
+     "field": "value",
+     "value": 61,
+     "note": "AM 2014"
+    },
+    {
+     "entity": "PM",
+     "x": "2011",
+     "field": "value",
+     "value": 42,
+     "note": "PM 2011"
+    },
+    {
+     "entity": "PM",
+     "x": "2012",
+     "field": "value",
+     "value": 52,
+     "note": "PM 2012"
+    },
+    {
+     "entity": "PM",
+     "x": "2013",
+     "field": "value",
+     "value": 61,
+     "note": "PM 2013"
+    },
+    {
+     "entity": "PM",
+     "x": "2014",
+     "field": "value",
+     "value": 64,
+     "note": "PM 2014"
+    }
+   ],
+   "accept": [
+    "Both AM and PM travel times are higher in each successive year from 2011 to 2014.",
+    "Neither series declines in any year; both increase monotonically.",
+    "AM rises 47 to 54 to 58 to 61, and PM rises 42 to 52 to 61 to 64."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The year-by-year ordering for both AM and PM must be visible so that every step from 2011 to 2014 is upward."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "PM 2014 is the maximum travel time in the table at 64 minutes.",
+  "The PM–AM gap in 2014 is 3 minutes (64 - 61).",
+  "The combined AM + PM travel time rises from 89 minutes in 2011 to 125 minutes in 2014."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

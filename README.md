@@ -1,11 +1,16 @@
 # DataVideo OK 5-file Dataset
 
-`ok_5files_all/` 是 340 条真实 data-video clip 的标注包。目录名里的 "5files" 是历史名称；
-现在每条 clip 的文件数随审核进度不同。
+仓库根目录按 clip 存放真实 data-video 标注包。"5files" 是历史名称；现在每条 clip
+的文件数随审核进度不同。
 
 ## 1. 每条 clip 的文件
 
-已按新协议审核过的 clip（目前是 `bar_1`–`bar_6`）：
+当前进度：
+
+- `bar_1`–`bar_34`：人工逐条审核完成。
+- `bar_35`–`bar_163`：已批量迁移为当前 R/U + G0/G2 完整性格式，等待人工复核。
+- bar 家族共 153 条，其中 63 条带 hardcase 标记。
+- 完整索引见根目录 `BAR_REVIEW_INDEX.csv`。
 
 | 文件 | 作用 |
 |---|---|
@@ -18,8 +23,8 @@
 | `semantic.svg` | 视觉参考 |
 | `keyframe.png` | 参考关键帧 |
 
-尚未按新协议审核的 clip 仍保留旧的 `g1_draft_b2.json` 和 `g2_evidence.json`；
-迁移在逐条进行。
+bar 家族已统一迁移到 `g1.json`；旧 `g1_draft_b2.json` 和 `g2_evidence.json` 已从
+bar clip 目录清除，原始草稿备份在本地 `benchmark_draft/legacy_bar_g1_20261022/`。
 
 ## 2. 审核顺序：表 → intent → G1
 
@@ -54,10 +59,13 @@
    不等式（`relation=">"`, `value=33.3`, `unit=percent`），G1 里把编造的绝对人数或精确值
    列入 reject。**只要图上有刻度线或坐标轴，就按轴尺度从几何推出具体值并写进表**（provenance
    里标 `estimated/geometry`）；数据表是唯一事实来源。
+9. **bar 完整性属于 G0/G2，不是额外 G1 U。** 由 `role=bar` 定义必须出现的数据标记；
+   普通/分组/堆叠柱缺任意一根柱或段都导致视觉完整性失败。`time_behavior=frame` 时必须
+   逐状态检查完整时间线，不能只看末帧。
 
 ## 3. intent
 
-输入是四样：**叙事目标（现有 intent_en）+ narration + ata_tablde + semantic.svg**。
+输入是四样：**叙事目标（现有 intent_en）+ narration + data_table + semantic.svg**。
 不用关键帧。
 
 写法：
@@ -93,6 +101,8 @@
 - **一个纯数值变化 = 一个 U**（bar_1、bar_2、bar_4）。
 - 多个子答案都必须出现时，可以合并成一个 U（bar_2 的四个地区、bar_6 的三种非汽车方式）。
 - 权重按 U 均分。
+- hardcase：必需命题由 intent/table 支持、但原参考图没有明确视觉标记时，保留 G1，
+  默认设置 `must_be_visualized=false`，并在 `HARDCASES.md` 记录。
 
 ## 5. 怎么判断 U 是否达成
 

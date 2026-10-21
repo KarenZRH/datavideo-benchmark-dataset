@@ -1,0 +1,134 @@
+{
+ "clip_id": "bar_118",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate the widespread public support for various proposed reforms to policing practices in the United States.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video state that police training has the highest Strongly support?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video show the mid-tier Strongly ranking among these proposals?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "Require police to be trained has the highest Strongly relative support value.",
+   "basis": [
+    {
+     "entity": "Require police to be trained",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.3883,
+     "note": "largest Strongly value"
+    }
+   ],
+   "accept": [
+    "Police training leads Strongly support at relative 0.3883.",
+    "Highest Strongly value is for police training, 0.3883.",
+    "Training reform tops the Strongly series at 0.3883."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative value for 'Require police to be trained' must appear as the largest Strongly value."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Make it a crime for police to Strongly value exceeds investigate and live-in.",
+   "basis": [
+    {
+     "entity": "Make it a crime for police to",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.268,
+     "note": "highest of three"
+    },
+    {
+     "entity": "power to investigate and",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.2352,
+     "note": "middle of three"
+    },
+    {
+     "entity": "Require officers to live in",
+     "x": "Strongly",
+     "field": "relative_value",
+     "value": 0.1914,
+     "note": "lowest of three"
+    }
+   ],
+   "accept": [
+    "Crime proposal Strongly value 0.2680 exceeds investigate 0.2352 and live-in 0.1914.",
+    "Strongly support is higher for crime proposal than investigate or live-in.",
+    "Crime proposal outranks investigate and live-in in Strongly series."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The three named Strongly values must be visibly ordered 0.2680 > 0.2352 > 0.1914."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "Mentioning that both Strongly and Somewhat categories exist for each proposal.",
+  "Showing the relative order of all five Strongly support values."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 10,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

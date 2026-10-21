@@ -24,5 +24,11 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "status": "agent_draft_pending_human_review",
+ "review_flags": [
+  "legacy_intent_needs_semantic_reaudit"
+ ],
+ "approved_by": null,
+ "approved_at": null
 }

@@ -1,0 +1,247 @@
+{
+ "clip_id": "bar_109",
+ "version": "g1_r_u_v1",
+ "intent": "To question the policy priority of vaccine boosters in high-income countries given the severe inequality in initial vaccine distribution across global income groups.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video explicitly state that booster rollout is concentrated in High-income countries, or can this be omitted?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video show that fully vaccinated relative values are unequal across income groups, or is this optional context?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video state that Low-income countries have the highest Not vaccinated relative value, or is this optional?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Must the video directly compare high-income boosters with low-income initial vaccination, or is this optional?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Booster rollout is concentrated in High-income countries: its booster relative value (0.1608) is the highest among the listed income-group booster values, about 2.3x Upper-middle income (0.0689), about 14x Low-income countries (0.0115), and about 28x Lower-middle income (0.0057).",
+   "basis": [
+    {
+     "entity": "High-income countries",
+     "x": "Boosters",
+     "field": "relative_value",
+     "value": 0.1608,
+     "note": "series Boosters"
+    },
+    {
+     "entity": "Upper-middle income",
+     "x": "Boosters",
+     "field": "relative_value",
+     "value": 0.0689,
+     "note": "series Boosters"
+    },
+    {
+     "entity": "Low-income countries",
+     "x": "Boosters",
+     "field": "relative_value",
+     "value": 0.0115,
+     "note": "series Boosters"
+    },
+    {
+     "entity": "Lower-middle income",
+     "x": "Boosters",
+     "field": "relative_value",
+     "value": 0.0057,
+     "note": "series Boosters"
+    }
+   ],
+   "accept": [
+    "High-income countries have the largest booster relative value among income groups, far above Low-income and Lower-middle income.",
+    "Booster rollout is skewed toward High-income countries: its booster relative is more than twice Upper-middle income and roughly fourteen times Low-income countries.",
+    "Lower-middle income has the smallest booster relative, while High-income countries has the largest."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the booster relative values for High-income countries, Upper-middle income, Lower-middle income, and Low-income countries visible or labeled so the high-income concentration is apparent."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Initial full vaccination is highly unequal across income groups: Upper-middle income has the highest fully vaccinated relative value (0.3101), Lower-middle income is next (0.2239), and Low-income countries is the lowest (0.0115), about 1/27 of Upper-middle and about 1/19 of Lower-middle.",
+   "basis": [
+    {
+     "entity": "Upper-middle income",
+     "x": "Fully vaccinated",
+     "field": "relative_value",
+     "value": 0.3101,
+     "note": "series Fully vaccinated"
+    },
+    {
+     "entity": "Lower-middle income",
+     "x": "Fully vaccinated",
+     "field": "relative_value",
+     "value": 0.2239,
+     "note": "series Fully vaccinated"
+    },
+    {
+     "entity": "Low-income countries",
+     "x": "Fully vaccinated",
+     "field": "relative_value",
+     "value": 0.0115,
+     "note": "series Fully vaccinated"
+    }
+   ],
+   "accept": [
+    "Fully vaccinated relative values range from Upper-middle income at the top to Low-income countries at the bottom.",
+    "Low-income countries' fully vaccinated relative is a small fraction of Upper-middle and Lower-middle income levels.",
+    "Initial full vaccination is unevenly distributed across income groups, with Upper-middle income highest and Low-income countries lowest."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show the fully vaccinated relative values for Upper-middle income, Lower-middle income, and Low-income countries on a common scale so the low-income minimum and upper-middle maximum are apparent."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Low-income countries' Not vaccinated relative value (0.5340) is the largest among Not vaccinated entries, nearly twice Upper-middle income (0.2871).",
+   "basis": [
+    {
+     "entity": "Low-income countries",
+     "x": "Not vaccinated",
+     "field": "relative_value",
+     "value": 0.534,
+     "note": "series Not vaccinated"
+    },
+    {
+     "entity": "Upper-middle income",
+     "x": "Not vaccinated",
+     "field": "relative_value",
+     "value": 0.2871,
+     "note": "series Not vaccinated"
+    }
+   ],
+   "accept": [
+    "Low-income countries have the highest Not vaccinated relative value, nearly twice the next highest Upper-middle income.",
+    "The Not vaccinated series peaks for Low-income countries at 0.5340, well above Upper-middle income's 0.2871.",
+    "Low-income countries are the most not-vaccinated group among the Not vaccinated entries shown."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show the Not vaccinated relative values for Low-income countries and Upper-middle income so the low-income high value is apparent."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "High-income countries' booster relative value (0.1608) is about 14x Low-income countries' fully vaccinated relative (0.0115) and about 9x their partially vaccinated relative (0.0173), indicating the third-shot rollout in high-income countries exceeds initial-dose rollout in low-income countries.",
+   "basis": [
+    {
+     "entity": "High-income countries",
+     "x": "Boosters",
+     "field": "relative_value",
+     "value": 0.1608,
+     "note": "series Boosters"
+    },
+    {
+     "entity": "Low-income countries",
+     "x": "Fully vaccinated",
+     "field": "relative_value",
+     "value": 0.0115,
+     "note": "series Fully vaccinated"
+    },
+    {
+     "entity": "Low-income countries",
+     "x": "Partially vaccinated",
+     "field": "relative_value",
+     "value": 0.0173,
+     "note": "series Partially vaccinated"
+    }
+   ],
+   "accept": [
+    "High-income booster relative exceeds Low-income fully vaccinated and partially vaccinated relative by roughly 14x and 9x.",
+    "There is more booster rollout in High-income countries than initial-dose rollout in Low-income countries.",
+    "The High-income booster value is an order of magnitude larger than Low-income fully vaccinated."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show High-income countries' booster relative and Low-income countries' fully/partially vaccinated relative in a comparable way, so the high-income booster value visibly exceeds the low-income initial-dose values."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "Upper-middle income has the highest Fully vaccinated relative value (0.3101) among Fully vaccinated entries.",
+  "Lower-middle income has the smallest Booster relative value (0.0057).",
+  "The table's overall highest relative value is Low-income countries' Not vaccinated (0.5340)."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 16,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

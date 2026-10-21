@@ -1,0 +1,112 @@
+{
+ "clip_id": "bar_158",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the timeline and expiration of key US-Russia nuclear treaties, providing context for the reassessment of arms control and the potential for new arms races.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Should the video explicitly show equal relative values, or may it omit them?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "All listed entities share the same relative_value (0.0333), so no entity is ranked or sized above another in this data field.",
+   "basis": [
+    {
+     "entity": "US-Russia Nuclear Treaties",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "ANTI-BALLISTIC MISSILE TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "INTERMEDIATE-RANGE NUCLEAR FORCES TREATY",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "START I",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    },
+    {
+     "entity": "SORT",
+     "x": "n/a",
+     "field": "relative_value",
+     "value": 0.0333,
+     "note": "same relative_value as all other listed entities"
+    }
+   ],
+   "accept": [
+    "Every listed entity has the same relative_value, so none is larger than another.",
+    "The relative_value is identical across all listed entities."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative_value encoding for all listed entities must be equal (same height/length/size if encoded)."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The listed relative_values are not shares of a whole and should not be rendered as percentages (0.0333 each; sum is 0.1665).",
+  "The video may note that the intent's timeline/expiration context is not represented in this table."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 5,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

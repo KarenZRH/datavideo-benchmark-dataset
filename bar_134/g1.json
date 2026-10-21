@@ -1,0 +1,86 @@
+{
+ "clip_id": "bar_134",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate how the presence of peacekeepers significantly reduces the likelihood of war reoccurring during the period 1989-2004.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video state the 24% likelihood, or can it omit the exact value?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "The likelihood of war reoccurring is 24%.",
+   "basis": [
+    {
+     "entity": "Likelihood of war reoccurring",
+     "x": "",
+     "field": "value",
+     "value": 24.0,
+     "note": "Table value is 24 with unit %."
+    }
+   ],
+   "accept": [
+    "24%",
+    "24 percent",
+    "a 24-percent likelihood"
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "A visible numeral 24% (or 24 percent) is shown as the likelihood of war reoccurring."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The video may note that war recurrence is not eliminated; a 24% likelihood remains.",
+  "The video may frame the value as about a quarter, as in the narration.",
+  "The video may include the historical period as context, but it is not a table data value."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 1,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

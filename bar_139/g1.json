@@ -1,0 +1,254 @@
+{
+ "clip_id": "bar_139",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate the substantial income disparity between high-earning and low-earning U.S. households in 2019.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the overall upward ordering from 10th to 90th a required semantic unit, or only the two endpoint disparity?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the exact bottom value 0.0499 be shown, or is only the bottom position required?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the exact top value 0.6250 be shown, or is only the top position required?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  },
+  {
+   "id": "R4",
+   "question": "Should the video use the table-derived ratio 12.5×, the narration's rounded 13×, or both?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The relative income values increase across the ordered income groups from the 10th through the 90th, with higher group labels having larger relative values.",
+   "basis": [
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "relative_value",
+     "value": 0.0499,
+     "note": "low end of the ordered series"
+    },
+    {
+     "entity": "20th",
+     "x": "20th",
+     "field": "relative_value",
+     "value": 0.0683,
+     "note": "second point in the upward series"
+    },
+    {
+     "entity": "30th",
+     "x": "30th",
+     "field": "relative_value",
+     "value": 0.0932,
+     "note": "third point in the upward series"
+    },
+    {
+     "entity": "40th",
+     "x": "40th",
+     "field": "relative_value",
+     "value": 0.1243,
+     "note": "fourth point in the upward series"
+    },
+    {
+     "entity": "50th",
+     "x": "50th",
+     "field": "relative_value",
+     "value": 0.1708,
+     "note": "middle point in the upward series"
+    },
+    {
+     "entity": "60th",
+     "x": "60th",
+     "field": "relative_value",
+     "value": 0.2175,
+     "note": "sixth point in the upward series"
+    },
+    {
+     "entity": "70th",
+     "x": "70th",
+     "field": "relative_value",
+     "value": 0.2642,
+     "note": "seventh point in the upward series"
+    },
+    {
+     "entity": "80th",
+     "x": "80th",
+     "field": "relative_value",
+     "value": 0.3262,
+     "note": "eighth point in the upward series"
+    },
+    {
+     "entity": "90th",
+     "x": "90th",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "high end of the ordered series"
+    }
+   ],
+   "accept": [
+    "The series rises from the 10th group to the 90th group.",
+    "Each step from 10th through 90th increases in relative income.",
+    "Higher income-percentile groups have larger relative values."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must show the groups in order with the 90th visibly higher than the 10th and no reversal in the overall upward trend."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The 10th group is the smallest relative-value endpoint in the series, with relative_value 0.0499.",
+   "basis": [
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "relative_value",
+     "value": 0.0499,
+     "note": "minimum of all rows"
+    }
+   ],
+   "accept": [
+    "The 10th group is the lowest point.",
+    "Relative income is smallest at the 10th group.",
+    "The low end sits at a relative value of 0.0499."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 10th group must be visibly the shortest/lowest point among the displayed groups."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The 90th group is the largest relative-value endpoint in the series, with relative_value 0.6250.",
+   "basis": [
+    {
+     "entity": "90th",
+     "x": "90th",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "maximum of all rows"
+    }
+   ],
+   "accept": [
+    "The 90th group is the highest point.",
+    "Relative income is largest at the 90th group.",
+    "The high end sits at 0.6250 relative units."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 90th group must be visibly the tallest/highest point among the displayed groups."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R4",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The high-end 90th group's relative value is about 12.5 times the low-end 10th group's relative value (0.6250 / 0.0499 = 12.525), showing a disparity greater than twelvefold.",
+   "basis": [
+    {
+     "entity": "90th",
+     "x": "90th",
+     "field": "relative_value",
+     "value": 0.625,
+     "note": "numerator"
+    },
+    {
+     "entity": "10th",
+     "x": "10th",
+     "field": "relative_value",
+     "value": 0.0499,
+     "note": "denominator"
+    }
+   ],
+   "accept": [
+    "The 90th group is about 12.5 times the 10th group.",
+    "The high end is more than 12 times the low end.",
+    "Rounded to the nearest whole number, the ratio is about 13 times."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the 90th and 10th values directly comparable and show the 90th towering over the 10th by more than an order of magnitude."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "The full series spans groups labeled from the 10th through the 90th, establishing the ranking context.",
+  "The 90th group is the only value above 0.5 relative units; the 80th and below are at or below 0.3262.",
+  "The lower groups from 10th through 80th are relatively compressed compared with the 90th."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 9,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "no_explicit_bar_mark_found",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null,
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "no_explicit_bar_mark_in_reference_svg",
+  "unit_ids": [],
+  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+ },
+ "hardcases": [
+  {
+   "unit_id": null,
+   "type": "no_explicit_bar_mark_in_reference_svg",
+   "handling": "Requires human visual inspection before semantic scoring."
+  }
+ ]
+}

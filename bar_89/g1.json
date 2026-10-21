@@ -1,0 +1,134 @@
+{
+ "clip_id": "bar_89",
+ "version": "g1_r_u_v1",
+ "intent": "To illustrate the youthful demographic structure of an African nation (Ethiopia) that underpins the continent's emergence as a major consumer market.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Is the full declining-with-age shape required, or is it enough to show that the youngest cohorts are large?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the video explicitly identify 0-4 as the largest cohort, or is a wide base enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The age structure is bottom-heavy: values are largest in the youngest cohorts and generally decline toward older ages.",
+   "basis": [
+    {
+     "entity": "0-4-right",
+     "x": "0-4",
+     "field": "value",
+     "value": 1.05,
+     "note": "youngest female cohort value"
+    },
+    {
+     "entity": "95-99-right",
+     "x": "95-99",
+     "field": "value",
+     "value": 0.009,
+     "note": "oldest female cohort value"
+    },
+    {
+     "entity": "0-4-left",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.996,
+     "note": "youngest male cohort value"
+    },
+    {
+     "entity": "95-99-left",
+     "x": "95-99",
+     "field": "value",
+     "value": 0.008,
+     "note": "oldest male cohort value"
+    }
+   ],
+   "accept": [
+    "The population pyramid is wide at the bottom and narrow at the top.",
+    "Values are highest for the youngest age groups and fall with age.",
+    "The chart shows a youthful, bottom-heavy age structure."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Bars for the youngest age groups (0-4 and 5-9) are visibly longer than bars for older age groups, creating a bottom-heavy shape."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "claim": "The 0-4 age group is the largest cohort in the table.",
+   "basis": [
+    {
+     "entity": "0-4-right",
+     "x": "0-4",
+     "field": "value",
+     "value": 1.05,
+     "note": "highest value in the table"
+    },
+    {
+     "entity": "0-4-left",
+     "x": "0-4",
+     "field": "value",
+     "value": 0.996,
+     "note": "highest male value"
+    }
+   ],
+   "accept": [
+    "0-4 is the largest age group.",
+    "The youngest cohort has the highest value.",
+    "The 0-4 bar is the longest in the chart."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The 0-4 bars are the longest in the chart, or at least no other age group exceeds them."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "The video may present the data as a population pyramid with male and female series on opposite sides, since the table provides both series.",
+  "The video may use the phrase 'consumer market' as context without claiming the age data alone proves future consumption."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 40,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

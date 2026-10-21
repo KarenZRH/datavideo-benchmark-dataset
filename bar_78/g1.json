@@ -1,0 +1,206 @@
+{
+ "clip_id": "bar_78",
+ "version": "g1_r_u_v1",
+ "intent": "To explain the factors driving WeWork's high valuation in contrast to the traditional profitability of Regus.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the 2016 dip and 2017 recovery be shown, or is overall growth enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Is the 2x/100% overall change required, or only the endpoint values?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Should the video be required to show and quantify the relative_value series, or is it optional context?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "The series is not monotonically increasing: it rises from 2013 to 2015, falls in 2016, and returns to its 2015 peak in 2017.",
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 100.0,
+     "note": "series start"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "value",
+     "value": 130.0,
+     "note": "increase from 2013"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "value",
+     "value": 200.0,
+     "note": "local/global peak"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "value",
+     "value": 190.0,
+     "note": "only year-over-year decline"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 200.0,
+     "note": "recovery to 2015 peak"
+    }
+   ],
+   "accept": [
+    "After rising from 100 in 2013 to 200 in 2015, the value dips to 190 in 2016 before returning to 200 in 2017.",
+    "The series reaches 200 twice, in 2015 and 2017, with a 2016 dip to 190.",
+    "2016 is the only year-over-year decline in the 2013–2017 series."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The chart must make the 2016 decline and 2017 recovery visible, e.g., the 2016 bar lower than 2015 and 2017."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "From 2013 to 2017, the value doubles: 100 to 200, a 100% increase.",
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "value",
+     "value": 100.0,
+     "note": "starting value"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "value",
+     "value": 200.0,
+     "note": "ending value"
+    }
+   ],
+   "accept": [
+    "The value doubles from 100 to 200 between 2013 and 2017.",
+    "It grows 100% over the period.",
+    "2017 is 2x the 2013 value."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "First and last values, 100 and 200, must be visible or directly comparable as a 2x relationship."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "The relative_value metric rises from 0.40 in 2013 to 0.80 in 2015, dips to 0.76 in 2016, and returns to 0.80 in 2017; its 2015 and 2017 highs are double the 2013 level.",
+   "basis": [
+    {
+     "entity": "2013",
+     "x": "2013",
+     "field": "relative_value",
+     "value": 0.4,
+     "note": "relative value in 2013"
+    },
+    {
+     "entity": "2014",
+     "x": "2014",
+     "field": "relative_value",
+     "value": 0.52,
+     "note": "relative value in 2014"
+    },
+    {
+     "entity": "2015",
+     "x": "2015",
+     "field": "relative_value",
+     "value": 0.8,
+     "note": "relative value in 2015"
+    },
+    {
+     "entity": "2016",
+     "x": "2016",
+     "field": "relative_value",
+     "value": 0.76,
+     "note": "relative value in 2016"
+    },
+    {
+     "entity": "2017",
+     "x": "2017",
+     "field": "relative_value",
+     "value": 0.8,
+     "note": "relative value in 2017"
+    }
+   ],
+   "accept": [
+    "Relative value rises from 0.40 in 2013 to 0.80 in 2015, dips to 0.76 in 2016, and returns to 0.80 in 2017.",
+    "The 0.80 relative values in 2015 and 2017 are twice the 2013 value of 0.40.",
+    "Relative value peaks at 0.80 in both 2015 and 2017."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The relative_value metric must be explicitly shown, e.g., secondary bars, labels, or annotations, not merely inferred from the primary value bars."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "2014's value is 130 and its relative_value is 0.52.",
+  "2015 and 2017 tie for the highest primary value at 200.",
+  "2013 is the lowest primary value at 100.",
+  "2016's primary value is 190 and its relative_value is 0.76."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 5,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

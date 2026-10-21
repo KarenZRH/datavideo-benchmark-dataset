@@ -1,0 +1,193 @@
+{
+ "clip_id": "bar_70",
+ "version": "g1_r_u_v1",
+ "intent": "To demonstrate that Ikea's legal structure effectively makes it one of the world's largest charitable foundations.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Must the video state/show Ikea as third in the ranking, or is it enough to show Ikea as merely one of the largest?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "Must the animation show Ikea's own value/endpoint, or can it omit it and only show rank/gap?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ]
+  },
+  {
+   "id": "R3",
+   "question": "Must the video quantify Ikea as roughly 30% smaller than Gates, or is a visual gap enough?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Stichting Ingka (Ikea's foundation) is third largest among the four entities shown: Bill & Melinda Gates 51.6 > Novo Nordisk 49.1 > Stichting Ingka 36.0 > Wellcome Trust 32.9.",
+   "basis": [
+    {
+     "entity": "BILL & MELINDA GATES",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 51.6,
+     "note": "largest value in table"
+    },
+    {
+     "entity": "NOVO NORDISK",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 49.1,
+     "note": "second-largest value in table"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "third-largest value in table"
+    },
+    {
+     "entity": "WELLCOME TRUST",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 32.9,
+     "note": "fourth/smallest value in table"
+    }
+   ],
+   "accept": [
+    "Stichting Ingka ranks third, behind the Gates Foundation and Novo Nordisk and ahead of Wellcome Trust.",
+    "The chart order is Gates 51.6, Novo Nordisk 49.1, Stichting Ingka 36.0, Wellcome Trust 32.9.",
+    "Ikea is the third-largest foundation in this comparison."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Bars or labels must show Stichting Ingka in third position, with two larger values above it and one smaller value below it."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "claim": "Stichting Ingka's charted value is 36.000, with relative_value 0.6000.",
+   "basis": [
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "Ikea/Stichting Ingka absolute value"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "Ikea/Stichting Ingka relative value"
+    }
+   ],
+   "accept": [
+    "Stichting Ingka (Ikea) has a value of 36.0 and relative value 0.6000.",
+    "Ikea's foundation endpoint is 36.0 on the chart.",
+    "The Stichting Ingka bar ends at 36.0, or 0.60 on the relative scale."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "Stichting Ingka's bar/endpoint must be labeled 36.0 or 0.6000 relative."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "Ikea/Stichting Ingka is about 30% smaller than the Bill & Melinda Gates Foundation.",
+   "basis": [
+    {
+     "entity": "BILL & MELINDA GATES",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 51.6,
+     "note": "Gates value used as comparison denominator"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "value",
+     "value": 36.0,
+     "note": "Ikea value compared with Gates"
+    },
+    {
+     "entity": "BILL & MELINDA GATES",
+     "x": "x_value empty",
+     "field": "relative_value",
+     "value": 0.86,
+     "note": "Gates relative value for alternate formula"
+    },
+    {
+     "entity": "STICHTING INGKA",
+     "x": "x_value empty",
+     "field": "relative_value",
+     "value": 0.6,
+     "note": "Ikea relative value for alternate formula"
+    }
+   ],
+   "accept": [
+    "Ikea is about 30% smaller than the Gates Foundation.",
+    "Ikea/Stichting Ingka is about 70% of the Gates Foundation's value (36.0 vs 51.6).",
+    "The Gates-to-Ikea gap is 15.6, equal to about 30.2% of Gates's 51.6.",
+    "Using relative values, 0.6000 is about 30.2% below 0.8600."
+   ],
+   "reject": [
+    "omitting the required fact",
+    "reversing the direction or values"
+   ],
+   "evidence": "The visual must compare Gates and Ikea and show or label the roughly 30% smaller gap, not just their absolute bars."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333333333,
+  "U2": 0.3333333333333333,
+  "U3": 0.3333333333333333
+ },
+ "optional_valid": [
+  "Show all four entity names and absolute values as bar labels: Gates 51.6, Novo Nordisk 49.1, Stichting Ingka 36.0, Wellcome Trust 32.9.",
+  "Display the relative_value scores 0.8600, 0.8183, 0.6000, and 0.5483 alongside the bars.",
+  "Animate the 15.6 gap between Gates and Stichting Ingka.",
+  "Highlight Wellcome Trust as the smallest bar at 32.9."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "review_flags": [
+  "legacy_g1_migrated",
+  "semantic_reaudit_required"
+ ],
+ "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}
