@@ -1,7 +1,9 @@
 # DataVideo OK 5-file Dataset
 
-`ok_5files_all/` 是 340 条真实 data-video clip 的标注包。目录名里的 "5files" 是历史名称；
+仓库根目录下是 340 条真实 data-video clip 的标注包。仓库名里的 "5files" 是历史名称；
 现在每条 clip 的文件数随审核进度不同。
+
+每条 clip 都带 `clip.mp4`（原始视频片段），整个仓库约 305 MB。
 
 ## 1. 每条 clip 的文件
 
@@ -17,6 +19,7 @@
 | `narration.jsonl` | ASR 句子与时间戳 |
 | `semantic.svg` | 视觉参考 |
 | `keyframe.png` | 参考关键帧 |
+| `clip.mp4` | 原始 clip 视频（约 3–10 MB，供合作者核对） |
 
 尚未按新协议审核的 clip 仍保留旧的 `g1_draft_b2.json` 和 `g2_evidence.json`；
 迁移在逐条进行。
@@ -52,7 +55,7 @@
 
 ## 3. intent
 
-输入是四样：**叙事目标（现有 intent_en）+ narration + ata_tablde + semantic.svg**。
+输入是四样：**叙事目标（现有 intent_en）+ narration + data_table + semantic.svg**。
 不用关键帧。
 
 写法：
