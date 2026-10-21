@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_23",
- "intent_en": "To present the 2016 election outcomes for each US state, illustrating the distribution of votes among candidates across different regions.",
- "previous_intent": "To present the US election results by state, visualizing the proportional vote share distribution among parties across different regions.",
+ "intent_en": "Present the 2016 presidential election results for all 50 states as vote-share distributions among Clinton, Trump, and other candidates.",
+ "previous_intent": "To present the 2016 election outcomes for each US state, illustrating the distribution of votes among candidates across different regions.",
  "narration_support": "These are the results of the 2016 election by state.",
  "chart_support": "Stacked bar chart titled '2016 election results by state' with states on the x-axis and colored segments (blue, grey, red) representing vote shares, overlaid with a horizontal reference line.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To present the 2016 election outcomes for each US state, illustrating the distribution of votes among candidates across different regions.",
+ "intent_machine": "To present the US election results by state, visualizing the proportional vote share distribution among parties across different regions.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

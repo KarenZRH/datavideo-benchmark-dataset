@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_16",
- "intent_en": "To illustrate the rapid growth of the human population over a century.",
- "previous_intent": "To demonstrate the rapid growth of the human population over a century, highlighting the significant increase in total population by the late 2010s.",
+ "intent_en": "Show that the human population quadrupled over the century before 2019.",
+ "previous_intent": "To illustrate the rapid growth of the human population over a century.",
  "narration_support": "In just a hundred years, the human population quadrupled.",
  "chart_support": "A vertical gauge chart displaying population in billions for the year 2019, indicating a high population level near the top of the scale.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate the rapid growth of the human population over a century.",
+ "intent_machine": "To illustrate the rapid growth of the human population over a century.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

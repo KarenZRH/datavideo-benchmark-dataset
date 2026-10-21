@@ -1,0 +1,69 @@
+{
+ "clip_id": "bar_25",
+ "version": "g1_r_u_v1",
+ "intent": "Show that the average highest mathematics course completed by high school graduates was higher in 2004 than in 1982.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How did the average highest mathematics course change between 1982 and 2004?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "High school graduates"
+    ],
+    "time": [
+     "1982",
+     "2004"
+    ],
+    "measure": "mean highest mathematics level"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The average highest mathematics level rises from about 2.7 in 1982, between Algebra I and Algebra II and nearer Algebra II, to about 3.65 in 2004, close to Trigonometry/Algebra III.",
+   "accept": [
+    "the 2004 bar is higher than the 1982 bar",
+    "1982 is between Algebra I and Algebra II while 2004 is close to Trigonometry/Algebra III",
+    "2.7 in 1982 versus 3.65 in 2004 on the displayed ordinal scale",
+    "an increase of about 0.95 ordinal levels"
+   ],
+   "reject": [
+    "saying the level fell from 1982 to 2004",
+    "placing 2004 nearer Algebra I than Trigonometry/Algebra III",
+    "reversing the two years",
+    "omitting the 2004 bar or misplacing it below the Algebra II level"
+   ],
+   "evidence": "Both bars are present on the same ordinal y-axis: the 1982 bar sits between Algebra I and Algebra II, while the taller 2004 bar reaches near Trigonometry/Algebra III."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The 1982 and 2004 values are estimated positions on the displayed ordinal scale; their exact numeric labels are not printed."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
+}

@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_11",
- "intent_en": "To demonstrate that cycling is a relatively safe mode of transport, with a fatality risk comparable to walking when measured by distance.",
- "previous_intent": "To compare the fatality rates per million miles across different transportation modes, illustrating that cycling is comparable in risk to walking and significantly safer than motorcycling.",
+ "intent_en": "Show that cycling's fatality risk per distance is about as low as walking's and far below motorcycling's.",
+ "previous_intent": "To demonstrate that cycling is a relatively safe mode of transport, with a fatality risk comparable to walking when measured by distance.",
  "narration_support": "In fact, it's about as safe as walking.",
  "chart_support": "Bar chart displaying deaths per million miles for various transport modes, showing that the risk for Cyclists is similar in magnitude to Walkers and significantly lower than Motorcyclists.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To demonstrate that cycling is a relatively safe mode of transport, with a fatality risk comparable to walking when measured by distance.",
+ "intent_machine": "To demonstrate that cycling is a relatively safe mode of transport, with a fatality risk comparable to walking when measured by distance.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

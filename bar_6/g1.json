@@ -64,5 +64,17 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-21"
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 8,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
 }

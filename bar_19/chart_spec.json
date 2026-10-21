@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_19",
  "family": "bar",
- "sub_type": "simple",
+ "sub_type": "range_bar",
  "orientation": "horizontal",
  "series_count": 1,
- "category_count": 2,
- "unit_mark": "bar",
+ "category_count": 1,
+ "unit_mark": "range",
  "has_axis": false,
  "has_legend": null,
  "has_value_labels": null,
@@ -17,5 +17,9 @@
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "snapshot",
+ "reference": {
+  "value": 0,
+  "unit": "°C"
+ }
 }

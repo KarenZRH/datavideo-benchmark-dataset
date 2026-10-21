@@ -1,0 +1,65 @@
+{
+ "clip_id": "bar_10",
+ "version": "g1_r_u_v1",
+ "intent": "Show that Bangladesh has the lowest life expectancy among the three, far below the United States and somewhat below South Korea.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How does Bangladesh's life expectancy compare with South Korea and the United States?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "United States",
+     "South Korea",
+     "Bangladesh"
+    ],
+    "measure": "life expectancy",
+    "time": "the plotted snapshot"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Bangladesh has the lowest life expectancy among the three: 47 years vs 52 for South Korea and 71 for the United States (about 45 in the narration).",
+   "accept": [
+    "all three values",
+    "Bangladesh is the lowest",
+    "the US is about 24 years higher and South Korea about 5 years higher",
+    "Bangladesh at about 45 years (45-47)"
+   ],
+   "reject": [
+    "saying Bangladesh is not the lowest",
+    "missing the United States or South Korea",
+    "wrong endpoint values"
+   ],
+   "evidence": "Three bars: Bangladesh is the shortest, the US the tallest."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The narration's literacy claim (only one in five can read and write) and low per-capita-income claim are not in the table."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 3,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

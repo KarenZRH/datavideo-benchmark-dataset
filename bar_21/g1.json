@@ -1,0 +1,132 @@
+{
+ "clip_id": "bar_21",
+ "version": "g1_r_u_v1",
+ "intent": "Show that a potential source of government revenue could fully cover free public college and food assistance several times, while nearly meeting the higher cost of an ambitious child-poverty reduction plan.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How far could about $200 billion go toward funding each of the three policy goals?",
+   "relation": "all_of",
+   "unit_ids": [
+    "U1",
+    "U2",
+    "U3"
+   ],
+   "scope": {
+    "entities": [
+     "Free public college",
+     "Food assistance",
+     "Cut child poverty 60%"
+    ],
+    "measure": "coverage of relative policy spending cost",
+    "baseline": "$200 billion"
+   }
+  },
+  {
+   "id": "R2",
+   "question": "Which policy requires the most spending, and which requires the least?",
+   "relation": "single",
+   "unit_ids": [
+    "U4"
+   ],
+   "scope": {
+    "entities": [
+     "Free public college",
+     "Food assistance",
+     "Cut child poverty 60%"
+    ],
+    "measure": "relative spending cost"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "About $200 billion would cover the free public college plan roughly three times over.",
+   "accept": [
+    "the revenue covers free public college about 3 times",
+    "free public college costs roughly one-third of the revenue",
+    "the college bar is the shortest policy-cost bar"
+   ],
+   "reject": [
+    "the revenue covers free public college only once",
+    "free public college consumes the entire $200 billion",
+    "the revenue cannot cover free public college"
+   ],
+   "evidence": "The table identifies a $200 billion revenue baseline and a relative college cost of 1.0."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R1",
+   "claim": "About $200 billion would cover federal food assistance roughly two times over.",
+   "accept": [
+    "the revenue covers food assistance about 2 times",
+    "food assistance costs roughly half of the revenue"
+   ],
+   "reject": [
+    "the revenue covers food assistance once",
+    "the revenue cannot cover food assistance",
+    "food assistance has the largest funding requirement"
+   ],
+   "evidence": "Food assistance has a relative spending cost of 1.5, between free public college and the child-poverty plan."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R1",
+   "claim": "About $200 billion would cover nearly all, but not the full, cost of the plan to cut child poverty by 60%.",
+   "accept": [
+    "the revenue gets close to the full cost of cutting child poverty by 60%",
+    "the child-poverty plan is nearly, but not fully, covered",
+    "the plan requires more than $200 billion"
+   ],
+   "reject": [
+    "the revenue fully covers the child-poverty plan",
+    "the revenue cuts child poverty by exactly 60%",
+    "the revenue covers only a small fraction of the plan"
+   ],
+   "evidence": "The child-poverty plan has the largest relative spending cost, while the narrative describes the revenue as getting close to its cost."
+  },
+  {
+   "id": "U4",
+   "requirement_id": "R2",
+   "claim": "The child-poverty plan requires the most spending, food assistance is second, and free public college requires the least.",
+   "accept": [
+    "Cut child poverty 60% is the most expensive, followed by food assistance, then free public college",
+    "the bar order is child-poverty plan > food assistance > free public college"
+   ],
+   "reject": [
+    "free public college is the most expensive",
+    "food assistance is the most expensive",
+    "the three requirements are equal"
+   ],
+   "evidence": "The bar-cost values are 4.5 for the child-poverty plan, 1.5 for food assistance, and 1.0 for free public college."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U4": 0.25
+ },
+ "optional_valid": [
+  "The charts may omit the word 'federal' from Food assistance.",
+  "The child-poverty plan may be identified by either Cut child poverty 60% or the Bennet-Brown plan."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 3,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

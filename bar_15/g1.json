@@ -1,0 +1,64 @@
+{
+ "clip_id": "bar_15",
+ "version": "g1_r_u_v1",
+ "intent": "Show that the number of people flagged for far-right activity rose by more than a third between 2016-17 and 2017-18.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How much did the number of people flagged for far-right activity change between 2016-17 and 2017-18?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "People flagged for far-right activity"
+    ],
+    "measure": "relative change in flagged count",
+    "time": "2016-17 to 2017-18"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "The number of people flagged for far-right activity rose by more than a third (>33.3%) from 2016-17 to 2017-18.",
+   "accept": [
+    "more than a third",
+    ">33.3%",
+    "the 2017-18 bar is at least one-third taller",
+    "about 40% as a bar estimate"
+   ],
+   "reject": [
+    "a decline",
+    "less than a third",
+    "an invented absolute count (e.g. exactly 1,400 people)",
+    "missing one of the two periods"
+   ],
+   "evidence": "Two bars: 2017-18 is at least one-third taller than 2016-17."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "About 40% is a bar-height estimate, not a printed value; absolute counts are unknown."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "clip_id": "bar_33",
+ "version": "g1_r_u_v1",
+ "intent": "Show that the United States has the highest per-capita retail prescription drug spending among the ten compared countries.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Which compared country has the highest per-capita retail prescription drug spending?",
+   "relation": "single",
+   "unit_ids": ["U1"],
+   "scope": {
+    "entities": ["Sweden", "Norway", "Netherlands", "Australia", "United Kingdom", "France", "Canada", "Germany", "Switzerland", "United States"],
+    "measure": "retail prescription drug spending per capita"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The United States has the highest per-capita retail prescription drug spending at about $1,013, above the other nine countries, which range from about $348 to $777.",
+   "accept": [
+    "the United States has the tallest bar",
+    "the U.S. is highest among the ten charted countries",
+    "the U.S. value is about $1,013 while every comparison country is below $800"
+   ],
+   "reject": [
+    "another country is highest",
+    "generalizing the ten-country comparison to every country in the world",
+    "omitting the United States or a compared country",
+    "describing the U.S. as below another country"
+   ],
+   "evidence": "Ten country bars share one per-capita spending scale, with the U.S. bar visibly tallest."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {"U1": 1.0},
+ "optional_valid": [
+  "The narration says 'anyone else in the world', but the chart supplies evidence for only the ten compared countries."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 10,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
+}

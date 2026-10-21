@@ -1,0 +1,68 @@
+{
+ "clip_id": "bar_27",
+ "version": "g1_r_u_v1",
+ "intent": "Show that median SAT scores rise steadily as family income increases across the seven income brackets.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How do median SAT scores change across the seven family-income brackets?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Less than $20,000",
+     "$40,000",
+     "$60,000",
+     "$80,000",
+     "$100,000",
+     "$140,000",
+     "More than $200,000"
+    ],
+    "measure": "median SAT score"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "claim": "Median SAT scores rise at every successive income bracket.",
+   "accept": [
+    "each income-bracket bar is taller than the preceding income-bracket bar"
+   ],
+   "reject": [
+    "claiming a complete seven-bracket trend when any income-bracket bar is missing",
+    "any decline or non-increasing step in the sequence",
+    "reversing the income order",
+    "claiming that the displayed data establish a causal effect of income on SAT scores; the source only shows an association"
+   ],
+   "evidence": "Seven horizontal bars are present for the seven income brackets, and every successive bar is longer than the previous one."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The narration calls the values average scores, while the chart title specifies median scores."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 7,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
+}

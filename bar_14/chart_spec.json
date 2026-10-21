@@ -10,12 +10,19 @@
  "has_legend": null,
  "has_value_labels": null,
  "text_count": 9,
- "row_count": 4,
+ "row_count": 8,
  "derived_from": [
   "data_table",
   "semantic.svg"
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "frame",
+ "time_encoding": "frame",
+ "motion": "bar_race",
+ "frames": [
+  1960,
+  2017
+ ],
+ "marks_per_frame": 4
 }

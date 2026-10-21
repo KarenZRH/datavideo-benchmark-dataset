@@ -1,0 +1,67 @@
+{
+ "clip_id": "bar_26",
+ "version": "g1_r_u_v1",
+ "intent": "Show that the share of colleges giving considerable importance to SAT scores increased between 1993 and 2005.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How did the share giving considerable importance to SAT scores change between 1993 and 2005?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Colleges"
+    ],
+    "time": [
+     "1993",
+     "2005"
+    ],
+    "measure": "share giving considerable importance to SAT scores"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "claim": "The share of colleges giving considerable importance to SAT scores rises from 46% in 1993 to 59% in 2005, a 13-percentage-point increase.",
+   "accept": [
+    "46% in 1993 and 59% in 2005",
+    "a 13-percentage-point rise",
+    "the considerable-importance segment is larger in 2005 than in 1993",
+    "59% is about 28% higher in relative terms than 46%"
+   ],
+   "reject": [
+    "a decline from 59% to 46%",
+    "a 13% relative increase instead of 13 percentage points",
+    "describing the smaller 41% or 54% segments as considerable importance",
+    "reversing the two years"
+   ],
+   "evidence": "The blue considerable-importance segment in each complete 100% stacked bar grows from 46% in 1993 to 59% in 2005."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
+}

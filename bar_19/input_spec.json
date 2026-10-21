@@ -1,6 +1,7 @@
 {
  "clip_id": "bar_19",
  "family": "bar",
- "sub_type": "simple",
- "orientation": "horizontal"
+ "sub_type": "range_bar",
+ "orientation": "horizontal",
+ "unit_mark": "range"
 }

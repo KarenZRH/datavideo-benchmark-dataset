@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_28",
- "intent_en": "To explain the tax structure and revenue potential of Senator Warren's proposed wealth tax.",
- "previous_intent": "To demonstrate the potential revenue and narrow tax base of Senator Warren's proposed wealth tax.",
+ "intent_en": "Explain how Warren's proposed wealth tax rises across wealth thresholds while affecting only the wealthiest Americans and raising substantial federal revenue.",
+ "previous_intent": "To explain the tax structure and revenue potential of Senator Warren's proposed wealth tax.",
  "narration_support": "So what would happen if we imposed Senator Warren's tax? Well, only the richest 0 .05 % of Americans would pay this tax. But in 2016, the government could have raised about $200 billion from it.",
  "chart_support": "Bar chart displaying tax rates (2%, 3%) corresponding to wealth thresholds ($60 million, $1 billion) with a value of $1.9 billion.",
  "supported_by_narration": true,
@@ -11,7 +11,7 @@
  "narration_sparse": false,
  "contains_answer_values": false,
  "confidence": 0.9,
- "evidence_note": "Narration discusses the overall revenue ($200 billion) and affected population (top 0.05%), while the chart visualizes the specific tax brackets (rates of 2% and 3% at wealth thresholds of ~$50-60 million and $1 billion) which define the mechanism of the tax.",
+ "evidence_note": "Narration discusses the overall revenue ($200 billion) and affected population (top 0.05%), while the chart visualizes the tax-rate thresholds: 2% above $60 million and 3% above $1 billion.",
  "gate_failed": "",
  "intent_official": "en",
  "intent_source": [
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To explain the tax structure and revenue potential of Senator Warren's proposed wealth tax.",
+ "intent_machine": "To demonstrate the potential revenue and narrow tax base of Senator Warren's proposed wealth tax.",
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

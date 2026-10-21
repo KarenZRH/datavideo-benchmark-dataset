@@ -1,0 +1,65 @@
+{
+ "clip_id": "bar_23",
+ "version": "g1_r_u_v1",
+ "intent": "Present the 2016 presidential election results for all 50 states as vote-share distributions among Clinton, Trump, and other candidates.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "Does the video present the complete state-by-state 2016 vote-share composition?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": "all 50 US states",
+    "time": "2016",
+    "measure": "Clinton, Other, and Trump vote shares"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "claim": "Each of the 50 states is shown as a complete 100% stacked bar with Clinton, Other, and Trump vote shares matching the table and summing to 100.",
+   "accept": [
+    "all 50 state columns are present and labeled",
+    "every state column contains Clinton, Other, and Trump segments that sum to 100%",
+    "all state-level segment values match the data table"
+   ],
+   "reject": [
+    "omitting states or combining multiple states into one bar",
+    "using grouped rather than 100% stacked columns",
+    "a state's three shares do not sum to 100%",
+    "wrong candidate-to-segment mapping"
+   ],
+   "evidence": "The chart shows 50 complete 100% stacked columns in alphabetical state order with the three candidate-share segments."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Trump has a higher vote share than Clinton in 28 states, Clinton is higher in 19, and Michigan, New Hampshire, and Wisconsin tie at 47% each.",
+  "Utah has the largest Other-candidate share at 26%; Mississippi has the smallest at 2%.",
+  "The 2016 national popular-vote totals are not part of this state-level table."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 150,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

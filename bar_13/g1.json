@@ -1,0 +1,71 @@
+{
+ "clip_id": "bar_13",
+ "version": "g1_r_u_v1",
+ "intent": "Show how the initial population projection overshot the actual level, and convey the uncertainty in the forecasts.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How did the population projection differ from the actual level?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Population projection",
+     "Actual population"
+    ],
+    "measure": "population in billions",
+    "time": "projection vs actual"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "The initial population projection reached about 5.6 billion, while the actual level was about 3.2 billion - a gap of 2.4 billion.",
+   "accept": [
+    "about 5.6 billion vs about 3.2 billion",
+    "a 2.4-billion gap",
+    "the projection was above 5 billion and the actual was around 3 billion",
+    "the bar rises above 5 and then falls to about 3"
+   ],
+   "reject": [
+    "the actual level was higher than the projection",
+    "missing the peak or the final level",
+    "the gap is 5.6 or 3.2 rather than 2.4",
+    "treating the two stages as simultaneous bars"
+   ],
+   "evidence": "The animated bar rises above 5 billion and then falls to about 3 billion."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The narration's 'it's complicated' explanation is not a table fact."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "state_sequence",
+  "required_states": [
+   "Initial projection",
+   "Actual"
+  ],
+  "required_marks_per_state": {
+   "Initial projection": 1,
+   "Actual": 1
+  },
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false
+ }
+}

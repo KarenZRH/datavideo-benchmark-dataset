@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_13",
- "intent_en": "To explain the factors causing the significant variance in future population projections and the complexities involved.",
- "previous_intent": "To explain the complex factors and data uncertainties that lead to significant variations in population projections, highlighting challenges in regions like Africa.",
+ "intent_en": "Show how the initial population projection overshot the actual level, and convey the uncertainty in the forecasts.",
+ "previous_intent": "To explain the factors causing the significant variance in future population projections and the complexities involved.",
  "narration_support": "And why do the projections vary by 2 .4 billion people? As always, it's complicated.",
  "chart_support": "A map of Africa with warning icons overlaid on a heatmap, alongside a vertical gauge labeled 'Population in Billion' ranging from 1 to 5.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To explain the factors causing the significant variance in future population projections and the complexities involved.",
+ "intent_machine": "To explain the factors causing the significant variance in future population projections and the complexities involved.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

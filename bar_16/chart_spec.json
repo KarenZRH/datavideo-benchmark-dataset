@@ -4,7 +4,7 @@
  "sub_type": "simple",
  "orientation": "horizontal",
  "series_count": 1,
- "category_count": 2,
+ "category_count": 1,
  "unit_mark": "bar",
  "has_axis": true,
  "has_legend": null,
@@ -17,5 +17,12 @@
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "frame",
+ "time_encoding": "frame",
+ "motion": "single_bar_race",
+ "frames": [
+  1919,
+  2019
+ ],
+ "marks_per_frame": 1
 }

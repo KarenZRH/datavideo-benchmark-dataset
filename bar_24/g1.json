@@ -1,0 +1,75 @@
+{
+ "clip_id": "bar_24",
+ "version": "g1_r_u_v1",
+ "intent": "Show how the number of students taking the SAT increased dramatically from 1941 to the present.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How did SAT participation grow from 1941 to the present?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Students taking the SAT"
+    ],
+    "time": [
+     "1941",
+     "1950",
+     "1960",
+     "1974",
+     "Now"
+    ],
+    "measure": "number of students"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "trend_or_change",
+   "must_be_visualized": true,
+   "claim": "SAT participation is shown at all five time points and rises from 10,000 students in 1941 to 80,000 in 1950, 800,000 in 1960, 1,000,000 in 1974, and 2,000,000 now, an approximately 200-fold increase.",
+   "accept": [
+    "all five values: 10,000; 80,000; 800,000; 1,000,000; 2,000,000",
+    "all five time-point bars are present, even though the 1941 bar is close to zero",
+    "a continuous upward trend from 1941 to Now",
+    "roughly 200 times the 1941 level"
+   ],
+   "reject": [
+    "any of the five time-point bars or labels is missing",
+    "missing the very small 1941 baseline of 10,000",
+    "a decline or flat trend",
+    "treating 80,000 or 800,000 as the maximum",
+    "reversing any time point",
+    "claiming the number is exactly the same at every displayed time"
+   ],
+   "evidence": "All five bars must be present: 1941, 1950, 1960, 1974, and Now. The first bar is almost invisible at 10,000 but cannot be omitted."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The narration says more than 2 million now; the input table uses 2 million.",
+  "The final narration mentions stronger college applications, but that claim is not part of the displayed data."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 5,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

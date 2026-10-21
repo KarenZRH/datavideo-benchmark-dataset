@@ -1,0 +1,69 @@
+{
+ "clip_id": "bar_30",
+ "version": "g1_r_u_v1",
+ "intent": "Show that the monthly price of the hepatitis C drug Sovaldi is higher in the United States than in five other developed countries.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How does the monthly Sovaldi price in the United States compare with the five other countries?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Norway",
+     "Canada",
+     "France",
+     "United Kingdom",
+     "Germany",
+     "United States"
+    ],
+    "measure": "monthly Sovaldi price"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The United States has the highest monthly Sovaldi price at about $29,883, compared with about $13,805 to $17,073 in the five other countries.",
+   "accept": [
+    "the United States has the tallest bar and the highest price",
+    "the U.S. price is about $29,883 while every comparison country is below $17,100",
+    "the U.S. price is about 1.75 times the highest comparison country and more than twice the lowest"
+   ],
+   "reject": [
+    "saying another country has the highest price",
+    "describing the values as annual rather than monthly prices",
+    "omitting the United States or any comparison country",
+    "saying the U.S. price is lower than the other countries"
+   ],
+   "evidence": "Six country bars share the same vertical dollar scale; the U.S. bar is clearly the tallest."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The narration calls the drug Sevaldi, but the chart title identifies it as Sovaldi."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 6,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
+}

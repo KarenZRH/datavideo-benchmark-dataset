@@ -7,8 +7,8 @@
  "category_count": 2,
  "unit_mark": "bar",
  "has_axis": true,
- "has_legend": null,
- "has_value_labels": null,
+ "has_legend": false,
+ "has_value_labels": false,
  "text_count": 9,
  "row_count": 2,
  "derived_from": [
@@ -17,5 +17,13 @@
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "snapshot",
+ "y_axis_title": "Highest level of math taken",
+ "y_axis_categories": [
+  {"value": 0, "label": "No math"},
+  {"value": 1, "label": "Low math"},
+  {"value": 2, "label": "Algebra I"},
+  {"value": 3, "label": "Algebra II"},
+  {"value": 4, "label": "Trigonometry / Algebra III"}
+ ]
 }

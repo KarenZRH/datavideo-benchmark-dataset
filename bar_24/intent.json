@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_24",
- "intent_en": "To demonstrate the dramatic increase in the number of students taking the SAT from 1941 to the present day.",
- "previous_intent": "To illustrate the dramatic surge in the number of students taking the SAT over the decades, highlighting the link between growing test participation and intensifying college competition.",
+ "intent_en": "Show how the number of students taking the SAT increased dramatically from 1941 to the present.",
+ "previous_intent": "To demonstrate the dramatic increase in the number of students taking the SAT from 1941 to the present day.",
  "narration_support": "In 1941, just 10,000 students took the SAT. By 1950, 80,000 students took the exam. By 1960, 800,000 students took the SAT. By the next decade, it rose to a million. And now, more than 2 million students take the exam.",
  "chart_support": "Bar chart showing the number of students taking the SAT increasing from 1941 to the present, with bars growing significantly taller over time.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To demonstrate the dramatic increase in the number of students taking the SAT from 1941 to the present day.",
+ "intent_machine": "To illustrate the dramatic surge in the number of students taking the SAT over the decades, highlighting the link between growing test participation and intensifying college competition.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

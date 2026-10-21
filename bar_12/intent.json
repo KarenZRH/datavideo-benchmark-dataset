@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_12",
- "intent_en": "To illustrate the surge in UKIP membership from July to August 2018.",
- "previous_intent": "To demonstrate the surge in UKIP membership from July to August 2018, attributing the growth to associations and highlighting the percentage increase.",
+ "intent_en": "Show how much UKIP membership surged between July and August 2018.",
+ "previous_intent": "To illustrate the surge in UKIP membership from July to August 2018.",
  "narration_support": "These associations helped UKIP's membership surge by 15 % in just one month.",
  "chart_support": "Bar chart comparing UKIP membership levels in July 2018 and August 2018, showing a higher value for August.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate the surge in UKIP membership from July to August 2018.",
+ "intent_machine": "To illustrate the surge in UKIP membership from July to August 2018.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

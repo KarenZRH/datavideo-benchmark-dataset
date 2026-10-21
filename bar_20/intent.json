@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_20",
- "intent_en": "To demonstrate that empowering families to choose their desired number of children leads to a substantial decrease in the projected global population by the year 2100.",
- "previous_intent": "To demonstrate the substantial reduction in projected global population for the end of the century if families are given reproductive autonomy, contrasting the baseline estimate with a significantly lower outcome.",
+ "intent_en": "Show that letting families choose their number of children would substantially reduce the projected 2100 population.",
+ "previous_intent": "To demonstrate that empowering families to choose their desired number of children leads to a substantial decrease in the projected global population by the year 2100.",
  "narration_support": "If families get to choose how many kids they want, birth projections fall by 30 % to 2 .8 billion people.",
  "chart_support": "A dot-matrix bar chart displaying a population projection for the year 2100, establishing the baseline high population figure.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To demonstrate that empowering families to choose their desired number of children leads to a substantial decrease in the projected global population by the year 2100.",
+ "intent_machine": "To demonstrate that empowering families to choose their desired number of children leads to a substantial decrease in the projected global population by the year 2100.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

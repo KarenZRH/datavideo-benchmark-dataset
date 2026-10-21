@@ -1,0 +1,69 @@
+{
+ "clip_id": "bar_20",
+ "version": "g1_r_u_v1",
+ "intent": "Show that letting families choose their number of children would substantially reduce the projected 2100 population.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How does the projected 2100 population change under family choice?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Projected population in 2100"
+    ],
+    "measure": "population in billions",
+    "time": "2100"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "The projected 2100 population falls from 4.0 billion in the baseline to 2.8 billion with family choice - a 30% reduction (-1.2 billion).",
+   "accept": [
+    "4.0 billion vs 2.8 billion",
+    "a 30% reduction",
+    "a decrease of 1.2 billion",
+    "the dot matrix shrinks from 400 to 280 dots (10 million per dot)"
+   ],
+   "reject": [
+    "an increase",
+    "2.8 to 4.0 (reversed)",
+    "wrong endpoints or percentage"
+   ],
+   "evidence": "The dot matrix shrinks from about 400 dots to about 280."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The keyframe at 2.75s shows an intermediate 3.3 billion before the final 2.8 billion."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "state_sequence",
+  "required_states": [
+   "Baseline projection",
+   "With family choice"
+  ],
+  "required_marks_per_state": {
+   "Baseline projection": 1,
+   "With family choice": 1
+  },
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false
+ }
+}

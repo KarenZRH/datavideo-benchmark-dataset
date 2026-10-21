@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_9",
- "intent_en": "To illustrate the low per capita income of developing nations like South Korea and Bangladesh compared to the USA.",
- "previous_intent": "To illustrate the significant economic disparity and low initial living standards between the United States and developing nations such as South Korea and Bangladesh at the beginning of the observed period.",
+ "intent_en": "Show that Bangladesh's per capita income is among the lowest in the world, far below the United States and South Korea.",
+ "previous_intent": "Show that South Korea and Bangladesh have far lower GDP per capita than the United States.",
  "narration_support": "per capita income was among the lowest in the world",
  "chart_support": "Bar chart showing GDP Per Capita where the USA is significantly higher than South Korea and Bangladesh",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "Show that South Korea and Bangladesh have far lower GDP per capita than the United States.",
+ "intent_machine": "Show that South Korea and Bangladesh have far lower GDP per capita than the United States.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

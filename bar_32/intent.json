@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_32",
- "intent_en": "To demonstrate that the monthly price of the cholesterol drug Crestor is higher in the United States than in other countries.",
- "previous_intent": "To demonstrate that the monthly price of the cholesterol drug Crestor is significantly higher in the United States compared to other nations such as Australia, France, and Germany.",
+ "intent_en": "Show that the monthly price of the cholesterol drug Crestor is higher in the United States than in six other developed countries.",
+ "previous_intent": "To demonstrate that the monthly price of the cholesterol drug Crestor is higher in the United States than in other countries.",
  "narration_support": "Crestor for cholesterol? More expensive in the US.",
  "chart_support": "Bar chart displaying the monthly price of Crestor across seven countries, with the United States showing the highest price bar.",
  "supported_by_narration": true,
@@ -24,5 +24,10 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": true
+ "needs_video_escalation": true,
+ "narrative_goal": "To demonstrate that the monthly price of the cholesterol drug Crestor is higher in the United States than in other countries.",
+ "intent_machine": "To demonstrate that the monthly price of the cholesterol drug Crestor is significantly higher in the United States compared to other nations such as Australia, France, and Germany.",
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": ["data_table","intent","g1"]
 }

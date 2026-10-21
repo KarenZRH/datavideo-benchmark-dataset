@@ -1,0 +1,155 @@
+{
+ "clip_id": "bar_28",
+ "version": "g1_r_u_v1",
+ "intent": "Explain how Warren's proposed wealth tax rises across wealth thresholds while affecting only the wealthiest Americans and raising substantial federal revenue.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How do the wealth-tax rates change across wealth thresholds?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Wealth above $60 million",
+     "Wealth above $1 billion"
+    ],
+    "measure": "annual wealth-tax rate"
+   }
+  },
+  {
+   "id": "R2",
+   "question": "How narrow is the tax base?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
+   ],
+   "scope": {
+    "entities": [
+     "US population"
+    ],
+    "measure": "share paying the wealth tax"
+   }
+  },
+  {
+   "id": "R3",
+   "question": "How much revenue could the tax raise?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ],
+   "scope": {
+    "entities": [
+     "US federal government"
+    ],
+    "time": "2016",
+    "measure": "potential annual revenue"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "threshold_or_crossing",
+   "must_be_visualized": true,
+   "claim": "An illustrative wealth bar spans the $60 million and $1 billion thresholds, showing a 2% tax rate at $60 million and a higher 3% rate at $1 billion.",
+   "accept": [
+    "$60 million corresponds to 2% and $1 billion corresponds to 3%",
+    "the rate increases from 2% to 3% at the higher wealth threshold",
+    "the 3% tier applies to wealth above $1 billion"
+   ],
+   "reject": [
+    "reversing the two thresholds or rates",
+    "showing 3% below $60 million or 2% above $1 billion",
+    "treating 2% and 3% as dollar amounts"
+   ],
+   "evidence": "A single vertical wealth bar rises from $60 million to $1.9 billion; dashed threshold lines link $60 million to 2% and $1 billion to 3%."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "hardcase": true,
+   "hardcase_reason": "The source chart has no direct visual mark for the share of Americans paying the tax.",
+   "claim": "Only the richest 0.05% of Americans would pay the proposed wealth tax.",
+   "accept": [
+    "the tax applies to only the richest 0.05% of Americans",
+    "the affected group is an extremely small top fraction of the population"
+   ],
+   "reject": [
+    "saying most Americans would pay the tax",
+    "treating 0.05% as 5%",
+    "claiming the chart visually proves a population share not encoded in its marks"
+   ],
+   "evidence": "This fact comes from the narration and is recorded as a table annotation; it is not directly encoded in the source chart."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R3",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "hardcase": true,
+   "hardcase_reason": "The source chart labels tax thresholds and rates but does not show the total potential revenue.",
+   "claim": "The tax could have raised about $200 billion in federal revenue in 2016.",
+   "accept": [
+    "about $200 billion in potential revenue",
+    "$200B in 2016",
+    "the tax could raise substantial federal revenue"
+   ],
+   "reject": [
+    "$200 million instead of $200 billion",
+    "claiming the chart directly displays $200 billion",
+    "treating $200 billion as an annual tax rate"
+   ],
+   "evidence": "This revenue figure comes from the narration and is recorded as a table annotation; it is not directly encoded in the source chart."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333,
+  "U2": 0.3333333333,
+  "U3": 0.3333333334
+ },
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "state_sequence",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [
+   "Initial state",
+   "Final state"
+  ],
+  "required_marks_per_state": {
+   "Initial state": 1,
+   "Final state": 1
+  },
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false,
+  "missing_any_fails_visual_completeness": true
+ },
+ "hardcases": [
+  {
+   "unit_id": "U2",
+   "type": "required_narrative_without_source_visual",
+   "handling": "must_be_visualized=false; do not invent a population mark from the chart."
+  },
+  {
+   "unit_id": "U3",
+   "type": "required_narrative_without_source_visual",
+   "handling": "must_be_visualized=false; do not invent a revenue mark from the chart."
+  }
+ ],
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "threshold_diagram_with_narration_only_claims",
+  "reason": "The chart is a wealth-threshold schematic rather than a conventional category bar chart, and the population-share and revenue claims exist only in narration."
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
+}

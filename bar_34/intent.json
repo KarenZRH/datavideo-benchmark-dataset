@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_34",
- "intent_en": "To demonstrate that Americans face the highest rates of skipping medication due to cost compared to residents of other developed nations, particularly those without insurance.",
- "previous_intent": "To demonstrate that adults in the United States have significantly higher rates of skipping medication due to cost compared to other developed nations, with uninsured Americans being the most likely to skip prescriptions.",
+ "intent_en": "Show that uninsured Americans are most likely to skip medication because of cost, while even insured Americans rank second and above every other compared country.",
+ "previous_intent": "To demonstrate that Americans face the highest rates of skipping medication due to cost compared to residents of other developed nations, particularly those without insurance.",
  "narration_support": "Americans without insurance are the most likely to skip medication because of the cost. Even Americans with insurance are second.",
  "chart_support": "Bar chart comparing the percentage of adults who skipped prescriptions due to cost across several countries, showing the United States (both insured and uninsured) has the highest values relative to the UK, Germany, France, Australia, Switzerland, and Canada.",
  "supported_by_narration": true,
@@ -24,5 +24,10 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To demonstrate that Americans face the highest rates of skipping medication due to cost compared to residents of other developed nations, particularly those without insurance.",
+ "intent_machine": "To demonstrate that adults in the United States have significantly higher rates of skipping medication due to cost compared to other developed nations, with uninsured Americans being the most likely to skip prescriptions.",
+ "approved_by": null,
+ "approved_at": null,
+ "review_order": ["data_table","intent","g1"]
 }

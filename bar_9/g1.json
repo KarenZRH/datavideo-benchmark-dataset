@@ -1,0 +1,64 @@
+{
+ "clip_id": "bar_9",
+ "version": "g1_r_u_v1",
+ "intent": "Show that Bangladesh's per capita income is among the lowest in the world, far below the United States and South Korea.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How does Bangladesh's GDP per capita compare with South Korea and the United States?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "United States",
+     "South Korea",
+     "Bangladesh"
+    ],
+    "measure": "GDP per capita",
+    "time": "the plotted snapshot"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Bangladesh has the lowest GDP per capita among the three: $750 vs $1,500 for South Korea and $16,500 for the United States.",
+   "accept": [
+    "all three values",
+    "Bangladesh is the lowest of the three",
+    "the US is about 22 times Bangladesh and South Korea is twice Bangladesh"
+   ],
+   "reject": [
+    "saying Bangladesh is not the lowest",
+    "missing South Korea or the United States",
+    "wrong endpoint values"
+   ],
+   "evidence": "Three bars: Bangladesh is the shortest, the US the longest."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The global claim 'among the lowest in the world' comes from the narration; the table supports only the three-country comparison."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 3,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

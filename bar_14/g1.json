@@ -1,0 +1,90 @@
+{
+ "clip_id": "bar_14",
+ "version": "g1_r_u_v1",
+ "intent": "Show that Sub-Saharan Africa's birth rate has fallen since 1960 but remains much higher than East Asia, North America, and the European Union.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How did Sub-Saharan Africa's birth rate change, and how does it compare with other regions in 2017?",
+   "relation": "all_of",
+   "unit_ids": [
+    "U1",
+    "U2"
+   ],
+   "scope": {
+    "entities": [
+     "Sub-Saharan Africa",
+     "East Asia",
+     "North America",
+     "European Union"
+    ],
+    "measure": "births per woman",
+    "time": "1960-2017"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Sub-Saharan Africa's birth rate fell from 6.6 in 1960 to 4.7 in 2017 (a 1.9 drop).",
+   "accept": [
+    "6.6 in 1960 and 4.7 in 2017",
+    "a 1.9 births-per-woman drop",
+    "about a 29% relative decline"
+   ],
+   "reject": [
+    "reversed direction",
+    "no change",
+    "wrong endpoint values"
+   ],
+   "evidence": "The Sub-Saharan Africa bar falls from 6.6 to 4.7 across the two frames."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R1",
+   "claim": "In 2017 Sub-Saharan Africa (4.7) is much higher than East Asia (1.8), North America (1.7) and the European Union (1.6).",
+   "accept": [
+    "all four 2017 values",
+    "Sub-Saharan Africa is the highest",
+    "about 2.6 times East Asia, the next-highest"
+   ],
+   "reject": [
+    "Sub-Saharan Africa is not the highest",
+    "missing a region",
+    "wrong 2017 values"
+   ],
+   "evidence": "In the 2017 frame the Sub-Saharan Africa bar is much longer than the other three."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
+ "optional_valid": [
+  "Other regions' changes: East Asia 5.4->1.8, North America 3.6->1.7, European Union 2.5->1.6",
+  "Sub-Saharan Africa's relative decline is the smallest (about 29% vs 36-67%)"
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 8,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "state_sequence",
+  "required_states": [
+   "1960",
+   "2017"
+  ],
+  "required_marks_per_state": {
+   "1960": 4,
+   "2017": 4
+  },
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false
+ }
+}

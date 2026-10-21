@@ -1,3 +1,4 @@
-clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
-bar_12,July 2018,july-2018,480.0,,1.000,0.8281,,#000000,printed
-bar_12,Aug 2018,aug-2018,800.0,,1.150,0.9524,,#E45756,printed
+﻿entity,x,metric,value,unit,label,role
+UKIP,July 2018,membership_index,1.00,index (July = 1.0),,bar
+UKIP,August 2018,membership_index,1.15,index (July = 1.0),+15%,bar
+UKIP,August 2018,new_members,3200,members,"3,200 new members",annotation

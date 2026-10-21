@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
-<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#1a1e24"/>
-<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#222222">$1.9 billion</text>
-<g id="chart-plot" data-role="plot">
-<line data-role="axis" x1="120" y1="523.3" x2="1220" y2="523.3" stroke="#666666" stroke-width="3"/>
-<line data-role="axis" x1="120" y1="140" x2="120" y2="523.3" stroke="#666666" stroke-width="3"/>
-<line data-role="tick" x1="112" y1="523.3" x2="120" y2="523.3" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="529.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">0%</text>
-<line data-role="tick" x1="112" y1="425.4" x2="120" y2="425.4" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="431.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">1%</text>
-<line data-role="tick" x1="112" y1="327.4" x2="120" y2="327.4" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="333.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">2%</text>
-<line data-role="tick" x1="112" y1="229.4" x2="120" y2="229.4" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="235.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#444444">3%</text>
-<g id="entity-2-value" data-role="entity" data-entity-id="2" data-label="2%">
-<rect id="2-value-bar" data-role="bar" data-entity-id="2" data-value="2" x="336.6" y="327.4" width="245.8" height="195.9" fill="#FFD700" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="2-value-label" data-role="value-label" data-entity-id="2" x="459.5" y="313.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">2%</text>
-<text id="2-value-label" data-role="category-label" data-entity-id="2" x="459.5" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">2%</text>
-</g>
-<g id="entity-3-value" data-role="entity" data-entity-id="3" data-label="3%">
-<rect id="3-value-bar" data-role="bar" data-entity-id="3" data-value="3" x="809.2" y="229.4" width="245.8" height="293.9" fill="#3cb44b" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="3-value-label" data-role="value-label" data-entity-id="3" x="932.1" y="215.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#222222">3%</text>
-<text id="3-value-label" data-role="category-label" data-entity-id="3" x="932.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">3%</text>
-</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart">
+  <rect width="1280" height="720" fill="#1A1E24"/>
+  <text x="1220" y="42" text-anchor="end" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#AEB8C4">Vox</text>
+
+  <text x="680" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#F5F7FA">$1.9 billion</text>
+  <line x1="600" y1="140" x2="760" y2="140" stroke="#AEB8C4" stroke-width="2"/>
+  <line x1="680" y1="140" x2="680" y2="118" stroke="#AEB8C4" stroke-width="2"/>
+  <text x="680" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#9AA7B6">Illustrative wealth level</text>
+
+  <text x="130" y="390" transform="rotate(-90 130 390)" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#8E9AAA">Net worth</text>
+  <text x="1040" y="390" transform="rotate(-90 1040 390)" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#8E9AAA">Tax rate by wealth threshold</text>
+
+  <!-- One illustrative wealth column: 0 to $1.9B on a linear vertical scale. -->
+  <rect data-role="bar" data-entity-id="illustrative-wealth" data-value="1.9" data-unit="billion USD"
+        x="600" y="140" width="160" height="500" rx="5" fill="#C9CED5" fill-opacity="0.82"/>
+  <line x1="470" y1="640" x2="900" y2="640" stroke="#8B95A1" stroke-width="3"/>
+
+  <!-- 60M threshold -> 2% -->
+  <line data-role="threshold" data-value="0.06" data-unit="billion USD"
+        x1="555" y1="624.21" x2="825" y2="624.21"
+        stroke="#F5B83D" stroke-width="3" stroke-dasharray="9 7"/>
+  <line x1="470" y1="624.21" x2="555" y2="624.21" stroke="#F5B83D" stroke-width="2"/>
+  <line x1="825" y1="624.21" x2="900" y2="624.21" stroke="#F5B83D" stroke-width="2"/>
+  <text x="455" y="631" text-anchor="end" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#F5F7FA">$60 million</text>
+  <text x="920" y="631" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#F5B83D">2%</text>
+
+  <!-- 1B threshold -> 3% -->
+  <line data-role="threshold" data-value="1" data-unit="billion USD"
+        x1="555" y1="376.84" x2="825" y2="376.84"
+        stroke="#3CB44B" stroke-width="3" stroke-dasharray="9 7"/>
+  <line x1="470" y1="376.84" x2="555" y2="376.84" stroke="#3CB44B" stroke-width="2"/>
+  <line x1="825" y1="376.84" x2="900" y2="376.84" stroke="#3CB44B" stroke-width="2"/>
+  <text x="455" y="384" text-anchor="end" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#F5F7FA">$1 billion</text>
+  <text x="920" y="384" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#3CB44B">3%</text>
+
+  <text x="455" y="664" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#AEB8C4">$0</text>
+  <text x="920" y="664" font-family="Arial, sans-serif" font-size="22" fill="#AEB8C4">0%</text>
 </svg>

@@ -1,0 +1,63 @@
+{
+ "clip_id": "bar_19",
+ "version": "g1_r_u_v1",
+ "intent": "Show the extreme temperature range on Mercury, driven by its lack of atmosphere and orbital dynamics.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "What is Mercury's surface temperature range?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Mercury"
+    ],
+    "measure": "surface temperature range",
+    "time": "snapshot"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Mercury's temperature ranges from -173°C to 437°C, a 610°C span, with 0°C in between.",
+   "accept": [
+    "the range -173°C to 437°C",
+    "a 610°C span",
+    "a range bar crossing 0°C"
+   ],
+   "reject": [
+    "only 0°C to 437°C",
+    "reversed endpoints",
+    "missing the negative side",
+    "treating 0°C as a data point"
+   ],
+   "evidence": "One range bar spans from -173°C to 437°C with a 0°C reference."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The narration's causes (no atmosphere, no moon, orbital dynamics) are not in the table."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

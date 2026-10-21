@@ -17,5 +17,26 @@
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "frame",
+ "time_encoding": "frame",
+ "motion": "single_bar_race",
+ "frames": [
+  1975,
+  2019
+ ],
+ "marks_per_frame": 1,
+ "intermediate_frames": [
+  {
+   "x": 1988,
+   "value": 29
+  },
+  {
+   "x": 2009,
+   "value": 61
+  },
+  {
+   "x": 2017,
+   "value": 73
+  }
+ ]
 }

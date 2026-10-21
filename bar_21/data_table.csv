@@ -1,4 +1,7 @@
-clip_id,entity,entity_id,x_px,x_value,value,relative_value,unit,color,source_type
-bar_21,Sanders plan,sanders-plan,413.5,,1.000,0.2226,,#E6E7EB,printed
-bar_21,Like food stamps,like-food-stamps,460.0,,1.500,0.3333,,#E6E7EB,printed
-bar_21,Bennet-Brown plan,bennet-brown-plan,740.0,,4.500,1.0000,,#E6E7EB,printed
+entity,series,x,metric,value,unit,label,role
+Free public college,Sanders plan,,spending_cost_relative_to_college,1.0,relative,,bar
+Food assistance,Like food stamps,,spending_cost_relative_to_college,1.5,relative,,bar
+Cut child poverty 60%,Bennet-Brown plan,,spending_cost_relative_to_college,4.5,relative,,bar
+Government revenue,,,available_revenue,200,billion USD,$200 billion,annotation
+Free public college,Sanders plan,,coverage_multiple,3,times,,annotation
+Food assistance,Like food stamps,,coverage_multiple,2,times,,annotation

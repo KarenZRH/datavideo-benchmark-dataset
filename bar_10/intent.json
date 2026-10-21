@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_10",
- "intent_en": "To illustrate the low life expectancy of Bangladesh relative to the USA and South Korea, highlighting the country's development challenges.",
- "previous_intent": "To illustrate the low life expectancy and poor socioeconomic conditions of Bangladesh in the past compared to the USA and South Korea.",
+ "intent_en": "Show that Bangladesh has the lowest life expectancy among the three, far below the United States and somewhat below South Korea.",
+ "previous_intent": "To illustrate the low life expectancy of Bangladesh relative to the USA and South Korea, highlighting the country's development challenges.",
  "narration_support": "Life expectancy was around 45",
  "chart_support": "Bar chart comparing Life Expectancy for USA, South Korea, and Bangladesh, showing Bangladesh with the lowest value",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate the low life expectancy of Bangladesh relative to the USA and South Korea, highlighting the country's development challenges.",
+ "intent_machine": "To illustrate the low life expectancy of Bangladesh relative to the USA and South Korea, highlighting the country's development challenges.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

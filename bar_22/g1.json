@@ -1,0 +1,134 @@
+{
+ "clip_id": "bar_22",
+ "version": "g1_r_u_v1",
+ "intent": "Show that a wealth tax could finance programs helping millions because wealth is extremely concentrated among the ultra-rich, while ordinary occupations have little or negative net worth.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "What wealth inequality does the chart make visually evident?",
+   "relation": "all_of",
+   "unit_ids": [
+    "U1",
+    "U2"
+   ],
+   "scope": {
+    "entities": [
+     "Cashier",
+     "Working mom",
+     "Office clerk",
+     "Nurse",
+     "Teacher",
+     "Accountant",
+     "Ultra-rich households"
+    ],
+    "measure": "net worth",
+    "pattern": "extreme concentration at the top"
+   }
+  },
+  {
+   "id": "R2",
+   "question": "What policy conclusion does the wealth inequality support?",
+   "relation": "single",
+   "unit_ids": [
+    "U3"
+   ],
+   "scope": {
+    "entities": [
+     "Ultra-rich households"
+    ],
+    "measure": "wealth-tax target and potential program funding"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The six named occupations range from -$4,000 for Cashier to $110,000 for Accountant, with Cashier the only negative value and Accountant the highest.",
+   "accept": [
+    "Cashier is -$4,000 while the other named occupations range from $1,000 to $110,000",
+    "Cashier is the only negative occupation value",
+    "Accountant is the highest named occupation at $110,000"
+   ],
+   "reject": [
+    "Cashier is the richest occupation",
+    "Accountant has about $11 million",
+    "all six occupations have exactly the same net worth",
+    "a statement that every named occupation is exactly zero without preserving the printed values"
+   ],
+   "evidence": "Six labeled bars show printed values from -$4,000 to $110,000, with Cashier below zero and Accountant highest."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R1",
+   "unit_kind": "extreme_value",
+   "must_be_visualized": true,
+   "claim": "At the far right, the wealth-distribution tail represents ultra-rich households whose net worth rises far beyond the displayed scale.",
+   "accept": [
+    "the far-right distribution curve rises extremely steeply and goes far above the displayed scale",
+    "an off-scale tail or callout labels the ultra-rich",
+    "the ultra-rich have wealth far beyond that of the six named occupations"
+   ],
+   "reject": [
+    "treating Ultra-rich households as a normal on-scale bar with a specific value",
+    "the ultra-rich have only slightly more wealth than the named occupations",
+    "wealth is evenly distributed across the population",
+    "an exact ultra-rich net-worth value is invented when the source intentionally gives none"
+   ],
+   "evidence": "The far-right area tail is the visual evidence: it rises steeply past the displayed axis and is labeled through an ultra-rich annotation. It is not a regular bar."
+  },
+  {
+   "id": "U3",
+   "requirement_id": "R2",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "hardcase": true,
+   "hardcase_reason": "The source chart has no direct visual mark for the wealth-tax policy conclusion; it is supported by the public intent and the ultra-rich concentration but defaults to content-only scoring.",
+   "claim": "The extreme concentration of wealth among the ultra-rich is the rationale for a wealth tax that could help finance programs benefiting millions.",
+   "accept": [
+    "wealth is concentrated at the very top, so a wealth tax targets the ultra-rich",
+    "taxing ultra-rich wealth could help fund large programs for millions of people",
+    "the policy conclusion follows from the contrast between ordinary occupations and the ultra-rich"
+   ],
+   "reject": [
+    "the wealth tax primarily targets ordinary workers",
+    "the named occupations carry the main tax burden",
+    "wealth concentration is irrelevant to the proposed tax"
+   ],
+   "evidence": "This is a narrative conclusion supported by the intent and the ultra-rich concentration shown in the chart. The source chart has no direct tax visual, so it belongs to content completion but not the visual-completion denominator."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 0.3333333333,
+  "U2": 0.3333333333,
+  "U3": 0.3333333334
+ },
+ "optional_valid": [
+  "Do not invent an exact value for the ultra-rich group; the source only shows that its wealth is far beyond the displayed scale."
+ ],
+ "hardcases": [
+  {
+   "unit_id": "U3",
+   "type": "required_narrative_without_source_visual",
+   "handling": "must_be_visualized=false by default; a generated callout may support the unit but is not required."
+  }
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 6,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

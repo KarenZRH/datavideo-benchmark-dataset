@@ -1,0 +1,63 @@
+{
+ "clip_id": "bar_17",
+ "version": "g1_r_u_v1",
+ "intent": "Show that most Americans need a car to get to work, making transportation the second-largest share of household expenditures in 2019, behind housing.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How does transportation compare with the largest category?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Housing",
+     "Transportation"
+    ],
+    "measure": "share of household expenditures",
+    "time": "2019"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "Transportation is the second-largest expenditure share at 17%, behind Housing at 33%.",
+   "accept": [
+    "Transportation is second at 17%, behind Housing at 33%",
+    "Transportation sits behind Housing"
+   ],
+   "reject": [
+    "Transportation is not second",
+    "Housing is not the largest",
+    "wrong shares for these two"
+   ],
+   "evidence": "Housing is the longest bar and Transportation the second-longest."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The other categories: Food 12%, Personal insurance 11%, Health care 9%, Clothes 3%",
+  "The narrative background that most Americans need a car for work (in the intent, not scored)."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 6,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

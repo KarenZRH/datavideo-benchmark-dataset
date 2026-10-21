@@ -17,5 +17,12 @@
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "frame",
+ "time_encoding": "frame",
+ "motion": "single_bar_race",
+ "frames": [
+  "initial_projection",
+  "actual"
+ ],
+ "marks_per_frame": 1
 }

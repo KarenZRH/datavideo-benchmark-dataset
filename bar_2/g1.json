@@ -81,5 +81,23 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-21"
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 8,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "state_sequence",
+  "required_states": [
+   "1990",
+   "2017"
+  ],
+  "required_marks_per_state": {
+   "1990": 4,
+   "2017": 4
+  },
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false
+ }
 }

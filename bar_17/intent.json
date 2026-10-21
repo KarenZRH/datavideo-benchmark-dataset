@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_17",
- "intent_en": "To illustrate that transportation is a significant and costly component of household expenditures.",
- "previous_intent": "To demonstrate that transportation is the second largest household expenditure for Americans, highlighting the significant financial burden of car ownership.",
+ "intent_en": "Show that most Americans need a car to get to work, making transportation the second-largest share of household expenditures in 2019, behind housing.",
+ "previous_intent": "To illustrate that transportation is a significant and costly component of household expenditures.",
  "narration_support": "And that's expensive. The second biggest household expense for Americans.",
  "chart_support": "Horizontal bar chart showing share of expenditures in 2019, with Transportation highlighted as a substantial category.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate that transportation is a significant and costly component of household expenditures.",
+ "intent_machine": "To illustrate that transportation is a significant and costly component of household expenditures.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

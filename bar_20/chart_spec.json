@@ -1,21 +1,29 @@
 {
  "clip_id": "bar_20",
  "family": "bar",
- "sub_type": "simple",
+ "sub_type": "pictograph",
  "orientation": "horizontal",
  "series_count": 1,
  "category_count": 1,
- "unit_mark": "bar",
+ "unit_mark": "dot",
  "has_axis": false,
  "has_legend": null,
  "has_value_labels": null,
  "text_count": 3,
- "row_count": 1,
+ "row_count": 2,
  "derived_from": [
   "data_table",
   "semantic.svg"
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "frame",
+ "icon_value": "10 million",
+ "time_encoding": "scenario",
+ "motion": "single_bar_race",
+ "frames": [
+  "baseline_projection",
+  "with_family_choice"
+ ],
+ "marks_per_frame": 1
 }

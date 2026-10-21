@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_27",
- "intent_en": "To demonstrate the positive relationship between family income levels and SAT scores, illustrating that students from wealthier families achieve higher scores.",
- "previous_intent": "To demonstrate the positive correlation between family income and SAT scores, highlighting that students from the lowest income brackets score significantly below the average while those from the highest income brackets score well above it.",
+ "intent_en": "Show that median SAT scores rise steadily as family income increases across the seven income brackets.",
+ "previous_intent": "To demonstrate the positive relationship between family income levels and SAT scores, illustrating that students from wealthier families achieve higher scores.",
  "narration_support": "And as we move up the income brackets, students score higher and higher.",
  "chart_support": "Horizontal bar chart showing median SAT scores increasing as family income brackets rise from 'Less than $20,000' to 'More than $200,000'.",
  "supported_by_narration": true,
@@ -24,5 +24,15 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To demonstrate the positive relationship between family income levels and SAT scores, illustrating that students from wealthier families achieve higher scores.",
+ "intent_machine": "To demonstrate the positive correlation between family income and SAT scores, highlighting that students from the lowest income brackets score significantly below the average while those from the highest income brackets score well above it.",
+ "data_note": "The chart title specifies median SAT scores; the narration uses the word average. The data table and G1 use median.",
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_7",
- "intent_en": "To illustrate the substantial increase in contraceptive usage over time, driven by distribution efforts to remote areas.",
- "previous_intent": "To illustrate the significant rise in contraceptive use from 1975 to 2019, driven by the distribution of contraceptives to remote areas.",
+ "intent_en": "Show the substantial rise in the contraceptive use rate between 1975 and 2019, driven by distribution reaching remote areas.",
+ "previous_intent": "To illustrate the substantial increase in contraceptive usage over time, driven by distribution efforts to remote areas.",
  "narration_support": "workers brought contraceptives even to the remotest areas, which drove contraceptive use from 8 % in 1975 to 76 % in 2019.",
  "chart_support": "Bar chart titled 'Contraceptive Use 2019' displaying usage levels for the year 2019.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate the substantial increase in contraceptive usage over time, driven by distribution efforts to remote areas.",
+ "intent_machine": "To illustrate the substantial increase in contraceptive usage over time, driven by distribution efforts to remote areas.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

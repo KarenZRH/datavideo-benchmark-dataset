@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_18",
- "intent_en": "To illustrate the projected future population scale of sub-Saharan Africa by the end of the century.",
- "previous_intent": "To illustrate the projected population of sub-Saharan Africa reaching a massive scale by the end of the century.",
+ "intent_en": "Show that sub-Saharan Africa's population could quadruple between 2021 and 2100.",
+ "previous_intent": "To illustrate the projected future population scale of sub-Saharan Africa by the end of the century.",
  "narration_support": "If population growth continues at its present rate, then sub -Saharan Africa could grow to more than 4 billion people by 2100.",
  "chart_support": "A dot matrix chart displaying a population total labeled 4 billion for the year 2099.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate the projected future population scale of sub-Saharan Africa by the end of the century.",
+ "intent_machine": "To illustrate the projected future population scale of sub-Saharan Africa by the end of the century.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

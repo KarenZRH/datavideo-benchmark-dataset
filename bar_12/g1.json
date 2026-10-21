@@ -1,0 +1,64 @@
+{
+ "clip_id": "bar_12",
+ "version": "g1_r_u_v1",
+ "intent": "Show how much UKIP membership surged between July and August 2018.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How much did UKIP membership change between July and August 2018?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "UKIP"
+    ],
+    "measure": "membership and one-month change",
+    "time": "July-August 2018"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "claim": "UKIP membership rose 15% in one month, adding 3,200 members (August = 1.15 x July).",
+   "accept": [
+    "+15% in one month",
+    "3,200 new members",
+    "August membership is 1.15 times July",
+    "July to August 2018"
+   ],
+   "reject": [
+    "a decline",
+    "15 members instead of 15%",
+    "3,200% instead of 3,200 members",
+    "wrong months"
+   ],
+   "evidence": "The August bar is 15% taller than July, and the +15% / 3,200 callout is visible."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "Derived absolute membership: about 21,333 in July and 24,533 in August (not printed on the chart)."
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "g0_data_completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ }
+}

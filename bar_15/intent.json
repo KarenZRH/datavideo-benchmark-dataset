@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_15",
- "intent_en": "To demonstrate the increase in the number of people flagged for far-right activity between 2016-17 and 2017-18.",
- "previous_intent": "To demonstrate the increase in people flagged for far-right activity from 2016-17 to 2017-18, highlighting a substantial rise.",
+ "intent_en": "Show that the number of people flagged for far-right activity rose by more than a third between 2016-17 and 2017-18.",
+ "previous_intent": "To demonstrate the increase in the number of people flagged for far-right activity between 2016-17 and 2017-18.",
  "narration_support": "the number of people flagged to authorities because of worries about far -right activity has risen",
  "chart_support": "bar chart showing a higher value for 2017-18 compared to 2016-17 for people flagged for far-right activity",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To demonstrate the increase in the number of people flagged for far-right activity between 2016-17 and 2017-18.",
+ "intent_machine": "To demonstrate the increase in the number of people flagged for far-right activity between 2016-17 and 2017-18.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

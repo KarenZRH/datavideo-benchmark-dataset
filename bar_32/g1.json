@@ -1,0 +1,56 @@
+{
+ "clip_id": "bar_32",
+ "version": "g1_r_u_v1",
+ "intent": "Show that the monthly price of the cholesterol drug Crestor is higher in the United States than in six other developed countries.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How does the monthly Crestor price in the United States compare with six other countries?",
+   "relation": "single",
+   "unit_ids": ["U1"],
+   "scope": {
+    "entities": ["United States", "Germany", "Canada", "United Kingdom", "France", "Norway", "Australia"],
+    "measure": "monthly Crestor price"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The United States has the highest monthly Crestor price at about $231, compared with about $8 to $38 in the six other countries.",
+   "accept": [
+    "the United States has the tallest bar",
+    "the U.S. is the highest-priced country",
+    "the U.S. price is about $231 while every comparison country is below $40"
+   ],
+   "reject": [
+    "another country is highest",
+    "the U.S. price is described as only slightly higher",
+    "monthly prices are described as annual prices",
+    "the U.S. or a comparison country is omitted"
+   ],
+   "evidence": "Seven country bars share one dollar scale; the U.S. bar is more than six times the tallest comparison bar."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {"U1": 1.0},
+ "optional_valid": [],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 7,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
+}

@@ -21,7 +21,7 @@
 <text data-role="category-label" x="480" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">1982</text>
 </g>
 <g id="entity-2004" data-role="entity" data-entity-id="2004" data-label="2004">
-<rect id="2004-bar" data-role="bar" data-entity-id="2004" data-value="1.65" x="700" y="426.75" width="160" height="173.25" fill="#4299D6"/>
+<rect id="2004-bar" data-role="bar" data-entity-id="2004" data-value="3.65" x="700" y="216.75" width="160" height="383.25" fill="#4299D6"/>
 <text data-role="category-label" x="780" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333333">2004</text>
 </g>
 </g>

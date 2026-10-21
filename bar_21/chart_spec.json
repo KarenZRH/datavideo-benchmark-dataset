@@ -6,9 +6,9 @@
  "series_count": 1,
  "category_count": 3,
  "unit_mark": "bar",
- "has_axis": true,
+ "has_axis": false,
  "has_legend": null,
- "has_value_labels": null,
+ "has_value_labels": false,
  "text_count": 6,
  "row_count": 3,
  "derived_from": [

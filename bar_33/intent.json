@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_33",
- "intent_en": "To illustrate that the United States has the highest per capita spending on retail prescription drugs compared to other nations.",
- "previous_intent": "To demonstrate that the United States has the highest per capita retail prescription drug spending among the compared developed nations.",
+ "intent_en": "Show that the United States has the highest per-capita retail prescription drug spending among the ten compared countries.",
+ "previous_intent": "To illustrate that the United States has the highest per capita spending on retail prescription drugs compared to other nations.",
  "narration_support": "Americans spend more on prescription drugs than anyone else in the world.",
  "chart_support": "Bar chart displaying retail prescription drug spending per capita across multiple countries, with the United States showing the highest spending level.",
  "supported_by_narration": true,
@@ -24,5 +24,11 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "To illustrate that the United States has the highest per capita spending on retail prescription drugs compared to other nations.",
+ "intent_machine": "To demonstrate that the United States has the highest per capita retail prescription drug spending among the compared developed nations.",
+ "scope_note": "The narration says 'anyone else in the world', but the chart provides only ten-country evidence; the intent is limited to the compared countries.",
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": ["data_table","intent","g1"]
 }

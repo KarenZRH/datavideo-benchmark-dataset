@@ -1,0 +1,70 @@
+{
+ "clip_id": "bar_29",
+ "version": "g1_r_u_v1",
+ "intent": "Show that the monthly price of the Advair asthma inhaler is much higher in the United States than in six other developed countries.",
+ "requirements": [
+  {
+   "id": "R1",
+   "question": "How does the monthly Advair price in the United States compare with the six other countries?",
+   "relation": "single",
+   "unit_ids": [
+    "U1"
+   ],
+   "scope": {
+    "entities": [
+     "Australia",
+     "France",
+     "Germany",
+     "Norway",
+     "United Kingdom",
+     "Canada",
+     "United States"
+    ],
+    "measure": "monthly Advair price"
+   }
+  }
+ ],
+ "units": [
+  {
+   "id": "U1",
+   "requirement_id": "R1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "The United States has the highest monthly Advair price at about $319, while every other listed country is below $83; even the closest comparison country is only about one-quarter of the U.S. price.",
+   "accept": [
+    "the United States has the tallest bar and is the highest-priced country",
+    "the U.S. price is about $319 and every other country is below $83",
+    "the U.S. price is more than three times the highest comparison country and more than seven times the lowest"
+   ],
+   "reject": [
+    "saying another country has the highest price",
+    "treating the seven countries as five different drugs",
+    "omitting the United States or any comparison country",
+    "describing the U.S. price as only slightly higher than the others"
+   ],
+   "evidence": "Seven country bars share the same vertical dollar scale; the U.S. bar is much taller than all six comparison bars."
+  }
+ ],
+ "weight_mode": "uniform_over_units",
+ "unit_weights": {
+  "U1": 1.0
+ },
+ "optional_valid": [
+  "The narration mentions five top-selling prescription drugs, but this chart shows only Advair across seven countries."
+ ],
+ "g0_data_completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 7,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
+}

@@ -2,13 +2,13 @@
  "clip_id": "bar_28",
  "family": "bar",
  "sub_type": "simple",
- "orientation": "horizontal",
+ "orientation": "vertical",
  "series_count": 1,
- "category_count": 2,
+ "category_count": 1,
  "unit_mark": "bar",
  "has_axis": true,
- "has_legend": null,
- "has_value_labels": null,
+ "has_legend": false,
+ "has_value_labels": true,
  "text_count": 9,
  "row_count": 2,
  "derived_from": [
@@ -17,5 +17,11 @@
  ],
  "confidence": "high",
  "needs_review": false,
- "time_behavior": "snapshot"
+ "time_behavior": "frame",
+ "frames": [
+  "Initial state",
+  "Final state"
+ ],
+ "marks_per_frame": 1,
+ "motion": "single_bar_race"
 }

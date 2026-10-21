@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_29",
- "intent_en": "To demonstrate that the monthly price of the Advair asthma inhaler is significantly higher in the United States compared to other developed nations.",
- "previous_intent": "To demonstrate the significant price disparity of the Advair asthma inhaler across different countries, highlighting that the monthly cost in the United States is substantially higher than in other developed nations.",
+ "intent_en": "Show that the monthly price of the Advair asthma inhaler is much higher in the United States than in six other developed countries.",
+ "previous_intent": "To demonstrate that the monthly price of the Advair asthma inhaler is significantly higher in the United States compared to other developed nations.",
  "narration_support": "AdVare, a brand name Asmenehaler, more expensive in the U .S.",
  "chart_support": "Bar chart displaying the monthly price of Advair asthma inhaler across seven countries, revealing that the United States has a much higher price than Norway, Australia, France, Germany, the United Kingdom, and Canada.",
  "supported_by_narration": true,
@@ -24,5 +24,15 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": true
+ "needs_video_escalation": true,
+ "narrative_goal": "To demonstrate that the monthly price of the Advair asthma inhaler is significantly higher in the United States compared to other developed nations.",
+ "intent_machine": "To demonstrate the significant price disparity of the Advair asthma inhaler across different countries, highlighting that the monthly cost in the United States is substantially higher than in other developed nations.",
+ "scope_note": "The chart covers Advair prices across seven countries; the narration's reference to five top-selling drugs is broader context and is not a unit of this chart.",
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

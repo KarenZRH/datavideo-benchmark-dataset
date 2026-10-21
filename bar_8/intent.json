@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_8",
- "intent_en": "To demonstrate that private school fees are prohibitively expensive for the average person, consuming a large portion of their income.",
- "previous_intent": "To demonstrate that rising private school fees consume a significant portion of average income, making private education unaffordable for the majority.",
+ "intent_en": "Show that annual private school fees take about half of an average earner's annual income, making private schooling hard to afford.",
+ "previous_intent": "Show that private school fees take about half of an average earner's income, making private schooling hard to afford.",
  "narration_support": "Rising school fees now amount to 50 % of an average earner's wage",
  "chart_support": "Bar chart comparing school fees and average income, illustrating that fees represent a significant fraction of total earnings.",
  "supported_by_narration": true,
@@ -24,5 +24,14 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": false
+ "needs_video_escalation": false,
+ "narrative_goal": "Show that private school fees take about half of an average earner's income, making private schooling hard to afford.",
+ "intent_machine": "Show that private school fees take about half of an average earner's income, making private schooling hard to afford.",
+ "approved_by": "human",
+ "approved_at": "2026-10-21",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }
