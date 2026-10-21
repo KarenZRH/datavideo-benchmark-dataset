@@ -1,6 +1,6 @@
 # DataVideo OK 5-file Dataset
 
-仓库根目录下是 340 条真实 data-video clip 的标注包。仓库名里的 "5files" 是历史名称；
+仓库根目录下是 340 条真实 data-video clip 的标注包。数据集沿用早期 "5files" 的叫法；
 现在每条 clip 的文件数随审核进度不同。
 
 每条 clip 都带 `clip.mp4`（原始视频片段），整个仓库约 305 MB。
