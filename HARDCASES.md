@@ -48,3 +48,16 @@ the source narration and is not supported by the table or intent, it remains
 - U1 (threshold-to-rate relationship) requires visual evidence.
 - U2 (`0.05%` tax base) and U3 (`$200B` potential revenue) exist only in
   narration and use `must_be_visualized=false`.
+
+## Batch migration flags (2026-10-22)
+
+For `bar_35` onward, hardcases were flagged conservatively during migration:
+
+- `legacy_units_without_visual_basis`: a required legacy unit has no basis, or its
+  basis is explicitly narration-only. It defaults to `must_be_visualized=false`.
+- `no_explicit_bar_mark_in_reference_svg`: the reference SVG contains no recognizable
+  `data-role="bar"` mark. These clips remain pending human visual inspection.
+- `legacy_unit_count_above_4`: the migrated G1 still has more than four required
+  units and should be checked for C4 duplication.
+
+The authoritative per-clip status and flags are in `BAR_REVIEW_INDEX.csv`.
