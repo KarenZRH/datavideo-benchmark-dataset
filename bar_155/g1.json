@@ -5,26 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the video explicitly identify Reported Liabilities as the maximum relative value?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is the equality between Reported Assets and Actual Liabilities required, or merely optional?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Should the derived 0.0877 gap between Reported Liabilities and Actual Liabilities be a required unit?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,133 +16,51 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "Reported Liabilities has the largest relative value at 0.3509, above Reported Assets and Actual Liabilities at 0.2632 and the second Reported Assets entry at 0.2485.",
-   "basis": [
-    {
-     "entity": "Reported Liabilities",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.3509,
-     "note": "maximum relative_value"
-    },
-    {
-     "entity": "Reported Assets",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2632,
-     "note": "compared with maximum"
-    },
-    {
-     "entity": "Actual Liabilities",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2632,
-     "note": "compared with maximum"
-    },
-    {
-     "entity": "Reported Assets (bar-4)",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2485,
-     "note": "compared with maximum"
-    }
-   ],
-   "accept": [
-    "Reported Liabilities has the largest relative value, 0.3509",
-    "Reported Liabilities exceeds all other entities in relative value",
-    "the maximum relative value is Reported Liabilities at about 0.351"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must make Reported Liabilities visibly larger in relative value than the other listed entities."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Reported Assets and Actual Liabilities are tied at the same relative value of 0.2632.",
+   "claim": "Reported pension assets are $3.6T versus reported liabilities $4.8T, while actual liabilities reach $7.0T.",
    "basis": [
     {
-     "entity": "Reported Assets",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2632,
-     "note": "tied relative_value"
+     "entity": "Reported assets",
+     "field": "pension_assets",
+     "value": "3.6",
+     "unit": "trillion USD"
     },
     {
-     "entity": "Actual Liabilities",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2632,
-     "note": "tied relative_value"
+     "entity": "Reported liabilities",
+     "field": "pension_liabilities",
+     "value": "4.8",
+     "unit": "trillion USD"
+    },
+    {
+     "entity": "Actual liabilities",
+     "field": "pension_liabilities",
+     "value": "7.0",
+     "unit": "trillion USD"
     }
    ],
    "accept": [
-    "Reported Assets and Actual Liabilities have equal relative values of 0.2632",
-    "Actual Liabilities matches Reported Assets at 0.2632",
-    "the two entities are tied at about 0.263 in relative value"
+    "reported and actual liabilities are distinguished",
+    "all values are present"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The chart must show Reported Assets and Actual Liabilities as equal in relative magnitude."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "Reported Liabilities exceeds Actual Liabilities by 0.0877 in relative value, computed as 0.3509 minus 0.2632.",
-   "basis": [
-    {
-     "entity": "Reported Liabilities",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.3509,
-     "note": "minuend"
-    },
-    {
-     "entity": "Actual Liabilities",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2632,
-     "note": "subtrahend"
-    }
-   ],
-   "accept": [
-    "Reported Liabilities is 0.0877 higher than Actual Liabilities in relative value",
-    "the relative gap between Reported Liabilities and Actual Liabilities is about 0.088",
-    "Actual Liabilities is 0.0877 lower than Reported Liabilities"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must make the relative-value difference between Reported Liabilities and Actual Liabilities visible."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "The tie between Reported Assets and Actual Liabilities at 0.2632 can be shown as an explicit equality or left implicit.",
-  "The second Reported Assets entry (bar-4) can be treated as an optional backfill comparison rather than a core required value.",
-  "The relative ordering can be conveyed by a ranking or by pairwise comparisons."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
-  "required_data_rows": 4,
+  "selection": "all role=bar rows",
+  "required_data_rows": 3,
   "required_states": [],
   "required_marks_per_state": {},
   "evaluated_in": "G2_visual_completeness",
@@ -166,26 +68,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

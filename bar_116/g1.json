@@ -5,7 +5,7 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the video be required to state that Black men's relative_value is higher than Black women's?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -18,48 +18,48 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Black men have a higher relative_value than Black women on the unfair-stop measure.",
+   "claim": "Black men report being unfairly stopped far more often than Black women.",
    "basis": [
     {
      "entity": "Black men",
-     "x": "Black men",
-     "field": "relative_value",
-     "value": 0.5972,
-     "note": "relative_value from table"
+     "field": "unfairly_stopped",
+     "value": "64",
+     "unit": "%"
     },
     {
      "entity": "Black women",
-     "x": "Black women",
-     "field": "relative_value",
-     "value": 0.2986,
-     "note": "relative_value from table"
+     "field": "unfairly_stopped",
+     "value": "32",
+     "unit": "%"
+    },
+    {
+     "entity": "Black adults",
+     "field": "unfairly_stopped",
+     "value": "45",
+     "unit": "%"
     }
    ],
    "accept": [
-    "Black men are more likely than Black women to report this experience on the relative measure.",
-    "The relative_value for Black men exceeds that for Black women.",
-    "Black men's relative measure is higher than Black women's.",
-    "The visual comparison shows Black men above Black women."
+    "all three values are shown",
+    "men exceed women"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The chart must visually encode Black men's relative_value as greater than Black women's so the direction of difference is clear."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
   "U1": 1.0
  },
- "optional_valid": [
-  "Black adults' relative_value is closer to Black women's than to Black men's (adults-to-women gap 0.1213 vs adults-to-men gap 0.1773).",
-  "Black adults' relative_value is below the midpoint between Black men and Black women on the relative scale."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 3,
   "required_states": [],
   "required_marks_per_state": {},
@@ -68,26 +68,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

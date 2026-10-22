@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-32%,value,0.4437,relative,,bar
-18%,value,0.2496,relative,,bar
-16%,value,0.2219,relative,,bar
-10%,value,0.1387,relative,,bar
+White adults,great_deal_confidence_in_police,32,%,32%,bar
+Hispanic adults,great_deal_confidence_in_police,18,%,18%,bar
+Asian adults*,great_deal_confidence_in_police,16,%,16%,bar
+Black adults,great_deal_confidence_in_police,10,%,10%,bar

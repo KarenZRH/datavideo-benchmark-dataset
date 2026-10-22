@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-55% of all household cats are overweight,value,1.000,,,bar
-9% of their owners know that,value,1.000,,,bar
+Overweight household cats,share_of_cats,55,%,55%,bar
+Owners aware their cat is overweight,share_of_owners,9,%,9%,bar

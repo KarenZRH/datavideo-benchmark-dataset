@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-Medical,value,55.000,,,bar
-Dispensary,value,18.400,,,bar
+DISPENSARY,estimated_sales_volume,18.4,tons,18.4 tons,bar
+MEDICAL,estimated_sales_volume,55,tons,55 tons,bar

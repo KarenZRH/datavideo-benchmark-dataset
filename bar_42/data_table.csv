@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-fossil fuels,uk_energy_subsidies_2016,10.500,,,bar
-renewables,uk_energy_subsidies_2016,7.300,,,bar
+fossil fuels,uk_energy_subsidy,10.5,billion GBP,£10.5bn,bar
+renewables,uk_energy_subsidy,7.3,billion GBP,£7.3bn,bar

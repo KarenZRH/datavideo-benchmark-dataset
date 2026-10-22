@@ -1,6 +1,6 @@
-entity,series,x,metric,value,unit,label,role,note
-$2 billion estate,wealth tax on a $2 billion estate,2000000000,better_way_tax_rich,2000000000,usd,,bar,single bar spanning the axis
-First $50M of wealth,marginal tax rate,0-50000000,better_way_tax_rich,0,percent,,bar,no tax on the first $50M
-$50M to $500M,marginal tax rate,50000000-500000000,better_way_tax_rich,2,percent,,bar,2% per the chart; narration uses the same 2%
-Above $500M,marginal tax rate,500000000+,better_way_tax_rich,3,percent,,bar,3% per the chart annotation
-$2 billion estate,tax due,2000000000,better_way_tax_rich,49000000,usd,,bar,narration: about $49 million
+entity,x,metric,value,unit,label,role
+$2 billion estate,Illustrative wealth,wealth_level,2,billion USD,$2 billion,bar
+First $50 million,,marginal_tax_rate,0,%,0%,annotation
+$50 million to $1 billion,,marginal_tax_rate,2,%,2%,annotation
+Above $1 billion,,marginal_tax_rate,3,%,3%,annotation
+$2 billion estate,,tax_due,49,million USD,about $49 million,annotation

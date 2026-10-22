@@ -1,17 +1,17 @@
 entity,series,metric,value,unit,label,role
-Medical scientists,A great deal,value,0.2188,relative,,bar
-40,A fair amount,value,0.2461,relative,,bar
-Scientists,A great deal,value,0.2133,relative,,bar
-39,A fair amount,value,0.2461,relative,,bar
-The military,A great deal,value,0.2133,relative,,bar
-39,A fair amount,value,0.2406,relative,,bar
-K-12 public school principals,A great deal,value,0.1148,relative,,bar
-21,A fair amount,value,0.2953,relative,,bar
-Religious leaders,A great deal,value,0.0820,relative,,bar
-15,A fair amount,value,0.2406,relative,,bar
-Business leaders,A great deal,value,0.0273,relative,,bar
-46,A fair amount,value,0.2242,relative,,bar
-Journalists,A great deal,value,0.0492,relative,,bar
-9,A fair amount,value,0.1969,relative,,bar
-Elected officials,A great deal,value,0.0219,relative,,bar
-37,A fair amount,value,0.1805,relative,,bar
+Medical scientists,A great deal,public_confidence,40,%,,bar
+Medical scientists,A fair amount,public_confidence,85,%,,bar
+Scientists,A great deal,public_confidence,39,%,,bar
+Scientists,A fair amount,public_confidence,84,%,,bar
+The military,A great deal,public_confidence,39,%,,bar
+The military,A fair amount,public_confidence,83,%,,bar
+K-12 public school principals,A great deal,public_confidence,21,%,,bar
+K-12 public school principals,A fair amount,public_confidence,75,%,,bar
+Religious leaders,A great deal,public_confidence,15,%,,bar
+Religious leaders,A fair amount,public_confidence,59,%,,bar
+Business leaders,A great deal,public_confidence,5,%,,bar
+Business leaders,A fair amount,public_confidence,46,%,,bar
+Journalists,A great deal,public_confidence,9,%,,bar
+Journalists,A fair amount,public_confidence,45,%,,bar
+Elected officials,A great deal,public_confidence,4,%,,bar
+Elected officials,A fair amount,public_confidence,37,%,,bar

@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
-<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#e8e8e6"/>
-<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#8a0f0f">PIRATE ATTACKS</text>
-<g id="chart-plot" data-role="plot">
-<line data-role="axis" x1="180.0" y1="560.0" x2="1140.0" y2="560.0" stroke="#999999" stroke-width="3"/>
-<g id="entity-year-2013" data-role="entity" data-entity-id="year-2013" data-label="2013">
-<rect id="year-2013-bar" data-role="bar" data-entity-id="year-2013" data-value="1" x="210.4" y="180.0" width="99.2" height="380.0" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="year-2013-label" data-role="category-label" data-entity-id="year-2013" x="260.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555555">2013</text>
-</g>
-<g id="entity-year-2014" data-role="entity" data-entity-id="year-2014" data-label="2014">
-<rect id="year-2014-bar" data-role="bar" data-entity-id="year-2014" data-value="0.9516" x="370.4" y="198.4" width="99.2" height="361.6" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="year-2014-label" data-role="category-label" data-entity-id="year-2014" x="420.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555555">2014</text>
-</g>
-<g id="entity-year-2015" data-role="entity" data-entity-id="year-2015" data-label="2015">
-<rect id="year-2015-bar" data-role="bar" data-entity-id="year-2015" data-value="0.9031" x="530.4" y="216.8" width="99.2" height="343.2" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="year-2015-label" data-role="category-label" data-entity-id="year-2015" x="580.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555555">2015</text>
-</g>
-<g id="entity-year-2016" data-role="entity" data-entity-id="year-2016" data-label="2016">
-<rect id="year-2016-bar" data-role="bar" data-entity-id="year-2016" data-value="0.7595" x="690.4" y="271.4" width="99.2" height="288.6" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="year-2016-label" data-role="category-label" data-entity-id="year-2016" x="740.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555555">2016</text>
-</g>
-<g id="entity-year-2017" data-role="entity" data-entity-id="year-2017" data-label="2017">
-<rect id="year-2017-bar" data-role="bar" data-entity-id="year-2017" data-value="0.7111" x="850.4" y="289.8" width="99.2" height="270.2" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="year-2017-label" data-role="category-label" data-entity-id="year-2017" x="900.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555555">2017</text>
-</g>
-<g id="entity-year-2018" data-role="entity" data-entity-id="year-2018" data-label="2018">
-<rect id="year-2018-bar" data-role="bar" data-entity-id="year-2018" data-value="0.55" x="1010.4" y="351.0" width="99.2" height="209.0" fill="#333333" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="year-2018-label" data-role="category-label" data-entity-id="year-2018" x="1060.0" y="590.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555555">2018</text>
-</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart">
+<rect data-role="background" width="1280" height="720" fill="#E8E8E6"/>
+<text x="640" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#8A0F0F">PIRATE ATTACKS</text>
+<text x="150" y="120" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#555">Annual losses to shipping</text>
+<line x1="190" y1="600.0" x2="1120" y2="600.0" stroke="#C9C9C9" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="170" y="607.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#555">0B</text>
+<line x1="190" y1="420.0" x2="1120" y2="420.0" stroke="#C9C9C9" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="170" y="427.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#555">4B</text>
+<line x1="190" y1="240.0" x2="1120" y2="240.0" stroke="#C9C9C9" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="170" y="247.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#555">8B</text>
+<line x1="190" y1="600" x2="1120" y2="600" stroke="#888" stroke-width="3"/>
+<rect data-role="bar" data-entity-id="2013" data-value="8.3" data-unit="billion USD" x="250" y="226.50" width="95" height="373.50" fill="#333333"/>
+<text x="297.5" y="629" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#444">2013</text>
+<rect data-role="bar" data-entity-id="2014" data-value="7.9" data-unit="billion USD" x="400" y="244.50" width="95" height="355.50" fill="#333333"/>
+<text x="447.5" y="629" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#444">2014</text>
+<rect data-role="bar" data-entity-id="2015" data-value="7.6" data-unit="billion USD" x="550" y="258.00" width="95" height="342.00" fill="#333333"/>
+<text x="597.5" y="629" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#444">2015</text>
+<rect data-role="bar" data-entity-id="2016" data-value="6.5" data-unit="billion USD" x="700" y="307.50" width="95" height="292.50" fill="#333333"/>
+<text x="747.5" y="629" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#444">2016</text>
+<rect data-role="bar" data-entity-id="2017" data-value="6.1" data-unit="billion USD" x="850" y="325.50" width="95" height="274.50" fill="#333333"/>
+<text x="897.5" y="629" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#444">2017</text>
+<rect data-role="bar" data-entity-id="2018" data-value="4.9" data-unit="billion USD" x="1000" y="379.50" width="95" height="220.50" fill="#333333"/>
+<text x="1047.5" y="629" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#444">2018</text>
 </svg>

@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_46",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the distribution of income taxes across different individuals as a baseline for comparing the total tax burden when corporate and property taxes are included.",
+ "intent": "Show the income-tax baseline across income groups before other taxes are added.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the zero income tax for the poorest be shown or stated?",
+   "question": "What is the baseline shape of income taxes across the eleven groups?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video convey the upward trend and the 18 peak at Group 10?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the video highlight that the richest is lower than Group 10, not the maximum?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,112 +16,45 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The POOREST person/group has an income tax value of 0.000, the bottom endpoint of the baseline distribution.",
+   "claim": "Income-tax rates rise from the poorest group through the tenth group, peak at about 18%, and then fall to about 10% for the top group.",
    "basis": [
     {
-     "entity": "POOREST",
-     "x": "198.7",
-     "field": "value",
-     "value": 0.0,
-     "note": "leftmost bar"
-    }
-   ],
-   "accept": [
-    "The poorest pays 0 income tax",
-    "income tax starts at zero for the poorest",
-    "the bottom group has a zero income-tax value"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Leftmost POOREST bar is at zero/empty on the income-tax axis."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "Income tax rises across the baseline from POOREST to Group 10, peaking at 18.000 for Group 10.",
-   "basis": [
-    {
-     "entity": "POOREST",
-     "x": "198.7",
-     "field": "value",
-     "value": 0.0,
-     "note": "start of trend"
+     "entity": "Richest 10%",
+     "field": "income_tax_rate",
+     "value": 18,
+     "unit": "%"
     },
     {
-     "entity": "Group 10",
-     "x": "1074.1",
-     "field": "value",
-     "value": 18.0,
-     "note": "peak of trend"
+     "entity": "400 Richest",
+     "field": "income_tax_rate",
+     "value": 10,
+     "unit": "%"
     }
    ],
    "accept": [
-    "Income tax climbs from 0 to 18 across the first ten groups",
-    "the baseline reaches its peak at 18 for Group 10",
-    "upward income-tax distribution from poorest to Group 10"
+    "eleven bars are present",
+    "the tenth bar is the maximum at about 18%",
+    "the final bar falls to about 10%"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting the top group",
+    "showing the final group as the maximum",
+    "reversing the order of the income groups"
    ],
-   "evidence": "Bars generally increase from POOREST through Group 10; Group 10 is the tallest bar at 18."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The RICHEST person/group has an income tax value of 10.000, which is 8.000 lower than Group 10's 18.000 (about 44.4% lower), so the richest is not the maximum.",
-   "basis": [
-    {
-     "entity": "RICHEST",
-     "x": "1171.4",
-     "field": "value",
-     "value": 10.0,
-     "note": "rightmost bar"
-    },
-    {
-     "entity": "Group 10",
-     "x": "1074.1",
-     "field": "value",
-     "value": 18.0,
-     "note": "comparison bar"
-    }
-   ],
-   "accept": [
-    "The richest has 10, which is less than Group 10's 18",
-    "Group 10 pays 8 more than the richest",
-    "the richest's income tax is about 44% lower than Group 10's",
-    "the richest is not the highest income-tax bar"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "RICHEST bar at 10 is visibly shorter than Group 10 bar at 18."
+   "evidence": "Use the corresponding visible bars/segments in the selected keyframe."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "Group-by-group values for all 11 entities (POOREST=0, Group 2=1, Group 3=3, Group 4=4, Group 5=6, Group 6=7, Group 7=8, Group 8=10, Group 9=12, Group 10=18, RICHEST=10) may be shown as labels or tooltips.",
-  "The normalized relative_value field (e.g., Group 10=0.6000, Group 9=0.4000, RICHEST=0.3333) may be used for bar-height scaling.",
-  "The first nonzero value may be noted as Group 2=1.000 if labels are shown."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar bars or stack segments; annotation rows excluded",
   "required_data_rows": 11,
   "required_states": [],
   "required_marks_per_state": {},
@@ -146,12 +63,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "percent_bars_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

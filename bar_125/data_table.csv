@@ -1,62 +1,62 @@
 entity,metric,value,unit,label,role
-1950,value,150.900,,,bar
-1950,value,323.000,,,bar
-100,value,455.000,,,bar
-200,value,468.400,,,bar
-1955,value,404.200,,,bar
-1955,value,382.600,,,bar
-1955,value,387.600,,,bar
-300,value,398.700,,,bar
-400,value,396.300,,,bar
-1960,value,399.100,,,bar
-1960,value,389.300,,,bar
-1960,value,405.700,,,bar
-500,value,439.600,,,bar
-600,value,433.600,,,bar
-1965,value,419.100,,,bar
-1965,value,421.000,,,bar
-1965,value,497.800,,,bar
-700,value,571.500,,,bar
-800,value,589.900,,,bar
-1970,value,563.900,,,bar
-1970,value,522.600,,,bar
-1970,value,470.300,,,bar
-$800 billion,value,469.500,,,bar
-1950,value,446.200,,,bar
-1975,value,440.400,,,bar
-1975,value,416.200,,,bar
-1975,value,404.900,,,bar
-1955,value,420.200,,,bar
-1960,value,422.800,,,bar
-1980,value,425.300,,,bar
-1980,value,424.300,,,bar
-1980,value,472.600,,,bar
-1965,value,558.900,,,bar
-1970,value,545.800,,,bar
-1985,value,574.100,,,bar
-1985,value,615.400,,,bar
-1985,value,656.100,,,bar
-1975,value,650.700,,,bar
-1980,value,637.100,,,bar
-1990,value,631.700,,,bar
-1990,value,605.400,,,bar
-1990,value,534.900,,,bar
-1985,value,563.600,,,bar
-1990,value,533.400,,,bar
-1995,value,505.700,,,bar
-1995,value,472.400,,,bar
-1995,value,446.700,,,bar
-1995,value,444.400,,,bar
-2000,value,434.300,,,bar
-2000,value,435.400,,,bar
-2000,value,452.300,,,bar
-2000,value,456.000,,,bar
-2005,value,511.900,,,bar
-2010,value,582.700,,,bar
-2005,value,635.100,,,bar
-2005,value,664.300,,,bar
-2005,value,673.900,,,bar
-1985,value,691.800,,,bar
-$615 billion,value,742.200,,,bar
-2010,value,800.600,,,bar
-2010,value,823.500,,,bar
+1950,us_defense_spending,150.9,billion USD,,bar
+1951,us_defense_spending,323.0,billion USD,,bar
+1952,us_defense_spending,455.0,billion USD,,bar
+1953,us_defense_spending,468.4,billion USD,,bar
+1954,us_defense_spending,404.2,billion USD,,bar
+1955,us_defense_spending,382.6,billion USD,,bar
+1956,us_defense_spending,387.6,billion USD,,bar
+1957,us_defense_spending,398.7,billion USD,,bar
+1958,us_defense_spending,396.3,billion USD,,bar
+1959,us_defense_spending,399.1,billion USD,,bar
+1960,us_defense_spending,389.3,billion USD,,bar
+1961,us_defense_spending,405.7,billion USD,,bar
+1962,us_defense_spending,439.6,billion USD,,bar
+1963,us_defense_spending,433.6,billion USD,,bar
+1964,us_defense_spending,419.1,billion USD,,bar
+1965,us_defense_spending,421.0,billion USD,,bar
+1966,us_defense_spending,497.8,billion USD,,bar
+1967,us_defense_spending,571.5,billion USD,,bar
+1968,us_defense_spending,589.9,billion USD,,bar
+1969,us_defense_spending,563.9,billion USD,,bar
+1970,us_defense_spending,522.6,billion USD,,bar
+1971,us_defense_spending,470.3,billion USD,,bar
+1972,us_defense_spending,469.5,billion USD,,bar
+1973,us_defense_spending,446.2,billion USD,,bar
+1974,us_defense_spending,440.4,billion USD,,bar
+1975,us_defense_spending,416.2,billion USD,,bar
+1976,us_defense_spending,404.9,billion USD,,bar
+1977,us_defense_spending,420.2,billion USD,,bar
+1978,us_defense_spending,422.8,billion USD,,bar
+1979,us_defense_spending,425.3,billion USD,,bar
+1980,us_defense_spending,424.3,billion USD,,bar
+1981,us_defense_spending,472.6,billion USD,,bar
+1982,us_defense_spending,558.9,billion USD,,bar
+1983,us_defense_spending,545.8,billion USD,,bar
+1984,us_defense_spending,574.1,billion USD,,bar
+1985,us_defense_spending,615.4,billion USD,$615.4 billion,bar
+1986,us_defense_spending,656.1,billion USD,,bar
+1987,us_defense_spending,650.7,billion USD,,bar
+1988,us_defense_spending,637.1,billion USD,,bar
+1989,us_defense_spending,631.7,billion USD,,bar
+1990,us_defense_spending,605.4,billion USD,,bar
+1991,us_defense_spending,534.9,billion USD,,bar
+1992,us_defense_spending,563.6,billion USD,,bar
+1993,us_defense_spending,533.4,billion USD,,bar
+1994,us_defense_spending,505.7,billion USD,,bar
+1995,us_defense_spending,472.4,billion USD,,bar
+1996,us_defense_spending,446.7,billion USD,,bar
+1997,us_defense_spending,444.4,billion USD,,bar
+1998,us_defense_spending,434.3,billion USD,,bar
+1999,us_defense_spending,435.4,billion USD,,bar
+2000,us_defense_spending,452.3,billion USD,,bar
+2001,us_defense_spending,456.0,billion USD,,bar
+2002,us_defense_spending,511.9,billion USD,,bar
+2003,us_defense_spending,582.7,billion USD,,bar
+2004,us_defense_spending,635.1,billion USD,,bar
+2005,us_defense_spending,664.3,billion USD,,bar
+2006,us_defense_spending,673.9,billion USD,,bar
+2007,us_defense_spending,691.8,billion USD,,bar
+2008,us_defense_spending,742.2,billion USD,,bar
+2009,us_defense_spending,800.6,billion USD,,bar
+2010,us_defense_spending,823.5,billion USD,,bar

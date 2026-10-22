@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Eyewitness misinterpretation,causes_wrongful_convictions,72.000,,,bar
-Improper forensics,causes_wrongful_convictions,47.000,,,bar
-False confessions,causes_wrongful_convictions,27.000,,,bar
-Informant,causes_wrongful_convictions,15.000,,,bar
+Eyewitness misinterpretation,share_of_wrongful_convictions,72,%,72%,bar
+Improper forensics,share_of_wrongful_convictions,47,%,47%,bar
+False confessions,share_of_wrongful_convictions,27,%,27%,bar
+Informant,share_of_wrongful_convictions,15,%,15%,bar

@@ -5,26 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly show high income exceeding 50%, or is a general 'majority' label enough?",
+   "question": "How unequal were confirmed vaccine-dose purchases by income group?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is the absolute 270 million count required, or is the 3.5% share sufficient to convey 'very few'?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the animation display the full four-group ranking, or only the high-vs-low contrast?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,126 +16,57 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "threshold_or_crossing",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "High-income countries accounted for 54.44% of the relative dose share, i.e. over half (majority).",
+   "claim": "High-income countries purchased about 4.2 billion doses, vastly more than upper-middle, lower-middle, and low-income groups.",
    "basis": [
     {
      "entity": "High income",
-     "x": "High income",
-     "field": "relative_value",
-     "value": 0.5444,
-     "note": "Table relative share; 0.5444 = 54.44%, above 0.5."
-    }
-   ],
-   "accept": [
-    "High-income countries got 54.4% of doses, more than half.",
-    "Over half the doses (54.44%) went to high-income countries.",
-    "High income crossed the 50% majority threshold with a 54.44% share."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The High income bar/segment must be visibly labeled 54.44% (or 54.4%) and/or shown crossing a 50% reference line."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "Lower-income countries received 270,000,000 doses, only a 3.50% relative share.",
-   "basis": [
-    {
-     "entity": "Lower income",
-     "x": "Lower income",
-     "field": "value",
-     "value": 270000000,
-     "note": "Absolute dose count for lower-income group."
-    },
-    {
-     "entity": "Lower income",
-     "x": "Lower income",
-     "field": "relative_value",
-     "value": 0.035,
-     "note": "Table relative share; 0.0350 = 3.50%."
-    }
-   ],
-   "accept": [
-    "Lower-income countries received only 3.5% of doses (270 million).",
-    "Just 270 million doses went to lower-income countries, a 3.50% share.",
-    "Lower income got 270M doses, only 3.5%."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The Lower income bar/segment must be labeled 270M and/or 3.5%."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "The dose shares decline in income order: High income 54.44% > Upper middle income 13.61% > Lower middle income 5.33% > Lower income 3.50%.",
-   "basis": [
-    {
-     "entity": "High income",
-     "x": "High income",
-     "field": "relative_value",
-     "value": 0.5444,
-     "note": "54.44% share."
+     "field": "confirmed_vaccine_doses",
+     "value": 4200,
+     "unit": "million doses"
     },
     {
      "entity": "Upper middle income",
-     "x": "Upper middle income",
-     "field": "relative_value",
-     "value": 0.1361,
-     "note": "13.61% share."
+     "field": "confirmed_vaccine_doses",
+     "value": 571.62,
+     "unit": "million doses"
     },
     {
      "entity": "Lower middle income",
-     "x": "Lower middle income",
-     "field": "relative_value",
-     "value": 0.0533,
-     "note": "5.33% share."
+     "field": "confirmed_vaccine_doses",
+     "value": 411,
+     "unit": "million doses"
     },
     {
      "entity": "Lower income",
-     "x": "Lower income",
-     "field": "relative_value",
-     "value": 0.035,
-     "note": "3.50% share."
+     "field": "confirmed_vaccine_doses",
+     "value": 270,
+     "unit": "million doses"
     }
    ],
    "accept": [
-    "Shares rank High 54.44% > Upper-middle 13.61% > Lower-middle 5.33% > Lower-income 3.50%.",
-    "Vaccine share falls as income group falls: 54.44%, 13.61%, 5.33%, 3.50%.",
-    "High income first with 54.44%, then upper-middle 13.61%, lower-middle 5.33%, lower-income last at 3.50%."
+    "all four income groups are present",
+    "high income is about 4.2 billion doses",
+    "each lower income group is far smaller"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing the ranking",
+    "using percentages instead of doses",
+    "omitting an income group"
    ],
-   "evidence": "Bars/segments must be ordered by income group and show relative-share labels in descending order."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "Upper-middle-income group's relative share is 13.61%.",
-  "Lower-middle-income group received 411,000,000 doses, a 5.33% share.",
-  "High-income absolute value is 4.2 billion doses.",
-  "Lower-middle-income absolute value is 411 million doses."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -160,26 +75,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
- "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
- ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null,
  "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
  },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "hardcases": [],
+ "review_flags": [
+  "strict_reaudit_2026-10-22"
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

@@ -1,14 +1,22 @@
 {
  "clip_id": "bar_82",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the exceptionally low nominal GDP of Somalia relative to countries like Ghana and Madagascar.",
+ "intent": "Show that Ghana and Madagascar have GDPs far above smaller nearby economies, conveying how low Somalia's GDP is.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the ranking of Ghana above Madagascar required to be shown?",
+   "question": "How do the shown neighboring economies compare by nominal GDP?",
    "relation": "single",
    "unit_ids": [
     "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "What does the neighboring-country comparison imply about Somalia?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
    ]
   }
  ],
@@ -16,49 +24,75 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Among the listed entities, Ghana has the highest value (1.000), followed by Madagascar (0.303).",
+   "claim": "Ghana is highest, followed by Madagascar, Saint Lucia, and Antigua and Barbuda.",
    "basis": [
     {
      "entity": "Ghana",
-     "x": "",
-     "field": "value",
+     "field": "gdp_nominal",
      "value": 1.0,
-     "note": "highest listed value"
+     "unit": "relative"
     },
     {
      "entity": "Madagascar",
-     "x": "",
-     "field": "value",
+     "field": "gdp_nominal",
      "value": 0.303,
-     "note": "second-highest listed value"
+     "unit": "relative"
+    },
+    {
+     "entity": "Saint Lucia",
+     "field": "gdp_nominal",
+     "value": 0.061,
+     "unit": "relative"
+    },
+    {
+     "entity": "Antigua and Barbuda",
+     "field": "gdp_nominal",
+     "value": 0.03,
+     "unit": "relative"
     }
    ],
    "accept": [
-    "Ghana is highest at 1.000, Madagascar second at 0.303",
-    "Ghana ranks first (1.000) and Madagascar second (0.303)",
-    "Ghana's bar is the tallest; Madagascar is next at 0.303"
+    "all four comparison bars are shown in descending order",
+    "Ghana is largest",
+    "the smaller economies remain visible"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting Madagascar",
+    "reversing Ghana and Antigua"
    ],
-   "evidence": "Ghana bar is tallest and Madagascar bar is second tallest among the four entities."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "claim": "Somalia's narrated GDP is lower than these already-small comparator economies.",
+   "basis": [],
+   "accept": [
+    "Somalia is described as lower than the shown comparators"
+   ],
+   "reject": [
+    "claiming Somalia is the tallest bar",
+    "claiming Somalia's GDP is larger than Ghana's"
+   ],
+   "evidence": "Narration-only context; do not invent a chart mark for it.",
+   "hardcase": true,
+   "hardcase_reason": "This consequence or prediction is stated in narration but has no direct chart mark."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 1.0
+  "U1": 0.5,
+  "U2": 0.5
  },
- "optional_valid": [
-  "Use of the table's relative_value column (0.7333, 0.2222, 0.0444, 0.0222) as provided, without interpreting it as a share of the four-country total.",
-  "Highlighting that Ghana and Madagascar are both much larger than Saint Lucia and Antigua."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -67,12 +101,23 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
- "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "narration_only_context",
+  "reason": "At least one required claim is not directly represented by a chart mark."
+ },
+ "hardcases": [
+  {
+   "unit_id": "U2",
+   "type": "required_narrative_without_source_visual",
+   "handling": "must_be_visualized=false; preserve the point through narration."
+  }
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "review_flags": [
+  "batch_64_83_reviewed_candidate"
+ ],
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

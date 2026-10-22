@@ -1,7 +1,7 @@
 entity,metric,value,unit,label,role
-1960s,us_job_creation,30.000,,,bar
-1970s,us_job_creation,25.000,,,bar
-1980s,us_job_creation,18.000,,,bar
-1990s,us_job_creation,18.000,,,bar
-2000-7*,us_job_creation,5.000,,,bar
-2000s*,us_job_creation,1.000,,,bar
+1960s,annual_job_creation_share,30,%,1960s,bar
+1970s,annual_job_creation_share,25,%,1970s,bar
+1980s,annual_job_creation_share,18,%,1980s,bar
+1990s,annual_job_creation_share,18,%,1990s,bar
+2000-7*,annual_job_creation_share,5,%,2000-7*,bar
+2000s*,annual_job_creation_share,1,%,2000s*,bar

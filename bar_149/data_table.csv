@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Tax Foundation,value,0.2829,relative,,bar
-Penn Wharton,value,0.3984,relative,,bar
-Tax Policy Center,value,0.4994,relative,,bar
-Americans for Tax Fairness,value,0.5312,relative,,bar
+Tax Foundation,projected_ten_year_revenue,213,billion USD,$213 billion,bar
+Penn Wharton,projected_ten_year_revenue,300,billion USD,$300 billion,bar
+Tax Policy Center,projected_ten_year_revenue,376,billion USD,$376 billion,bar
+Americans for Tax Fairness,projected_ten_year_revenue,400,billion USD,$400 billion,bar

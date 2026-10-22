@@ -7,9 +7,10 @@
 
 当前进度：
 
-- `bar_1`–`bar_34`：人工逐条审核完成。
-- `bar_35`–`bar_163`：已批量迁移为当前 R/U + G0/G2 完整性格式，等待人工复核。
-- bar 家族共 153 条，其中 63 条带 hardcase 标记。
+- bar 家族共 153 条，全部完成 R/U + G0/G2 完整性格式迁移。
+- 当前 100 条为人工审核通过，53 条为待人工复核；具体状态以
+  `BAR_REVIEW_INDEX.csv` 为准。
+- 其中 28 条带 hardcase 标记。
 - 完整索引见根目录 `BAR_REVIEW_INDEX.csv`。
 
 | 文件 | 作用 |
@@ -23,8 +24,7 @@
 | `semantic.svg` | 视觉参考 |
 | `keyframe.png` | 参考关键帧 |
 
-bar 家族已统一迁移到 `g1.json`；旧 `g1_draft_b2.json` 和 `g2_evidence.json` 已从
-bar clip 目录清除，原始草稿备份在本地 `benchmark_draft/legacy_bar_g1_20261022/`。
+bar 家族已统一迁移到 `g1.json`；当前根目录只保留审核后的数据和索引文件。
 
 ## 2. 审核顺序：表 → intent → G1
 
@@ -136,3 +136,5 @@ bar clip 目录清除，原始草稿备份在本地 `benchmark_draft/legacy_bar_
 - 完整 spec：`chart_spec.json`
 - 生成输入 spec：`input_spec.json`
 - 协议：`benchmark_draft/gt/evaluation_protocol.md`、`CHART_SPEC.md`
+- bar 全量审核索引：`BAR_REVIEW_INDEX.csv`
+- `bar_84`–`bar_163` 严格审核记录：`BAR84_163_STRICT_AUDIT.csv`、`BAR84_163_STRICT_AUDIT.md`

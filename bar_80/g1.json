@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_80",
  "version": "g1_r_u_v1",
- "intent": "To establish the millennial demographic as a mature generation of adults transitioning from education to the workforce and career paths.",
+ "intent": "Show the demographic distribution of millennials across age bands and genders.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the clip explicitly bound millennials as 20-24 through 40-44, or is one boundary sufficient?",
+   "question": "Which age bands define the millennial cohort in the pyramid?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -16,49 +16,302 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "identity_or_series",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The millennial cohort spans from the youngest age band 20-24 to the oldest age band 40-44.",
+   "claim": "The highlighted millennial cohort spans the 20–24 through 35–39 age bands, with male and female sides shown separately.",
    "basis": [
     {
-     "entity": "20-24",
-     "x": "Male",
-     "field": "value",
+     "entity": "95-99",
+     "field": "millennials",
+     "value": 0.031,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "95-99",
+     "field": "millennials",
+     "value": 0.041,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "90-95",
+     "field": "millennials",
+     "value": 0.083,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "90-95",
+     "field": "millennials",
+     "value": 0.093,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "85-89",
+     "field": "millennials",
+     "value": 0.165,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "85-89",
+     "field": "millennials",
+     "value": 0.175,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "80-84",
+     "field": "millennials",
+     "value": 0.289,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "80-84",
+     "field": "millennials",
+     "value": 0.299,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "75-79",
+     "field": "millennials",
+     "value": 0.443,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "75-79",
+     "field": "millennials",
+     "value": 0.454,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "70-74",
+     "field": "millennials",
+     "value": 0.598,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "70-74",
+     "field": "millennials",
+     "value": 0.608,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "65-69",
+     "field": "millennials",
+     "value": 0.753,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "65-69",
+     "field": "millennials",
+     "value": 0.768,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "60-64",
+     "field": "millennials",
      "value": 0.866,
-     "note": "youngest millennial band, male"
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "60-64",
+     "field": "millennials",
+     "value": 0.887,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "55-59",
+     "field": "millennials",
+     "value": 0.969,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "55-59",
+     "field": "millennials",
+     "value": 1.0,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "50-54",
+     "field": "millennials",
+     "value": 0.907,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "50-54",
+     "field": "millennials",
+     "value": 0.959,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "45-49",
+     "field": "millennials",
+     "value": 0.804,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "45-49",
+     "field": "millennials",
+     "value": 0.845,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "40-44",
+     "field": "millennials",
+     "value": 0.763,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "40-44",
+     "field": "millennials",
+     "value": 0.794,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "35-39",
+     "field": "millennials",
+     "value": 0.763,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "35-39",
+     "field": "millennials",
+     "value": 0.804,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "30-34",
+     "field": "millennials",
+     "value": 0.814,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "30-34",
+     "field": "millennials",
+     "value": 0.845,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "25-29",
+     "field": "millennials",
+     "value": 0.866,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "25-29",
+     "field": "millennials",
+     "value": 0.887,
+     "unit": "relative",
+     "series": "Female"
     },
     {
      "entity": "20-24",
-     "x": "Female",
-     "field": "value",
+     "field": "millennials",
+     "value": 0.866,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "20-24",
+     "field": "millennials",
      "value": 0.897,
-     "note": "youngest millennial band, female"
+     "unit": "relative",
+     "series": "Female"
     },
     {
-     "entity": "40-44",
-     "x": "Male",
-     "field": "value",
-     "value": 0.763,
-     "note": "oldest millennial band, male"
+     "entity": "15-19",
+     "field": "millennials",
+     "value": 0.724,
+     "unit": "relative",
+     "series": "Male"
     },
     {
-     "entity": "40-44",
-     "x": "Female",
-     "field": "value",
-     "value": 0.794,
-     "note": "oldest millennial band, female"
+     "entity": "15-19",
+     "field": "millennials",
+     "value": 0.751,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "10-14",
+     "field": "millennials",
+     "value": 0.677,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "10-14",
+     "field": "millennials",
+     "value": 0.705,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "5-9",
+     "field": "millennials",
+     "value": 0.631,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "5-9",
+     "field": "millennials",
+     "value": 0.659,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "0-4",
+     "field": "millennials",
+     "value": 0.585,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "0-4",
+     "field": "millennials",
+     "value": 0.612,
+     "unit": "relative",
+     "series": "Female"
     }
    ],
    "accept": [
-    "Millennials range from the 20-24 age band through the 40-44 age band.",
-    "The youngest millennials are in the 20-24 group and the oldest are in the 40-44 group.",
-    "The millennial span shown covers 20-24 to 40-44."
+    "the pyramid contains paired male/female age bands",
+    "20–24 through 35–39 are highlighted",
+    "40–44 and all younger/older bands remain unhighlighted"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "collapsing the two genders",
+    "omitting age bands",
+    "highlighting only a single age"
    ],
-   "evidence": "Age labels for 20-24 and 40-44 must be visible and visually connected to the millennial range."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -69,7 +322,7 @@
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 40,
   "required_states": [],
   "required_marks_per_state": {},
@@ -78,11 +331,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

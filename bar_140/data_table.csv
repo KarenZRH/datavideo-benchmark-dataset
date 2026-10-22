@@ -1,6 +1,6 @@
 entity,metric,value,unit,label,role
-1980,value,0.4314,relative,,bar
-1990,value,0.4788,relative,,bar
-2000,value,0.5024,relative,,bar
-2010,value,0.5546,relative,,bar
-2019,value,0.5972,relative,,bar
+1980,p90_p10_income_ratio,9.1,ratio,9.1,bar
+1990,p90_p10_income_ratio,10.1,ratio,10.1,bar
+2000,p90_p10_income_ratio,10.6,ratio,10.6,bar
+2010,p90_p10_income_ratio,11.7,ratio,11.7,bar
+2019,p90_p10_income_ratio,12.6,ratio,12.6,bar

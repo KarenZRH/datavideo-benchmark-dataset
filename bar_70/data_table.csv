@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-BILL &amp; MELINDA GATES,largest_charities,51.600,,,bar
-NOVO NORDISK,largest_charities,49.100,,,bar
-STICHTING INGKA,largest_charities,36.000,,,bar
-WELLCOME TRUST,largest_charities,32.900,,,bar
+BILL & MELINDA GATES,largest_charities,51.600,billion USD,,bar
+NOVO NORDISK,largest_charities,49.100,billion USD,,bar
+STICHTING INGKA,largest_charities,36.000,billion USD,,bar
+WELLCOME TRUST,largest_charities,32.900,billion USD,,bar

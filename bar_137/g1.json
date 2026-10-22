@@ -5,26 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Is stating the United States' own relative_value required, or only its comparison with other entities?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is the US-China equality required to establish that the US is not uniquely largest?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Does the intent require showing that no listed entity exceeds the US, or only that the US is tied with at least one other?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,124 +16,99 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "The United States has a relative CO2 value of 0.1406 in the table.",
-   "basis": [
-    {
-     "entity": "United States",
-     "x": "entity",
-     "field": "relative_value",
-     "value": 0.1406,
-     "note": "United States row: relative_value=0.1406."
-    }
-   ],
-   "accept": [
-    "The United States is at 0.1406 on the relative scale",
-    "United States relative_value = 0.1406",
-    "The US has a relative_value of 0.1406"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must show the United States with relative_value 0.1406 (or a rounded 0.14)."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "China's relative CO2 value equals the United States' relative CO2 value at 0.1406.",
+   "claim": "China produced the largest share of 2018 CO2 emissions; the United States was not the largest emitter.",
    "basis": [
     {
-     "entity": "United States",
-     "x": "entity",
-     "field": "relative_value",
-     "value": 0.1406,
-     "note": "US row."
+     "entity": "EU-28",
+     "field": "co2_emissions_2018",
+     "value": "3.17",
+     "unit": "billion metric tons CO2"
     },
     {
-     "entity": "China",
-     "x": "entity",
-     "field": "relative_value",
-     "value": 0.1406,
-     "note": "China row."
-    }
-   ],
-   "accept": [
-    "China and the United States are tied at 0.1406",
-    "The United States is not ahead of China; both are 0.1406",
-    "China has the same relative_value as the United States (0.1406)"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Both the United States and China must be shown with equal relative_value 0.1406."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "No listed entity has a relative_value greater than the United States' 0.1406; the table's maximum relative_value is 0.1406.",
-   "basis": [
-    {
-     "entity": "United States",
-     "x": "entity",
-     "field": "relative_value",
-     "value": 0.1406,
-     "note": "US row."
+     "entity": "Europe (excluding EU-28)",
+     "field": "co2_emissions_2018",
+     "value": "1.4",
+     "unit": "billion metric tons CO2"
     },
     {
-     "entity": "China",
-     "x": "entity",
-     "field": "relative_value",
-     "value": 0.1406,
-     "note": "China row."
+     "entity": "United States",
+     "field": "co2_emissions_2018",
+     "value": "5.22",
+     "unit": "billion metric tons CO2"
+    },
+    {
+     "entity": "North America (excluding US)",
+     "field": "co2_emissions_2018",
+     "value": "1.06",
+     "unit": "billion metric tons CO2"
+    },
+    {
+     "entity": "South America",
+     "field": "co2_emissions_2018",
+     "value": "1.06",
+     "unit": "billion metric tons CO2"
+    },
+    {
+     "entity": "Africa",
+     "field": "co2_emissions_2018",
+     "value": "1.3",
+     "unit": "billion metric tons CO2"
     },
     {
      "entity": "India",
-     "x": "entity",
-     "field": "relative_value",
-     "value": 0.1406,
-     "note": "India row."
+     "field": "co2_emissions_2018",
+     "value": "2.56",
+     "unit": "billion metric tons CO2"
     },
     {
-     "entity": "EU-28",
-     "x": "entity",
-     "field": "relative_value",
-     "value": 0.1406,
-     "note": "EU-28 row; all other table rows also have relative_value=0.1406."
+     "entity": "China",
+     "field": "co2_emissions_2018",
+     "value": "9.7",
+     "unit": "billion metric tons CO2"
+    },
+    {
+     "entity": "Asia (excluding China and India)",
+     "field": "co2_emissions_2018",
+     "value": "7.9",
+     "unit": "billion metric tons CO2"
+    },
+    {
+     "entity": "Oceania",
+     "field": "co2_emissions_2018",
+     "value": "0.43",
+     "unit": "billion metric tons CO2"
+    },
+    {
+     "entity": "International transport",
+     "field": "co2_emissions_2018",
+     "value": "1.2",
+     "unit": "billion metric tons CO2"
     }
    ],
    "accept": [
-    "No listed entity is above the United States at 0.1406",
-    "The maximum relative_value in the table is 0.1406, tied with the United States",
-    "The United States is not surpassed by any listed country or region"
+    "all regions are present",
+    "China is largest",
+    "US is not largest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The chart must not show any entity with a relative_value larger than the United States' 0.1406; the top value must be shared at 0.1406."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "EU-28 and Europe also have relative_value 0.1406, tying the United States.",
-  "Asia, Oceania, South America, and North America are all at relative_value 0.1406 in the table."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 11,
   "required_states": [],
   "required_marks_per_state": {},
@@ -158,26 +117,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

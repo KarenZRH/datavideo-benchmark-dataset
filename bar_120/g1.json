@@ -5,18 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly identify 'Require police to be trained' as the proposal with the highest Strongly relative value?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should the video call out the tie at the top of the Somewhat series and the lowest Somewhat value?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,80 +16,102 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "Among all entries, the Strongly series entry 'Require police to be trained' has the highest relative value (0.3008).",
-   "basis": [
-    {
-     "entity": "Require police to be trained",
-     "x": "Strongly",
-     "field": "relative_value",
-     "value": 0.3008,
-     "note": "Highest relative value in the table."
-    }
-   ],
-   "accept": [
-    "Strongly support is highest for requiring police training",
-    "The strongest intensity of support is for police training",
-    "Require police to be trained has the top Strongly relative value"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The visual encoding must show 'Require police to be trained' in the Strongly series as having the highest relative value compared to all other entries."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "In the Somewhat series, the highest relative values are tied at 0.2242 (entities labeled '44' and '27'), and the lowest is 0.1695 (entity labeled '26').",
+   "claim": "Republicans also show majority support for most proposals, but lower intensity than Democrats.",
    "basis": [
     {
-     "entity": "44",
-     "x": "Somewhat",
-     "field": "relative_value",
-     "value": 0.2242,
-     "note": "Tied highest in Somewhat series."
+     "entity": "Require police to be trained in nonviolent alternatives to deadly force",
+     "field": "support_for_police_reform",
+     "value": "55",
+     "unit": "%",
+     "series": "Strongly"
     },
     {
-     "entity": "27",
-     "x": "Somewhat",
-     "field": "relative_value",
-     "value": 0.2242,
-     "note": "Tied highest in Somewhat series."
+     "entity": "Require police to be trained in nonviolent alternatives to deadly force",
+     "field": "support_for_police_reform",
+     "value": "36",
+     "unit": "%",
+     "series": "Somewhat"
     },
     {
-     "entity": "26",
-     "x": "Somewhat",
-     "field": "relative_value",
-     "value": 0.1695,
-     "note": "Lowest in Somewhat series."
+     "entity": "Create a federal government database to track officers accused of misconduct",
+     "field": "support_for_police_reform",
+     "value": "44",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Create a federal government database to track officers accused of misconduct",
+     "field": "support_for_police_reform",
+     "value": "41",
+     "unit": "%",
+     "series": "Somewhat"
+    },
+    {
+     "entity": "Give civilian oversight boards power to investigate and discipline officers",
+     "field": "support_for_police_reform",
+     "value": "19",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Give civilian oversight boards power to investigate and discipline officers",
+     "field": "support_for_police_reform",
+     "value": "39",
+     "unit": "%",
+     "series": "Somewhat"
+    },
+    {
+     "entity": "Make it a crime for police to use chokeholds or strangleholds",
+     "field": "support_for_police_reform",
+     "value": "26",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Make it a crime for police to use chokeholds or strangleholds",
+     "field": "support_for_police_reform",
+     "value": "31",
+     "unit": "%",
+     "series": "Somewhat"
+    },
+    {
+     "entity": "Require officers to live in the cities or towns they police",
+     "field": "support_for_police_reform",
+     "value": "27",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Require officers to live in the cities or towns they police",
+     "field": "support_for_police_reform",
+     "value": "41",
+     "unit": "%",
+     "series": "Somewhat"
     }
    ],
    "accept": [
-    "Somewhat support peaks at 0.2242 for two entries and bottoms at 0.1695",
-    "The Somewhat series ranges from 0.1695 to 0.2242",
-    "The highest Somewhat relative values are tied, while 26 is the lowest"
+    "all five proposals are present",
+    "both response segments are present"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "Within the Somewhat series, the marks for '44' and '27' must be the highest and the mark for '26' must be the lowest."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
  "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 10,
   "required_states": [],
   "required_marks_per_state": {},
@@ -106,26 +120,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

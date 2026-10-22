@@ -1,22 +1,14 @@
 {
  "clip_id": "bar_94",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the top countries' expenditure on research and development as a percentage of GDP, highlighting a nation that ranks just below South Korea.",
+ "intent": "Compare research-and-development spending as a share of GDP and show Israel ranking just below South Korea.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the full rank order of all four countries required, or only that South Korea is first and Israel second?",
+   "question": "Where does Israel rank in R&D spending?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should Israel be explicitly identified as the nation immediately below South Korea?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,97 +16,57 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Descending order among the listed countries: South Korea is first (0.950), Israel second (0.900), Japan third (0.750), Finland fourth (0.650).",
+   "claim": "Israel is shown just below South Korea and above Japan and Finland; the narration gives Israel about 4.5% of GDP.",
    "basis": [
     {
      "entity": "South Korea",
-     "x": "680.0",
-     "field": "value",
+     "field": "%_gdp_r_d_top_4",
      "value": 0.95,
-     "note": "highest listed value"
+     "unit": "relative"
     },
     {
      "entity": "Israel",
-     "x": "660.0",
-     "field": "value",
+     "field": "%_gdp_r_d_top_4",
      "value": 0.9,
-     "note": "second-highest listed value"
+     "unit": "relative"
     },
     {
      "entity": "Japan",
-     "x": "600.0",
-     "field": "value",
+     "field": "%_gdp_r_d_top_4",
      "value": 0.75,
-     "note": "third-highest listed value"
+     "unit": "relative"
     },
     {
      "entity": "Finland",
-     "x": "560.0",
-     "field": "value",
+     "field": "%_gdp_r_d_top_4",
      "value": 0.65,
-     "note": "fourth-highest listed value"
+     "unit": "relative"
     }
    ],
    "accept": [
-    "South Korea ranks first, followed by Israel, Japan, and Finland.",
-    "Order: South Korea > Israel > Japan > Finland.",
-    "Israel is second behind South Korea; Japan and Finland follow."
+    "the four countries are ordered",
+    "Israel is second",
+    "South Korea is first"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "making Israel last",
+    "omitting South Korea",
+    "turning 4.5% into 45%"
    ],
-   "evidence": "Bars must be ordered or labeled so the rank order South Korea > Israel > Japan > Finland is unambiguous."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "comparison",
-   "must_be_visualized": true,
-   "claim": "Israel is the country immediately below South Korea in the ranking, with a lower value than South Korea: 0.900 vs 0.950.",
-   "basis": [
-    {
-     "entity": "South Korea",
-     "x": "680.0",
-     "field": "value",
-     "value": 0.95,
-     "note": "South Korea value for comparison"
-    },
-    {
-     "entity": "Israel",
-     "x": "660.0",
-     "field": "value",
-     "value": 0.9,
-     "note": "Israel value for comparison"
-    }
-   ],
-   "accept": [
-    "Israel is just below South Korea: 0.900 vs 0.950.",
-    "South Korea is first and Israel second, just below South Korea.",
-    "Israel ranks immediately behind South Korea."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The Israel bar must be adjacent to and lower than the South Korea bar, with both entities identifiable."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Japan is third at 0.750 and Finland is fourth at 0.650.",
-  "Relative_value column values if the animation uses that scale: South Korea 0.5938, Israel 0.5625, Japan 0.4688, Finland 0.4062."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -123,12 +75,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

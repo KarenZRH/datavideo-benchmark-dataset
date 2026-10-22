@@ -1,9 +1,9 @@
 entity,series,x,metric,value,unit,label,role
-2011,AM,2011,katy_freeway_travel_times,47,Minutes,,bar
-2011,PM,2011,katy_freeway_travel_times,42,Minutes,,bar
-2012,AM,2012,katy_freeway_travel_times,54,Minutes,,bar
-2012,PM,2012,katy_freeway_travel_times,52,Minutes,,bar
-2013,AM,2013,katy_freeway_travel_times,58,Minutes,,bar
-2013,PM,2013,katy_freeway_travel_times,61,Minutes,,bar
-2014,AM,2014,katy_freeway_travel_times,61,Minutes,,bar
-2014,PM,2014,katy_freeway_travel_times,64,Minutes,,bar
+2011,AM,2011,katy_freeway_travel_time,47,minutes,,bar
+2011,PM,2011,katy_freeway_travel_time,42,minutes,,bar
+2012,AM,2012,katy_freeway_travel_time,54,minutes,,bar
+2012,PM,2012,katy_freeway_travel_time,52,minutes,,bar
+2013,AM,2013,katy_freeway_travel_time,58,minutes,,bar
+2013,PM,2013,katy_freeway_travel_time,61,minutes,,bar
+2014,AM,2014,katy_freeway_travel_time,61,minutes,,bar
+2014,PM,2014,katy_freeway_travel_time,64,minutes,,bar

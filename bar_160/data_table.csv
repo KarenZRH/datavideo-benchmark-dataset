@@ -1,9 +1,9 @@
 entity,metric,value,unit,label,role
-FIN,value,0.6533,relative,,bar
-DEU,value,0.6667,relative,,bar
-ISR,value,0.6400,relative,,bar
-AUS,value,0.6267,relative,,bar
-UK,value,0.6133,relative,,bar
-NZL,value,0.5867,relative,,bar
-OECD,value,0.5867,relative,,bar
-USA,value,0.4333,relative,,bar
+Finland,teacher_to_college_graduate_pay_ratio,0.98,ratio,0.98,bar
+Germany,teacher_to_college_graduate_pay_ratio,1.0,ratio,1.00,bar
+Israel,teacher_to_college_graduate_pay_ratio,0.96,ratio,0.96,bar
+Australia,teacher_to_college_graduate_pay_ratio,0.94,ratio,0.94,bar
+United Kingdom,teacher_to_college_graduate_pay_ratio,0.92,ratio,0.92,bar
+New Zealand,teacher_to_college_graduate_pay_ratio,0.88,ratio,0.88,bar
+OECD,teacher_to_college_graduate_pay_ratio,0.88,ratio,0.88,bar
+United States,teacher_to_college_graduate_pay_ratio,0.65,ratio,0.65,bar

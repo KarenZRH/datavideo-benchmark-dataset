@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-Rep/Lean Rep,value,0.4659,relative,,bar
-Dem/Lean Dem,value,0.1442,relative,,bar
+Rep/Lean Rep,great_deal_confidence_in_police,42,%,42%,bar
+Dem/Lean Dem,great_deal_confidence_in_police,13,%,13%,bar

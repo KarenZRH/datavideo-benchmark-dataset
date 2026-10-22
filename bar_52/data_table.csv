@@ -1,35 +1,36 @@
-entity,series,metric,value,unit,label,role
-Poorest,Corporate and property taxes,value,1.0,%,,bar
-Poorest,Payroll taxes,value,10.6,%,,bar
-2nd,Income taxes,value,1.0,%,,bar
-2nd,Corporate and property taxes,value,1.3,%,,bar
-2nd,Payroll taxes,value,10.9,%,,bar
-3rd,Income taxes,value,3.0,%,,bar
-3rd,Corporate and property taxes,value,1.5,%,,bar
-3rd,Payroll taxes,value,10.9,%,,bar
-4th,Income taxes,value,4.0,%,,bar
-4th,Corporate and property taxes,value,2.0,%,,bar
-4th,Payroll taxes,value,10.4,%,,bar
-5th,Income taxes,value,6.0,%,,bar
-5th,Corporate and property taxes,value,2.2,%,,bar
-5th,Payroll taxes,value,10.4,%,,bar
-6th,Income taxes,value,7.0,%,,bar
-6th,Corporate and property taxes,value,2.6,%,,bar
-6th,Payroll taxes,value,10.4,%,,bar
-7th,Income taxes,value,8.0,%,,bar
-7th,Corporate and property taxes,value,3.0,%,,bar
-7th,Payroll taxes,value,10.4,%,,bar
-8th,Income taxes,value,10.0,%,,bar
-8th,Corporate and property taxes,value,3.2,%,,bar
-8th,Payroll taxes,value,10.4,%,,bar
-9th,Income taxes,value,12.0,%,,bar
-9th,Corporate and property taxes,value,3.7,%,,bar
-9th,Payroll taxes,value,9.8,%,,bar
-10th,Income taxes,value,18.0,%,,bar
-10th,Corporate and property taxes,value,9.2,%,,bar
-10th,Estate taxes,value,0.3,%,,bar
-10th,Payroll taxes,value,1.0,%,,bar
-Richest,Income taxes,value,10.0,%,,bar
-Richest,Corporate and property taxes,value,10.5,%,,bar
-Richest,Estate taxes,value,0.8,%,,bar
-Richest,Payroll taxes,value,0.4,%,,bar
+entity,series,metric,value,unit,label,role,stack_order
+Poorest,Income taxes,share_of_income,1,%,Poorest,bar,1
+2nd,Income taxes,share_of_income,1,%,,bar,1
+3rd,Income taxes,share_of_income,3,%,,bar,1
+4th,Income taxes,share_of_income,4,%,,bar,1
+5th,Income taxes,share_of_income,6,%,,bar,1
+6th,Income taxes,share_of_income,7,%,,bar,1
+7th,Income taxes,share_of_income,8,%,,bar,1
+8th,Income taxes,share_of_income,10,%,,bar,1
+9th,Income taxes,share_of_income,12,%,,bar,1
+10th,Income taxes,share_of_income,18,%,,bar,1
+Richest,Income taxes,share_of_income,10,%,Richest,bar,1
+Poorest,Corporate and property taxes,share_of_income,1,%,,bar,2
+2nd,Corporate and property taxes,share_of_income,1.3,%,,bar,2
+3rd,Corporate and property taxes,share_of_income,1.5,%,,bar,2
+4th,Corporate and property taxes,share_of_income,2,%,,bar,2
+5th,Corporate and property taxes,share_of_income,2.2,%,,bar,2
+6th,Corporate and property taxes,share_of_income,2.6,%,,bar,2
+7th,Corporate and property taxes,share_of_income,3,%,,bar,2
+8th,Corporate and property taxes,share_of_income,3.2,%,,bar,2
+9th,Corporate and property taxes,share_of_income,3.7,%,,bar,2
+10th,Corporate and property taxes,share_of_income,9.2,%,,bar,2
+Richest,Corporate and property taxes,share_of_income,10.5,%,,bar,2
+10th,Estate taxes,share_of_income,0.3,%,,bar,3
+Richest,Estate taxes,share_of_income,0.8,%,,bar,3
+Poorest,Payroll taxes,share_of_income,10.6,%,,bar,4
+2nd,Payroll taxes,share_of_income,10.9,%,,bar,4
+3rd,Payroll taxes,share_of_income,10.9,%,,bar,4
+4th,Payroll taxes,share_of_income,10.4,%,,bar,4
+5th,Payroll taxes,share_of_income,10.4,%,,bar,4
+6th,Payroll taxes,share_of_income,10.4,%,,bar,4
+7th,Payroll taxes,share_of_income,10.4,%,,bar,4
+8th,Payroll taxes,share_of_income,10.4,%,,bar,4
+9th,Payroll taxes,share_of_income,9.8,%,,bar,4
+10th,Payroll taxes,share_of_income,1,%,,bar,4
+Richest,Payroll taxes,share_of_income,0.4,%,,bar,4

@@ -1,3 +1,4 @@
 entity,series,metric,value,unit,label,role
-Actual content,share,value,28.000,,,bar
-Filler,share,value,72.000,,,bar
+Actual content,share,share_of_book,28,%,ACTUAL CONTENT,bar
+Stories / repetition / examples / unnecessary details,share,share_of_book,72,%,STORIES / REPETITION / EXAMPLES / UNNECESSARY DETAILS,bar
+Longer books,scope,book_scope,1,qualitative,longer books,annotation

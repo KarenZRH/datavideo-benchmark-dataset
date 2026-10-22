@@ -1,16 +1,97 @@
 entity,x,metric,value,unit,label,role
-1945,1945,value,1,countries,,bar
-1950,1950,value,2,countries,,bar
-1955,1955,value,3,countries,,bar
-1960,1960,value,3,countries,,bar
-1965,1965,value,5,countries,,bar
-1970,1970,value,6,countries,,bar
-1975,1975,value,6,countries,,bar
-1980,1980,value,7,countries,,bar
-1985,1985,value,8,countries,,bar
-1990,1990,value,10,countries,,bar
-1995,1995,value,9,countries,,bar
-2000,2000,value,9,countries,,bar
-2005,2005,value,9,countries,,bar
-2010,2010,value,9,countries,,bar
-2015,2015,value,9,countries,,bar
+United States,1945,nuclear_power_presence,1,presence,,bar
+United States,1950,nuclear_power_presence,1,presence,,bar
+Soviet Union,1950,nuclear_power_presence,1,presence,,bar
+United States,1955,nuclear_power_presence,1,presence,,bar
+Soviet Union,1955,nuclear_power_presence,1,presence,,bar
+United Kingdom,1955,nuclear_power_presence,1,presence,,bar
+United States,1960,nuclear_power_presence,1,presence,,bar
+Soviet Union,1960,nuclear_power_presence,1,presence,,bar
+United Kingdom,1960,nuclear_power_presence,1,presence,,bar
+United States,1965,nuclear_power_presence,1,presence,,bar
+Soviet Union,1965,nuclear_power_presence,1,presence,,bar
+United Kingdom,1965,nuclear_power_presence,1,presence,,bar
+France,1965,nuclear_power_presence,1,presence,,bar
+China,1965,nuclear_power_presence,1,presence,,bar
+United States,1970,nuclear_power_presence,1,presence,,bar
+Soviet Union,1970,nuclear_power_presence,1,presence,,bar
+United Kingdom,1970,nuclear_power_presence,1,presence,,bar
+France,1970,nuclear_power_presence,1,presence,,bar
+China,1970,nuclear_power_presence,1,presence,,bar
+Israel,1970,nuclear_power_presence,1,presence,,bar
+United States,1975,nuclear_power_presence,1,presence,,bar
+Soviet Union,1975,nuclear_power_presence,1,presence,,bar
+United Kingdom,1975,nuclear_power_presence,1,presence,,bar
+France,1975,nuclear_power_presence,1,presence,,bar
+China,1975,nuclear_power_presence,1,presence,,bar
+India,1975,nuclear_power_presence,1,presence,,bar
+United States,1980,nuclear_power_presence,1,presence,,bar
+Soviet Union,1980,nuclear_power_presence,1,presence,,bar
+United Kingdom,1980,nuclear_power_presence,1,presence,,bar
+France,1980,nuclear_power_presence,1,presence,,bar
+China,1980,nuclear_power_presence,1,presence,,bar
+India,1980,nuclear_power_presence,1,presence,,bar
+Israel,1980,nuclear_power_presence,1,presence,,bar
+United States,1985,nuclear_power_presence,1,presence,,bar
+Soviet Union,1985,nuclear_power_presence,1,presence,,bar
+United Kingdom,1985,nuclear_power_presence,1,presence,,bar
+France,1985,nuclear_power_presence,1,presence,,bar
+China,1985,nuclear_power_presence,1,presence,,bar
+India,1985,nuclear_power_presence,1,presence,,bar
+Israel,1985,nuclear_power_presence,1,presence,,bar
+South Africa,1985,nuclear_power_presence,1,presence,,bar
+United States,1990,nuclear_power_presence,1,presence,,bar
+Soviet Union,1990,nuclear_power_presence,1,presence,,bar
+United Kingdom,1990,nuclear_power_presence,1,presence,,bar
+France,1990,nuclear_power_presence,1,presence,,bar
+China,1990,nuclear_power_presence,1,presence,,bar
+India,1990,nuclear_power_presence,1,presence,,bar
+Israel,1990,nuclear_power_presence,1,presence,,bar
+South Africa,1990,nuclear_power_presence,1,presence,,bar
+Pakistan,1990,nuclear_power_presence,1,presence,,bar
+Belarus,1990,nuclear_power_presence,1,presence,,bar
+United States,1995,nuclear_power_presence,1,presence,,bar
+Russia,1995,nuclear_power_presence,1,presence,,bar
+United Kingdom,1995,nuclear_power_presence,1,presence,,bar
+France,1995,nuclear_power_presence,1,presence,,bar
+China,1995,nuclear_power_presence,1,presence,,bar
+India,1995,nuclear_power_presence,1,presence,,bar
+Israel,1995,nuclear_power_presence,1,presence,,bar
+Pakistan,1995,nuclear_power_presence,1,presence,,bar
+North Korea,1995,nuclear_power_presence,1,presence,,bar
+United States,2000,nuclear_power_presence,1,presence,,bar
+Russia,2000,nuclear_power_presence,1,presence,,bar
+United Kingdom,2000,nuclear_power_presence,1,presence,,bar
+France,2000,nuclear_power_presence,1,presence,,bar
+China,2000,nuclear_power_presence,1,presence,,bar
+India,2000,nuclear_power_presence,1,presence,,bar
+Israel,2000,nuclear_power_presence,1,presence,,bar
+Pakistan,2000,nuclear_power_presence,1,presence,,bar
+North Korea,2000,nuclear_power_presence,1,presence,,bar
+United States,2005,nuclear_power_presence,1,presence,,bar
+Russia,2005,nuclear_power_presence,1,presence,,bar
+United Kingdom,2005,nuclear_power_presence,1,presence,,bar
+France,2005,nuclear_power_presence,1,presence,,bar
+China,2005,nuclear_power_presence,1,presence,,bar
+India,2005,nuclear_power_presence,1,presence,,bar
+Israel,2005,nuclear_power_presence,1,presence,,bar
+Pakistan,2005,nuclear_power_presence,1,presence,,bar
+North Korea,2005,nuclear_power_presence,1,presence,,bar
+United States,2010,nuclear_power_presence,1,presence,,bar
+Russia,2010,nuclear_power_presence,1,presence,,bar
+United Kingdom,2010,nuclear_power_presence,1,presence,,bar
+France,2010,nuclear_power_presence,1,presence,,bar
+China,2010,nuclear_power_presence,1,presence,,bar
+India,2010,nuclear_power_presence,1,presence,,bar
+Israel,2010,nuclear_power_presence,1,presence,,bar
+Pakistan,2010,nuclear_power_presence,1,presence,,bar
+North Korea,2010,nuclear_power_presence,1,presence,,bar
+United States,2015,nuclear_power_presence,1,presence,,bar
+Russia,2015,nuclear_power_presence,1,presence,,bar
+United Kingdom,2015,nuclear_power_presence,1,presence,,bar
+France,2015,nuclear_power_presence,1,presence,,bar
+China,2015,nuclear_power_presence,1,presence,,bar
+India,2015,nuclear_power_presence,1,presence,,bar
+Israel,2015,nuclear_power_presence,1,presence,,bar
+Pakistan,2015,nuclear_power_presence,1,presence,,bar
+North Korea,2015,nuclear_power_presence,1,presence,,bar

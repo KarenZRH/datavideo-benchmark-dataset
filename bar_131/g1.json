@@ -5,7 +5,7 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the video explicitly convey the equality of all relative values?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -18,41 +18,85 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "All listed entities share the same relative_value of 0.1111.",
+   "claim": "Russia and the United States dominate the 2015 nuclear arsenal, while the other seven countries hold much smaller totals.",
    "basis": [
     {
-     "entity": "all listed entities",
-     "x": "all rows",
-     "field": "relative_value",
-     "value": 0.1111,
-     "note": "each row equals 0.1111"
+     "entity": "Russia",
+     "field": "nuclear_warheads",
+     "value": "7800",
+     "unit": "warheads"
+    },
+    {
+     "entity": "United States",
+     "field": "nuclear_warheads",
+     "value": "7100",
+     "unit": "warheads"
+    },
+    {
+     "entity": "France",
+     "field": "nuclear_warheads",
+     "value": "300",
+     "unit": "warheads"
+    },
+    {
+     "entity": "China",
+     "field": "nuclear_warheads",
+     "value": "260",
+     "unit": "warheads"
+    },
+    {
+     "entity": "United Kingdom",
+     "field": "nuclear_warheads",
+     "value": "215",
+     "unit": "warheads"
+    },
+    {
+     "entity": "Pakistan",
+     "field": "nuclear_warheads",
+     "value": "120",
+     "unit": "warheads"
+    },
+    {
+     "entity": "India",
+     "field": "nuclear_warheads",
+     "value": "115",
+     "unit": "warheads"
+    },
+    {
+     "entity": "Israel",
+     "field": "nuclear_warheads",
+     "value": "80",
+     "unit": "warheads"
+    },
+    {
+     "entity": "North Korea",
+     "field": "nuclear_warheads",
+     "value": "7",
+     "unit": "warheads"
     }
    ],
    "accept": [
-    "All entities share the same relative value.",
-    "Each row is 0.1111 on the relative scale.",
-    "No entity differs from the others in relative size."
+    "all nine countries are present",
+    "Russia and USA are largest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The relative magnitudes of all listed entities appear identical."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
   "U1": 1.0
  },
- "optional_valid": [
-  "The entity labels mix country names with numeric or year-like strings.",
-  "The relative values sum to about 0.8888, below a full whole."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
-  "required_data_rows": 8,
+  "selection": "all role=bar rows",
+  "required_data_rows": 9,
   "required_states": [],
   "required_marks_per_state": {},
   "evaluated_in": "G2_visual_completeness",
@@ -60,26 +104,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

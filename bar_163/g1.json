@@ -5,18 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video show single-year ages from 1 to 100, or can it use age groups?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is the overall young-high/old-low shape required, or is only the age/gender breakdown required?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,104 +16,1233 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The age dimension covers single years from 1 to 100, ordered by age, so each age has a row for each gender.",
+   "claim": "The pyramid encodes population counts as squares for each single year of age and each gender.",
    "basis": [
     {
      "entity": "male",
-     "x": "1",
      "field": "value",
-     "value": 73,
-     "note": "youngest age row"
-    },
-    {
-     "entity": "male",
-     "x": "100",
-     "field": "value",
-     "value": 3,
-     "note": "oldest age row"
+     "value": "3",
+     "unit": "squares"
     },
     {
      "entity": "female",
-     "x": "50",
      "field": "value",
-     "value": 51,
-     "note": "middle age example"
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "5",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "3",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "6",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "5",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "6",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "6",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "7",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "6",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "7",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "7",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "7",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "7",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "8",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "8",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "9",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "8",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "11",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "10",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "11",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "11",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "11",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "12",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "12",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "13",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "13",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "13",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "14",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "14",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "15",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "14",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "16",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "15",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "16",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "16",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "17",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "17",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "18",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "18",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "19",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "19",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "20",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "21",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "21",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "22",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "23",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "23",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "24",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "24",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "26",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "27",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "27",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "28",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "29",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "29",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "30",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "31",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "32",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "32",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "33",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "33",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "34",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "34",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "35",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "34",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "35",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "36",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "37",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "37",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "38",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "38",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "39",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "39",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "39",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "40",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "42",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "42",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "43",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "43",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "44",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "44",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "44",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "45",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "47",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "47",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "47",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "47",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "49",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "48",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "49",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "49",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "49",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "50",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "51",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "50",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "51",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "51",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "51",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "51",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "52",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "51",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "52",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "52",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "52",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "52",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "53",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "55",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "55",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "55",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "55",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "57",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "57",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "58",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "58",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "59",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "61",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "60",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "61",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "63",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "63",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "63",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "63",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "63",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "63",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "63",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "64",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "65",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "66",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "67",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "67",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "68",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "67",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "68",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "68",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "69",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "69",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "69",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "69",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "70",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "70",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "71",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "70",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "72",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "71",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "72",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "72",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "73",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "73",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "73",
+     "unit": "squares"
+    },
+    {
+     "entity": "male",
+     "field": "value",
+     "value": "73",
+     "unit": "squares"
+    },
+    {
+     "entity": "female",
+     "field": "value",
+     "value": "73",
+     "unit": "squares"
     }
    ],
    "accept": [
-    "Ages are arranged from 1 to 100",
-    "The data covers single years of age across the full range",
-    "Every age from 1 through 100 appears for male and female"
+    "both genders are present",
+    "ages1–100 are present",
+    "square counts match the table"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The chart must show or label an age progression spanning 1 to 100, not just a few aggregated age bands."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "The values are largest at the youngest ages and smallest at the oldest ages: the youngest ages reach 73 squares while the oldest ages are around 3 squares.",
-   "basis": [
-    {
-     "entity": "male",
-     "x": "100",
-     "field": "value",
-     "value": 3,
-     "note": "oldest male value"
-    },
-    {
-     "entity": "female",
-     "x": "97",
-     "field": "value",
-     "value": 3,
-     "note": "old female value"
-    },
-    {
-     "entity": "male",
-     "x": "1",
-     "field": "value",
-     "value": 73,
-     "note": "youngest male value"
-    },
-    {
-     "entity": "female",
-     "x": "1",
-     "field": "value",
-     "value": 73,
-     "note": "youngest female value"
-    }
-   ],
-   "accept": [
-    "Values decline from youngest to oldest ages",
-    "The youngest ages are much larger than the oldest ages",
-    "The series shrinks from about 73 squares at the youngest to about 3 squares at the oldest"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must show a clear overall gradient from high values at the young end to low values at the old end."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "The unit of the values is squares, with the maximum 73 squares and minimum 3 squares.",
-  "Relative_value is 1.0000 at the maximum 73-square rows and about 0.0411 at the minimum 3-square rows."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 200,
   "required_states": [],
   "required_marks_per_state": {},
@@ -130,26 +1251,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_61",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the decline in US job creation over recent decades.",
+ "intent": "Show that US annual job creation declined sharply from the 1960s through the 2000s.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video show the full ordered decline across all six table categories, or is a general downward trend enough?",
+   "question": "How did US job creation change across the decades?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should the 1960s-to-2000s* magnitude, 29 fewer or 96.7% lower or 3.3% share, be required, or only the trend?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the video explicitly mark the start of the decline in the 1970s, given the narration says the shrink begins in the early 1970s?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,168 +16,69 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "US job creation declines across the decades shown, from 30 in the 1960s to 1 in the 2000s*; the series is generally downward rather than rising.",
+   "claim": "Job creation declines from about 30% of the y-axis scale in the 1960s to about 1% in the 2000s.",
    "basis": [
     {
      "entity": "1960s",
-     "x": "1960s",
-     "field": "value",
+     "field": "annual_job_creation_share",
      "value": 30,
-     "note": "first/peak bar"
+     "unit": "%"
     },
     {
      "entity": "1970s",
-     "x": "1970s",
-     "field": "value",
+     "field": "annual_job_creation_share",
      "value": 25,
-     "note": "lower than 1960s"
+     "unit": "%"
     },
     {
      "entity": "1980s",
-     "x": "1980s",
-     "field": "value",
+     "field": "annual_job_creation_share",
      "value": 18,
-     "note": "continues lower"
+     "unit": "%"
     },
     {
      "entity": "1990s",
-     "x": "1990s",
-     "field": "value",
+     "field": "annual_job_creation_share",
      "value": 18,
-     "note": "same as 1980s"
+     "unit": "%"
     },
     {
      "entity": "2000-7*",
-     "x": "2000-7*",
-     "field": "value",
+     "field": "annual_job_creation_share",
      "value": 5,
-     "note": "sharp drop"
+     "unit": "%"
     },
     {
      "entity": "2000s*",
-     "x": "2000s*",
-     "field": "value",
+     "field": "annual_job_creation_share",
      "value": 1,
-     "note": "lowest/endpoint"
+     "unit": "%"
     }
    ],
    "accept": [
-    "Job creation falls from 30 in the 1960s to 1 in the 2000s*.",
-    "The bars step down over time: 30, 25, 18, 18, 5, then 1.",
-    "US job creation trends downward across the 1960s–2000s* decades shown."
+    "all six periods are shown",
+    "the bars trend downward",
+    "the 2000s group is the smallest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "showing an increasing trend",
+    "omitting the Great Recession split",
+    "reversing the decades"
    ],
-   "evidence": "All six decade bars/points appear in order with heights 30, 25, 18, 18, 5, 1; the overall direction from first to last is clearly downward."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The endpoint decline from the 1960s to the 2000s* is 29 fewer jobs, or 96.7% lower; the 2000s* value is only 3.3% of the 1960s value.",
-   "basis": [
-    {
-     "entity": "1960s",
-     "x": "1960s",
-     "field": "value",
-     "value": 30,
-     "note": "baseline decade"
-    },
-    {
-     "entity": "2000s*",
-     "x": "2000s*",
-     "field": "value",
-     "value": 1,
-     "note": "endpoint decade"
-    },
-    {
-     "entity": "1960s",
-     "x": "1960s",
-     "field": "relative_value",
-     "value": 1.0,
-     "note": "normalized baseline"
-    },
-    {
-     "entity": "2000s*",
-     "x": "2000s*",
-     "field": "relative_value",
-     "value": 0.0333,
-     "note": "about 3.3% of 1960s"
-    }
-   ],
-   "accept": [
-    "Job creation is 96.7% lower in the 2000s* than in the 1960s.",
-    "The series falls from 30 in the 1960s to 1 in the 2000s*, a drop of 29.",
-    "The 2000s* level is just 3.3% of the 1960s level."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 1960s bar (30) and 2000s* bar (1) are both visible or annotated, with the computed drop or share called out."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The decline starts after the 1960s peak: the 1970s value is 25, down 5 or 16.7% from the 1960s 30.",
-   "basis": [
-    {
-     "entity": "1960s",
-     "x": "1960s",
-     "field": "value",
-     "value": 30,
-     "note": "peak before decline"
-    },
-    {
-     "entity": "1970s",
-     "x": "1970s",
-     "field": "value",
-     "value": 25,
-     "note": "first decline"
-    },
-    {
-     "entity": "1970s",
-     "x": "1970s",
-     "field": "relative_value",
-     "value": 0.8333,
-     "note": "83.3% of 1960s"
-    }
-   ],
-   "accept": [
-    "The 1970s falls to 25, down from 30 in the 1960s.",
-    "After the 1960s peak, job creation is about 17% lower in the 1970s.",
-    "The 1970s is at 83.3% of the 1960s level."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 1960s and 1970s bars are adjacent and show 30 then 25, with the 5-unit drop or 83.3% relative value visible."
+   "evidence": "The selected keyframe and the plotted bars/segments encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "The 2000-7* intermediate value of 5 as its own late-period bar.",
-  "The exact relative_value for any decade, such as 1970s = 0.8333, 1980s/1990s = 0.6000, or 2000-7* = 0.1667.",
-  "The 2000s* lowest-value status as a standalone annotation, if not already covered by the endpoint change.",
-  "The equal 1980s/1990s plateau as an optional aside."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar segments",
   "required_data_rows": 6,
   "required_states": [],
   "required_marks_per_state": {},
@@ -202,12 +87,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_52_63_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

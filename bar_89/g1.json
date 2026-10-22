@@ -1,22 +1,14 @@
 {
  "clip_id": "bar_89",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the youthful demographic structure of an African nation (Ethiopia) that underpins the continent's emergence as a major consumer market.",
+ "intent": "Show Ethiopia's young age structure and large base of children and young adults.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the full declining-with-age shape required, or is it enough to show that the youngest cohorts are large?",
+   "question": "What demographic shape does Ethiopia have?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video explicitly identify 0-4 as the largest cohort, or is a wide base enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,97 +16,312 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "share_or_composition",
    "must_be_visualized": true,
-   "claim": "The age structure is bottom-heavy: values are largest in the youngest cohorts and generally decline toward older ages.",
+   "claim": "Ethiopia's population pyramid has a broad base of children and young adults and narrows sharply at older ages.",
    "basis": [
     {
-     "entity": "0-4-right",
-     "x": "0-4",
-     "field": "value",
+     "entity": "95-99",
+     "field": "ethiopia",
+     "value": 0.0083,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "95-99",
+     "field": "ethiopia",
+     "value": 0.008715,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "90-95",
+     "field": "ethiopia",
+     "value": 0.0248,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "90-95",
+     "field": "ethiopia",
+     "value": 0.028245,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "85-89",
+     "field": "ethiopia",
+     "value": 0.0455,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "85-89",
+     "field": "ethiopia",
+     "value": 0.049875,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "80-84",
+     "field": "ethiopia",
+     "value": 0.0703,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "80-84",
+     "field": "ethiopia",
+     "value": 0.073815,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "75-79",
+     "field": "ethiopia",
+     "value": 0.0992,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "75-79",
+     "field": "ethiopia",
+     "value": 0.10416,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "70-74",
+     "field": "ethiopia",
+     "value": 0.1323,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "70-74",
+     "field": "ethiopia",
+     "value": 0.138915,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "65-69",
+     "field": "ethiopia",
+     "value": 0.1695,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "65-69",
+     "field": "ethiopia",
+     "value": 0.177975,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "60-64",
+     "field": "ethiopia",
+     "value": 0.2109,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "60-64",
+     "field": "ethiopia",
+     "value": 0.221445,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "55-59",
+     "field": "ethiopia",
+     "value": 0.2522,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "55-59",
+     "field": "ethiopia",
+     "value": 0.267015,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "50-54",
+     "field": "ethiopia",
+     "value": 0.2977,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "50-54",
+     "field": "ethiopia",
+     "value": 0.31689,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "45-49",
+     "field": "ethiopia",
+     "value": 0.3473,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "45-49",
+     "field": "ethiopia",
+     "value": 0.36897,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "40-44",
+     "field": "ethiopia",
+     "value": 0.3969,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "40-44",
+     "field": "ethiopia",
+     "value": 0.421155,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "35-39",
+     "field": "ethiopia",
+     "value": 0.4643,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "35-39",
+     "field": "ethiopia",
+     "value": 0.49182,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "30-34",
+     "field": "ethiopia",
+     "value": 0.5351,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "30-34",
+     "field": "ethiopia",
+     "value": 0.566265,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "25-29",
+     "field": "ethiopia",
+     "value": 0.6119,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "25-29",
+     "field": "ethiopia",
+     "value": 0.646905,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "20-24",
+     "field": "ethiopia",
+     "value": 0.6946,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "20-24",
+     "field": "ethiopia",
+     "value": 0.73374,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "15-19",
+     "field": "ethiopia",
+     "value": 0.7832,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "15-19",
+     "field": "ethiopia",
+     "value": 0.82677,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "10-14",
+     "field": "ethiopia",
+     "value": 0.8777,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "10-14",
+     "field": "ethiopia",
+     "value": 0.925995,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "5-9",
+     "field": "ethiopia",
+     "value": 0.9545,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "5-9",
+     "field": "ethiopia",
+     "value": 1.00663,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "0-4",
+     "field": "ethiopia",
+     "value": 0.9959,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "0-4",
+     "field": "ethiopia",
      "value": 1.05,
-     "note": "youngest female cohort value"
-    },
-    {
-     "entity": "95-99-right",
-     "x": "95-99",
-     "field": "value",
-     "value": 0.009,
-     "note": "oldest female cohort value"
-    },
-    {
-     "entity": "0-4-left",
-     "x": "0-4",
-     "field": "value",
-     "value": 0.996,
-     "note": "youngest male cohort value"
-    },
-    {
-     "entity": "95-99-left",
-     "x": "95-99",
-     "field": "value",
-     "value": 0.008,
-     "note": "oldest male cohort value"
+     "unit": "relative",
+     "series": "Female"
     }
    ],
    "accept": [
-    "The population pyramid is wide at the bottom and narrow at the top.",
-    "Values are highest for the youngest age groups and fall with age.",
-    "The chart shows a youthful, bottom-heavy age structure."
+    "both genders are present",
+    "the base is widest",
+    "older bands are much smaller"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "showing an old-age-heavy pyramid",
+    "omitting the youngest bands"
    ],
-   "evidence": "Bars for the youngest age groups (0-4 and 5-9) are visibly longer than bars for older age groups, creating a bottom-heavy shape."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "The 0-4 age group is the largest cohort in the table.",
-   "basis": [
-    {
-     "entity": "0-4-right",
-     "x": "0-4",
-     "field": "value",
-     "value": 1.05,
-     "note": "highest value in the table"
-    },
-    {
-     "entity": "0-4-left",
-     "x": "0-4",
-     "field": "value",
-     "value": 0.996,
-     "note": "highest male value"
-    }
-   ],
-   "accept": [
-    "0-4 is the largest age group.",
-    "The youngest cohort has the highest value.",
-    "The 0-4 bar is the longest in the chart."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 0-4 bars are the longest in the chart, or at least no other age group exceeds them."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "The video may present the data as a population pyramid with male and female series on opposite sides, since the table provides both series.",
-  "The video may use the phrase 'consumer market' as context without claiming the age data alone proves future consumption."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 40,
   "required_states": [],
   "required_marks_per_state": {},
@@ -123,11 +330,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

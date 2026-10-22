@@ -1,5 +1,5 @@
 entity,series,metric,value,unit,label,role
-White,Registered,average_voter_registration_southern_states_1963,74.0,,,bar
-White,Couldn't vote,average_voter_registration_southern_states_1963,26.0,,,bar
-Nonwhite,Registered,average_voter_registration_southern_states_1963,40.0,,,bar
-Nonwhite,Couldn't vote,average_voter_registration_southern_states_1963,60.0,,,bar
+White,Registered,voter_registration,74.0,%,,bar
+White,Couldn't vote,voter_registration,26.0,%,,bar
+Nonwhite,Registered,voter_registration,40.0,%,,bar
+Nonwhite,Couldn't vote,voter_registration,60.0,%,Couldn't vote,bar

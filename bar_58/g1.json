@@ -1,22 +1,14 @@
 {
  "clip_id": "bar_58",
  "version": "g1_r_u_v1",
- "intent": "To demonstrate that eyewitness misinterpretation is the leading cause of wrongful convictions.",
+ "intent": "Show that eyewitness misinterpretation is the most frequently cited cause of wrongful convictions, followed by improper forensics, false confessions, and informants.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video state the exact top value 72%, or is 'leading cause' alone sufficient?",
+   "question": "Which wrongful-conviction cause is most frequently cited?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is it enough to compare eyewitness to all other causes, or must the runner-up gap also be explicit?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,91 +16,57 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "Eyewitness misinterpretation is the leading/highest cause in the chart, with value 72 (relative_value 0.72, i.e. 72%).",
-   "basis": [
-    {
-     "entity": "Eyewitness misinterpretation",
-     "x": "Eyewitness misinterpretation",
-     "field": "value",
-     "value": 72.0,
-     "note": "Table value is 72.000; relative_value is 0.7200."
-    }
-   ],
-   "accept": [
-    "Eyewitness misinterpretation is the leading cause at 72%.",
-    "72% of the cited exonerations involve inaccurate eyewitness testimony.",
-    "The eyewitness bar is highest, at about 72%."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The eyewitness-misinterpretation bar must be visibly the tallest and must be labeled or annotated with 72% or 72."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Eyewitness misinterpretation is greater than every other listed cause: 72 vs improper forensics 47, false confessions 27, and informant 15.",
+   "claim": "Eyewitness misinterpretation is the highest at 72%, above improper forensics at 47%, false confessions at 27%, and informants at 15%.",
    "basis": [
     {
      "entity": "Eyewitness misinterpretation",
-     "x": "Eyewitness misinterpretation",
-     "field": "value",
-     "value": 72.0,
-     "note": "Top value."
+     "field": "share_of_wrongful_convictions",
+     "value": 72,
+     "unit": "%"
     },
     {
      "entity": "Improper forensics",
-     "x": "Improper forensics",
-     "field": "value",
-     "value": 47.0,
-     "note": "Lower than eyewitness."
+     "field": "share_of_wrongful_convictions",
+     "value": 47,
+     "unit": "%"
     },
     {
      "entity": "False confessions",
-     "x": "False confessions",
-     "field": "value",
-     "value": 27.0,
-     "note": "Lower than eyewitness."
+     "field": "share_of_wrongful_convictions",
+     "value": 27,
+     "unit": "%"
     },
     {
      "entity": "Informant",
-     "x": "Informant",
-     "field": "value",
-     "value": 15.0,
-     "note": "Lower than eyewitness."
+     "field": "share_of_wrongful_convictions",
+     "value": 15,
+     "unit": "%"
     }
    ],
    "accept": [
-    "Eyewitness misinterpretation tops all other listed causes.",
-    "72 is higher than 47, 27, and 15.",
-    "No other listed cause reaches the eyewitness misinterpretation level."
+    "all four causes are present",
+    "the values are shown in descending order",
+    "eyewitness misinterpretation is the highest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "making another cause the highest",
+    "omitting a category",
+    "treating the total as 100% without noting overlap"
    ],
-   "evidence": "The eyewitness bar must be shown alongside the other three bars at lower heights, with values or labels visible enough to compare."
+   "evidence": "The selected keyframe and the plotted bars/segments encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Improper forensics is the runner-up at 47%.",
-  "False confessions is 27% and informant is 15%.",
-  "Eyewitness misinterpretation is 4.8 times informant: 72 / 15 = 4.8."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar segments",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -117,12 +75,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_52_63_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

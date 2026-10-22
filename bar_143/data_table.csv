@@ -1,13 +1,25 @@
-entity,metric,value,unit,label,role
-7,value,84.000,,,bar
-14,value,81.000,,,bar
-23,value,81.000,,,bar
-27,value,80.000,,,bar
-44,value,82.000,,,bar
-31,value,83.000,,,bar
-30,value,57.000,,,bar
-36,value,67.000,,,bar
-34,value,75.000,,,bar
-40,value,70.000,,,bar
-49,value,84.000,,,bar
-49,value,88.000,,,bar
+entity,series,metric,value,unit,label,role
+Trump,Democrats,presidential_approval,7,%,Trump,bar
+Trump,Republicans,presidential_approval,84,%,Trump,bar
+Obama,Democrats,presidential_approval,81,%,Obama,bar
+Obama,Republicans,presidential_approval,14,%,Obama,bar
+G.W. Bush,Democrats,presidential_approval,23,%,G.W. Bush,bar
+G.W. Bush,Republicans,presidential_approval,81,%,G.W. Bush,bar
+Clinton,Democrats,presidential_approval,80,%,Clinton,bar
+Clinton,Republicans,presidential_approval,27,%,Clinton,bar
+G.H.W. Bush,Democrats,presidential_approval,44,%,G.H.W. Bush,bar
+G.H.W. Bush,Republicans,presidential_approval,82,%,G.H.W. Bush,bar
+Reagan,Democrats,presidential_approval,31,%,Reagan,bar
+Reagan,Republicans,presidential_approval,83,%,Reagan,bar
+Carter,Democrats,presidential_approval,57,%,Carter,bar
+Carter,Republicans,presidential_approval,30,%,Carter,bar
+Ford,Democrats,presidential_approval,36,%,Ford,bar
+Ford,Republicans,presidential_approval,67,%,Ford,bar
+Nixon,Democrats,presidential_approval,34,%,Nixon,bar
+Nixon,Republicans,presidential_approval,75,%,Nixon,bar
+Johnson,Democrats,presidential_approval,70,%,Johnson,bar
+Johnson,Republicans,presidential_approval,40,%,Johnson,bar
+Kennedy,Democrats,presidential_approval,49,%,Kennedy,bar
+Kennedy,Republicans,presidential_approval,84,%,Kennedy,bar
+Eisenhower,Democrats,presidential_approval,49,%,Eisenhower,bar
+Eisenhower,Republicans,presidential_approval,88,%,Eisenhower,bar

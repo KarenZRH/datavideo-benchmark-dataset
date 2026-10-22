@@ -1,2 +1,4 @@
 entity,metric,value,unit,label,role
-General Motors,ceo_compensation_2018,22.000,,,bar
+General Motors,ceo_compensation,22,million USD,$22M,bar
+Volkswagen,ceo_compensation,12.5,million USD,$12.5M,bar
+Toyota,ceo_compensation,3.4,million USD,$3.4M,bar

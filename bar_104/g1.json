@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_104",
  "version": "g1_r_u_v1",
- "intent": "To demonstrate that high-income earners face a higher effective tax rate than the ultra-wealthy, and that the ultra-wealthy's tax burden has decreased since 2001.",
+ "intent": "Show that the 400 richest paid a lower effective tax rate than $100k–$200k earners in 2008, and that their rate fell after 2001.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly compare the 25% high-income rate against the 18.1% ultra-wealthy rate in 2008?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -13,18 +13,10 @@
   },
   {
    "id": "R2",
-   "question": "Must the video show the 2001-to-2008 decline in the 400 richest' effective tax rate?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Is the 25% high-income effective tax rate required as a standalone visible value?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -34,109 +26,75 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "In 2008, the $100k-$200k income group's effective tax rate (25%) was higher than the 400 richest' rate (18.1%), a gap of 6.9 percentage points.",
+   "claim": "In 2008, the 400 richest paid an effective tax rate of 18.1%, below the 25% paid by $100k–$200k earners.",
    "basis": [
     {
-     "entity": "$100k-$200k earners tax rate",
-     "x": "2008",
+     "entity": "400 richest tax rate",
      "field": "value",
-     "value": 25.0,
-     "note": "effective tax rate for the middle income group"
+     "value": "18.1",
+     "unit": "%"
     },
     {
-     "entity": "400 richest tax rate",
-     "x": "2008",
+     "entity": "$100k-$200k earners tax rate",
      "field": "value",
-     "value": 18.1,
-     "note": "effective tax rate for top 400 richest tax returns"
+     "value": "25",
+     "unit": "%"
     }
    ],
    "accept": [
-    "25% vs 18.1%; $100k-$200k earners paid a higher effective rate than the 400 richest in 2008",
-    "The 400 richest paid 18.1%, lower than the 25% paid by $100k-$200k earners",
-    "Middle/high-income earners faced a 6.9 percentage-point higher effective tax rate than the ultra-wealthy in 2008"
+    "18.1% and25% are shown for2008",
+    "18.1 is lower than25"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing the groups",
+    "using the2001 rate for2008"
    ],
-   "evidence": "Two 2008 values must be visible/labeled: $100k-$200k (or middle) at 25% and 400 richest at 18.1%, on a comparable scale or with explicit comparison labels."
+   "evidence": "The two 2008 marks are present."
   },
   {
    "id": "U2",
    "requirement_id": "R2",
    "unit_kind": "change_or_rate",
    "must_be_visualized": true,
-   "claim": "The 400 richest' effective tax rate declined from 23% in 2001 to 18.1% in 2008, a drop of 4.9 percentage points (about 21.3% lower relative to 2001).",
+   "claim": "The 400 richest effective tax rate fell from23% in2001 to18.1% in2008.",
    "basis": [
     {
      "entity": "400 richest tax rate",
      "x": "2001",
      "field": "value",
-     "value": 23.0,
-     "note": "2001 effective tax rate for top 400 richest tax returns"
+     "value": "23",
+     "unit": "%"
     },
     {
      "entity": "400 richest tax rate",
      "x": "2008",
      "field": "value",
-     "value": 18.1,
-     "note": "2008 effective tax rate for top 400 richest tax returns"
+     "value": "18.1",
+     "unit": "%"
     }
    ],
    "accept": [
-    "The 400 richest' effective tax rate fell from 23% in 2001 to 18.1% in 2008",
-    "The ultra-wealthy's rate declined by 4.9 percentage points since 2001",
-    "The top 400 rate was about 21% lower in 2008 than in 2001"
+    "23% is attached to2001",
+    "18.1% is attached to2008",
+    "the rate falls"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing the years",
+    "claiming the rate rose"
    ],
-   "evidence": "Both top-400 values must be visible on a timeline or paired bars: 23% for 2001 and 18.1% for 2008, with a downward direction or change label."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "The $100k-$200k earners' effective tax rate in 2008 was 25%.",
-   "basis": [
-    {
-     "entity": "$100k-$200k earners tax rate",
-     "x": "2008",
-     "field": "value",
-     "value": 25.0,
-     "note": "effective tax rate for the $100k-$200k income group"
-    }
-   ],
-   "accept": [
-    "$100k-$200k earners faced a 25% effective tax rate in 2008",
-    "The $100k-$200k or middle-income group is shown at 25%",
-    "High-income earners: 25% effective tax rate"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A bar/label for $100k-$200k or middle/high-income earners at 25% must be visible."
+   "evidence": "Both year-coded marks are present."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 0.5,
+  "U2": 0.5
  },
- "optional_valid": [
-  "Highlight the 6.9 percentage-point gap between 25% and 18.1% as a derived comparison.",
-  "Show the 23% to 18.1% drop as an approximately 21.3% relative decline.",
-  "Frame the 400 richest' 18.1% as the lowest rate among the displayed groups in 2008."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 3,
   "required_states": [],
   "required_marks_per_state": {},
@@ -145,26 +103,26 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
- "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
- ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null,
  "clip_hardcase": {
   "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+  "type": "multi_year_overlay_comparison",
+  "unit_ids": [
+   "U1",
+   "U2"
+  ],
+  "reason": "The clip compares two groups in 2008 while also carrying a second time point for the richest group from 2001."
  },
  "hardcases": [
   {
    "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
+   "type": "multi_year_overlay_comparison",
+   "handling": "Evaluate both required relations without collapsing the 2001 and 2008 comparisons."
   }
- ]
+ ],
+ "review_flags": [
+  "manual_specific_fix_2026-10-22"
+ ],
+ "status": "agent_draft_pending_human_review",
+ "approved_by": null,
+ "approved_at": null
 }

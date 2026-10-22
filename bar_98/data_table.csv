@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-Cats,value,88.000,,,bar
-74 million,value,74.000,,,bar
+Cats,pet_population,88,million pets,88 million,bar
+Dogs,pet_population,74,million pets,74 million,bar

@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Black adults,value,0.5972,relative,,bar
-Hispanic adults,value,0.2522,relative,,bar
-Asian adults*,value,0.2124,relative,,bar
-White adults,value,0.1194,relative,,bar
+Black adults,unfairly_stopped,45,%,45%,bar
+Hispanic adults,unfairly_stopped,19,%,19%,bar
+Asian adults*,unfairly_stopped,16,%,16%,bar
+White adults,unfairly_stopped,9,%,9%,bar

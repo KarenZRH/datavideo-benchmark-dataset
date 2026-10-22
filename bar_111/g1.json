@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_111",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the disparity in access to clean water between populations, contextualizing Dewey's privileged background against a lower access statistic.",
+ "intent": "Dewi's high-income household has far greater access to clean water than Putri's low-income household, showing that income inequality extends to basic services.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the clip explicitly contrast the higher and lower access values, or is showing only one value sufficient?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the clip explicitly identify 0.6250 as the highest access value?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the clip explicitly identify 0.4361 as the lowest access value?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -34,103 +18,43 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "There is a disparity among the shown relative access values: one value is 0.6250 while another is 0.4361, so access is not uniform.",
+   "claim": "High-income Dewi's family has much better access to clean water than low-income Putri's family.",
    "basis": [
     {
-     "entity": "access to clean water",
-     "x": "not used",
-     "field": "relative_value",
-     "value": 0.625,
-     "note": "Higher relative access value."
+     "entity": "Dewi's family",
+     "field": "access_to_clean_water",
+     "value": "98",
+     "unit": "%"
     },
     {
-     "entity": "access to clean water",
-     "x": "not used",
-     "field": "relative_value",
-     "value": 0.4361,
-     "note": "Lower relative access value."
+     "entity": "Putri's family",
+     "field": "access_to_clean_water",
+     "value": "72",
+     "unit": "%"
     }
    ],
    "accept": [
-    "one access value is 0.6250 while another is 0.4361",
-    "the highest access value is about 0.63 and the lowest is about 0.44",
-    "there is a visible gap between a higher access value and a lower access value"
+    "both families are shown",
+    "98% and 72% are attached correctly"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "Both the 0.6250 and 0.4361 relative values are represented, and the difference between them is visually apparent."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "The highest relative access value shown is 0.6250; it appears twice in the table.",
-   "basis": [
-    {
-     "entity": "access to clean water",
-     "x": "not used",
-     "field": "relative_value",
-     "value": 0.625,
-     "note": "Maximum relative value; appears in two rows."
-    }
-   ],
-   "accept": [
-    "the maximum relative access value is 0.6250",
-    "one access value reaches about 0.63",
-    "the highest shown access value is roughly 0.625"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 0.6250 value is shown as the highest or tied for highest."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "The lowest relative access value shown is 0.4361.",
-   "basis": [
-    {
-     "entity": "access to clean water",
-     "x": "not used",
-     "field": "relative_value",
-     "value": 0.4361,
-     "note": "Minimum relative value."
-    }
-   ],
-   "accept": [
-    "the minimum relative access value is 0.4361",
-    "the lowest access figure is about 0.44",
-    "the smallest shown value is roughly 0.436"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 0.4361 value is shown as the lowest."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "The middle relative value 0.5986 is below the maximum 0.6250 but above the minimum 0.4361; it is about 0.96 times the maximum and about 1.37 times the minimum.",
-  "The absolute gap between the highest and lowest relative values is 0.1889 (0.6250 - 0.4361).",
-  "The two rows with 0.6250 indicate a tie for the maximum relative access value."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
-  "required_data_rows": 4,
+  "selection": "all role=bar rows",
+  "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
   "evaluated_in": "G2_visual_completeness",
@@ -138,26 +62,22 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
+ "sequence_context": "Across this sequence, household income inequality places Dewi's family far above Putri's, translates into unequal access to clean water, and affects a broader low-income population than the poorest decile alone.",
+ "related_clips": [
+  "bar_110",
+  "bar_111",
+  "bar_112"
  ]
 }

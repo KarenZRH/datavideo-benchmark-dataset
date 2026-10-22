@@ -5,18 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the video explicitly identify the single highest relative value and its Russia / Red series?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the Russia / Red series be shown as monotonically increasing over time, or is a general upward trend enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,95 +16,180 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The largest relative value in the table belongs to the Russia / Red series, at about 0.42, and is slightly above the next-highest Russia / Red value of about 0.41.",
+   "claim": "In 1985, the USA and Russia dominated the displayed nuclear stockpile, with the Other group much smaller.",
    "basis": [
     {
-     "entity": "Russia / Red",
-     "x": "58,761",
-     "field": "relative_value",
-     "value": 0.4182,
-     "note": "highest overall relative_value in the table"
+     "entity": "1950",
+     "field": "nuclear_warheads",
+     "value": "1175",
+     "unit": "warheads",
+     "series": "USA"
     },
     {
-     "entity": "Russia / Red",
-     "x": "USA",
-     "field": "relative_value",
-     "value": 0.4134,
-     "note": "second highest overall relative_value in the table"
+     "entity": "1955",
+     "field": "nuclear_warheads",
+     "value": "2609",
+     "unit": "warheads",
+     "series": "USA"
+    },
+    {
+     "entity": "1955",
+     "field": "nuclear_warheads",
+     "value": "325",
+     "unit": "warheads",
+     "series": "Russia"
+    },
+    {
+     "entity": "1960",
+     "field": "nuclear_warheads",
+     "value": "18399",
+     "unit": "warheads",
+     "series": "USA"
+    },
+    {
+     "entity": "1960",
+     "field": "nuclear_warheads",
+     "value": "1627",
+     "unit": "warheads",
+     "series": "Russia"
+    },
+    {
+     "entity": "1960",
+     "field": "nuclear_warheads",
+     "value": "544",
+     "unit": "warheads",
+     "series": "Other"
+    },
+    {
+     "entity": "1965",
+     "field": "nuclear_warheads",
+     "value": "25190",
+     "unit": "warheads",
+     "series": "USA"
+    },
+    {
+     "entity": "1965",
+     "field": "nuclear_warheads",
+     "value": "5039",
+     "unit": "warheads",
+     "series": "Russia"
+    },
+    {
+     "entity": "1965",
+     "field": "nuclear_warheads",
+     "value": "916",
+     "unit": "warheads",
+     "series": "Other"
+    },
+    {
+     "entity": "1970",
+     "field": "nuclear_warheads",
+     "value": "20316",
+     "unit": "warheads",
+     "series": "USA"
+    },
+    {
+     "entity": "1970",
+     "field": "nuclear_warheads",
+     "value": "16253",
+     "unit": "warheads",
+     "series": "Russia"
+    },
+    {
+     "entity": "1970",
+     "field": "nuclear_warheads",
+     "value": "1627",
+     "unit": "warheads",
+     "series": "Other"
+    },
+    {
+     "entity": "1975",
+     "field": "nuclear_warheads",
+     "value": "14281",
+     "unit": "warheads",
+     "series": "USA"
+    },
+    {
+     "entity": "1975",
+     "field": "nuclear_warheads",
+     "value": "30940",
+     "unit": "warheads",
+     "series": "Russia"
+    },
+    {
+     "entity": "1975",
+     "field": "nuclear_warheads",
+     "value": "2377",
+     "unit": "warheads",
+     "series": "Other"
+    },
+    {
+     "entity": "1980",
+     "field": "nuclear_warheads",
+     "value": "21884",
+     "unit": "warheads",
+     "series": "USA"
+    },
+    {
+     "entity": "1980",
+     "field": "nuclear_warheads",
+     "value": "35131",
+     "unit": "warheads",
+     "series": "Russia"
+    },
+    {
+     "entity": "1980",
+     "field": "nuclear_warheads",
+     "value": "578",
+     "unit": "warheads",
+     "series": "Other"
+    },
+    {
+     "entity": "1985",
+     "field": "nuclear_warheads",
+     "value": "22182",
+     "unit": "warheads",
+     "series": "USA"
+    },
+    {
+     "entity": "1985",
+     "field": "nuclear_warheads",
+     "value": "35543",
+     "unit": "warheads",
+     "series": "Russia"
+    },
+    {
+     "entity": "1985",
+     "field": "nuclear_warheads",
+     "value": "1036",
+     "unit": "warheads",
+     "series": "Other"
     }
    ],
    "accept": [
-    "The largest relative value in the table is the Russia / Red value labeled 58,761, at about 0.42.",
-    "The highest overall normalized value belongs to the Russia / Red series.",
-    "Russia / Red contains the top relative value, slightly above its next highest value of about 0.41."
+    "all three 1985 groups are present",
+    "Russia is largest and Other is smallest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The chart must show the Russia / Red value labeled 58,761 as the maximum relative value among all displayed points."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "For the Russia / Red series, the year-coded relative values increase steadily from 1955 to 2010; the 2010 value is about 50 times the 1955 value.",
-   "basis": [
-    {
-     "entity": "Russia / Red",
-     "x": "1955",
-     "field": "relative_value",
-     "value": 0.0038,
-     "note": "start of year-coded Russia / Red series"
-    },
-    {
-     "entity": "Russia / Red",
-     "x": "1990",
-     "field": "relative_value",
-     "value": 0.0191,
-     "note": "intermediate point"
-    },
-    {
-     "entity": "Russia / Red",
-     "x": "2000",
-     "field": "relative_value",
-     "value": 0.0593,
-     "note": "intermediate point"
-    },
-    {
-     "entity": "Russia / Red",
-     "x": "2010",
-     "field": "relative_value",
-     "value": 0.1913,
-     "note": "end of year-coded Russia / Red series"
-    }
-   ],
-   "accept": [
-    "For Russia / Red, the relative value rises from 0.0038 in 1955 to 0.1913 in 2010.",
-    "The Russia / Red year-coded values increase steadily, ending about 50 times higher than the 1955 value.",
-    "Russia / Red shows a clear upward trend across its year-coded points."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must show Russia / Red points for 1955, 1990, 2000, and 2010 in increasing order."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
  "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
-  "required_data_rows": 20,
+  "selection": "all role=bar rows",
+  "required_data_rows": 21,
   "required_states": [],
   "required_marks_per_state": {},
   "evaluated_in": "G2_visual_completeness",
@@ -120,26 +197,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

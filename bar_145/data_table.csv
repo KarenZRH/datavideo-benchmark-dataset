@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-High income,value,4200000000.000,,,bar
-Upper middle income,value,0.1361,relative,,bar
-Lower middle income,value,411000000.000,,,bar
-Lower income,value,270000000.000,,,bar
+High income,confirmed_vaccine_doses,4200,million doses,4.2B,bar
+Upper middle income,confirmed_vaccine_doses,571.62,million doses,,bar
+Lower middle income,confirmed_vaccine_doses,411,million doses,411M,bar
+Lower income,confirmed_vaccine_doses,270,million doses,270M,bar

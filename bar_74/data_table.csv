@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-KFC,global_locations,20000.000,,,bar
-Starbucks,global_locations,30000.000,,,bar
-McDonald&#x27;s,global_locations,37000.000,,,bar
-Subway,global_locations,43000.000,,,bar
+KFC,global_locations,20000.000,locations,,bar
+Starbucks,global_locations,30000.000,locations,,bar
+McDonald's,global_locations,37000.000,locations,,bar
+Subway,global_locations,43000.000,locations,,bar

@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_88",
  "version": "g1_r_u_v1",
- "intent": "To illustrate Japan's demographic imbalance, specifically an aging population with a shrinking youth base, which the narration suggests creates economic vulnerability.",
+ "intent": "Show Japan's aging population and comparatively small younger age bands.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly compare the youngest cohort to the peak, or is a general shrinking-youth statement enough?",
+   "question": "What demographic shape does Japan have?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video explicitly contrast a specific older cohort with the youngest cohort, or is a general aging statement enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Is identifying the exact peak cohort required, or only the general top-heavy shape?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,145 +16,312 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "comparison",
+   "unit_kind": "share_or_composition",
    "must_be_visualized": true,
-   "claim": "The youngest age groups are much smaller than the middle-aged peak; the 0-4 cohort is about half the size of the 45-49 cohort.",
+   "claim": "Japan's population pyramid is top-heavy: older age bands are proportionally large while younger age bands are narrower.",
    "basis": [
     {
-     "entity": "0-4",
-     "x": "0-4",
-     "field": "value",
-     "value": 0.495,
-     "note": "male 0-4"
+     "entity": "95-99",
+     "field": "japan",
+     "value": 0.0421,
+     "unit": "relative",
+     "series": "Male"
     },
     {
-     "entity": "0-4",
-     "x": "0-4",
-     "field": "value",
-     "value": 0.526,
-     "note": "female 0-4"
+     "entity": "95-99",
+     "field": "japan",
+     "value": 0.0737,
+     "unit": "relative",
+     "series": "Female"
     },
     {
-     "entity": "45-49",
-     "x": "45-49",
-     "field": "value",
-     "value": 0.958,
-     "note": "male 45-49"
+     "entity": "90-95",
+     "field": "japan",
+     "value": 0.1158,
+     "unit": "relative",
+     "series": "Male"
     },
     {
-     "entity": "45-49",
-     "x": "45-49",
-     "field": "value",
-     "value": 1.0,
-     "note": "female 45-49, largest single bar"
-    }
-   ],
-   "accept": [
-    "The 0-4 age group is roughly half the size of the 45-49 peak",
-    "Youngest cohort is about half the largest middle-aged cohort",
-    "The base of the pyramid is much narrower than the middle bulge"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 0-4 bars are visibly much shorter than the 45-49 bars."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "comparison",
-   "must_be_visualized": true,
-   "claim": "Older cohorts are not small; the 70-74 age group is larger than the 0-4 age group.",
-   "basis": [
+     "entity": "90-95",
+     "field": "japan",
+     "value": 0.1474,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "85-89",
+     "field": "japan",
+     "value": 0.2632,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "85-89",
+     "field": "japan",
+     "value": 0.3053,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "80-84",
+     "field": "japan",
+     "value": 0.4316,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "80-84",
+     "field": "japan",
+     "value": 0.4737,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "75-79",
+     "field": "japan",
+     "value": 0.6,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "75-79",
+     "field": "japan",
+     "value": 0.6421,
+     "unit": "relative",
+     "series": "Female"
+    },
     {
      "entity": "70-74",
-     "x": "70-74",
-     "field": "value",
-     "value": 0.821,
-     "note": "male 70-74"
+     "field": "japan",
+     "value": 0.8211,
+     "unit": "relative",
+     "series": "Male"
     },
     {
      "entity": "70-74",
-     "x": "70-74",
-     "field": "value",
-     "value": 0.863,
-     "note": "female 70-74"
+     "field": "japan",
+     "value": 0.8632,
+     "unit": "relative",
+     "series": "Female"
     },
     {
-     "entity": "0-4",
-     "x": "0-4",
-     "field": "value",
-     "value": 0.495,
-     "note": "male 0-4"
+     "entity": "65-69",
+     "field": "japan",
+     "value": 0.8,
+     "unit": "relative",
+     "series": "Male"
     },
     {
-     "entity": "0-4",
-     "x": "0-4",
-     "field": "value",
-     "value": 0.526,
-     "note": "female 0-4"
-    }
-   ],
-   "accept": [
-    "The 70-74 age group is about 1.65 times the size of the 0-4 group",
-    "Older cohorts are larger than the youngest cohort",
-    "The 70-74 bar is taller than the 0-4 bar"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 70-74 and 0-4 age-group bars must be comparable, showing 70-74 is taller than 0-4."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "The largest single cohort is 45-49, especially female 45-49 at 1.000; male 45-49 is 0.958.",
-   "basis": [
+     "entity": "65-69",
+     "field": "japan",
+     "value": 0.8421,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "60-64",
+     "field": "japan",
+     "value": 0.7053,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "60-64",
+     "field": "japan",
+     "value": 0.7368,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "55-59",
+     "field": "japan",
+     "value": 0.6842,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "55-59",
+     "field": "japan",
+     "value": 0.7158,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "50-54",
+     "field": "japan",
+     "value": 0.7789,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "50-54",
+     "field": "japan",
+     "value": 0.8211,
+     "unit": "relative",
+     "series": "Female"
+    },
     {
      "entity": "45-49",
-     "x": "45-49",
-     "field": "value",
+     "field": "japan",
+     "value": 0.9579,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "45-49",
+     "field": "japan",
      "value": 1.0,
-     "note": "female 45-49, global maximum"
+     "unit": "relative",
+     "series": "Female"
     },
     {
-     "entity": "45-49",
-     "x": "45-49",
-     "field": "value",
-     "value": 0.958,
-     "note": "male 45-49, second highest single bar"
+     "entity": "40-44",
+     "field": "japan",
+     "value": 0.8105,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "40-44",
+     "field": "japan",
+     "value": 0.8526,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "35-39",
+     "field": "japan",
+     "value": 0.7474,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "35-39",
+     "field": "japan",
+     "value": 0.7789,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "30-34",
+     "field": "japan",
+     "value": 0.7053,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "30-34",
+     "field": "japan",
+     "value": 0.7368,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "25-29",
+     "field": "japan",
+     "value": 0.6421,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "25-29",
+     "field": "japan",
+     "value": 0.6737,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "20-24",
+     "field": "japan",
+     "value": 0.6,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "20-24",
+     "field": "japan",
+     "value": 0.6316,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "15-19",
+     "field": "japan",
+     "value": 0.5789,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "15-19",
+     "field": "japan",
+     "value": 0.6105,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "10-14",
+     "field": "japan",
+     "value": 0.5579,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "10-14",
+     "field": "japan",
+     "value": 0.5895,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "5-9",
+     "field": "japan",
+     "value": 0.5368,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "5-9",
+     "field": "japan",
+     "value": 0.5684,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "0-4",
+     "field": "japan",
+     "value": 0.4947,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "0-4",
+     "field": "japan",
+     "value": 0.5263,
+     "unit": "relative",
+     "series": "Female"
     }
    ],
    "accept": [
-    "The peak of the chart is the 45-49 age group, with female 45-49 the single largest bar",
-    "The largest cohort is 45-49, and the female bar (1.000) is slightly larger than the male bar (0.958)"
+    "both male and female age bands are shown",
+    "older bands are proportionally large",
+    "younger bands are visibly narrower"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "showing a youth-heavy pyramid",
+    "omitting the older population"
    ],
-   "evidence": "The 45-49 age group bars are visibly the tallest, with female 45-49 as the highest single bar."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "The oldest 95-99 group is the smallest cohort (male 0.042, female 0.074).",
-  "The 0-4, 5-9, and 10-14 groups are all smaller than most older groups.",
-  "The 45-49 cohort is followed by a dip in the 55-59 and 60-64 groups before another rise at 70-74."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 40,
   "required_states": [],
   "required_marks_per_state": {},
@@ -179,11 +330,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

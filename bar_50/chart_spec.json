@@ -4,19 +4,15 @@
  "sub_type": "simple",
  "orientation": "vertical",
  "series_count": 1,
- "category_count": 8,
- "unit_mark": "bar",
+ "category_count": 9,
  "has_axis": true,
- "has_legend": null,
- "has_value_labels": null,
- "text_count": 7,
+ "has_value_labels": false,
  "row_count": 9,
  "derived_from": [
   "data_table",
   "semantic.svg"
  ],
- "confidence": "high",
- "needs_review": true,
+ "needs_review": false,
  "time_behavior": "snapshot",
- "batch_status": "agent_processed_pending_human_review"
+ "batch_status": "approved"
 }

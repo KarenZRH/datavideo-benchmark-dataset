@@ -1,4 +1,4 @@
 entity,metric,value,unit,label,role
-SUNNI,muslims_iraq,20.000,,,bar
-SHIA,muslims_iraq,63.000,,,bar
-KURDS (SUNNI),muslims_iraq,17.000,,,bar
+SUNNI,muslims_iraq,20.000,%,,bar
+SHIA,muslims_iraq,63.000,%,,bar
+KURDS (SUNNI),muslims_iraq,17.000,%,,bar

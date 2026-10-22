@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_64",
  "family": "bar",
- "sub_type": "simple",
+ "sub_type": "stacked_100",
  "orientation": "horizontal"
 }

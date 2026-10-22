@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_36",
- "intent_en": "To illustrate the relationship between educational attainment and Black migration rates from the South, highlighting the significance of 'some college' education in this trend since the 1960s.",
- "previous_intent": "To demonstrate that net migration rates among Southern Black residents were highest for those with some college education, highlighting the relationship between educational attainment and migration patterns.",
+ "intent_en": "Show that among Southern Black residents, those with some college had the highest net migration rate by education level.",
+ "previous_intent": "To illustrate the relationship between educational attainment and Black migration rates from the South, highlighting the significance of 'some college' education in this trend since the 1960s.",
  "narration_support": "We now do have an opportunity to get advanced education, at least some college",
  "chart_support": "Horizontal bar chart titled 'Black migration rates by education' showing net migration per 1,000 Southern black residents, with the 'Some college' category highlighted in yellow",
  "supported_by_narration": true,
@@ -25,10 +25,13 @@
   "contains_answer_values": false
  },
  "needs_video_escalation": true,
+ "narrative_goal": "To illustrate the relationship between educational attainment and Black migration rates from the South, highlighting the significance of 'some college' education in this trend since the 1960s.",
+ "intent_machine": "To demonstrate that net migration rates among Southern Black residents were highest for those with some college education, highlighting the relationship between educational attainment and migration patterns.",
  "status": "agent_draft_pending_human_review",
  "review_flags": [
   "legacy_intent_needs_semantic_reaudit"
  ],
- "approved_by": null,
- "approved_at": null
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": ["data_table","intent","g1"]
 }

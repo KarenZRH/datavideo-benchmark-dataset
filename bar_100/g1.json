@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_100",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the changing trends in civil war resolutions, highlighting a shift from military victory to diplomatic negotiation over time.",
+ "intent": "Show the shift in civil-war endings from military force toward negotiated settlements.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the video be required to state the military-victory decline from 44.4% to 15.6%, or is showing the downward trend sufficient?",
+   "question": "How did civil-war endings change from before 1989 to now?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should the negotiated-ending increase from 11.1% to 44.4% be required as a separate unit?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Is the crossover/order reversal required, or are the two separate trend statements sufficient?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,136 +16,60 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "change_or_rate",
+   "unit_kind": "share_or_composition",
    "must_be_visualized": true,
-   "claim": "Military victory as a share of civil-war endings declined from 44.4% until 1989 to 15.6% currently.",
+   "claim": "Endings by force fall while negotiated endings rise, with diplomacy becoming the dominant shown outcome.",
    "basis": [
     {
-     "entity": "UNTIL 1989",
-     "x": "military victory series (#E67E22)",
-     "field": "relative_value",
-     "value": 0.4444,
-     "note": "row bar_100 until-1989, value=1.000, relative_value=0.4444; color #E67E22 inferred as victory from narration"
+     "entity": "Until 1989",
+     "field": "share_of_civil_wars",
+     "value": 1.0,
+     "unit": "relative",
+     "series": "Civil wars ended by force"
     },
     {
-     "entity": "CURRENTLY",
-     "x": "military victory series (#A0522D)",
-     "field": "relative_value",
-     "value": 0.1556,
-     "note": "row bar_100 currently, value=0.350, relative_value=0.1556; color #A0522D inferred as victory"
+     "entity": "Currently",
+     "field": "share_of_civil_wars",
+     "value": 0.35,
+     "unit": "relative",
+     "series": "Civil wars ended by force"
+    },
+    {
+     "entity": "Until 1989",
+     "field": "share_of_civil_wars",
+     "value": 0.25,
+     "unit": "relative",
+     "series": "Civil wars ended by diplomacy"
+    },
+    {
+     "entity": "Currently",
+     "field": "share_of_civil_wars",
+     "value": 1.0,
+     "unit": "relative",
+     "series": "Civil wars ended by diplomacy"
     }
    ],
    "accept": [
-    "Military victory fell from 44.4% to 15.6%.",
-    "Victory share dropped by about 29 percentage points, from 44% to 16%.",
-    "Military victory became much rarer, falling by roughly 65% relative to its 1989 share.",
-    "Victories declined from about 44% of endings to about 16%."
+    "both outcomes have before/after bars",
+    "force falls",
+    "diplomacy rises"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing the two time trends",
+    "omitting one outcome"
    ],
-   "evidence": "Victory-series bars for both periods must be visible, with labels or axis positions showing 44.4% and 15.6% (or heights proportional)."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "Negotiated endings as a share of civil-war endings increased from 11.1% until 1989 to 44.4% currently.",
-   "basis": [
-    {
-     "entity": "UNTIL 1989",
-     "x": "negotiated series (#1F3A5F)",
-     "field": "relative_value",
-     "value": 0.1111,
-     "note": "row bar_100 until-1989, value=0.250, relative_value=0.1111; color #1F3A5F inferred as negotiated from narration"
-    },
-    {
-     "entity": "CURRENTLY",
-     "x": "negotiated series (#5B9BD5)",
-     "field": "relative_value",
-     "value": 0.4444,
-     "note": "row bar_100 currently, value=1.000, relative_value=0.4444; color #5B9BD5 inferred as negotiated"
-    }
-   ],
-   "accept": [
-    "Negotiated endings rose from 11.1% to 44.4%.",
-    "Negotiated settlements jumped by about 33 percentage points, from 11% to 44%.",
-    "Negotiated endings roughly quadrupled, from about one-tenth to over two-fifths of endings.",
-    "Diplomatic negotiation grew from 11.1% until 1989 to 44.4% currently."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Negotiation-series bars for both periods must be visible, with labels or axis positions showing 11.1% and 44.4%."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "The leading resolution type reversed: until 1989 military victory exceeded negotiated endings (44.4% vs 11.1%), but currently negotiated endings exceed military victory (44.4% vs 15.6%).",
-   "basis": [
-    {
-     "entity": "UNTIL 1989",
-     "x": "military victory series (#E67E22)",
-     "field": "relative_value",
-     "value": 0.4444,
-     "note": "row bar_100 until-1989, relative_value=0.4444; inferred as victory"
-    },
-    {
-     "entity": "UNTIL 1989",
-     "x": "negotiated series (#1F3A5F)",
-     "field": "relative_value",
-     "value": 0.1111,
-     "note": "row bar_100 until-1989, relative_value=0.1111; inferred as negotiated"
-    },
-    {
-     "entity": "CURRENTLY",
-     "x": "military victory series (#A0522D)",
-     "field": "relative_value",
-     "value": 0.1556,
-     "note": "row bar_100 currently, relative_value=0.1556; inferred as victory"
-    },
-    {
-     "entity": "CURRENTLY",
-     "x": "negotiated series (#5B9BD5)",
-     "field": "relative_value",
-     "value": 0.4444,
-     "note": "row bar_100 currently, relative_value=0.4444; inferred as negotiated"
-    }
-   ],
-   "accept": [
-    "Victory led negotiation 44.4% to 11.1% until 1989, but negotiation led victory 44.4% to 15.6% currently.",
-    "Military victory was ahead in the earlier period; negotiated endings are ahead now.",
-    "There was a crossover from victory-dominant to negotiation-dominant endings.",
-    "Negotiated endings overtook military victories as the larger share."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Both resolution series across both periods must be visible together so the viewer can see the order reversal/crossover; labels or legend must distinguish victory from negotiation."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "Mention that the current negotiated share is about 44% (rounded from 44.4%) rather than the narration's 'almost 40%'.",
-  "Mention the relative decline of military victory by about 65% using (0.1556-0.4444)/0.4444.",
-  "Use color/legend to distinguish military victory from negotiated endings.",
-  "Show both periods on a common axis for comparison."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -170,12 +78,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

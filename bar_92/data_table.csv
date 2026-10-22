@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Ivory Coast,value,53.000,,,bar
-Nigeria,value,54.000,,,bar
-Somalia,value,55.000,,,bar
-Mozambique,value,57.000,,,bar
+Ivory Coast,value,53.000,years,,bar
+Nigeria,value,54.000,years,,bar
+Somalia,value,55.000,years,,bar
+Mozambique,value,57.000,years,,bar

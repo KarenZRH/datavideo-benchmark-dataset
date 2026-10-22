@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-South Korea,%_gdp_r_d_top_4,0.950,,,bar
-Israel,%_gdp_r_d_top_4,0.900,,,bar
-Japan,%_gdp_r_d_top_4,0.750,,,bar
-Finland,%_gdp_r_d_top_4,0.650,,,bar
+South Korea,%_gdp_r_d_top_4,0.950,relative,,bar
+Israel,%_gdp_r_d_top_4,0.900,relative,,bar
+Japan,%_gdp_r_d_top_4,0.750,relative,,bar
+Finland,%_gdp_r_d_top_4,0.650,relative,,bar

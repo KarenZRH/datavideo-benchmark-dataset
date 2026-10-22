@@ -1,3 +1,5 @@
 entity,metric,value,unit,label,role
-MY WEALTH,better_way_tax_rich,0.373,,,bar
-FRIEND&#x27;S WEALTH,better_way_tax_rich,1.000,,,bar
+MY WEALTH,wealth_level,0.235,relative,MY WEALTH,bar
+FRIEND'S WEALTH,wealth_level,1.000,relative,FRIEND'S WEALTH,bar
+MY WEALTH,income_tax_burden,1.000,relative,about the same income tax,annotation
+FRIEND'S WEALTH,income_tax_burden,1.000,relative,about the same income tax,annotation

@@ -16,7 +16,7 @@
   "semantic.svg"
  ],
  "confidence": "high",
- "needs_review": true,
+ "needs_review": false,
  "time_behavior": "snapshot",
- "batch_status": "agent_processed_pending_human_review"
+ "batch_status": "approved"
 }

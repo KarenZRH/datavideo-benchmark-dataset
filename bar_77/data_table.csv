@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-In-N-Out,value,1.000,,,bar
-Whataburger,value,2.000,,,bar
-Five Guys,value,4.000,,,bar
-McDonald&#x27;s,value,40.000,,,bar
+In-N-Out,us_locations,347,locations,347,bar
+Whataburger,us_locations,694,locations,about 694,bar
+Five Guys,us_locations,1388,locations,"about 1,388",bar
+McDonald's,us_locations,13880,locations,"about 13,880",bar

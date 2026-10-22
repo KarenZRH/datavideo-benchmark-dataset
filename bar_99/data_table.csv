@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-Other wars,state_vs_state_wars_1900_2000,0.78,,no,bar
-Wars between democracies,state_vs_state_wars_1900_2000,0.22,,yes,bar
+Other wars,state_vs_state_wars_1900_2000,0.78,relative,no,bar
+Wars between democracies,state_vs_state_wars_1900_2000,0.22,relative,yes,bar

@@ -1,5 +1,7 @@
-entity,metric,value,unit,label,role
-survived,value,0.2022,relative,,bar
-HIROSHIMA,value,0.4853,relative,,bar
-survived,value,0.1699,relative,,bar
-100k killed,value,0.5176,relative,,bar
+entity,series,metric,value,unit,label,role
+Hiroshima,Killed,atomic_bomb_casualties,100,thousand people,100k killed,bar
+Hiroshima,Survived,atomic_bomb_casualties,240,thousand people,240k survived,bar
+Nagasaki,Killed,atomic_bomb_casualties,65,thousand people,65k killed,bar
+Nagasaki,Survived,atomic_bomb_casualties,198,thousand people,198k survived,bar
+Hiroshima total,Total,atomic_bomb_population,340,thousand people,340k,annotation
+Nagasaki total,Total,atomic_bomb_population,263,thousand people,263k,annotation

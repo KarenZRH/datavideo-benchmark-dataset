@@ -1,5 +1,3 @@
 entity,metric,value,unit,label,role
-access to clean water,value,0.6250,relative,,bar
-access to clean water,value,0.5986,relative,,bar
-access to clean water,value,0.6250,relative,,bar
-access to clean water,value,0.4361,relative,,bar
+Dewi's family,access_to_clean_water,98,%,98%,bar
+Putri's family,access_to_clean_water,72,%,72%,bar

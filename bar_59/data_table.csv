@@ -1,10 +1,10 @@
 entity,metric,value,unit,label,role
-Detroit,cities_with_largest_loss_blacks,1.000,,,bar
-Chicago,cities_with_largest_loss_blacks,0.921,,,bar
-New Orleans,cities_with_largest_loss_blacks,0.616,,,bar
-New York,cities_with_largest_loss_blacks,0.511,,,bar
-Los Angeles,cities_with_largest_loss_blacks,0.282,,,bar
-"Washington, DC",cities_with_largest_loss_blacks,0.180,,,bar
-Oakland,cities_with_largest_loss_blacks,0.154,,,bar
-Cleveland,cities_with_largest_loss_blacks,0.154,,,bar
-Atlanta,cities_with_largest_loss_blacks,0.154,,,bar
+Detroit,black_population_loss_2000_2010,1.0,relative,Detroit,bar
+Chicago,black_population_loss_2000_2010,0.921,relative,Chicago,bar
+New Orleans,black_population_loss_2000_2010,0.616,relative,New Orleans,bar
+New York,black_population_loss_2000_2010,0.511,relative,New York,bar
+Los Angeles,black_population_loss_2000_2010,0.282,relative,Los Angeles,bar
+"Washington, DC",black_population_loss_2000_2010,0.18,relative,"Washington, DC",bar
+Oakland,black_population_loss_2000_2010,0.154,relative,Oakland,bar
+Cleveland,black_population_loss_2000_2010,0.154,relative,Cleveland,bar
+Atlanta,black_population_loss_2000_2010,0.154,relative,Atlanta,bar

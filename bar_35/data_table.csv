@@ -1,4 +1,4 @@
 entity,metric,value,unit,label,role
-Released Pretrial,2017_dc_courts_dc_pretrial_services_agency,94.000,,,bar
-Returned for Every Court Date,2017_dc_courts_dc_pretrial_services_agency,88.000,,,bar
-Not Arrested Pretrial,2017_dc_courts_dc_pretrial_services_agency,86.000,,,bar
+Released Pretrial,pretrial_release_rate,94,%,94%,bar
+Returned for Every Court Date,every_court_date_return_rate,88,%,88%,bar
+Not Arrested Pretrial,no_pretrial_arrest_rate,86,%,86%,bar

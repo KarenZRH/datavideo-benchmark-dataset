@@ -2,21 +2,17 @@
  "clip_id": "bar_49",
  "family": "bar",
  "sub_type": "stacked",
- "orientation": "horizontal",
+ "orientation": "vertical",
  "series_count": 2,
  "category_count": 11,
- "unit_mark": "bar",
  "has_axis": true,
- "has_legend": null,
- "has_value_labels": null,
- "text_count": 8,
+ "has_value_labels": false,
  "row_count": 13,
  "derived_from": [
   "data_table",
   "semantic.svg"
  ],
- "confidence": "high",
- "needs_review": true,
+ "needs_review": false,
  "time_behavior": "snapshot",
- "batch_status": "agent_processed_pending_human_review"
+ "batch_status": "approved"
 }

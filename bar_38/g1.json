@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_38",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the projected global population for the year 2100.",
+ "intent": "Show that a small projected fertility gap would lead to hundreds of millions fewer people and a lower global population in 2100.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the clip explicitly state the 3.6 billion total as the 2100 projection?",
+   "question": "What does the small projected gap imply for global population in 2100?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the clip explicitly state the 0.4 billion / 400 million reduction?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the video convey the relative smallness of the 0.4 billion reduction against the 3.6 billion total?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,98 +16,34 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The projected global population total for 2100 is 3.6 billion.",
+   "claim": "The projected 2100 global population is 3.6 billion, and a 0.4 billion gap represents 400 million fewer people against the 4.0 billion reference total.",
    "basis": [
-    {
-     "entity": "= 10 Million",
-     "x": "2100",
-     "field": "value",
-     "value": 3.6,
-     "note": "value column is 3.600; entity_original labels it '3.6 Billion'"
-    }
+    {"entity": "World population in 2100", "field": "value", "value": 3.6},
+    {"entity": "Projected reduction", "field": "value", "value": 0.4}
    ],
    "accept": [
-    "The 2100 global population total is 3.6 billion",
-    "Projected global population reaches 3.6 billion by 2100",
-    "The total for 2100 is 3.6 billion people"
+    "3.6 billion people remain in the 2100 projection",
+    "the reduction or gap is 0.4 billion, or 400 million people",
+    "the 3.6 billion bar and 0.4 billion gap together sit under the 4.0 billion reference bracket"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "the reduction is described as 400 thousand or 40 million",
+    "the 0.4 billion gap is treated as part of the remaining population",
+    "the 4.0 billion bracket is presented as the new 2100 population",
+    "either the population total or the reduction is omitted"
    ],
-   "evidence": "A visible label or value callout showing 3.6 billion associated with the 2100 total."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The projection includes a reduction or gap of 0.4 billion people, i.e., 400 million fewer people.",
-   "basis": [
-    {
-     "entity": "Track20",
-     "x": "2100",
-     "field": "value",
-     "value": 0.4,
-     "note": "value column is 0.400; entity_original labels it '0.4 Billion'"
-    }
-   ],
-   "accept": [
-    "The gap means 0.4 billion fewer people",
-    "A reduction of 400 million people",
-    "0.4 billion people fewer in 2100"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A visible label or value callout showing 0.4 billion or 400 million as the reduction/gap."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "The 0.4 billion reduction is tiny relative to the 3.6 billion total: it is roughly one-ninth of the total.",
-   "basis": [
-    {
-     "entity": "Track20",
-     "x": "2100",
-     "field": "value",
-     "value": 0.4,
-     "note": "reduction value"
-    },
-    {
-     "entity": "= 10 Million",
-     "x": "2100",
-     "field": "value",
-     "value": 3.6,
-     "note": "total value"
-    }
-   ],
-   "accept": [
-    "The 0.4 billion gap is about one-ninth of the 3.6 billion total",
-    "0.4 billion is a small fraction of 3.6 billion",
-    "The reduction is roughly a tenth of the total"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 0.4 billion value and 3.6 billion total must be visually compared in a way that shows the 0.4 is a small fraction of the 3.6, not an absolute percentage unless the table unit allows it."
+   "evidence": "The chart shows a 3.6 billion bar plus a 0.4 billion gap under a 4.0 billion bracket, with readable value labels."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
  "optional_valid": [
-  "Expressing the 3.6 billion total as 3,600 million people (3.600 × 1000 = 3,600).",
-  "Showing that both table rows share the same relative_value 0.0778, but this should not override the absolute values."
+  "The 0.4 billion reduction is about one-ninth of the 3.6 billion projected population.",
+  "The chart's 4.0 billion bracket is a comparison total, not the final 2100 population."
  ],
  "g0_data_completeness": {
   "required": true,
@@ -138,11 +58,11 @@
   "missing_any_fails_visual_completeness": true
  },
  "review_flags": [
-  "legacy_g1_migrated",
+  "legacy_intent_migrated",
   "semantic_reaudit_required"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_review_draft_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

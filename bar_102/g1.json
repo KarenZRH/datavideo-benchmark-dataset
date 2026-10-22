@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_102",
  "version": "g1_r_u_v1",
- "intent": "To highlight WeWork's status among top global startups and the controversy regarding its valuation.",
+ "intent": "Show WeWork's position among the most valuable startups and the controversy around its valuation.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly convey WeWork as fourth/last among these four, or is general top-startup context enough?",
+   "question": "Where does WeWork rank among the shown startup valuations?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is WeWork's exact normalized value required, or is its rank/relative position sufficient?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Should the video compare WeWork to both Uber and Didi, or only to Didi (the Chinese competitor)?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,131 +16,56 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Among the four listed startups, WeWork ranks fourth/lowest by value, behind Toutiao, Uber, and Didi.",
+   "claim": "Toutiao is first, Uber second, Didi third, and WeWork fourth.",
    "basis": [
     {
      "entity": "Toutiao",
-     "x": "ranking",
-     "field": "value",
+     "field": "top_startup_valuations",
      "value": 1.0,
-     "note": "highest listed value"
+     "unit": "relative"
     },
     {
      "entity": "Uber",
-     "x": "ranking",
-     "field": "value",
+     "field": "top_startup_valuations",
      "value": 0.95,
-     "note": "second listed value"
+     "unit": "relative"
     },
     {
      "entity": "Didi",
-     "x": "ranking",
-     "field": "value",
+     "field": "top_startup_valuations",
      "value": 0.71,
-     "note": "third listed value"
+     "unit": "relative"
     },
     {
      "entity": "WeWork",
-     "x": "ranking",
-     "field": "value",
+     "field": "top_startup_valuations",
      "value": 0.56,
-     "note": "fourth/lowest listed value"
+     "unit": "relative"
     }
    ],
    "accept": [
-    "WeWork is the fourth highest-valued startup among the four shown",
-    "WeWork ranks last in this top-four startup set",
-    "Only Toutiao, Uber, and Didi rank above WeWork"
+    "all four startups are present",
+    "WeWork is fourth",
+    "Toutiao is first"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "making WeWork first",
+    "omitting Didi"
    ],
-   "evidence": "Bars must be ordered descending, with WeWork shown as the fourth/lowest bar and labeled as WeWork."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "WeWork's normalized value endpoint is 0.560 on the same scale where Toutiao is 1.000.",
-   "basis": [
-    {
-     "entity": "WeWork",
-     "x": "normalized valuation",
-     "field": "value",
-     "value": 0.56,
-     "note": "WeWork endpoint value in table"
-    }
-   ],
-   "accept": [
-    "WeWork's value is 0.560 on the normalized scale",
-    "WeWork is shown at 0.56 while the top bar is 1.000",
-    "WeWork's bar reaches 0.560"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The WeWork bar endpoint or value label must show 0.560 (or 0.56)."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "comparison",
-   "must_be_visualized": true,
-   "claim": "WeWork trails Didi by 0.150 in normalized value and trails Uber by 0.390.",
-   "basis": [
-    {
-     "entity": "Didi",
-     "x": "value gap vs WeWork",
-     "field": "value",
-     "value": 0.71,
-     "note": "Didi value"
-    },
-    {
-     "entity": "WeWork",
-     "x": "value gap vs Didi",
-     "field": "value",
-     "value": 0.56,
-     "note": "WeWork value"
-    },
-    {
-     "entity": "Uber",
-     "x": "value gap vs WeWork",
-     "field": "value",
-     "value": 0.95,
-     "note": "Uber value"
-    }
-   ],
-   "accept": [
-    "WeWork is 0.150 behind Didi and 0.390 behind Uber",
-    "Didi's value is 0.150 higher than WeWork's; Uber's is 0.390 higher",
-    "WeWork sits below both Didi and Uber by those gaps"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Didi and Uber bars must be visibly longer than WeWork; if gaps are labeled, show 0.150 and 0.390."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "A text or voiceover framing that WeWork was called massively/most overvalued, as in the intent and original narration; this is contextual controversy rather than a table-derived metric.",
-  "Highlighting WeWork's bar color/label differently to draw attention to its lower rank."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -165,12 +74,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

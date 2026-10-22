@@ -1,22 +1,22 @@
 {
  "clip_id": "bar_39",
  "family": "bar",
- "sub_type": "stacked",
- "orientation": "horizontal",
- "series_count": 3,
- "category_count": 4,
+ "sub_type": "simple",
+ "orientation": "vertical",
+ "series_count": 1,
+ "category_count": 1,
  "unit_mark": "bar",
  "has_axis": true,
- "has_legend": null,
- "has_value_labels": null,
+ "has_legend": false,
+ "has_value_labels": true,
  "text_count": 8,
- "row_count": 5,
+ "row_count": 1,
  "derived_from": [
   "data_table",
   "semantic.svg"
  ],
  "confidence": "high",
- "needs_review": true,
+ "needs_review": false,
  "time_behavior": "snapshot",
- "batch_status": "agent_processed_pending_human_review"
+ "batch_status": "approved"
 }

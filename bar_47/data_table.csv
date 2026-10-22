@@ -1,12 +1,12 @@
 entity,metric,value,unit,label,role
-POOREST,corporate_property_taxes,2.000,,,bar
-POOREST,corporate_property_taxes,2.000,,,bar
-Group 3,corporate_property_taxes,2.000,,,bar
-Group 4,corporate_property_taxes,2.000,,,bar
-Group 5,corporate_property_taxes,2.000,,,bar
-Group 6,corporate_property_taxes,2.000,,,bar
-Group 7,corporate_property_taxes,3.000,,,bar
-Group 8,corporate_property_taxes,3.000,,,bar
-Group 9,corporate_property_taxes,3.000,,,bar
-Group 10,corporate_property_taxes,9.000,,,bar
-RICHEST,corporate_property_taxes,11.000,,,bar
+Poorest 10%,corporate_property_tax_rate,1,%,Poorest 10%,bar
+Second 10%,corporate_property_tax_rate,1.3,%,,bar
+Third 10%,corporate_property_tax_rate,1.5,%,,bar
+Fourth 10%,corporate_property_tax_rate,2,%,,bar
+Fifth 10%,corporate_property_tax_rate,2.2,%,,bar
+Sixth 10%,corporate_property_tax_rate,2.6,%,,bar
+Seventh 10%,corporate_property_tax_rate,3,%,,bar
+Eighth 10%,corporate_property_tax_rate,3.2,%,,bar
+Ninth 10%,corporate_property_tax_rate,3.7,%,,bar
+Richest 10%,corporate_property_tax_rate,9.2,%,Richest 10%,bar
+400 Richest,corporate_property_tax_rate,10.5,%,400 Richest,bar

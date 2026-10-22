@@ -1,6 +1,6 @@
 entity,metric,value,unit,label,role
-Terrestrial Planets,value,1.000,,,bar
-Jupiter,value,70.000,,,bar
-Neptune 5%,value,20.000,,,bar
-Neptune 5%,value,4.000,,,bar
-Neptune 5%,value,5.000,,,bar
+Terrestrial Planets,value,1.000,relative,,bar
+Jupiter,value,70.000,relative,,bar
+Saturn,value,20.000,relative,,bar
+Uranus,value,4.000,relative,,bar
+Neptune,value,5.000,relative,,bar

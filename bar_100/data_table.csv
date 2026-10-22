@@ -1,5 +1,5 @@
-entity,metric,value,unit,label,role
-UNTIL 1989,value,1.000,,,bar
-CURRENTLY,value,0.350,,,bar
-UNTIL 1989,value,0.250,,,bar
-CURRENTLY,value,1.000,,,bar
+entity,series,metric,value,unit,label,role
+Until 1989,Civil wars ended by force,share_of_civil_wars,1.0,relative,Until 1989,bar
+Currently,Civil wars ended by force,share_of_civil_wars,0.35,relative,Currently,bar
+Until 1989,Civil wars ended by diplomacy,share_of_civil_wars,0.25,relative,Until 1989,bar
+Currently,Civil wars ended by diplomacy,share_of_civil_wars,1.0,relative,Currently,bar

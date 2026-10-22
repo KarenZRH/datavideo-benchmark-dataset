@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_111",
- "intent_en": "To illustrate the disparity in access to clean water between populations, contextualizing Dewey's privileged background against a lower access statistic.",
+ "intent_en": "Dewi's high-income household has far greater access to clean water than Putri's low-income household, showing that income inequality extends to basic services.",
  "previous_intent": "To illustrate the disparity in access to clean water, contrasting the near-universal availability in developed contexts (exemplified by Dewey's upbringing) with the lower global average.",
  "narration_support": "Dewey grew up in a house with clean running water and a toilet.",
  "chart_support": "A split-screen graphic comparing access to clean water, displaying a significantly higher access rate on the left side (visually represented by higher water levels) than on the right side.",
@@ -24,11 +24,17 @@
  "leak_check": {
   "contains_answer_values": false
  },
- "needs_video_escalation": true,
+ "needs_video_escalation": false,
  "status": "agent_draft_pending_human_review",
  "review_flags": [
-  "legacy_intent_needs_semantic_reaudit"
+  "manual_sequence_reaudit_2026-10-22"
  ],
  "approved_by": null,
- "approved_at": null
+ "approved_at": null,
+ "sequence_context": "Across this sequence, household income inequality places Dewi's family far above Putri's, translates into unequal access to clean water, and affects a broader low-income population than the poorest decile alone.",
+ "related_clips": [
+  "bar_110",
+  "bar_111",
+  "bar_112"
+ ]
 }

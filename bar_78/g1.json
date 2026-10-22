@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_78",
  "version": "g1_r_u_v1",
- "intent": "To explain the factors driving WeWork's high valuation in contrast to the traditional profitability of Regus.",
+ "intent": "Show the trend in Regus's profit and contrast it with WeWork's much higher valuation.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the 2016 dip and 2017 recovery be shown, or is overall growth enough?",
+   "question": "What trend does Regus's profit follow from 2013 to 2017?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -13,18 +13,10 @@
   },
   {
    "id": "R2",
-   "question": "Is the 2x/100% overall change required, or only the endpoint values?",
+   "question": "How is Regus contrasted with WeWork?",
    "relation": "single",
    "unit_ids": [
     "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Should the video be required to show and quantify the relative_value series, or is it optional context?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,161 +24,83 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The series is not monotonically increasing: it rises from 2013 to 2015, falls in 2016, and returns to its 2015 peak in 2017.",
+   "claim": "Regus profit rises from about 100 million in 2013 to 200 million in 2015, dips in 2016, and returns to 200 million in 2017.",
    "basis": [
     {
      "entity": "2013",
-     "x": "2013",
-     "field": "value",
+     "field": "regus_profit",
      "value": 100.0,
-     "note": "series start"
+     "unit": "million USD"
     },
     {
      "entity": "2014",
-     "x": "2014",
-     "field": "value",
+     "field": "regus_profit",
      "value": 130.0,
-     "note": "increase from 2013"
+     "unit": "million USD"
     },
     {
      "entity": "2015",
-     "x": "2015",
-     "field": "value",
+     "field": "regus_profit",
      "value": 200.0,
-     "note": "local/global peak"
+     "unit": "million USD"
     },
     {
      "entity": "2016",
-     "x": "2016",
-     "field": "value",
+     "field": "regus_profit",
      "value": 190.0,
-     "note": "only year-over-year decline"
+     "unit": "million USD"
     },
     {
      "entity": "2017",
-     "x": "2017",
-     "field": "value",
+     "field": "regus_profit",
      "value": 200.0,
-     "note": "recovery to 2015 peak"
+     "unit": "million USD"
     }
    ],
    "accept": [
-    "After rising from 100 in 2013 to 200 in 2015, the value dips to 190 in 2016 before returning to 200 in 2017.",
-    "The series reaches 200 twice, in 2015 and 2017, with a 2016 dip to 190.",
-    "2016 is the only year-over-year decline in the 2013–2017 series."
+    "all five years are shown",
+    "the 2016 dip is preserved",
+    "2013 starts near 100 and 2017 ends near 200"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "showing a strict monotonic rise",
+    "omitting 2016",
+    "changing million to billion"
    ],
-   "evidence": "The chart must make the 2016 decline and 2017 recovery visible, e.g., the 2016 bar lower than 2015 and 2017."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   },
   {
    "id": "U2",
    "requirement_id": "R2",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "From 2013 to 2017, the value doubles: 100 to 200, a 100% increase.",
-   "basis": [
-    {
-     "entity": "2013",
-     "x": "2013",
-     "field": "value",
-     "value": 100.0,
-     "note": "starting value"
-    },
-    {
-     "entity": "2017",
-     "x": "2017",
-     "field": "value",
-     "value": 200.0,
-     "note": "ending value"
-    }
-   ],
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "claim": "The narration contrasts Regus's profitability with WeWork's much larger valuation.",
+   "basis": [],
    "accept": [
-    "The value doubles from 100 to 200 between 2013 and 2017.",
-    "It grows 100% over the period.",
-    "2017 is 2x the 2013 value."
+    "Regus is described as profitable",
+    "WeWork's valuation is described as much larger"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "claiming this chart directly plots WeWork's valuation",
+    "claiming Regus has no profits"
    ],
-   "evidence": "First and last values, 100 and 200, must be visible or directly comparable as a 2x relationship."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "The relative_value metric rises from 0.40 in 2013 to 0.80 in 2015, dips to 0.76 in 2016, and returns to 0.80 in 2017; its 2015 and 2017 highs are double the 2013 level.",
-   "basis": [
-    {
-     "entity": "2013",
-     "x": "2013",
-     "field": "relative_value",
-     "value": 0.4,
-     "note": "relative value in 2013"
-    },
-    {
-     "entity": "2014",
-     "x": "2014",
-     "field": "relative_value",
-     "value": 0.52,
-     "note": "relative value in 2014"
-    },
-    {
-     "entity": "2015",
-     "x": "2015",
-     "field": "relative_value",
-     "value": 0.8,
-     "note": "relative value in 2015"
-    },
-    {
-     "entity": "2016",
-     "x": "2016",
-     "field": "relative_value",
-     "value": 0.76,
-     "note": "relative value in 2016"
-    },
-    {
-     "entity": "2017",
-     "x": "2017",
-     "field": "relative_value",
-     "value": 0.8,
-     "note": "relative value in 2017"
-    }
-   ],
-   "accept": [
-    "Relative value rises from 0.40 in 2013 to 0.80 in 2015, dips to 0.76 in 2016, and returns to 0.80 in 2017.",
-    "The 0.80 relative values in 2015 and 2017 are twice the 2013 value of 0.40.",
-    "Relative value peaks at 0.80 in both 2015 and 2017."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The relative_value metric must be explicitly shown, e.g., secondary bars, labels, or annotations, not merely inferred from the primary value bars."
+   "evidence": "Narration-only context; do not invent a chart mark for it.",
+   "hardcase": true,
+   "hardcase_reason": "This consequence or prediction is stated in narration but has no direct chart mark."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 0.5,
+  "U2": 0.5
  },
- "optional_valid": [
-  "2014's value is 130 and its relative_value is 0.52.",
-  "2015 and 2017 tie for the highest primary value at 200.",
-  "2013 is the lowest primary value at 100.",
-  "2016's primary value is 190 and its relative_value is 0.76."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 5,
   "required_states": [],
   "required_marks_per_state": {},
@@ -195,12 +109,23 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
- "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+ "clip_hardcase": {
+  "is_hardcase": true,
+  "type": "narration_only_context",
+  "reason": "At least one required claim is not directly represented by a chart mark."
+ },
+ "hardcases": [
+  {
+   "unit_id": "U2",
+   "type": "required_narrative_without_source_visual",
+   "handling": "must_be_visualized=false; preserve the point through narration."
+  }
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "review_flags": [
+  "batch_64_83_reviewed_candidate"
+ ],
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

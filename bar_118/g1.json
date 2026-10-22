@@ -5,18 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video state that police training has the highest Strongly support?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video show the mid-tier Strongly ranking among these proposals?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,83 +16,102 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "Require police to be trained has the highest Strongly relative support value.",
-   "basis": [
-    {
-     "entity": "Require police to be trained",
-     "x": "Strongly",
-     "field": "relative_value",
-     "value": 0.3883,
-     "note": "largest Strongly value"
-    }
-   ],
-   "accept": [
-    "Police training leads Strongly support at relative 0.3883.",
-    "Highest Strongly value is for police training, 0.3883.",
-    "Training reform tops the Strongly series at 0.3883."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The relative value for 'Require police to be trained' must appear as the largest Strongly value."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Make it a crime for police to Strongly value exceeds investigate and live-in.",
+   "claim": "A majority broadly supports each policing reform, with support ranging from about74% to93%.",
    "basis": [
     {
-     "entity": "Make it a crime for police to",
-     "x": "Strongly",
-     "field": "relative_value",
-     "value": 0.268,
-     "note": "highest of three"
+     "entity": "Require police to be trained in nonviolent alternatives to deadly force",
+     "field": "support_for_police_reform",
+     "value": "71",
+     "unit": "%",
+     "series": "Strongly"
     },
     {
-     "entity": "power to investigate and",
-     "x": "Strongly",
-     "field": "relative_value",
-     "value": 0.2352,
-     "note": "middle of three"
+     "entity": "Require police to be trained in nonviolent alternatives to deadly force",
+     "field": "support_for_police_reform",
+     "value": "22",
+     "unit": "%",
+     "series": "Somewhat"
     },
     {
-     "entity": "Require officers to live in",
-     "x": "Strongly",
-     "field": "relative_value",
-     "value": 0.1914,
-     "note": "lowest of three"
+     "entity": "Create a federal government database to track officers accused of misconduct",
+     "field": "support_for_police_reform",
+     "value": "62",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Create a federal government database to track officers accused of misconduct",
+     "field": "support_for_police_reform",
+     "value": "27",
+     "unit": "%",
+     "series": "Somewhat"
+    },
+    {
+     "entity": "Give civilian oversight boards power to investigate and discipline officers",
+     "field": "support_for_police_reform",
+     "value": "43",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Give civilian oversight boards power to investigate and discipline officers",
+     "field": "support_for_police_reform",
+     "value": "32",
+     "unit": "%",
+     "series": "Somewhat"
+    },
+    {
+     "entity": "Make it a crime for police to use chokeholds or strangleholds",
+     "field": "support_for_police_reform",
+     "value": "49",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Make it a crime for police to use chokeholds or strangleholds",
+     "field": "support_for_police_reform",
+     "value": "25",
+     "unit": "%",
+     "series": "Somewhat"
+    },
+    {
+     "entity": "Require officers to live in the cities or towns they police",
+     "field": "support_for_police_reform",
+     "value": "35",
+     "unit": "%",
+     "series": "Strongly"
+    },
+    {
+     "entity": "Require officers to live in the cities or towns they police",
+     "field": "support_for_police_reform",
+     "value": "39",
+     "unit": "%",
+     "series": "Somewhat"
     }
    ],
    "accept": [
-    "Crime proposal Strongly value 0.2680 exceeds investigate 0.2352 and live-in 0.1914.",
-    "Strongly support is higher for crime proposal than investigate or live-in.",
-    "Crime proposal outranks investigate and live-in in Strongly series."
+    "all five proposals are present",
+    "both response segments are present"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The three named Strongly values must be visibly ordered 0.2680 > 0.2352 > 0.1914."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Mentioning that both Strongly and Somewhat categories exist for each proposal.",
-  "Showing the relative order of all five Strongly support values."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 10,
   "required_states": [],
   "required_marks_per_state": {},
@@ -109,26 +120,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

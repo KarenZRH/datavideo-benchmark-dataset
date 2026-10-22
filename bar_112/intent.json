@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_112",
- "intent_en": "To illustrate that low economic status is prevalent among a large segment of the population, extending well beyond the absolute poorest group.",
+ "intent_en": "Putri's hardship represents a much wider low-income population, showing that disadvantage extends well beyond Indonesia's poorest decile.",
  "previous_intent": "To illustrate the widespread economic disparity in Indonesia, demonstrating that the financial struggles of the poorest households are representative of a much larger segment of the lower-income population.",
  "narration_support": "Putri's story doesn't only apply to the bottom 10 %? Another 68 million Indonesians in the bottom 40 % of households are not much better off.",
  "chart_support": "Stylized bar chart comparing household levels, showing a high bar for Dewi's Family and a cluster of low bars populated by multiple family icons for Putri's Family, illustrating a significant disparity and a large lower-income demographic.",
@@ -27,8 +27,14 @@
  "needs_video_escalation": false,
  "status": "agent_draft_pending_human_review",
  "review_flags": [
-  "legacy_intent_needs_semantic_reaudit"
+  "manual_sequence_reaudit_2026-10-22"
  ],
  "approved_by": null,
- "approved_at": null
+ "approved_at": null,
+ "sequence_context": "Across this sequence, household income inequality places Dewi's family far above Putri's, translates into unequal access to clean water, and affects a broader low-income population than the poorest decile alone.",
+ "related_clips": [
+  "bar_110",
+  "bar_111",
+  "bar_112"
+ ]
 }

@@ -1,8 +1,8 @@
 entity,metric,value,unit,label,role
-Dubai,2016_international_visitor_spending,1.000,,,bar
-London,2016_international_visitor_spending,0.628,,,bar
-NY,2016_international_visitor_spending,0.581,,,bar
-Singapore,2016_international_visitor_spending,0.549,,,bar
-Bangkok,2016_international_visitor_spending,0.502,,,bar
-Paris,2016_international_visitor_spending,0.437,,,bar
-Tokyo,2016_international_visitor_spending,0.390,,,bar
+Dubai,2016_international_visitor_spending,1.0,relative_to_Dubai,Dubai,bar
+London,2016_international_visitor_spending,0.628,relative_to_Dubai,London,bar
+NY,2016_international_visitor_spending,0.581,relative_to_Dubai,NY,bar
+Singapore,2016_international_visitor_spending,0.549,relative_to_Dubai,Singapore,bar
+Bangkok,2016_international_visitor_spending,0.502,relative_to_Dubai,Bangkok,bar
+Paris,2016_international_visitor_spending,0.437,relative_to_Dubai,Paris,bar
+Tokyo,2016_international_visitor_spending,0.39,relative_to_Dubai,Tokyo,bar

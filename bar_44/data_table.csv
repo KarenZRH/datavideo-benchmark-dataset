@@ -1,11 +1,11 @@
 entity,metric,value,unit,label,role
-POOREST 10%,income_taxes,1.000,,,bar
-POOREST 10%,income_taxes,1.000,,,bar
-Group 3,income_taxes,2.000,,,bar
-Group 4,income_taxes,3.000,,,bar
-Group 5,income_taxes,4.000,,,bar
-Group 6,income_taxes,6.000,,,bar
-Group 7,income_taxes,7.000,,,bar
-Group 8,income_taxes,9.000,,,bar
-Group 9,income_taxes,12.000,,,bar
-RICHEST 10%,income_taxes,21.000,,,bar
+Poorest 10%,income_tax_rate,1,%,Poorest 10%,bar
+Second 10%,income_tax_rate,1,%,,bar
+Third 10%,income_tax_rate,3,%,,bar
+Fourth 10%,income_tax_rate,4,%,,bar
+Fifth 10%,income_tax_rate,6,%,,bar
+Sixth 10%,income_tax_rate,7,%,,bar
+Seventh 10%,income_tax_rate,8,%,,bar
+Eighth 10%,income_tax_rate,10,%,,bar
+Ninth 10%,income_tax_rate,12,%,,bar
+Richest 10%,income_tax_rate,18,%,Richest 10%,bar

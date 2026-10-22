@@ -5,18 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the animation show the full rank order of all four organizations, or only the extremes?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should the clip explicitly name and label both the lowest and highest estimate?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,96 +16,56 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The complete ordering of the four relative estimates from lowest to highest is Tax Foundation, Penn Wharton, Tax Policy Center, Americans for Tax Fairness.",
+   "claim": "Estimates of ten-year revenue rise from $213B to $400B across the four organizations.",
    "basis": [
     {
      "entity": "Tax Foundation",
-     "x": "Tax Foundation",
-     "field": "relative_value",
-     "value": 0.2829,
-     "note": "lowest"
+     "field": "projected_ten_year_revenue",
+     "value": "213",
+     "unit": "billion USD"
     },
     {
      "entity": "Penn Wharton",
-     "x": "Penn Wharton",
-     "field": "relative_value",
-     "value": 0.3984,
-     "note": "second-lowest"
+     "field": "projected_ten_year_revenue",
+     "value": "300",
+     "unit": "billion USD"
     },
     {
      "entity": "Tax Policy Center",
-     "x": "Tax Policy Center",
-     "field": "relative_value",
-     "value": 0.4994,
-     "note": "second-highest"
+     "field": "projected_ten_year_revenue",
+     "value": "376",
+     "unit": "billion USD"
     },
     {
      "entity": "Americans for Tax Fairness",
-     "x": "Americans for Tax Fairness",
-     "field": "relative_value",
-     "value": 0.5312,
-     "note": "highest"
+     "field": "projected_ten_year_revenue",
+     "value": "400",
+     "unit": "billion USD"
     }
    ],
    "accept": [
-    "From lowest to highest: Tax Foundation, Penn Wharton, Tax Policy Center, Americans for Tax Fairness.",
-    "Penn Wharton ranks second-lowest and Tax Policy Center ranks second-highest among the four.",
-    "The rank order is Tax Foundation < Penn Wharton < Tax Policy Center < Americans for Tax Fairness."
+    "all organizations and values are present",
+    "the range is213 to400"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The four bars must be visibly ordered by their relative values, with no rank reversals."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "Tax Foundation gives the lowest relative estimate (0.2829) and Americans for Tax Fairness gives the highest (0.5312).",
-   "basis": [
-    {
-     "entity": "Tax Foundation",
-     "x": "Tax Foundation",
-     "field": "relative_value",
-     "value": 0.2829,
-     "note": "lowest relative estimate"
-    },
-    {
-     "entity": "Americans for Tax Fairness",
-     "x": "Americans for Tax Fairness",
-     "field": "relative_value",
-     "value": 0.5312,
-     "note": "highest relative estimate"
-    }
-   ],
-   "accept": [
-    "The lowest estimate is Tax Foundation at 0.2829; the highest is Americans for Tax Fairness at 0.5312.",
-    "Estimates run from 0.2829 for Tax Foundation up to 0.5312 for Americans for Tax Fairness."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The lowest and highest bars must be labeled with their organizations and relative values."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Penn Wharton as the middle estimate at 0.3984 relative value.",
-  "Tax Policy Center and Americans for Tax Fairness being the two highest estimates."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -122,26 +74,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

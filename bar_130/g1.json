@@ -214,9 +214,9 @@
   "semantic_reaudit_required"
  ],
  "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null,
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
  "clip_hardcase": {
   "is_hardcase": true,
   "type": "no_explicit_bar_mark_in_reference_svg",

@@ -1,33 +1,33 @@
 entity,series,metric,value,unit,label,role
-Feb 20,Local,value,1.000,,yes,bar
-Feb 20,Local,value,1.000,,no,bar
-Feb 20,Local,value,1.000,,no,bar
-Feb 20,Local,value,2.000,,no,bar
-27 Feb 20,Imported,value,2.000,,yes,bar
-27 Feb 20,Imported,value,2.000,,no,bar
-27 Feb 20,Local,value,1.000,,no,bar
-27 Feb 20,Local,value,4.000,,no,bar
-27 Feb 20,Imported,value,1.000,,no,bar
-27 Feb 20,Local,value,1.000,,no,bar
-09 Mar 20,Local,value,1.000,,yes,bar
-09 Mar 20,Imported,value,1.000,,no,bar
-09 Mar 20,Local,value,1.000,,no,bar
-09 Mar 20,Imported,value,5.000,,no,bar
-09 Mar 20,Local,value,3.000,,no,bar
-09 Mar 20,Imported,value,5.000,,no,bar
-09 Mar 20,Imported,value,8.000,,no,bar
-09 Mar 20,Imported,value,3.000,,no,bar
-09 Mar 20,Imported,value,5.000,,no,bar
-17 Mar 20,Imported,value,15.000,,yes,bar
-17 Mar 20,Local,value,2.000,,no,bar
-17 Mar 20,Imported,value,17.000,,no,bar
-17 Mar 20,Imported,value,21.000,,no,bar
-17 Mar 20,Imported,value,27.000,,no,bar
-17 Mar 20,Imported,value,10.000,,no,bar
-17 Mar 20,Local,value,1.000,,no,bar
-17 Mar 20,Imported,value,16.000,,no,bar
-25 Mar 20,Local,value,8.000,,yes,bar
-25 Mar 20,Imported,value,19.000,,no,bar
-25 Mar 20,Imported,value,29.000,,no,bar
-25 Mar 20,Imported,value,24.000,,no,bar
-25 Mar 20,Local,value,3.000,,no,bar
+Feb 20,Local,value,1.000,cases,yes,bar
+Feb 20,Local,value,1.000,cases,no,bar
+Feb 20,Local,value,1.000,cases,no,bar
+Feb 20,Local,value,2.000,cases,no,bar
+27 Feb 20,Imported,value,2.000,cases,yes,bar
+27 Feb 20,Imported,value,2.000,cases,no,bar
+27 Feb 20,Local,value,1.000,cases,no,bar
+27 Feb 20,Local,value,4.000,cases,no,bar
+27 Feb 20,Imported,value,1.000,cases,no,bar
+27 Feb 20,Local,value,1.000,cases,no,bar
+09 Mar 20,Local,value,1.000,cases,yes,bar
+09 Mar 20,Imported,value,1.000,cases,no,bar
+09 Mar 20,Local,value,1.000,cases,no,bar
+09 Mar 20,Imported,value,5.000,cases,no,bar
+09 Mar 20,Local,value,3.000,cases,no,bar
+09 Mar 20,Imported,value,5.000,cases,no,bar
+09 Mar 20,Imported,value,8.000,cases,no,bar
+09 Mar 20,Imported,value,3.000,cases,no,bar
+09 Mar 20,Imported,value,5.000,cases,no,bar
+17 Mar 20,Imported,value,15.000,cases,yes,bar
+17 Mar 20,Local,value,2.000,cases,no,bar
+17 Mar 20,Imported,value,17.000,cases,no,bar
+17 Mar 20,Imported,value,21.000,cases,no,bar
+17 Mar 20,Imported,value,27.000,cases,no,bar
+17 Mar 20,Imported,value,10.000,cases,no,bar
+17 Mar 20,Local,value,1.000,cases,no,bar
+17 Mar 20,Imported,value,16.000,cases,no,bar
+25 Mar 20,Local,value,8.000,cases,yes,bar
+25 Mar 20,Imported,value,19.000,cases,no,bar
+25 Mar 20,Imported,value,29.000,cases,no,bar
+25 Mar 20,Imported,value,24.000,cases,no,bar
+25 Mar 20,Local,value,3.000,cases,no,bar

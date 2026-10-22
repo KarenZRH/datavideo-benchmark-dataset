@@ -1,12 +1,12 @@
 entity,metric,value,unit,label,role
-POOREST,consumption_taxes,12.500,,,bar
-Group 2,consumption_taxes,11.000,,,bar
-Group 3,consumption_taxes,9.500,,,bar
-Group 4,consumption_taxes,8.000,,,bar
-Group 5,consumption_taxes,7.000,,,bar
-Group 6,consumption_taxes,6.500,,,bar
-Group 7,consumption_taxes,6.000,,,bar
-Group 8,consumption_taxes,5.000,,,bar
-Group 9,consumption_taxes,4.500,,,bar
-Group 10,consumption_taxes,3.000,,,bar
-RICHEST,consumption_taxes,2.000,,,bar
+Poorest,consumption_tax_rate,12.5,%,POOREST,bar
+2nd,consumption_tax_rate,11,%,,bar
+3rd,consumption_tax_rate,9.5,%,,bar
+4th,consumption_tax_rate,8,%,,bar
+5th,consumption_tax_rate,7,%,,bar
+6th,consumption_tax_rate,6.5,%,,bar
+7th,consumption_tax_rate,6,%,,bar
+8th,consumption_tax_rate,5,%,,bar
+9th,consumption_tax_rate,4.5,%,,bar
+10th,consumption_tax_rate,3,%,,bar
+Richest,consumption_tax_rate,2,%,RICHEST,bar

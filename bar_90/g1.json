@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_90",
  "version": "g1_r_u_v1",
- "intent": "To illustrate that Israel's population is growing while most other developed nations are not.",
+ "intent": "Show Israel's population structure, emphasizing its relatively large young population and growth potential.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the declining-with-age pattern required to support the growth message, or can the video just show one or two age groups?",
+   "question": "What does Israel's population pyramid show?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -16,56 +16,311 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "share_or_composition",
    "must_be_visualized": true,
-   "claim": "Younger age groups are larger than older age groups; this is the pattern the video uses to convey that Israel's population is growing.",
+   "claim": "Israel has a relatively full young and working-age structure, with a broad base continuing into middle age.",
    "basis": [
     {
+     "entity": "95-99",
+     "field": "israel",
+     "value": 0.0118,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "95-99",
+     "field": "israel",
+     "value": 0.01239,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "90-95",
+     "field": "israel",
+     "value": 0.0353,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "90-95",
+     "field": "israel",
+     "value": 0.04011,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "85-89",
+     "field": "israel",
+     "value": 0.0647,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "85-89",
+     "field": "israel",
+     "value": 0.07098,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "80-84",
+     "field": "israel",
+     "value": 0.1,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "80-84",
+     "field": "israel",
+     "value": 0.105,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "75-79",
+     "field": "israel",
+     "value": 0.1412,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "75-79",
+     "field": "israel",
+     "value": 0.14826,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "70-74",
+     "field": "israel",
+     "value": 0.1882,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "70-74",
+     "field": "israel",
+     "value": 0.19761,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "65-69",
+     "field": "israel",
+     "value": 0.2412,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "65-69",
+     "field": "israel",
+     "value": 0.25326,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "60-64",
+     "field": "israel",
+     "value": 0.3,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "60-64",
+     "field": "israel",
+     "value": 0.315,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "55-59",
+     "field": "israel",
+     "value": 0.3588,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "55-59",
+     "field": "israel",
+     "value": 0.37989,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "50-54",
+     "field": "israel",
+     "value": 0.4235,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "50-54",
+     "field": "israel",
+     "value": 0.45087,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "45-49",
+     "field": "israel",
+     "value": 0.4941,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "45-49",
+     "field": "israel",
+     "value": 0.525,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "40-44",
+     "field": "israel",
+     "value": 0.5647,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "40-44",
+     "field": "israel",
+     "value": 0.59913,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "35-39",
+     "field": "israel",
+     "value": 0.6353,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "35-39",
+     "field": "israel",
+     "value": 0.67326,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "30-34",
+     "field": "israel",
+     "value": 0.7059,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "30-34",
+     "field": "israel",
+     "value": 0.74739,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "25-29",
+     "field": "israel",
+     "value": 0.7765,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "25-29",
+     "field": "israel",
+     "value": 0.82152,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "20-24",
+     "field": "israel",
+     "value": 0.8412,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "20-24",
+     "field": "israel",
+     "value": 0.889455,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "15-19",
+     "field": "israel",
+     "value": 0.8941,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "15-19",
+     "field": "israel",
+     "value": 0.945,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "10-14",
+     "field": "israel",
+     "value": 0.9353,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "10-14",
+     "field": "israel",
+     "value": 0.98826,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
+     "entity": "5-9",
+     "field": "israel",
+     "value": 0.9706,
+     "unit": "relative",
+     "series": "Male"
+    },
+    {
+     "entity": "5-9",
+     "field": "israel",
+     "value": 1.02533,
+     "unit": "relative",
+     "series": "Female"
+    },
+    {
      "entity": "0-4",
-     "x": "Female",
-     "field": "relative_value",
-     "value": 0.7438,
-     "note": "Youngest listed cohort, highest relative_value."
+     "field": "israel",
+     "value": 0.9941,
+     "unit": "relative",
+     "series": "Male"
     },
     {
-     "entity": "95-99",
-     "x": "Male",
-     "field": "relative_value",
-     "value": 0.0084,
-     "note": "Oldest listed cohort, lowest relative_value."
-    },
-    {
-     "entity": "95-99",
-     "x": "Female",
-     "field": "relative_value",
-     "value": 0.0087,
-     "note": "Oldest listed cohort."
+     "entity": "0-4",
+     "field": "israel",
+     "value": 1.05,
+     "unit": "relative",
+     "series": "Female"
     }
    ],
    "accept": [
-    "The age distribution has a broad base: younger cohorts have much larger bars than older cohorts.",
-    "Relative values decrease steadily as age increases.",
-    "The youngest listed age group is far larger than the oldest listed age group."
+    "the pyramid is paired by gender",
+    "young and middle-age bands remain substantial"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "showing an extremely top-heavy pyramid",
+    "omitting young cohorts"
    ],
-   "evidence": "The bars must visibly decrease from the youngest age group toward the oldest age group."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
   "U1": 1.0
  },
- "optional_valid": [
-  "The video may note that the youngest female cohort (0-4) is only slightly larger than the next youngest female cohort (5-9): 0.7438 vs 0.7262.",
-  "The video may emphasise that the male/female difference is small compared with the age-group differences."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 40,
   "required_states": [],
   "required_marks_per_state": {},
@@ -74,11 +329,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

@@ -1,2 +1,3 @@
-entity,metric,value,unit,label,role
-Corporate tax rate,corporate_tax_rate,21.000,,,bar
+entity,series,metric,value,unit,label,role
+Corporate tax rate,2017,corporate_tax_rate,37,%,37%,bar
+Corporate tax rate,2018,corporate_tax_rate,21,%,21%,bar

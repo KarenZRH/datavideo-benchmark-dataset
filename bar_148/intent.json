@@ -19,16 +19,16 @@
   "keyframe"
  ],
  "draft_by": "agent:qwen3.7-flash-2026-07-15",
- "confirmed_by": null,
+ "confirmed_by": "human",
  "regen_batch": "2026-09-23b",
  "leak_check": {
   "contains_answer_values": false
  },
  "needs_video_escalation": false,
- "status": "agent_draft_pending_human_review",
+ "status": "approved",
  "review_flags": [
   "legacy_intent_needs_semantic_reaudit"
  ],
- "approved_by": null,
- "approved_at": null
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

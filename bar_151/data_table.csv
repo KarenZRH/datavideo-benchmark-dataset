@@ -1,37 +1,37 @@
-entity,series,metric,value,unit,label,role
-Jan '19,A great deal,value,0.0924,relative,,bar
-Jan '19,A fair amount,value,0.1372,relative,,bar
-Apr '20,A great deal,value,0.1135,relative,,bar
-Apr '20,A fair amount,value,0.1214,relative,,bar
-Nov '20,A great deal,value,0.1056,relative,,bar
-Nov '20,A fair amount,value,0.1187,relative,,bar
-Jan '19,,value,0.0844,relative,,bar
-Jan '19,,value,0.1478,relative,,bar
-Apr '20,,value,0.0818,relative,,bar
-Apr '20,,value,0.1425,relative,,bar
-Nov '20,,value,0.0686,relative,,bar
-Nov '20,,value,0.1451,relative,,bar
-Jan '19,,value,0.0976,relative,,bar
-Jan '19,,value,0.1319,relative,,bar
-Apr '20,,value,0.1399,relative,,bar
-Apr '20,,value,0.1029,relative,,bar
-Nov '20,,value,0.1425,relative,,bar
-Nov '20,,value,0.0950,relative,,bar
-Jan '19,A great deal,value,0.0924,relative,,bar
-Jan '19,A fair amount,value,0.1346,relative,,bar
-Apr '20,A great deal,value,0.1029,relative,,bar
-Apr '20,A fair amount,value,0.1267,relative,,bar
-Nov '20,A great deal,value,0.1029,relative,,bar
-Nov '20,A fair amount,value,0.1187,relative,,bar
-Jan '19,,value,0.0712,relative,,bar
-Jan '19,,value,0.1451,relative,,bar
-Apr '20,,value,0.0712,relative,,bar
-Apr '20,,value,0.1531,relative,,bar
-Nov '20,,value,0.0581,relative,,bar
-Nov '20,,value,0.1451,relative,,bar
-Jan '19,,value,0.1135,relative,,bar
-Jan '19,,value,0.1267,relative,,bar
-Apr '20,,value,0.1372,relative,,bar
-Apr '20,,value,0.1029,relative,,bar
-Nov '20,,value,0.1451,relative,,bar
-Nov '20,,value,0.0976,relative,,bar
+entity,series,subgroup,x,metric,value,unit,label,role
+Medical scientists,A fair amount,U.S. adults,Jan '19,public_confidence,52,%,,bar
+Medical scientists,A great deal,U.S. adults,Jan '19,public_confidence,35,%,,bar
+Medical scientists,A fair amount,U.S. adults,Apr '20,public_confidence,46,%,,bar
+Medical scientists,A great deal,U.S. adults,Apr '20,public_confidence,43,%,,bar
+Medical scientists,A fair amount,U.S. adults,Nov '20,public_confidence,45,%,,bar
+Medical scientists,A great deal,U.S. adults,Nov '20,public_confidence,40,%,,bar
+Medical scientists,A fair amount,Rep/Lean Rep,Jan '19,public_confidence,56,%,,bar
+Medical scientists,A great deal,Rep/Lean Rep,Jan '19,public_confidence,32,%,,bar
+Medical scientists,A fair amount,Rep/Lean Rep,Apr '20,public_confidence,54,%,,bar
+Medical scientists,A great deal,Rep/Lean Rep,Apr '20,public_confidence,31,%,,bar
+Medical scientists,A fair amount,Rep/Lean Rep,Nov '20,public_confidence,55,%,,bar
+Medical scientists,A great deal,Rep/Lean Rep,Nov '20,public_confidence,26,%,,bar
+Medical scientists,A fair amount,Dem/Lean Dem,Jan '19,public_confidence,50,%,,bar
+Medical scientists,A great deal,Dem/Lean Dem,Jan '19,public_confidence,37,%,,bar
+Medical scientists,A fair amount,Dem/Lean Dem,Apr '20,public_confidence,39,%,,bar
+Medical scientists,A great deal,Dem/Lean Dem,Apr '20,public_confidence,53,%,,bar
+Medical scientists,A fair amount,Dem/Lean Dem,Nov '20,public_confidence,36,%,,bar
+Medical scientists,A great deal,Dem/Lean Dem,Nov '20,public_confidence,54,%,,bar
+Scientists,A fair amount,U.S. adults,Jan '19,public_confidence,51,%,,bar
+Scientists,A great deal,U.S. adults,Jan '19,public_confidence,35,%,,bar
+Scientists,A fair amount,U.S. adults,Apr '20,public_confidence,48,%,,bar
+Scientists,A great deal,U.S. adults,Apr '20,public_confidence,39,%,,bar
+Scientists,A fair amount,U.S. adults,Nov '20,public_confidence,45,%,,bar
+Scientists,A great deal,U.S. adults,Nov '20,public_confidence,39,%,,bar
+Scientists,A fair amount,Rep/Lean Rep,Jan '19,public_confidence,55,%,,bar
+Scientists,A great deal,Rep/Lean Rep,Jan '19,public_confidence,27,%,,bar
+Scientists,A fair amount,Rep/Lean Rep,Apr '20,public_confidence,58,%,,bar
+Scientists,A great deal,Rep/Lean Rep,Apr '20,public_confidence,27,%,,bar
+Scientists,A fair amount,Rep/Lean Rep,Nov '20,public_confidence,55,%,,bar
+Scientists,A great deal,Rep/Lean Rep,Nov '20,public_confidence,22,%,,bar
+Scientists,A fair amount,Dem/Lean Dem,Jan '19,public_confidence,48,%,,bar
+Scientists,A great deal,Dem/Lean Dem,Jan '19,public_confidence,43,%,,bar
+Scientists,A fair amount,Dem/Lean Dem,Apr '20,public_confidence,39,%,,bar
+Scientists,A great deal,Dem/Lean Dem,Apr '20,public_confidence,52,%,,bar
+Scientists,A fair amount,Dem/Lean Dem,Nov '20,public_confidence,37,%,,bar
+Scientists,A great deal,Dem/Lean Dem,Nov '20,public_confidence,55,%,,bar

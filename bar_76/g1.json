@@ -1,22 +1,14 @@
 {
  "clip_id": "bar_76",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the relative mass distribution of the solar system's planets, highlighting Jupiter's dominance.",
+ "intent": "Using a 100% stacked horizontal bar, show the relative mass of the planets, highlighting Jupiter's dominance.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must Jupiter's 70 value be explicitly shown or labeled, or is a proportionally dominant visual enough?",
+   "question": "How is planetary mass distributed in the 100% stacked bar?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is Jupiter's 70% share of total listed mass required, or is only its raw 70 value required?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,101 +16,64 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Jupiter is the largest plotted planetary mass, with a value of 70.000.",
+   "claim": "Jupiter contains about 70% of the shown planetary mass; the remaining categories total about 30%.",
    "basis": [
-    {
-     "entity": "Jupiter",
-     "x": "505.6",
-     "field": "value",
-     "value": 70.0,
-     "note": "Jupiter row value; maximum among listed values"
-    }
-   ],
-   "accept": [
-    "Jupiter is plotted at 70",
-    "Jupiter has a mass value of about 70",
-    "Jupiter is the largest bar/segment with value 70",
-    "Jupiter accounts for roughly 70 units on the chart"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A bar/segment or label for Jupiter must visibly show 70, or the tallest bar must reach the 70 mark on the value axis."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "Jupiter's 70.000 equals 70% of the summed listed planetary mass, because the other listed values total 30.000 (1 + 20 + 4 + 5).",
-   "basis": [
-    {
-     "entity": "Jupiter",
-     "x": "505.6",
-     "field": "value",
-     "value": 70.0,
-     "note": "Jupiter row value"
-    },
     {
      "entity": "Terrestrial Planets",
-     "x": "164.8",
      "field": "value",
      "value": 1.0,
-     "note": "Terrestrial Planets row value"
+     "unit": "relative"
     },
     {
-     "entity": "Neptune 5%",
-     "x": "937.6",
+     "entity": "Jupiter",
+     "field": "value",
+     "value": 70.0,
+     "unit": "relative"
+    },
+    {
+     "entity": "Saturn",
      "field": "value",
      "value": 20.0,
-     "note": "First Neptune 5% row value"
+     "unit": "relative"
     },
     {
-     "entity": "Neptune 5%",
-     "x": "1052.8",
+     "entity": "Uranus",
      "field": "value",
      "value": 4.0,
-     "note": "Second Neptune 5% row value"
+     "unit": "relative"
     },
     {
-     "entity": "Neptune 5%",
-     "x": "1096.0",
+     "entity": "Neptune",
      "field": "value",
      "value": 5.0,
-     "note": "Third Neptune 5% row value"
+     "unit": "relative"
     }
    ],
    "accept": [
-    "Jupiter accounts for about 70% of the total mass shown",
-    "Jupiter is 70 of the 100 summed mass units",
-    "The rest of the planets total 30%, so Jupiter is 70%",
-    "Jupiter is roughly 70% of all planetary mass in the table"
+    "the chart is shown as one 100% stacked bar",
+    "all five categories are present",
+    "Jupiter is about 70%",
+    "the five shares total about 100%"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "labeling Saturn or Uranus as Neptune",
+    "reversing Jupiter and the terrestrial planets",
+    "omitting a planetary category"
    ],
-   "evidence": "A cumulative or part-to-whole view must show Jupiter as 70% and the other listed categories as the remaining 30%."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Terrestrial Planets is the smallest listed value at 1.000, which is 1% of the 100.000 summed listed mass.",
-  "The three rows under entity 'Neptune 5%' can be shown separately as 20.000, 4.000, and 5.000 value segments.",
-  "Jupiter's 70.000 can be rounded to 'about 70' or 'roughly 70' in narration.",
-  "The chart may label Jupiter's value as both 70.000 and 70% of the listed total."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 5,
   "required_states": [],
   "required_marks_per_state": {},
@@ -127,11 +82,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

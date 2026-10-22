@@ -1,4 +1,4 @@
 entity,metric,value,unit,label,role
-Black men,value,0.5972,relative,,bar
-Black women,value,0.2986,relative,,bar
-Black adults,value,0.4199,relative,,bar
+Black men,unfairly_stopped,64,%,64%,bar
+Black women,unfairly_stopped,32,%,32%,bar
+Black adults,unfairly_stopped,45,%,45%,bar

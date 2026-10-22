@@ -5,7 +5,7 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the 94% pretrial release rate required in the final video?",
+   "question": "What share of defendants was released pretrial?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -13,7 +13,7 @@
   },
   {
    "id": "R2",
-   "question": "Must the video preserve the conditional denominator 'of released defendants' for the 88% figure?",
+   "question": "Among released defendants, what share returned for every court date?",
    "relation": "single",
    "unit_ids": [
     "U2"
@@ -21,7 +21,7 @@
   },
   {
    "id": "R3",
-   "question": "Must the video present 86% as a public-safety outcome for released defendants?",
+   "question": "Among released defendants, what share was not arrested pretrial?",
    "relation": "single",
    "unit_ids": [
     "U3"
@@ -136,7 +136,7 @@
   "semantic_reaudit_required"
  ],
  "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

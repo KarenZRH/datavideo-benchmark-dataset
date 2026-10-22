@@ -5,18 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video convey an overall upward trend from 1980 to 2019?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the clip show monotonic/steady increase across all consecutive benchmark years, not just an overall endpoint rise?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,105 +16,62 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The relative income-inequality measure is higher in 2019 than in 1980, showing an overall upward trend.",
+   "claim": "The 90th-to-10th income ratio rises from9.1 in1980 to12.6 in2019.",
    "basis": [
     {
      "entity": "1980",
-     "x": "1980",
-     "field": "relative_value",
-     "value": 0.4314,
-     "note": "start of the series"
-    },
-    {
-     "entity": "2019",
-     "x": "2019",
-     "field": "relative_value",
-     "value": 0.5972,
-     "note": "end of the series"
-    }
-   ],
-   "accept": [
-    "The inequality indicator rises overall from 1980 to 2019.",
-    "The series ends higher than it starts.",
-    "There is a net upward movement from the first to the last benchmark year."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Both the 1980 and 2019 relative-value marks must be visible, and the 2019 mark must be higher than the 1980 mark."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "The rise is steady: each successive benchmark year has a higher relative_value than the previous year (1980 < 1990 < 2000 < 2010 < 2019).",
-   "basis": [
-    {
-     "entity": "1980",
-     "x": "1980",
-     "field": "relative_value",
-     "value": 0.4314,
-     "note": "first benchmark value"
+     "field": "p90_p10_income_ratio",
+     "value": "9.1",
+     "unit": "ratio"
     },
     {
      "entity": "1990",
-     "x": "1990",
-     "field": "relative_value",
-     "value": 0.4788,
-     "note": "higher than 1980"
+     "field": "p90_p10_income_ratio",
+     "value": "10.1",
+     "unit": "ratio"
     },
     {
      "entity": "2000",
-     "x": "2000",
-     "field": "relative_value",
-     "value": 0.5024,
-     "note": "higher than 1990"
+     "field": "p90_p10_income_ratio",
+     "value": "10.6",
+     "unit": "ratio"
     },
     {
      "entity": "2010",
-     "x": "2010",
-     "field": "relative_value",
-     "value": 0.5546,
-     "note": "higher than 2000"
+     "field": "p90_p10_income_ratio",
+     "value": "11.7",
+     "unit": "ratio"
     },
     {
      "entity": "2019",
-     "x": "2019",
-     "field": "relative_value",
-     "value": 0.5972,
-     "note": "higher than 2010"
+     "field": "p90_p10_income_ratio",
+     "value": "12.6",
+     "unit": "ratio"
     }
    ],
    "accept": [
-    "The indicator increases at every benchmark step.",
-    "No benchmark year is lower than the one before it.",
-    "The series is monotonically rising across the listed years."
+    "all five values are present",
+    "the trend increases"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "Consecutive benchmark-year relative-value marks must appear in increasing order, with no downward step between them."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "The clip may name the metric as the 90th/10th household income ratio, provided it uses only relative comparisons and no absolute income values.",
-  "The clip may note that the five years are benchmark observations rather than annual data.",
-  "The clip may display intermediate benchmark values 1990=0.4788, 2000=0.5024, and 2010=0.5546."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 5,
   "required_states": [],
   "required_marks_per_state": {},
@@ -131,26 +80,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

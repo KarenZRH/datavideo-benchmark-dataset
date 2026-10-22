@@ -1,7 +1,7 @@
 {
  "clip_id": "bar_38",
- "intent_en": "To illustrate the projected global population for the year 2100.",
- "previous_intent": "To illustrate the projected population for the end of the century, highlighting a reduction from previous estimates.",
+ "intent_en": "Show that a small projected fertility gap would lead to hundreds of millions fewer people and a lower global population in 2100.",
+ "previous_intent": "To illustrate the projected global population for the year 2100.",
  "narration_support": "This tiny gap between this generation and the next one would lead to 400 million fewer people in 2100 with 3 .6 billion in total.",
  "chart_support": "A dot matrix visualization displaying the total population count for the year 2100.",
  "supported_by_narration": true,
@@ -29,6 +29,7 @@
  "review_flags": [
   "legacy_intent_needs_semantic_reaudit"
  ],
- "approved_by": null,
- "approved_at": null
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": ["data_table","intent","g1"]
 }

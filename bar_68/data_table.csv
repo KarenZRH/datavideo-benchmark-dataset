@@ -1,7 +1,7 @@
 entity,metric,value,unit,label,role
-2013,pirate_attacks,1.000,,,bar
-2014,pirate_attacks,0.952,,,bar
-2015,pirate_attacks,0.903,,,bar
-2016,pirate_attacks,0.759,,,bar
-2017,pirate_attacks,0.711,,,bar
-2018,pirate_attacks,0.550,,,bar
+2013,annual_piracy_cost,8.3,billion USD,2013,bar
+2014,annual_piracy_cost,7.9,billion USD,2014,bar
+2015,annual_piracy_cost,7.6,billion USD,2015,bar
+2016,annual_piracy_cost,6.5,billion USD,2016,bar
+2017,annual_piracy_cost,6.1,billion USD,2017,bar
+2018,annual_piracy_cost,4.9,billion USD,2018,bar

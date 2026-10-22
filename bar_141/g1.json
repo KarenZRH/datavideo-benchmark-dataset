@@ -5,7 +5,7 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the video explicitly show the comparison between the 'Is generally' bars for entity 29 and entity 12 as the core partisan divide?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -18,33 +18,61 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "In the 'Is generally' series, the relative_value for entity 29 is higher than for entity 12, showing one group is more likely than the other to view the system as generally fair.",
+   "claim": "Republicans are far more likely than Democrats to call the economic system generally fair.",
    "basis": [
     {
-     "entity": "29",
-     "x": "Is generally",
-     "field": "relative_value",
-     "value": 0.1042,
-     "note": "relative_value for entity 29 in the 'Is generally' series"
+     "entity": "All adults",
+     "field": "perceived_economic_fairness",
+     "value": "29",
+     "unit": "%",
+     "series": "Is generally fair"
     },
     {
-     "entity": "12",
-     "x": "Is generally",
-     "field": "relative_value",
-     "value": 0.0431,
-     "note": "relative_value for entity 12 in the 'Is generally' series"
+     "entity": "All adults",
+     "field": "perceived_economic_fairness",
+     "value": "70",
+     "unit": "%",
+     "series": "Unfairly favors powerful interests"
+    },
+    {
+     "entity": "Republican/Lean Rep",
+     "field": "perceived_economic_fairness",
+     "value": "50",
+     "unit": "%",
+     "series": "Is generally fair"
+    },
+    {
+     "entity": "Republican/Lean Rep",
+     "field": "perceived_economic_fairness",
+     "value": "50",
+     "unit": "%",
+     "series": "Unfairly favors powerful interests"
+    },
+    {
+     "entity": "Democrat/Lean Dem",
+     "field": "perceived_economic_fairness",
+     "value": "12",
+     "unit": "%",
+     "series": "Is generally fair"
+    },
+    {
+     "entity": "Democrat/Lean Dem",
+     "field": "perceived_economic_fairness",
+     "value": "86",
+     "unit": "%",
+     "series": "Unfairly favors powerful interests"
     }
    ],
    "accept": [
-    "Entity 29 has a higher relative_value than entity 12 in the 'Is generally' series (0.1042 vs 0.0431).",
-    "The 'Is generally' bar for 29 is taller than the bar for 12.",
-    "29 outranks 12 in the 'Is generally' series."
+    "all three groups and both responses are present",
+    "Republicans are more favorable"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "Both bars for entity 29 and entity 12 in the 'Is generally' series must be visible and directly comparable; the bar for 29 must be taller than the bar for 12."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -55,7 +83,7 @@
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 6,
   "required_states": [],
   "required_marks_per_state": {},
@@ -64,26 +92,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

@@ -2,20 +2,14 @@
  "clip_id": "bar_66",
  "family": "bar",
  "sub_type": "simple",
- "orientation": "vertical",
- "series_count": 1,
+ "orientation": "horizontal",
+ "series_count": 2,
  "category_count": 1,
- "unit_mark": "bar",
- "has_axis": false,
- "has_legend": null,
- "has_value_labels": null,
- "text_count": 2,
- "row_count": 1,
+ "row_count": 2,
  "derived_from": [
   "data_table",
   "semantic.svg"
  ],
- "confidence": "high",
  "needs_review": true,
  "time_behavior": "snapshot",
  "batch_status": "agent_processed_pending_human_review"

@@ -1,16 +1,16 @@
-entity,metric,value,unit,label,role
-DAIRY,value,1.000,,,bar
-RICE,value,0.250,,,bar
-SOY,value,0.250,,,bar
-OAT,value,0.180,,,bar
-ALMOND,value,0.180,,,bar
-DAIRY · EMISSIONS,value,1.000,,,bar
-RICE · LAND USE,value,0.050,,,bar
-SOY · LAND USE,value,0.050,,,bar
-OAT · LAND USE,value,0.200,,,bar
-ALMOND · LAND USE,value,0.200,,,bar
-DAIRY · WATER USE,value,1.000,,,bar
-RICE · WATER USE,value,0.500,,,bar
-SOY · WATER USE,value,0.100,,,bar
-OAT · WATER USE,value,0.100,,,bar
-ALMOND · WATER USE,value,0.670,,,bar
+entity,series,metric,value,unit,label,role
+DAIRY,emissions,environmental_impact_relative_to_dairy,1.0,relative,DAIRY,bar
+RICE,emissions,environmental_impact_relative_to_dairy,0.25,relative,RICE,bar
+SOY,emissions,environmental_impact_relative_to_dairy,0.25,relative,SOY,bar
+OAT,emissions,environmental_impact_relative_to_dairy,0.18,relative,OAT,bar
+ALMOND,emissions,environmental_impact_relative_to_dairy,0.18,relative,ALMOND,bar
+DAIRY,land_use,environmental_impact_relative_to_dairy,1.0,relative,DAIRY,bar
+RICE,land_use,environmental_impact_relative_to_dairy,0.05,relative,RICE,bar
+SOY,land_use,environmental_impact_relative_to_dairy,0.05,relative,SOY,bar
+OAT,land_use,environmental_impact_relative_to_dairy,0.2,relative,OAT,bar
+ALMOND,land_use,environmental_impact_relative_to_dairy,0.2,relative,ALMOND,bar
+DAIRY,water_use,environmental_impact_relative_to_dairy,1.0,relative,DAIRY,bar
+RICE,water_use,environmental_impact_relative_to_dairy,0.5,relative,RICE,bar
+SOY,water_use,environmental_impact_relative_to_dairy,0.1,relative,SOY,bar
+OAT,water_use,environmental_impact_relative_to_dairy,0.1,relative,OAT,bar
+ALMOND,water_use,environmental_impact_relative_to_dairy,0.67,relative,ALMOND,bar

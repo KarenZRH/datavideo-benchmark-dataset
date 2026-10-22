@@ -1,14 +1,22 @@
 {
  "clip_id": "bar_74",
  "version": "g1_r_u_v1",
- "intent": "To explain how major fast-food chains generate high revenue through a massive number of global locations.",
+ "intent": "Compare the global location counts of major fast-food chains, highlighting Subway's scale.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly establish the full ranking, or is it enough to show that Subway is largest?",
+   "question": "How do the four chains compare by global location count?",
    "relation": "single",
    "unit_ids": [
     "U1"
+   ]
+  },
+  {
+   "id": "R2",
+   "question": "What point does Subway's scale make?",
+   "relation": "single",
+   "unit_ids": [
+    "U2"
    ]
   }
  ],
@@ -16,64 +24,100 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The ranking by global location count is Subway (43,000) > McDonald's (37,000) > Starbucks (30,000) > KFC (20,000).",
+   "claim": "The ranking is Subway > McDonald's > Starbucks > KFC, with about 43,000, 37,000, 30,000, and 20,000 locations.",
    "basis": [
     {
      "entity": "KFC",
-     "x": "global locations",
-     "field": "value",
+     "field": "global_locations",
      "value": 20000.0,
-     "note": "lowest among the four"
+     "unit": "locations"
     },
     {
      "entity": "Starbucks",
-     "x": "global locations",
-     "field": "value",
+     "field": "global_locations",
      "value": 30000.0,
-     "note": "third among the four"
+     "unit": "locations"
     },
     {
      "entity": "McDonald's",
-     "x": "global locations",
-     "field": "value",
+     "field": "global_locations",
      "value": 37000.0,
-     "note": "second among the four"
+     "unit": "locations"
     },
     {
      "entity": "Subway",
-     "x": "global locations",
-     "field": "value",
+     "field": "global_locations",
      "value": 43000.0,
-     "note": "highest among the four"
+     "unit": "locations"
     }
    ],
    "accept": [
-    "Subway is first with 43,000, then McDonald's with 37,000, Starbucks with 30,000, and KFC with 20,000",
-    "From most to fewest locations: Subway, McDonald's, Starbucks, KFC",
-    "Subway has the most locations and KFC the fewest among these four chains"
+    "all four chains are present",
+    "the lengths preserve the four counts",
+    "Subway is the largest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing the ranking",
+    "omitting Subway",
+    "using revenue instead of locations"
    ],
-   "evidence": "The chart must make the full descending order clear, e.g., sorted bars or labels/annotations showing Subway > McDonald's > Starbucks > KFC."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
+  },
+  {
+   "id": "U2",
+   "requirement_id": "R2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "claim": "Subway's roughly 43,000 locations make it the largest network shown, noticeably ahead of McDonald's.",
+   "basis": [
+    {
+     "entity": "KFC",
+     "field": "global_locations",
+     "value": 20000.0,
+     "unit": "locations"
+    },
+    {
+     "entity": "Starbucks",
+     "field": "global_locations",
+     "value": 30000.0,
+     "unit": "locations"
+    },
+    {
+     "entity": "McDonald's",
+     "field": "global_locations",
+     "value": 37000.0,
+     "unit": "locations"
+    },
+    {
+     "entity": "Subway",
+     "field": "global_locations",
+     "value": 43000.0,
+     "unit": "locations"
+    }
+   ],
+   "accept": [
+    "Subway is explicitly identified as the largest",
+    "McDonald's is visible as the next-largest bar"
+   ],
+   "reject": [
+    "omitting the highest bar",
+    "claiming Subway is smaller than McDonald's"
+   ],
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 1.0
+  "U1": 0.5,
+  "U2": 0.5
  },
- "optional_valid": [
-  "A combined four-chain total of 130,000 locations (20,000 + 30,000 + 37,000 + 43,000), if the video chooses to aggregate.",
-  "Bar lengths proportional to the table values or relative_value, provided the scale is not mislabeled as revenue or global market share.",
-  "A note that Subway's 43,000 is the largest and KFC's 20,000 is the smallest among these four chains."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -82,11 +126,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

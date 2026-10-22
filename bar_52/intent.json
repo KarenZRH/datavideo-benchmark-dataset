@@ -1,34 +1,27 @@
 {
  "clip_id": "bar_52",
- "intent_en": "To illustrate how the inclusion of payroll taxes reduces the progressivity of the total tax burden across different income levels.",
- "previous_intent": "To illustrate how the inclusion of payroll taxes flattens the tax burden distribution across income groups.",
- "narration_support": "Add payroll taxes onto this chart and it starts to flatten out.",
- "chart_support": "Stacked bar chart displaying tax components (Income, Corporate/property, Estate, Payroll) for individuals from poorest to richest, showing that payroll taxes (yellow) constitute a large portion of the tax burden for the poorest, thereby flattening the overall upward trend.",
+ "intent_en": "Show that adding payroll taxes to income, corporate/property, and estate taxes flattens the total tax burden across income groups.",
+ "narration_support": "Add payroll taxes onto this chart and it starts to flatten out. The last type of taxes we're going to look at are the taxes we pay when we buy stuff.",
+ "chart_support": "",
  "supported_by_narration": true,
  "supported_by_chart": true,
  "dual_source_verified": true,
- "multi_chart_in_clip": false,
- "narration_sparse": false,
  "contains_answer_values": false,
- "confidence": 0.95,
- "evidence_note": "The narration explicitly discusses the effect of adding payroll taxes on the chart's shape ('flattens out'), and the chart visualizes this by showing large payroll tax contributions (yellow) for the poorest individuals, which reduces the gap between the poorest and richest tax burdens compared to income taxes alone.",
- "gate_failed": "",
  "intent_official": "en",
  "intent_source": [
   "narration",
   "keyframe"
  ],
- "draft_by": "agent:qwen3.7-flash-2026-07-15",
- "confirmed_by": null,
- "regen_batch": "2026-09-23b",
- "leak_check": {
-  "contains_answer_values": false
- },
+ "draft_by": "manual_batch_review_2026-10-22",
+ "confirmed_by": "human",
  "needs_video_escalation": false,
- "status": "agent_draft_pending_human_review",
- "review_flags": [
-  "legacy_intent_needs_semantic_reaudit"
- ],
- "approved_by": null,
- "approved_at": null
+ "status": "approved",
+ "review_flags": [],
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

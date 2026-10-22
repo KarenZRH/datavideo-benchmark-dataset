@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_81",
  "version": "g1_r_u_v1",
- "intent": "To demonstrate the massive scale of the Congolese death toll by comparing it to the total population of Belgium.",
+ "intent": "Show the scale of Congolese deaths from 1885 to 1908 by comparing it with Belgium's 1890 population.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the order/comparison (deaths > Belgium population) required, or can the video just show both bars?",
+   "question": "How do Congolese deaths compare with Belgium's 1890 population?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -18,49 +18,43 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "CONGOLESE DEATHS exceed BELGIAN POPULATION 1890 in the comparison: 1.000 is greater than 0.740.",
+   "claim": "The Congolese death bar is larger than the Belgian-population comparison bar.",
    "basis": [
     {
      "entity": "CONGOLESE DEATHS",
-     "x": "395.0",
-     "field": "value",
+     "field": "congolese_killed_1885_1908",
      "value": 1.0,
-     "note": "Higher table value."
+     "unit": "relative"
     },
     {
      "entity": "BELGIAN POPULATION 1890",
-     "x": "945.0",
-     "field": "value",
+     "field": "congolese_killed_1885_1908",
      "value": 0.74,
-     "note": "Lower table value."
+     "unit": "relative"
     }
    ],
    "accept": [
-    "The Congolese death toll is larger than Belgium’s 1890 population.",
-    "Congolese deaths outweigh the Belgian population.",
-    "The deaths bar is taller than the Belgium population bar."
+    "both labeled rectangles/bars are present",
+    "Congolese deaths are taller",
+    "Belgian population is shown at about 74% of the comparison height"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing the two bars",
+    "omitting either label",
+    "treating the comparison as exact equal population"
    ],
-   "evidence": "The CONGOLESE DEATHS bar must visibly be taller or higher than the BELGIAN POPULATION 1890 bar."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
   "U1": 1.0
  },
- "optional_valid": [
-  "Displaying the exact table values 1.000 and 0.740 as labels.",
-  "Using the 74% share framing for the Belgian population comparison.",
-  "Using the 0.260 absolute gap framing for the two scaled values.",
-  "Showing source/color metadata such as printed source type and the two bar colors."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
@@ -69,12 +63,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

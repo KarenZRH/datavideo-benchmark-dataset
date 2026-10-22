@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_93",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the demographic proportions of Sunni and Shia Muslims and the friction between these groups.",
+ "intent": "Show the global Muslim population split between Sunni and Shia Muslims.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video state or visualize Sunni as 80% of the Muslim-world whole, or is a relative bar height enough?",
+   "question": "How is the global Muslim population split between Sunni and Shia Muslims?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video state or visualize Shia as 20% of the Muslim-world whole, or can it be shown only as the remainder?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Does the video need an explicit majority/larger-than label, or is the visible 80-versus-20 order sufficient?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,108 +16,44 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "share_or_composition",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Sunni Muslims make up about 80% of the Muslim world.",
+   "claim": "Sunni Muslims are about 80% and Shia Muslims about 20% of the global Muslim population.",
    "basis": [
     {
      "entity": "SUNNI",
-     "x": "Muslim world share",
-     "field": "value",
+     "field": "muslim_faiths",
      "value": 80.0,
-     "note": "Table value is 80; narration frames it as about 80% of the Muslim world."
-    }
-   ],
-   "accept": [
-    "Sunni Muslims make up about 80% of the Muslim world.",
-    "Sunnis are roughly 80% of Muslims.",
-    "The Sunni share is approximately 80 percent.",
-    "80% of the Muslim world is Sunni."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A Sunni-labeled mark must occupy about 80% of the whole, e.g. an 80% bar/area/slice or four-fifths of the composition."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "Shia Muslims make up about 20% of the Muslim world.",
-   "basis": [
-    {
-     "entity": "SHIA",
-     "x": "Muslim world share",
-     "field": "value",
-     "value": 20.0,
-     "note": "Table value is 20; narration frames it as about 20% of the Muslim world."
-    }
-   ],
-   "accept": [
-    "Shia Muslims make up about 20% of the Muslim world.",
-    "Shia are roughly 20% of Muslims.",
-    "The Shia share is approximately 20 percent.",
-    "20% of the Muslim world is Shia."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A Shia-labeled mark must occupy about 20% of the whole, e.g. a 20% bar/area/slice or one-fifth of the composition."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "Sunni Muslims are the larger group and Shia Muslims are the smaller group.",
-   "basis": [
-    {
-     "entity": "SUNNI",
-     "x": "Muslim world share",
-     "field": "value",
-     "value": 80.0,
-     "note": "80 is greater than the Shia value of 20."
+     "unit": "%"
     },
     {
      "entity": "SHIA",
-     "x": "Muslim world share",
-     "field": "value",
+     "field": "muslim_faiths",
      "value": 20.0,
-     "note": "20 is less than the Sunni value of 80."
+     "unit": "%"
     }
    ],
    "accept": [
-    "Sunni are the larger group.",
-    "Sunnis outnumber Shia.",
-    "Sunni majority versus Shia minority.",
-    "Sunni share is higher than Shia share."
+    "both groups are present",
+    "the two shares are about 80 and 20",
+    "the shares sum to 100%"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing the two groups",
+    "treating 80 and 20 as country populations"
    ],
-   "evidence": "The Sunni visual element must be clearly larger or higher than the Shia visual element."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "The combined Sunni and Shia shares total 100% (80 + 20 = 100).",
-  "The Sunni-Shia gap is 60 percentage points (80 - 20 = 60).",
-  "Sunni share is four-fifths and Shia share is one-fifth.",
-  "The Sunni:Shia ratio is 4:1 (80 / 20 = 4)."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
@@ -142,12 +62,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

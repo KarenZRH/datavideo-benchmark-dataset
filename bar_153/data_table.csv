@@ -1,4 +1,4 @@
 entity,metric,value,unit,label,role
-1976,value,0.2787,relative,,bar
-2012,value,0.4976,relative,,bar
-2016,value,0.5972,relative,,bar
+1976,share_of_voters_in_landslide_counties,28,%,28%,bar
+2012,share_of_voters_in_landslide_counties,50,%,50%,bar
+2016,share_of_voters_in_landslide_counties,60,%,60%,bar

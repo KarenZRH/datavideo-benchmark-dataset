@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_87",
  "version": "g1_r_u_v1",
- "intent": "To highlight the significant disparity between the prevalence of overweight cats and the low awareness of this issue among their owners.",
+ "intent": "Show that overweight cats are common while only a small fraction of owners are aware of it.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video state 55% as the overweight prevalence among household cats?",
+   "question": "How common are overweight cats, and how many owners know?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video state 9% as the owner-awareness value?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Is the 46-percentage-point gap required to satisfy the intent, or can 55% and 9% alone suffice?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,108 +16,43 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "55% of all household cats are overweight.",
-   "basis": [
-    {
-     "entity": "55% of all household cats are overweight",
-     "x": "640.0",
-     "field": "entity",
-     "value": "55%",
-     "note": "The table entity label carries the 55% prevalence; the table value=1.000 is a normalized bar value, not the percentage."
-    }
-   ],
-   "accept": [
-    "55% of household cats are overweight",
-    "Overweight prevalence among household cats is 55%",
-    "55 percent of all household cats are overweight",
-    "The cat overweight rate is 55%"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A value label or bar/segment for overweight-cat prevalence must read 55%."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "Only 9% of the cats' owners know that.",
-   "basis": [
-    {
-     "entity": "9% of their owners know that",
-     "x": "640.0",
-     "field": "entity",
-     "value": "9%",
-     "note": "The table entity label carries the 9% owner-awareness value; the table value=1.000 is a normalized bar value, not the percentage."
-    }
-   ],
-   "accept": [
-    "Only 9% of owners know",
-    "9% of their owners are aware",
-    "Owner awareness is 9%",
-    "Just 9% of cat owners know"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A value label or bar/segment for owner awareness must read 9%."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The disparity between overweight prevalence and owner awareness is 46 percentage points.",
+   "claim": "About 55% of household cats are overweight, but only 9% of owners know it.",
    "basis": [
     {
-     "entity": "55% of all household cats are overweight",
-     "x": "640.0",
-     "field": "entity",
-     "value": "55%",
-     "note": "First value used in the subtraction."
+     "entity": "Overweight household cats",
+     "field": "share_of_cats",
+     "value": 55.0,
+     "unit": "%"
     },
     {
-     "entity": "9% of their owners know that",
-     "x": "640.0",
-     "field": "entity",
-     "value": "9%",
-     "note": "Second value used in the subtraction."
+     "entity": "Owners aware their cat is overweight",
+     "field": "share_of_owners",
+     "value": 9.0,
+     "unit": "%"
     }
    ],
    "accept": [
-    "There is a 46-point gap between overweight prevalence and owner awareness",
-    "55% and 9% differ by 46 percentage points",
-    "Prevalence is 46 points higher than awareness",
-    "Only 9% aware versus 55% overweight — a 46-point disparity"
+    "both 55% and 9% are represented",
+    "the awareness share is much smaller"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing 55 and 9",
+    "claiming most owners know"
    ],
-   "evidence": "Both 55% and 9% must be visible and comparable; the disparity should be shown as a gap/difference, not only as two isolated labels."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "Framing the 55% value as a majority or more than half of household cats.",
-  "Expressing the disparity as a ratio of about 6.1x instead of only a 46-point gap.",
-  "Stating the U.S. context from the original narration, provided it is not presented as table-derived.",
-  "Showing both values in the same color because both table rows share color #C0392B."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
@@ -142,12 +61,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

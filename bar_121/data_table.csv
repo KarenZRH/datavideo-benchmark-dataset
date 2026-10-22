@@ -1,5 +1,5 @@
 entity,series,metric,value,unit,label,role
-In person at polling places,Very,value,0.2680,relative,,bar
-49,Somewhat,value,0.2242,relative,,bar
-By absentee or mail-in ballot,Very,value,0.1094,relative,,bar
-20,Somewhat,value,0.2078,relative,,bar
+In person at polling places,Very,confidence_votes_counted,49,%,,bar
+In person at polling places,Somewhat,confidence_votes_counted,41,%,,bar
+By absentee or mail-in ballot,Very,confidence_votes_counted,20,%,,bar
+By absentee or mail-in ballot,Somewhat,confidence_votes_counted,38,%,,bar

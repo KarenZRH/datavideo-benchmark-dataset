@@ -1,29 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="datavideo.semantic_render_v1">
-<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#222529"/>
-<text id="chart-title" data-role="title" x="640.0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f2f2f2">A better way to tax the rich</text>
-<g id="chart-plot" data-role="plot">
-<line data-role="axis" x1="120" y1="600.0" x2="1220" y2="600.0" stroke="#666666" stroke-width="3"/>
-<line data-role="axis" x1="120" y1="140" x2="120" y2="600.0" stroke="#666666" stroke-width="3"/>
-<line data-role="tick" x1="112" y1="600.0" x2="120" y2="600.0" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0</text>
-<line data-role="tick" x1="112" y1="534.9" x2="120" y2="534.9" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="540.9" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.2</text>
-<line data-role="tick" x1="112" y1="469.7" x2="120" y2="469.7" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="475.7" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.4</text>
-<line data-role="tick" x1="112" y1="404.6" x2="120" y2="404.6" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="410.6" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.6</text>
-<line data-role="tick" x1="112" y1="339.4" x2="120" y2="339.4" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="345.4" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">0.8</text>
-<line data-role="tick" x1="112" y1="274.3" x2="120" y2="274.3" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104" y="280.3" text-anchor="end" font-family="Arial, sans-serif" font-size="22" fill="#c9c9c9">1</text>
-<g id="entity-my-wealth" data-role="entity" data-entity-id="my-wealth" data-label="MY WEALTH">
-<rect id="my-wealth-bar" data-role="bar" data-entity-id="my-wealth" data-value="0.3729" x="532.5" y="478.6" width="112.2" height="121.4" fill="#d4d4d4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="my-wealth-label" data-role="category-label" data-entity-id="my-wealth" x="588.6" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">MY WEALTH</text>
-</g>
-<g id="entity-friend-s-wealth" data-role="entity" data-entity-id="friend-s-wealth" data-label="FRIEND&#x27;S WEALTH">
-<rect id="friend-s-wealth-bar" data-role="bar" data-entity-id="friend-s-wealth" data-value="1" x="1022.0" y="274.3" width="112.2" height="325.7" fill="#d4d4d4" data-animation-property="height" data-anchor="bottom" data-animation-axis="y" data-orientation="vertical"/>
-<text id="friend-s-wealth-label" data-role="category-label" data-entity-id="friend-s-wealth" x="1078.1" y="630.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#e5e5e5">FRIEND&#x27;S WEALTH</text>
-</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart">
+  <defs>
+    <radialGradient id="vox-bg" cx="50%" cy="45%" r="72%">
+      <stop offset="0%" stop-color="#1A232A"/>
+      <stop offset="68%" stop-color="#151E25"/>
+      <stop offset="100%" stop-color="#0D1419"/>
+    </radialGradient>
+  </defs>
+
+  <rect data-role="background" width="1280" height="720" fill="url(#vox-bg)"/>
+  <text x="1210" y="48" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+        font-size="30" font-weight="700" letter-spacing="1" fill="#AEB6C0">Vox</text>
+
+  <!-- Two illustrated wealth columns. The source has no title, axis, ticks, or printed values. -->
+  <rect data-role="bar" data-entity-id="my-wealth" data-value="0.235" data-unit="relative"
+        x="423" y="616" width="72" height="104" fill="#CFD2D6"/>
+  <rect data-role="bar" data-entity-id="friends-wealth" data-value="1" data-unit="relative"
+        x="725" y="278" width="72" height="442" fill="#CFD2D6"/>
+
+  <!-- Simplified pixel-art figures reproduce the source's visual identification without adding data. -->
+  <g data-role="illustration" aria-label="Person with glasses and a blue shirt">
+    <rect x="445" y="520" width="28" height="13" fill="#171717"/>
+    <rect x="442" y="533" width="34" height="28" fill="#F2C89C"/>
+    <rect x="445" y="542" width="11" height="5" fill="#202B3B"/>
+    <rect x="462" y="542" width="11" height="5" fill="#202B3B"/>
+    <rect x="455" y="542" width="8" height="3" fill="#202B3B"/>
+    <rect x="436" y="561" width="46" height="46" fill="#269FD4"/>
+    <rect x="426" y="565" width="14" height="37" fill="#269FD4"/>
+    <rect x="478" y="565" width="14" height="37" fill="#269FD4"/>
+    <rect x="438" y="607" width="18" height="9" fill="#3B4351"/>
+    <rect x="462" y="607" width="18" height="9" fill="#3B4351"/>
+  </g>
+
+  <g data-role="illustration" aria-label="Person in a grey suit">
+    <rect x="746" y="178" width="30" height="14" fill="#171717"/>
+    <rect x="742" y="192" width="38" height="30" fill="#F2C89C"/>
+    <rect x="746" y="202" width="11" height="5" fill="#202B3B"/>
+    <rect x="765" y="202" width="11" height="5" fill="#202B3B"/>
+    <rect x="757" y="202" width="8" height="3" fill="#202B3B"/>
+    <rect x="736" y="222" width="50" height="47" fill="#626B78"/>
+    <rect x="723" y="226" width="17" height="43" fill="#626B78"/>
+    <rect x="782" y="226" width="17" height="43" fill="#626B78"/>
+    <rect x="754" y="225" width="14" height="35" fill="#E8E9EB"/>
+    <rect x="739" y="269" width="18" height="9" fill="#363D47"/>
+    <rect x="765" y="269" width="18" height="9" fill="#363D47"/>
+  </g>
+
+  <!-- Label positions and line structure follow the source frame. -->
+  <text x="400" y="670" text-anchor="end"
+        font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700"
+        letter-spacing="1.5" fill="#F5F7FA">MY WEALTH</text>
+  <text x="820" y="524" text-anchor="start"
+        font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700"
+        letter-spacing="1.5" fill="#F5F7FA">
+    <tspan x="820" dy="0">FRIEND'S</tspan>
+    <tspan x="820" dy="34">WEALTH</tspan>
+  </text>
 </svg>

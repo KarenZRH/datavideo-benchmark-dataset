@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Reported Assets,value,0.2632,relative,,bar
-Reported Liabilities,value,0.3509,relative,,bar
-Actual Liabilities,value,0.2632,relative,,bar
-Reported Assets,value,0.2485,relative,,bar
+Reported assets,pension_assets,3.6,trillion USD,$3.6tr,bar
+Reported liabilities,pension_liabilities,4.8,trillion USD,$4.8tr,bar
+Actual liabilities,pension_liabilities,7.0,trillion USD,$7.0tr,bar
+Unfunded gap,pension_gap,3.4,trillion USD,$3.4tr,annotation

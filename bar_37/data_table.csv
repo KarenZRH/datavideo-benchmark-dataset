@@ -1,8 +1,8 @@
-entity,series,metric,value,unit,label,role
-United States,monthly price,monthly_price_lantus_insulin,359.492,$,,bar
-Canada,monthly price,monthly_price_lantus_insulin,73.9679,$,,bar
-United Kingdom,monthly price,monthly_price_lantus_insulin,71.2156,$,,bar
-Germany,monthly price,monthly_price_lantus_insulin,68.4633,$,,bar
-Australia,monthly price,monthly_price_lantus_insulin,63.6468,$,,bar
-France,monthly price,monthly_price_lantus_insulin,58.1422,$,,bar
-Norway,monthly price,monthly_price_lantus_insulin,55.3899,$,,bar
+entity,metric,value,unit,label
+United States,monthly_price_lantus_insulin,359.492,USD per month,
+Canada,monthly_price_lantus_insulin,73.968,USD per month,
+United Kingdom,monthly_price_lantus_insulin,71.216,USD per month,
+Germany,monthly_price_lantus_insulin,68.463,USD per month,
+Australia,monthly_price_lantus_insulin,63.647,USD per month,
+France,monthly_price_lantus_insulin,58.142,USD per month,
+Norway,monthly_price_lantus_insulin,55.39,USD per month,

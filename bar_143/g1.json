@@ -5,26 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video state entity 7's 7-point gap as a baseline?",
+   "question": "How large is the partisan gap in presidential approval?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video state entity 49's 49-point gap as the high endpoint?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the video explicitly show the 42-point increase from entity 7 to 49?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,133 +16,202 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Entity 7's partisan approval gap is 7 points (84 minus 77).",
+   "claim": "Democratic and Republican approval diverge sharply across presidents, with Trump and Obama showing especially large opposite-party gaps.",
    "basis": [
     {
-     "entity": "7",
-     "x": "769.5",
-     "field": "value",
-     "value": 84.0,
-     "note": "value=84"
+     "entity": "Trump",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 7,
+     "unit": "%"
     },
     {
-     "entity": "7",
-     "x": "769.5",
-     "field": "relative_value",
-     "value": 0.77,
-     "note": "0.77*100=77"
+     "entity": "Trump",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 84,
+     "unit": "%"
+    },
+    {
+     "entity": "Obama",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 81,
+     "unit": "%"
+    },
+    {
+     "entity": "Obama",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 14,
+     "unit": "%"
+    },
+    {
+     "entity": "G.W. Bush",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 23,
+     "unit": "%"
+    },
+    {
+     "entity": "G.W. Bush",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 81,
+     "unit": "%"
+    },
+    {
+     "entity": "Clinton",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 80,
+     "unit": "%"
+    },
+    {
+     "entity": "Clinton",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 27,
+     "unit": "%"
+    },
+    {
+     "entity": "G.H.W. Bush",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 44,
+     "unit": "%"
+    },
+    {
+     "entity": "G.H.W. Bush",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 82,
+     "unit": "%"
+    },
+    {
+     "entity": "Reagan",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 31,
+     "unit": "%"
+    },
+    {
+     "entity": "Reagan",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 83,
+     "unit": "%"
+    },
+    {
+     "entity": "Carter",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 57,
+     "unit": "%"
+    },
+    {
+     "entity": "Carter",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 30,
+     "unit": "%"
+    },
+    {
+     "entity": "Ford",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 36,
+     "unit": "%"
+    },
+    {
+     "entity": "Ford",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 67,
+     "unit": "%"
+    },
+    {
+     "entity": "Nixon",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 34,
+     "unit": "%"
+    },
+    {
+     "entity": "Nixon",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 75,
+     "unit": "%"
+    },
+    {
+     "entity": "Johnson",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 70,
+     "unit": "%"
+    },
+    {
+     "entity": "Johnson",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 40,
+     "unit": "%"
+    },
+    {
+     "entity": "Kennedy",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 49,
+     "unit": "%"
+    },
+    {
+     "entity": "Kennedy",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 84,
+     "unit": "%"
+    },
+    {
+     "entity": "Eisenhower",
+     "series": "Democrats",
+     "field": "presidential_approval",
+     "value": 49,
+     "unit": "%"
+    },
+    {
+     "entity": "Eisenhower",
+     "series": "Republicans",
+     "field": "presidential_approval",
+     "value": 88,
+     "unit": "%"
     }
    ],
    "accept": [
-    "Entity 7 gap is 7 points",
-    "Approval gap for entity 7 is 84 minus 77 = 7",
-    "Entity 7 shows a 7-point partisan difference"
+    "all twelve presidents have both party values",
+    "Trump is about 7% Democratic and 84% Republican",
+    "Obama is about 81% Democratic and 14% Republican"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting one party",
+    "reversing the party labels",
+    "showing no partisan gap"
    ],
-   "evidence": "Show entity 7's two approval levels and the 7-point gap."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "Entity 49's partisan approval gap reaches 49 points (88 minus 39).",
-   "basis": [
-    {
-     "entity": "49",
-     "x": "976.5",
-     "field": "value",
-     "value": 88.0,
-     "note": "value=88"
-    },
-    {
-     "entity": "49",
-     "x": "976.5",
-     "field": "relative_value",
-     "value": 0.39,
-     "note": "0.39*100=39"
-    }
-   ],
-   "accept": [
-    "Entity 49 gap is 49 points",
-    "Approval gap for entity 49 is 88 minus 39 = 49",
-    "The last entity 49 bar shows a 49-point difference"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Show entity 49's two approval levels and the 49-point gap."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The gap grows from 7 points at entity 7 to 49 points at entity 49.",
-   "basis": [
-    {
-     "entity": "7",
-     "x": "769.5",
-     "field": "value",
-     "value": 84.0,
-     "note": "value=84"
-    },
-    {
-     "entity": "7",
-     "x": "769.5",
-     "field": "relative_value",
-     "value": 0.77,
-     "note": "0.77*100=77"
-    },
-    {
-     "entity": "49",
-     "x": "976.5",
-     "field": "value",
-     "value": 88.0,
-     "note": "value=88"
-    },
-    {
-     "entity": "49",
-     "x": "976.5",
-     "field": "relative_value",
-     "value": 0.39,
-     "note": "0.39*100=39"
-    }
-   ],
-   "accept": [
-    "Gap widens by 42 points from entity 7 to entity 49",
-    "Entity 7 gap 7 rises to entity 49 gap 49",
-    "Partisan approval gap grows 42 points across shown span"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Both endpoint gaps and their 42-point difference are visible."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "Entity 30 has the lowest value at 57.",
-  "Entity 7 has the highest relative_value at 0.77 (77).",
-  "Entity 44 gap is 44 points (82 minus 38)."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
-  "required_data_rows": 12,
+  "selection": "all role=bar data rows",
+  "required_data_rows": 24,
   "required_states": [],
   "required_marks_per_state": {},
   "evaluated_in": "G2_visual_completeness",
@@ -166,26 +219,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
- "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
- ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null,
  "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
  },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "hardcases": [],
+ "review_flags": [
+  "strict_reaudit_2026-10-22"
+ ],
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

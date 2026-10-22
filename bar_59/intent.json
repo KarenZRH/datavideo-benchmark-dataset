@@ -1,34 +1,27 @@
 {
  "clip_id": "bar_59",
- "intent_en": "To illustrate the widespread geographic distribution of black population loss across major United States cities, reinforcing the narration's claim that this migration trend affects northern, southern, and western regions.",
- "previous_intent": "To illustrate the widespread geographic distribution of African American population loss across major US cities in the North, South, and West during the 2000-2010 period.",
- "narration_support": "It's not just in two or three cities, but it's in a lot of cities across the country. Northern cities, southern cities, western cities.",
- "chart_support": "Horizontal bar chart titled 'Cities with largest loss of blacks' displaying a ranked list of cities (Detroit, Chicago, New Orleans, New York, Los Angeles, etc.) for the 2000–2010 Census period.",
+ "intent_en": "Show that large losses of Black residents occurred across many major US cities rather than in only two or three places.",
+ "narration_support": "It's not just in two or three cities, but it's in a lot of cities across the country. Northern cities, southern cities, western cities. African Americans started to make this move, especially in the last 20 or 25 years. Really large numbers of blacks moved to the south.",
+ "chart_support": "Cities with largest loss of blacks",
  "supported_by_narration": true,
  "supported_by_chart": true,
  "dual_source_verified": true,
- "multi_chart_in_clip": false,
- "narration_sparse": false,
  "contains_answer_values": false,
- "confidence": 0.95,
- "evidence_note": "The narration explicitly mentions the multi-regional nature of the phenomenon ('Northern cities, southern cities, western cities'), and the chart lists cities from these regions (e.g., Detroit/Chicago/NY for North, New Orleans/DC/Atlanta for South, LA/Oakland for West) experiencing population decline.",
- "gate_failed": "",
  "intent_official": "en",
  "intent_source": [
   "narration",
   "keyframe"
  ],
- "draft_by": "agent:qwen3.7-flash-2026-07-15",
- "confirmed_by": null,
- "regen_batch": "2026-09-23b",
- "leak_check": {
-  "contains_answer_values": false
- },
+ "draft_by": "manual_batch_review_2026-10-22",
+ "confirmed_by": "human",
  "needs_video_escalation": false,
- "status": "agent_draft_pending_human_review",
- "review_flags": [
-  "legacy_intent_needs_semantic_reaudit"
- ],
- "approved_by": null,
- "approved_at": null
+ "status": "approved",
+ "review_flags": [],
+ "approved_by": "human",
+ "approved_at": "2026-10-22",
+ "review_order": [
+  "data_table",
+  "intent",
+  "g1"
+ ]
 }

@@ -1,9 +1,9 @@
 entity,series,metric,value,unit,label,role
-Aug 2016,Very,value,0.0764,relative,,bar
-Aug 2016,Somewhat,value,0.2569,relative,,bar
-Nov 2016,Very,value,0.3264,relative,,bar
-Nov 2016,Somewhat,value,0.2847,relative,,bar
-Aug 2016,Very,value,0.3403,relative,,bar
-Aug 2016,Somewhat,value,0.2083,relative,,bar
-Nov 2016,Very,value,0.3056,relative,,bar
-Nov 2016,Somewhat,value,0.2222,relative,,bar
+Trump voters – Aug 2016,Very,confidence_votes_counted,11,%,,bar
+Trump voters – Aug 2016,Somewhat,confidence_votes_counted,37,%,,bar
+Trump voters – Nov 2016,Very,confidence_votes_counted,47,%,,bar
+Trump voters – Nov 2016,Somewhat,confidence_votes_counted,41,%,,bar
+Clinton voters – Aug 2016,Very,confidence_votes_counted,49,%,,bar
+Clinton voters – Aug 2016,Somewhat,confidence_votes_counted,30,%,,bar
+Clinton voters – Nov 2016,Very,confidence_votes_counted,44,%,,bar
+Clinton voters – Nov 2016,Somewhat,confidence_votes_counted,32,%,,bar

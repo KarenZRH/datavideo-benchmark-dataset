@@ -1,21 +1,23 @@
 entity,series,metric,value,unit,label,role
-1985,USA,value,0.2610,relative,,bar
-"58,761",Russia / Red,value,0.4182,relative,,bar
-1980,USA,value,0.2575,relative,,bar
-USA,Russia / Red,value,0.4134,relative,,bar
-Russia / Red,Other,value,0.0068,relative,,bar
-1975,USA,value,0.1680,relative,,bar
-Other,Russia / Red,value,0.3641,relative,,bar
-2015,Other,value,0.0280,relative,,bar
-1970,USA,value,0.2391,relative,,bar
-2010,Russia / Red,value,0.1913,relative,,bar
-2005,Other,value,0.0191,relative,,bar
-1965,USA,value,0.2964,relative,,bar
-2000,Russia / Red,value,0.0593,relative,,bar
-1995,Other,value,0.0108,relative,,bar
-1960,USA,value,0.2165,relative,,bar
-1990,Russia / Red,value,0.0191,relative,,bar
-1985,Other,value,0.0064,relative,,bar
-1955,USA,value,0.0307,relative,,bar
-1955,Russia / Red,value,0.0038,relative,,bar
-1950,USA,value,0.0138,relative,,bar
+1950,USA,nuclear_warheads,1175,warheads,,bar
+1955,USA,nuclear_warheads,2609,warheads,,bar
+1955,Russia,nuclear_warheads,325,warheads,,bar
+1960,USA,nuclear_warheads,18399,warheads,,bar
+1960,Russia,nuclear_warheads,1627,warheads,,bar
+1960,Other,nuclear_warheads,544,warheads,,bar
+1965,USA,nuclear_warheads,25190,warheads,,bar
+1965,Russia,nuclear_warheads,5039,warheads,,bar
+1965,Other,nuclear_warheads,916,warheads,,bar
+1970,USA,nuclear_warheads,20316,warheads,,bar
+1970,Russia,nuclear_warheads,16253,warheads,,bar
+1970,Other,nuclear_warheads,1627,warheads,,bar
+1975,USA,nuclear_warheads,14281,warheads,,bar
+1975,Russia,nuclear_warheads,30940,warheads,,bar
+1975,Other,nuclear_warheads,2377,warheads,,bar
+1980,USA,nuclear_warheads,21884,warheads,,bar
+1980,Russia,nuclear_warheads,35131,warheads,,bar
+1980,Other,nuclear_warheads,578,warheads,,bar
+1985,USA,nuclear_warheads,22182,warheads,,bar
+1985,Russia,nuclear_warheads,35543,warheads,,bar
+1985,Other,nuclear_warheads,1036,warheads,,bar
+1985,Total,nuclear_warheads,58761,warheads,"58,761",annotation

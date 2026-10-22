@@ -1,13 +1,13 @@
 entity,series,metric,value,unit,label,role
-75,Federal income tax,value,101.156,,,bar
-Bottom fifth,Labor income,value,83.140,,,bar
-Type of income,Federal income tax,value,101.156,,,bar
-Second fifth,Labor income,value,86.143,,,bar
-Labor income,Federal income tax,value,101.156,,,bar
-Third fifth,Labor income,value,83.140,,,bar
-Federal income tax,Federal income tax,value,101.156,,,bar
-Fourth fifth,Labor income,value,82.140,,,bar
-0,Federal income tax,value,101.156,,,bar
-Top fifth,Labor income,value,63.123,,,bar
-25,Federal income tax,value,101.156,,,bar
-Top 1%,Labor income,value,36.099,,,bar
+Bottom fifth,Labor income,income_share,82,%,,bar
+Second fifth,Labor income,income_share,85,%,,bar
+Third fifth,Labor income,income_share,82,%,,bar
+Fourth fifth,Labor income,income_share,81,%,,bar
+Top fifth,Labor income,income_share,62,%,,bar
+Top 1%,Labor income,income_share,35,%,,bar
+Bottom fifth,Investment income,income_share,18,%,,bar
+Second fifth,Investment income,income_share,15,%,,bar
+Third fifth,Investment income,income_share,18,%,,bar
+Fourth fifth,Investment income,income_share,19,%,,bar
+Top fifth,Investment income,income_share,38,%,,bar
+Top 1%,Investment income,income_share,65,%,,bar

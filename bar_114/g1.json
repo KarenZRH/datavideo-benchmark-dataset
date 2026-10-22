@@ -5,34 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video identify the top category as the maximum relative value?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video preserve the full descending order of all four categories?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Is the top-to-second gap an essential signal, or is just the top being highest enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
-   ]
-  },
-  {
-   "id": "R4",
-   "question": "Must the video convey the magnitude of the top-to-bottom disparity, not just the ranking?",
-   "relation": "single",
-   "unit_ids": [
-    "U4"
    ]
   }
  ],
@@ -40,159 +16,56 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "The largest relative value among the four categories is 0.4437, making it the top category for confidence.",
-   "basis": [
-    {
-     "entity": "32%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.4437,
-     "note": "largest relative_value in table"
-    }
-   ],
-   "accept": [
-    "The top category has the highest relative confidence at about 0.44.",
-    "The largest bar or segment is the one with relative_value 0.4437.",
-    "One category clearly leads with relative_value 0.4437."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The top category's magnitude must be visibly the largest among the four."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "The relative values are ordered from largest to smallest: 0.4437 > 0.2496 > 0.2219 > 0.1387.",
-   "basis": [
-    {
-     "entity": "32%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.4437,
-     "note": "rank 1"
-    },
-    {
-     "entity": "18%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2496,
-     "note": "rank 2"
-    },
-    {
-     "entity": "16%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2219,
-     "note": "rank 3"
-    },
-    {
-     "entity": "10%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.1387,
-     "note": "rank 4"
-    }
-   ],
-   "accept": [
-    "The four categories rank in descending order: about 0.44, 0.25, 0.22, 0.14.",
-    "The chart shows a descending sequence from largest to smallest across the four categories.",
-    "Largest to smallest is 0.4437, 0.2496, 0.2219, 0.1387."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The four magnitudes must be shown in descending order."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The largest relative value (0.4437) exceeds the second-largest (0.2496) by 0.1941 relative units, a gap of about 1.78x.",
-   "basis": [
-    {
-     "entity": "32%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.4437,
-     "note": "top category"
-    },
-    {
-     "entity": "18%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2496,
-     "note": "second category"
-    }
-   ],
-   "accept": [
-    "The top category is nearly twice the second category in relative terms.",
-    "The gap between the top and second category is about 0.19 relative units.",
-    "The top value is about 1.8 times the next value."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must make the gap between the highest and next-highest magnitudes visually apparent."
-  },
-  {
-   "id": "U4",
-   "requirement_id": "R4",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The smallest relative value (0.1387) is less than one-third of the largest (0.4437), about 0.31x, or the largest is about 3.2 times the smallest.",
+   "claim": "White adults report the highest confidence, followed by Hispanic, Asian, and Black adults.",
    "basis": [
     {
-     "entity": "32%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.4437,
-     "note": "top category"
+     "entity": "White adults",
+     "field": "great_deal_confidence_in_police",
+     "value": "32",
+     "unit": "%"
     },
     {
-     "entity": "10%",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.1387,
-     "note": "bottom category"
+     "entity": "Hispanic adults",
+     "field": "great_deal_confidence_in_police",
+     "value": "18",
+     "unit": "%"
+    },
+    {
+     "entity": "Asian adults*",
+     "field": "great_deal_confidence_in_police",
+     "value": "16",
+     "unit": "%"
+    },
+    {
+     "entity": "Black adults",
+     "field": "great_deal_confidence_in_police",
+     "value": "10",
+     "unit": "%"
     }
    ],
    "accept": [
-    "The smallest category is less than a third of the largest.",
-    "The largest value is more than three times the smallest.",
-    "The bottom category is far below the top (about 0.14 vs 0.44)."
+    "all four groups and values are present",
+    "White is highest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The chart must show the lowest magnitude is much smaller than the highest."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.25,
-  "U2": 0.25,
-  "U3": 0.25,
-  "U4": 0.25
+  "U1": 1.0
  },
- "optional_valid": [
-  "The exact relative_value of the top category is 0.4437.",
-  "The exact relative_value of the smallest category is 0.1387.",
-  "The total of the four relative values is 1.0539."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -201,26 +74,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

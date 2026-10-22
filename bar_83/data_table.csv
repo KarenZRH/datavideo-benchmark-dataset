@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-Cannabis,value,0.049,,,bar
-Beer,value,1.000,,,bar
+Cannabis,value,0.049,relative,,bar
+Beer,value,1.000,relative,,bar

@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_39",
  "version": "g1_r_u_v1",
- "intent": "To demonstrate how a progressive wealth tax is calculated across different asset levels, illustrating that moderate wealth incurs no cost while extreme wealth is taxed at marginal rates.",
+ "intent": "Show how the proposed wealth tax rises across wealth brackets and estimate the tax due on a $2 billion estate.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the clip be required to state that the first $50M is untaxed, or is that only optional context?",
+   "question": "How do the wealth-tax rates rise across wealth brackets?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -13,34 +13,10 @@
   },
   {
    "id": "R2",
-   "question": "Should the 2% middle-bracket rate be a required semantic unit?",
+   "question": "What tax is due on the $2 billion estate?",
    "relation": "single",
    "unit_ids": [
     "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Should the 3% top-bracket rate be required even though the narration does not verbally state it?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
-   ]
-  },
-  {
-   "id": "R4",
-   "question": "Should the progressive ordering be required as a separate unit, or is it sufficiently covered by the individual bracket-rate units?",
-   "relation": "single",
-   "unit_ids": [
-    "U4"
-   ]
-  },
-  {
-   "id": "R5",
-   "question": "Should the $49M tax due on the $2B estate be required as the endpoint result?",
-   "relation": "single",
-   "unit_ids": [
-    "U5"
    ]
   }
  ],
@@ -50,164 +26,71 @@
    "requirement_id": "R1",
    "unit_kind": "threshold_or_crossing",
    "must_be_visualized": true,
-   "claim": "Wealth in the first bracket up to $50M is not taxed; the marginal rate is 0%.",
+   "claim": "The wealth tax is 0% on the first $50 million, 2% from $50 million to $1 billion, and 3% above $1 billion.",
    "basis": [
     {
-     "entity": "First $50M of wealth",
-     "x": "0-50000000",
-     "field": "value",
-     "value": 0.0,
-     "note": "marginal rate 0% in table"
+     "entity": "First $50 million",
+     "field": "marginal_tax_rate",
+     "value": 0
+    },
+    {
+     "entity": "$50 million to $1 billion",
+     "field": "marginal_tax_rate",
+     "value": 2
+    },
+    {
+     "entity": "Above $1 billion",
+     "field": "marginal_tax_rate",
+     "value": 3
     }
    ],
    "accept": [
-    "wealth up to $50M is untaxed",
-    "the first $50M bracket has a 0% rate",
-    "no tax on the first $50M"
+    "0% up to $50 million, 2% from $50 million to $1 billion, and 3% above $1 billion",
+    "marginal rates rise from 0% to 2% to 3% at the stated thresholds"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "using $500 million as the 3% threshold",
+    "reversing the thresholds or rates",
+    "treating the 2% and 3% tier rates as total tax rates on all wealth"
    ],
-   "evidence": "The chart must make the 0% rate for the first $50M bracket visible."
+   "evidence": "A single wealth-scale bar shows the $50 million and $1 billion thresholds with the corresponding 0%, 2%, and 3% rate annotations."
   },
   {
    "id": "U2",
    "requirement_id": "R2",
    "unit_kind": "key_value_endpoint",
    "must_be_visualized": true,
-   "claim": "The $50M to $500M bracket has a 2% marginal tax rate.",
-   "basis": [
-    {
-     "entity": "$50M to $500M",
-     "x": "50000000-500000000",
-     "field": "value",
-     "value": 2.0,
-     "note": "2% marginal rate in table"
-    }
-   ],
-   "accept": [
-    "the $50M–$500M bracket is taxed at 2%",
-    "a 2% marginal rate applies from $50M to $500M",
-    "the middle bracket rate is 2%"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must visibly associate the 2% marginal rate with the $50M–$500M bracket."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "The bracket above $500M has a 3% marginal tax rate.",
-   "basis": [
-    {
-     "entity": "Above $500M",
-     "x": "500000000+",
-     "field": "value",
-     "value": 3.0,
-     "note": "3% marginal rate in table"
-    }
-   ],
-   "accept": [
-    "wealth above $500M is taxed at 3%",
-    "the top bracket rate is 3%",
-    "a 3% marginal rate applies above $500M"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must visibly associate the 3% marginal rate with the above-$500M bracket."
-  },
-  {
-   "id": "U4",
-   "requirement_id": "R4",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "The marginal tax rates progress upward across wealth brackets: 0%, then 2%, then 3%.",
-   "basis": [
-    {
-     "entity": "First $50M of wealth",
-     "x": "0-50000000",
-     "field": "value",
-     "value": 0.0,
-     "note": "0% bracket rate"
-    },
-    {
-     "entity": "$50M to $500M",
-     "x": "50000000-500000000",
-     "field": "value",
-     "value": 2.0,
-     "note": "2% bracket rate"
-    },
-    {
-     "entity": "Above $500M",
-     "x": "500000000+",
-     "field": "value",
-     "value": 3.0,
-     "note": "3% bracket rate"
-    }
-   ],
-   "accept": [
-    "marginal rates rise from 0% to 2% to 3%",
-    "the brackets are progressive with rates 0%, 2%, 3%",
-    "higher wealth brackets have higher marginal rates"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must make the three bracket rates visible in an ordered progression from 0% to 2% to 3%."
-  },
-  {
-   "id": "U5",
-   "requirement_id": "R5",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
    "claim": "The tax due on a $2 billion estate is about $49 million.",
    "basis": [
     {
      "entity": "$2 billion estate",
-     "x": "2000000000",
-     "field": "value",
-     "value": 49000000.0,
-     "note": "tax due from narration_printed row"
+     "field": "tax_due",
+     "value": 49,
+     "unit": "million USD"
     }
    ],
    "accept": [
-    "the $2B estate owes about $49M",
-    "tax due on the $2B estate is roughly $49M",
-    "$49M is the tax due for the $2B estate"
+    "about $49 million due on a $2 billion estate",
+    "roughly $49 million in tax for the $2 billion example"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "$49 billion or $49 thousand",
+    "treating $49 million as the tax rate"
    ],
-   "evidence": "The $49M tax-due figure must be visible in association with the $2B estate."
+   "evidence": "In the final chart state, a white comparison swatch and the text $49 million appear beside the $2 billion scale; narration also states the amount."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.2,
-  "U2": 0.2,
-  "U3": 0.2,
-  "U4": 0.2,
-  "U5": 0.2
+  "U1": 0.5,
+  "U2": 0.5
  },
- "optional_valid": [
-  "The $2B estate amount (2,000,000,000 USD) as the asset level being taxed.",
-  "The first bracket starting at $0.",
-  "The association of the $49M tax due specifically with the $2B estate rather than with a bracket rate."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
   "selection": "all role=bar data rows; annotation rows excluded",
-  "required_data_rows": 5,
+  "required_data_rows": 1,
   "required_states": [],
   "required_marks_per_state": {},
   "evaluated_in": "G2_visual_completeness",
@@ -215,13 +98,18 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "custom_threshold_diagram",
+  "reason": "The tax-bracket diagram is custom rather than a standard category bar chart, but all required facts have direct visual evidence."
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "legacy_unit_count_above_4",
-  "semantic_reaudit_required"
+  "legacy_intent_migrated",
+  "custom_threshold_diagram"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_review_draft_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

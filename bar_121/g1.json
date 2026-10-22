@@ -5,7 +5,7 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the in-person vs. mail-in Very-confidence comparison obligatory from the intent?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -18,48 +18,58 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "In-person polling places has a higher relative 'Very' confidence value than absentee/mail-in ballot (0.2680 vs. 0.1094).",
+   "claim": "Voters were much more confident in in-person voting than mail-in voting.",
    "basis": [
     {
      "entity": "In person at polling places",
-     "x": "Very",
-     "field": "relative_value",
-     "value": 0.268,
-     "note": "series Very"
+     "field": "confidence_votes_counted",
+     "value": "49",
+     "unit": "%",
+     "series": "Very"
+    },
+    {
+     "entity": "In person at polling places",
+     "field": "confidence_votes_counted",
+     "value": "41",
+     "unit": "%",
+     "series": "Somewhat"
     },
     {
      "entity": "By absentee or mail-in ballot",
-     "x": "Very",
-     "field": "relative_value",
-     "value": 0.1094,
-     "note": "series Very"
+     "field": "confidence_votes_counted",
+     "value": "20",
+     "unit": "%",
+     "series": "Very"
+    },
+    {
+     "entity": "By absentee or mail-in ballot",
+     "field": "confidence_votes_counted",
+     "value": "38",
+     "unit": "%",
+     "series": "Somewhat"
     }
    ],
    "accept": [
-    "In-person Very confidence is higher than mail-in Very confidence.",
-    "The in-person polling-place mark for Very exceeds the absentee/mail-in mark for Very.",
-    "Voters are more likely to be Very confident in in-person voting than in mail-in voting."
+    "both voting methods are present",
+    "Very and Somewhat components are present"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The mark for In person at polling places under Very must extend farther than the mark for By absentee or mail-in ballot under Very."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
   "U1": 1.0
  },
- "optional_valid": [
-  "The four relative values order as In-person Very > 49 Somewhat > 20 Somewhat > Mail-in Very.",
-  "The mail-in Very relative value is less than half of the in-person Very relative value.",
-  "The in-person Very relative value is smaller than the sum of the two Somewhat relative values."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -68,26 +78,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

@@ -7,8 +7,8 @@
  "category_count": 4,
  "unit_mark": "bar",
  "has_axis": true,
- "has_legend": null,
- "has_value_labels": null,
+ "has_legend": false,
+ "has_value_labels": true,
  "text_count": 15,
  "row_count": 4,
  "derived_from": [

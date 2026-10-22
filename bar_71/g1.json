@@ -1,30 +1,14 @@
 {
  "clip_id": "bar_71",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the breakdown of Amazon's revenue by business segment (Online Store, AWS, Subscriptions, 3rd Party Retail) from 2015 to 2018, establishing the revenue composition before pivoting to a discussion on profitability.",
+ "intent": "Using a stacked bar chart, show the composition of Amazon's revenue by business segment from 2015 to 2018, especially the dominance of the Online Store.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Should the video be required to show Online Store as largest in every individual year, not just overall?",
+   "question": "Which Amazon segment dominates revenue across the shown years?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is 3rd Party Retail's second-place ranking in each year required, or is Online Store dominance sufficient?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Should the video explicitly state that the two largest segments together dominate the composition, or is showing the individual segments enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
    ]
   }
  ],
@@ -32,161 +16,145 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "Online Store is the largest revenue segment in each year from 2015 to 2018, with relative values 0.65, 0.57, 0.60, and 0.65.",
-   "basis": [
-    {
-     "entity": "Online Store",
-     "x": "2015",
-     "field": "relative_value",
-     "value": 0.65,
-     "note": "largest segment in 2015"
-    },
-    {
-     "entity": "Online Store",
-     "x": "2016",
-     "field": "relative_value",
-     "value": 0.57,
-     "note": "largest segment in 2016"
-    },
-    {
-     "entity": "Online Store",
-     "x": "2017",
-     "field": "relative_value",
-     "value": 0.6,
-     "note": "largest segment in 2017"
-    },
-    {
-     "entity": "Online Store",
-     "x": "2018",
-     "field": "relative_value",
-     "value": 0.65,
-     "note": "largest segment in 2018"
-    }
-   ],
-   "accept": [
-    "Online Store is the biggest segment in every year, with relative values 0.65, 0.57, 0.60, 0.65.",
-    "The largest slice is always Online Store from 2015 through 2018.",
-    "Online Store dominates the revenue mix, about 0.6 relative value across the period."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "In every year of the animation, the encoded mark for Online Store must be visually larger than the marks for 3rd Party Retail, AWS, and Subscriptions."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "3rd Party Retail is the second-largest revenue segment in each year from 2015 to 2018, with relative values 0.20, 0.2998, 0.2501, and 0.20.",
+   "claim": "Online Store is the largest revenue segment in 2015–2018, with 3rd Party Retail second; AWS and Subscriptions make up smaller shares.",
    "basis": [
     {
-     "entity": "3rd Party Retail",
-     "x": "2015",
-     "field": "relative_value",
-     "value": 0.2,
-     "note": "second-largest in 2015"
+     "entity": "2015",
+     "field": "value",
+     "value": 0.65,
+     "unit": "relative",
+     "series": "Online Store"
     },
     {
-     "entity": "3rd Party Retail",
-     "x": "2016",
-     "field": "relative_value",
+     "entity": "2015",
+     "field": "value",
+     "value": 0.2,
+     "unit": "relative",
+     "series": "3rd Party Retail"
+    },
+    {
+     "entity": "2015",
+     "field": "value",
+     "value": 0.05,
+     "unit": "relative",
+     "series": "Subscriptions"
+    },
+    {
+     "entity": "2015",
+     "field": "value",
+     "value": 0.1,
+     "unit": "relative",
+     "series": "AWS"
+    },
+    {
+     "entity": "2016",
+     "field": "value",
+     "value": 0.57,
+     "unit": "relative",
+     "series": "Online Store"
+    },
+    {
+     "entity": "2016",
+     "field": "value",
      "value": 0.2998,
-     "note": "second-largest in 2016"
+     "unit": "relative",
+     "series": "3rd Party Retail"
     },
     {
-     "entity": "3rd Party Retail",
-     "x": "2017",
-     "field": "relative_value",
+     "entity": "2016",
+     "field": "value",
+     "value": 0.03,
+     "unit": "relative",
+     "series": "Subscriptions"
+    },
+    {
+     "entity": "2016",
+     "field": "value",
+     "value": 0.1002,
+     "unit": "relative",
+     "series": "AWS"
+    },
+    {
+     "entity": "2017",
+     "field": "value",
+     "value": 0.6,
+     "unit": "relative",
+     "series": "Online Store"
+    },
+    {
+     "entity": "2017",
+     "field": "value",
      "value": 0.2501,
-     "note": "second-largest in 2017"
+     "unit": "relative",
+     "series": "3rd Party Retail"
     },
     {
-     "entity": "3rd Party Retail",
-     "x": "2018",
-     "field": "relative_value",
+     "entity": "2017",
+     "field": "value",
+     "value": 0.0501,
+     "unit": "relative",
+     "series": "Subscriptions"
+    },
+    {
+     "entity": "2017",
+     "field": "value",
+     "value": 0.0999,
+     "unit": "relative",
+     "series": "AWS"
+    },
+    {
+     "entity": "2018",
+     "field": "value",
+     "value": 0.65,
+     "unit": "relative",
+     "series": "Online Store"
+    },
+    {
+     "entity": "2018",
+     "field": "value",
      "value": 0.2,
-     "note": "second-largest in 2018"
+     "unit": "relative",
+     "series": "3rd Party Retail"
+    },
+    {
+     "entity": "2018",
+     "field": "value",
+     "value": 0.05,
+     "unit": "relative",
+     "series": "Subscriptions"
+    },
+    {
+     "entity": "2018",
+     "field": "value",
+     "value": 0.1,
+     "unit": "relative",
+     "series": "AWS"
     }
    ],
    "accept": [
-    "3rd Party Retail is always the second-biggest segment, with relative values 0.20, 0.2998, 0.2501, 0.20.",
-    "After Online Store, 3rd Party Retail is the next largest revenue source each year.",
-    "3rd Party Retail stays second in the revenue breakdown across 2015-2018."
+    "all four years are shown",
+    "all four segment series are present",
+    "Online Store is largest in each year"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "claiming AWS is the largest revenue segment",
+    "omitting a year or a series",
+    "merging Subscriptions with AWS"
    ],
-   "evidence": "In each year, the 3rd Party Retail mark must be visually larger than AWS and Subscriptions but smaller than Online Store."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "Online Store and 3rd Party Retail together make up the large majority of the relative revenue composition, about 0.85 to 0.87 in each year.",
-   "basis": [
-    {
-     "entity": "Online Store + 3rd Party Retail",
-     "x": "2015",
-     "field": "relative_value",
-     "value": 0.85,
-     "note": "0.65 + 0.20 from table"
-    },
-    {
-     "entity": "Online Store + 3rd Party Retail",
-     "x": "2016",
-     "field": "relative_value",
-     "value": 0.8698,
-     "note": "0.57 + 0.2998 from table"
-    },
-    {
-     "entity": "Online Store + 3rd Party Retail",
-     "x": "2017",
-     "field": "relative_value",
-     "value": 0.8501,
-     "note": "0.60 + 0.2501 from table"
-    },
-    {
-     "entity": "Online Store + 3rd Party Retail",
-     "x": "2018",
-     "field": "relative_value",
-     "value": 0.85,
-     "note": "0.65 + 0.20 from table"
-    }
-   ],
-   "accept": [
-    "Online Store plus 3rd Party Retail account for about 0.85-0.87 of the revenue mix each year.",
-    "The two largest segments together make up the vast majority of relative revenue.",
-    "Combined, Online Store and 3rd Party Retail stay around 0.85 relative value from 2015 to 2018."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "In each year, the combined encoded area or attribute for Online Store and 3rd Party Retail must be visibly much larger than the combined AWS and Subscriptions portion."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 1.0
  },
- "optional_valid": [
-  "3rd Party Retail peaks in 2016 at relative value 0.2998, up from 0.20 in 2015 and back to 0.20 in 2018.",
-  "Online Store dips to 0.57 in 2016 before returning to 0.60 in 2017 and 0.65 in 2018.",
-  "AWS is about twice Subscriptions in 2015, 2017, and 2018 (0.10 vs 0.05, 0.0999 vs 0.0501, 0.10 vs 0.05), but not in 2016 (0.1002 vs 0.03).",
-  "Subscriptions has its lowest relative value in 2016 at 0.03."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 16,
   "required_states": [],
   "required_marks_per_state": {},
@@ -195,26 +163,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

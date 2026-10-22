@@ -5,18 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video show both larger rows exceeding both survived rows?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the maximum segment be explicitly shown as largest?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -26,90 +18,58 @@
    "requirement_id": "R1",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Both largest relative rows exceed both survived rows.",
+   "claim": "Hiroshima and Nagasaki populations were mostly composed of survivors, with smaller killed segments.",
    "basis": [
     {
-     "entity": "100k killed",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.5176,
-     "note": "largest row"
+     "entity": "Hiroshima",
+     "field": "atomic_bomb_casualties",
+     "value": "100",
+     "unit": "thousand people",
+     "series": "Killed"
     },
     {
-     "entity": "HIROHIMA",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.4853,
-     "note": "second largest row"
+     "entity": "Hiroshima",
+     "field": "atomic_bomb_casualties",
+     "value": "240",
+     "unit": "thousand people",
+     "series": "Survived"
     },
     {
-     "entity": "survived",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.2022,
-     "note": "larger survived row"
+     "entity": "Nagasaki",
+     "field": "atomic_bomb_casualties",
+     "value": "65",
+     "unit": "thousand people",
+     "series": "Killed"
     },
     {
-     "entity": "survived",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.1699,
-     "note": "smaller survived row"
+     "entity": "Nagasaki",
+     "field": "atomic_bomb_casualties",
+     "value": "198",
+     "unit": "thousand people",
+     "series": "Survived"
     }
    ],
    "accept": [
-    "Both survived values are lower than both larger rows",
-    "0.17 and 0.20 are below 0.49 and 0.52",
-    "Survived segments are smaller than killed-related segments"
+    "both cities and both segments are present",
+    "totals match340k and263k"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "Two larger bars or segments visibly exceed two smaller survived segments."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_extreme",
-   "must_be_visualized": true,
-   "claim": "The maximum relative value is 0.5176 for 100k killed.",
-   "basis": [
-    {
-     "entity": "100k killed",
-     "x": "",
-     "field": "relative_value",
-     "value": 0.5176,
-     "note": "maximum row"
-    }
-   ],
-   "accept": [
-    "100k killed is largest at about 0.52",
-    "Maximum is 0.5176 for 100k killed",
-    "Top row is 100k killed with relative value 0.5176"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 100k killed segment is visibly the largest."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Exact labels 'survived' and '100k killed'",
-  "Two survived rows both shown",
-  "Relative values rounded to two decimals",
-  "Ordering of survived rows: 0.2022 above 0.1699"
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
@@ -118,26 +78,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

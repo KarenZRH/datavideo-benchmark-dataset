@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart" data-generator="stacked_bar_template_v1">
-<rect id="scene-background-fill" data-role="background-fill" x="0" y="0" width="1280" height="720" fill="#f6f6f4"/>
-<g id="chart-plot" data-role="plot">
-<line data-role="axis" x1="120.0" y1="150.0" x2="120.0" y2="600.0" stroke="#666666" stroke-width="3"/>
-<line data-role="tick" x1="112.0" y1="600.0" x2="120.0" y2="600.0" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104.0" y="606.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">0%</text>
-<line data-role="gridline" x1="120.0" y1="450.0" x2="1220.0" y2="450.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
-<line data-role="tick" x1="112.0" y1="450.0" x2="120.0" y2="450.0" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104.0" y="456.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">10%</text>
-<line data-role="gridline" x1="120.0" y1="300.0" x2="1220.0" y2="300.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
-<line data-role="tick" x1="112.0" y1="300.0" x2="120.0" y2="300.0" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104.0" y="306.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">20%</text>
-<line data-role="gridline" x1="120.0" y1="150.0" x2="1220.0" y2="150.0" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4"/>
-<line data-role="tick" x1="112.0" y1="150.0" x2="120.0" y2="150.0" stroke="#666666" stroke-width="2"/>
-<text data-role="tick-label" x="104.0" y="156.0" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#444444">30%</text>
-<line data-role="axis" x1="120.0" y1="600.0" x2="1220.0" y2="600.0" stroke="#666666" stroke-width="3"/>
-<line x1="860" y1="92" x2="896" y2="92" stroke="#23527c" stroke-width="6"/>
-<text x="904" y="100" font-family="Arial, sans-serif" font-size="20" fill="#333333">Corporate and property taxes</text>
-<line x1="860" y1="122" x2="896" y2="122" stroke="#7da0c4" stroke-width="6"/>
-<text x="904" y="130" font-family="Arial, sans-serif" font-size="20" fill="#333333">Estate taxes</text>
-<rect data-role="stack-segment" data-bar="Poorest" data-series="Corporate and property taxes" x="134.0" y="585.0" width="72.0" height="15.0" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="2nd" data-series="Corporate and property taxes" x="234.0" y="580.5" width="72.0" height="19.5" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="3rd" data-series="Corporate and property taxes" x="334.0" y="577.5" width="72.0" height="22.5" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="4th" data-series="Corporate and property taxes" x="434.0" y="570.0" width="72.0" height="30.0" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="5th" data-series="Corporate and property taxes" x="534.0" y="567.0" width="72.0" height="33.0" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="6th" data-series="Corporate and property taxes" x="634.0" y="561.0" width="72.0" height="39.0" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="7th" data-series="Corporate and property taxes" x="734.0" y="555.0" width="72.0" height="45.0" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="8th" data-series="Corporate and property taxes" x="834.0" y="552.0" width="72.0" height="48.0" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="9th" data-series="Corporate and property taxes" x="934.0" y="544.5" width="72.0" height="55.5" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="10th" data-series="Corporate and property taxes" x="1034.0" y="462.0" width="72.0" height="138.0" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="10th" data-series="Estate taxes" x="1034.0" y="457.5" width="72.0" height="4.5" fill="#7da0c4"/>
-<rect data-role="stack-segment" data-bar="Richest" data-series="Corporate and property taxes" x="1134.0" y="442.5" width="72.0" height="157.5" fill="#23527c"/>
-<rect data-role="stack-segment" data-bar="Richest" data-series="Estate taxes" x="1134.0" y="430.5" width="72.0" height="12.0" fill="#7da0c4"/>
-<text x="170.0" y="632.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">Poorest</text>
-<text x="1170.0" y="632.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#444444">Richest</text>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-role="semantic-chart">
+<rect data-role="background" width="1280" height="720" fill="#E8EAEA"/>
+<text x="640" y="52" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#30343A">Corporate and property taxes</text>
+<text x="1200" y="50" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#697279">Vox</text>
+<text x="134" y="162" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#454A50">%</text>
+<line x1="180" y1="600" x2="1170" y2="600" stroke="#C8CCCE" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="134" y="607" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#454A50">0%</text>
+<line x1="180" y1="450" x2="1170" y2="450" stroke="#C8CCCE" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="134" y="457" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#454A50">10%</text>
+<line x1="180" y1="300" x2="1170" y2="300" stroke="#C8CCCE" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="134" y="307" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#454A50">20%</text>
+<line x1="180" y1="150" x2="1170" y2="150" stroke="#C8CCCE" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="134" y="157" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#454A50">30%</text>
+<line x1="180" y1="145" x2="180" y2="600" stroke="#818A8E" stroke-width="2"/>
+<rect data-role="bar" data-entity-id="poorest-10%" data-series="Corporate and property taxes" data-value="1" data-unit="%" x="196.75" y="585.00" width="54.67" height="15.00" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="second-10%" data-series="Corporate and property taxes" data-value="1.3" data-unit="%" x="284.94" y="580.50" width="54.67" height="19.50" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="third-10%" data-series="Corporate and property taxes" data-value="1.5" data-unit="%" x="373.12" y="577.50" width="54.67" height="22.50" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="fourth-10%" data-series="Corporate and property taxes" data-value="2" data-unit="%" x="461.30" y="570.00" width="54.67" height="30.00" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="fifth-10%" data-series="Corporate and property taxes" data-value="2.2" data-unit="%" x="549.48" y="567.00" width="54.67" height="33.00" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="sixth-10%" data-series="Corporate and property taxes" data-value="2.6" data-unit="%" x="637.66" y="561.00" width="54.67" height="39.00" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="seventh-10%" data-series="Corporate and property taxes" data-value="3" data-unit="%" x="725.85" y="555.00" width="54.67" height="45.00" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="eighth-10%" data-series="Corporate and property taxes" data-value="3.2" data-unit="%" x="814.03" y="552.00" width="54.67" height="48.00" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="ninth-10%" data-series="Corporate and property taxes" data-value="3.7" data-unit="%" x="902.21" y="544.50" width="54.67" height="55.50" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="richest-10%" data-series="Corporate and property taxes" data-value="9.2" data-unit="%" x="990.39" y="462.00" width="54.67" height="138.00" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="richest-10%" data-series="Estate taxes" data-value="0.3" data-unit="%" x="990.39" y="457.50" width="54.67" height="4.50" fill="#6E9CC1"/>
+<rect data-role="bar" data-entity-id="400-richest" data-series="Corporate and property taxes" data-value="10.5" data-unit="%" x="1078.57" y="442.50" width="54.67" height="157.50" fill="#005B8D"/>
+<rect data-role="bar" data-entity-id="400-richest" data-series="Estate taxes" data-value="0.8" data-unit="%" x="1078.57" y="430.50" width="54.67" height="12.00" fill="#6E9CC1"/>
+<rect x="860" y="84" width="24" height="16" fill="#005B8D"/>
+<text x="894" y="99" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#40464B">Corporate and property taxes</text>
+<rect x="860" y="114" width="24" height="16" fill="#6E9CC1"/>
+<text x="894" y="129" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#40464B">Estate taxes</text>
+<text x="224.1" y="646" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#383D42">Poorest 10%</text>
+<text x="1017.7" y="646" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#383D42">Richest 10%</text>
+<text x="1105.9" y="680" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#383D42">400 Richest</text>
 </svg>

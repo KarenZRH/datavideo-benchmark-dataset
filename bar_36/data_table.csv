@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Less than high school,black_migration_rates_education,3.000,,,bar
-High school graduate,black_migration_rates_education,9.000,,,bar
-Some college,black_migration_rates_education,27.000,,,bar
-College graduate,black_migration_rates_education,20.000,,,bar
+Less than high school,net_migration_rate,3,%,3%,bar
+High school graduate,net_migration_rate,9,%,9%,bar
+Some college,net_migration_rate,27,%,27%,bar
+College graduate,net_migration_rate,20,%,20%,bar

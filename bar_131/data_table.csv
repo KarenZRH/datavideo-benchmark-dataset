@@ -1,9 +1,10 @@
-entity,series,metric,value,unit,label,role
-"7,100",,value,0.1111,relative,,bar
-"7,800",,value,0.1111,relative,,bar
-2015,North Korea 7,value,0.1111,relative,,bar
-France 300,North Korea 7,value,0.1111,relative,,bar
-China 260,North Korea 7,value,0.1111,relative,,bar
-United Kingdom 215,North Korea 7,value,0.1111,relative,,bar
-Pakistan 120,North Korea 7,value,0.1111,relative,,bar
-India 115,North Korea 7,value,0.1111,relative,,bar
+entity,metric,value,unit,label,role
+Russia,nuclear_warheads,7800,warheads,"7,800",bar
+United States,nuclear_warheads,7100,warheads,"7,100",bar
+France,nuclear_warheads,300,warheads,300,bar
+China,nuclear_warheads,260,warheads,260,bar
+United Kingdom,nuclear_warheads,215,warheads,215,bar
+Pakistan,nuclear_warheads,120,warheads,120,bar
+India,nuclear_warheads,115,warheads,115,bar
+Israel,nuclear_warheads,80,warheads,80,bar
+North Korea,nuclear_warheads,7,warheads,7,bar

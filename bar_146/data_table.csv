@@ -1,8 +1,8 @@
 entity,metric,value,unit,label,role
-8.7,value,0.4486,relative,,bar
-7.3,value,0.3764,relative,,bar
-6.6,value,0.3403,relative,,bar
-5.1,value,0.2630,relative,,bar
-5.7,value,0.2939,relative,,bar
-4.6,value,0.2372,relative,,bar
-4.0,value,0.2062,relative,,bar
+Canada,doses_procured_per_person,8.7,doses per person,8.7,bar
+United Kingdom,doses_procured_per_person,7.3,doses per person,7.3,bar
+New Zealand,doses_procured_per_person,6.6,doses per person,6.6,bar
+Chile,doses_procured_per_person,5.7,doses per person,5.7,bar
+Australia,doses_procured_per_person,5.1,doses per person,5.1,bar
+European Union,doses_procured_per_person,4.6,doses per person,4.6,bar
+United States,doses_procured_per_person,4.0,doses per person,4,bar

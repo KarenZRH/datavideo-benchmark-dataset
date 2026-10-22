@@ -1,22 +1,14 @@
 {
  "clip_id": "bar_65",
  "version": "g1_r_u_v1",
- "intent": "To illustrate that CEO compensation at American companies like General Motors is uniquely high compared to international counterparts and to link this disparity to profit distribution.",
+ "intent": "Show that the General Motors CEO received unusually high compensation in 2018 compared with her counterparts at Volkswagen and Toyota.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video show 22.000 as the GM CEO compensation value?",
+   "question": "How do the three CEOs' 2018 compensation levels compare?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should the video interpret relative_value=0.0750 as a profit share, or keep it as an unlabeled relative index?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,71 +16,52 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "General Motors CEO compensation is 22.000 in the table's value field.",
+   "claim": "General Motors' CEO received $22 million, Volkswagen's CEO $12.5 million, and Toyota's CEO $3.4 million.",
    "basis": [
     {
      "entity": "General Motors",
-     "x": "value",
-     "field": "value",
+     "field": "ceo_compensation",
      "value": 22.0,
-     "note": "Table value cell for the only entity row."
-    }
-   ],
-   "accept": [
-    "GM CEO compensation is 22.000",
-    "the GM CEO compensation value is 22.0",
-    "General Motors reaches 22.000 in the table's value field"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "A bar, endpoint, or label for General Motors must encode the value 22.000."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "General Motors has a relative/profit measure of 0.0750 in the table's relative_value field.",
-   "basis": [
+     "unit": "million USD"
+    },
     {
-     "entity": "General Motors",
-     "x": "relative_value",
-     "field": "relative_value",
-     "value": 0.075,
-     "note": "Table relative_value cell for the only entity row."
+     "entity": "Volkswagen",
+     "field": "ceo_compensation",
+     "value": 12.5,
+     "unit": "million USD"
+    },
+    {
+     "entity": "Toyota",
+     "field": "ceo_compensation",
+     "value": 3.4,
+     "unit": "million USD"
     }
    ],
    "accept": [
-    "GM's relative value is 0.0750",
-    "the relative/profit measure is 0.075",
-    "GM CEO compensation is 0.0750 of profits"
+    "all three companies and values are shown",
+    "the unit is millions of dollars",
+    "GM is highest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "treating the values as thousands or billions",
+    "omitting Volkswagen or Toyota",
+    "reversing GM and Toyota"
    ],
-   "evidence": "A label or visual encoding must show 0.0750 for General Motors as the relative/profit measure."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Qualitative mention that Volkswagen and Toyota are international counterparts, provided no numeric compensation values are invented.",
-  "Describing General Motors as American, since that is identity/context from the narration rather than a table value.",
-  "Showing the 0.0750 relative value as a profit-share visual if the reviewer accepts the narration's profit denominator."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
-  "required_data_rows": 1,
+  "selection": "all role=bar data rows",
+  "required_data_rows": 3,
   "required_states": [],
   "required_marks_per_state": {},
   "evaluated_in": "G2_visual_completeness",
@@ -96,11 +69,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

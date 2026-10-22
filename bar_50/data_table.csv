@@ -1,10 +1,10 @@
 entity,metric,value,unit,label,role
-POOREST,payroll_taxes,11.000,,,bar
-POOREST,payroll_taxes,11.000,,,bar
-Group 3,payroll_taxes,12.000,,,bar
-Group 4,payroll_taxes,11.000,,,bar
-Group 5,payroll_taxes,11.000,,,bar
-Group 6,payroll_taxes,11.000,,,bar
-Group 7,payroll_taxes,10.400,,,bar
-Group 8,payroll_taxes,10.400,,,bar
-RICHEST,payroll_taxes,10.000,,,bar
+Poorest,payroll_tax_rate,10.6,%,Poorest,bar
+2nd,payroll_tax_rate,10.9,%,,bar
+3rd,payroll_tax_rate,10.9,%,,bar
+4th,payroll_tax_rate,10.4,%,,bar
+5th,payroll_tax_rate,10.4,%,,bar
+6th,payroll_tax_rate,10.4,%,,bar
+7th,payroll_tax_rate,10.4,%,,bar
+8th,payroll_tax_rate,10.4,%,,bar
+9th,payroll_tax_rate,9.8,%,,bar

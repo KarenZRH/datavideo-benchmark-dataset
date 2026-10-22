@@ -1,3 +1,3 @@
 entity,metric,value,unit,label,role
-SHIA,value,63.000,,,bar
-SUNNI,value,20.000,,,bar
+SHIA,value,63.000,%,,bar
+SUNNI,value,20.000,%,,bar

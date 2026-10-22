@@ -1,11 +1,11 @@
 entity,series,metric,value,unit,label,role
-Require police to be trained,Strongly,value,0.3008,relative,,bar
-55,Somewhat,value,0.1969,relative,,bar
-Create a federal government,Strongly,value,0.2406,relative,,bar
-44,Somewhat,value,0.2242,relative,,bar
-power to investigate and,Strongly,value,0.1039,relative,,bar
-19,Somewhat,value,0.2133,relative,,bar
-Make it a crime for police to,Strongly,value,0.1422,relative,,bar
-26,Somewhat,value,0.1695,relative,,bar
-Require officers to live in,Strongly,value,0.1477,relative,,bar
-27,Somewhat,value,0.2242,relative,,bar
+Require police to be trained in nonviolent alternatives to deadly force,Strongly,support_for_police_reform,55,%,,bar
+Require police to be trained in nonviolent alternatives to deadly force,Somewhat,support_for_police_reform,36,%,,bar
+Create a federal government database to track officers accused of misconduct,Strongly,support_for_police_reform,44,%,,bar
+Create a federal government database to track officers accused of misconduct,Somewhat,support_for_police_reform,41,%,,bar
+Give civilian oversight boards power to investigate and discipline officers,Strongly,support_for_police_reform,19,%,,bar
+Give civilian oversight boards power to investigate and discipline officers,Somewhat,support_for_police_reform,39,%,,bar
+Make it a crime for police to use chokeholds or strangleholds,Strongly,support_for_police_reform,26,%,,bar
+Make it a crime for police to use chokeholds or strangleholds,Somewhat,support_for_police_reform,31,%,,bar
+Require officers to live in the cities or towns they police,Strongly,support_for_police_reform,27,%,,bar
+Require officers to live in the cities or towns they police,Somewhat,support_for_police_reform,41,%,,bar

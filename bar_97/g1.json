@@ -1,22 +1,14 @@
 {
  "clip_id": "bar_97",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the sectarian power dynamic in Iraq where a Sunni minority suppressed the Shia majority.",
+ "intent": "Show the sectarian and ethnic composition of Iraq, including the Shia majority, Sunni minority, and Sunni Kurds.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly state Shia's 63 as the largest value, or is 'Shia majority/largest' enough without the number?",
+   "question": "How is Iraq's population split among the shown groups?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is Sunni's specific value of 20 required, or is the minority relation to Shia sufficient?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,91 +16,50 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_extreme",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "SHIA has the largest value among the listed groups: 63, compared with SUNNI at 20 and KURDS (SUNNI) at 17.",
+   "claim": "Iraq is shown as about 63% Shia, 20% Sunni, and 17% Sunni Kurds.",
    "basis": [
     {
-     "entity": "SHIA",
-     "x": "x_px=640.0",
-     "field": "value",
-     "value": 63.0,
-     "note": "Shia value is 63."
+     "entity": "SUNNI",
+     "field": "muslims_iraq",
+     "value": 20.0,
+     "unit": "%"
     },
     {
-     "entity": "SUNNI",
-     "x": "x_px=640.0",
-     "field": "value",
-     "value": 20.0,
-     "note": "Sunni value is 20."
+     "entity": "SHIA",
+     "field": "muslims_iraq",
+     "value": 63.0,
+     "unit": "%"
     },
     {
      "entity": "KURDS (SUNNI)",
-     "x": "x_px=640.0",
-     "field": "value",
+     "field": "muslims_iraq",
      "value": 17.0,
-     "note": "Kurds (Sunni) value is 17."
+     "unit": "%"
     }
    ],
    "accept": [
-    "Shia is the largest group at 63.",
-    "Shia has 63, more than Sunni's 20 and Kurds' 17.",
-    "Shia is the biggest listed group with a value of 63."
+    "all three groups are present",
+    "the values total 100%",
+    "Shia is the largest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting Sunni Kurds",
+    "reversing Shia and Sunni"
    ],
-   "evidence": "The Shia bar/segment must be visibly the largest and carry the value 63 or an equivalent label."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "comparison",
-   "must_be_visualized": true,
-   "claim": "SUNNI is a minority at 20, lower than Shia at 63.",
-   "basis": [
-    {
-     "entity": "SUNNI",
-     "x": "x_px=640.0",
-     "field": "value",
-     "value": 20.0,
-     "note": "Sunni value is 20."
-    },
-    {
-     "entity": "SHIA",
-     "x": "x_px=640.0",
-     "field": "value",
-     "value": 63.0,
-     "note": "Shia value is 63."
-    }
-   ],
-   "accept": [
-    "Sunni is a minority at 20, below Shia's 63.",
-    "Sunni has 20, which is smaller than Shia's 63.",
-    "The Sunni bar is shorter than the Shia bar."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The Sunni bar/segment must be visibly shorter than the Shia bar/segment and be labeled 20 or clearly identified as Sunni minority."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "Ordering the bars by size as Shia > Sunni > Kurds (Sunni).",
-  "Annotating the non-Shia listed total as 20 + 17 = 37, still below Shia's 63.",
-  "Using relative_value 0.9871 only for scaling or layout, not as a semantic data value."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 3,
   "required_states": [],
   "required_marks_per_state": {},
@@ -117,12 +68,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_84_105_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

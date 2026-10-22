@@ -5,17 +5,11 @@
  "orientation": "vertical",
  "series_count": 4,
  "category_count": 32,
- "unit_mark": "bar",
- "has_axis": true,
- "has_legend": null,
- "has_value_labels": null,
- "text_count": 6,
  "row_count": 111,
  "derived_from": [
   "data_table",
   "semantic.svg"
  ],
- "confidence": "high",
  "needs_review": true,
  "time_behavior": "snapshot",
  "batch_status": "agent_processed_pending_human_review"

@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Ghana,gdp_nominal,1.000,,,bar
-Madagascar,gdp_nominal,0.303,,,bar
-Saint Lucia,gdp_nominal,0.061,,,bar
-Antigua and Barbuda,gdp_nominal,0.030,,,bar
+Ghana,gdp_nominal,1.000,relative,,bar
+Madagascar,gdp_nominal,0.303,relative,,bar
+Saint Lucia,gdp_nominal,0.061,relative,,bar
+Antigua and Barbuda,gdp_nominal,0.030,relative,,bar

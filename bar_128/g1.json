@@ -5,34 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Is it required to state that within 3 weeks is the largest bucket, or is showing it visually enough?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should the video explicitly quantify the instant share, or just show it as smaller than the within-3-weeks bucket?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the video call out 3+ weeks as small, or can it just show the small segment?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
-   ]
-  },
-  {
-   "id": "R4",
-   "question": "Is the combined first-three-weeks total required as a headline takeaway, or is the separate within-3-weeks bucket enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U4"
    ]
   }
  ],
@@ -40,208 +16,68 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "share_or_composition",
-   "must_be_visualized": true,
-   "claim": "The within-3-weeks bucket is the largest timing category in each city, at about 0.63 of each city's total: Hiroshima 204 of 324 dots; Nagasaki 132 of 210 dots.",
-   "basis": [
-    {
-     "entity": "Hiroshima",
-     "x": "within 3 weeks",
-     "field": "value",
-     "value": 204,
-     "note": "largest bucket for Hiroshima"
-    },
-    {
-     "entity": "Hiroshima",
-     "x": "within 3 weeks",
-     "field": "relative_value",
-     "value": 0.6296,
-     "note": "share of Hiroshima total"
-    },
-    {
-     "entity": "Nagasaki",
-     "x": "within 3 weeks",
-     "field": "value",
-     "value": 132,
-     "note": "largest bucket for Nagasaki"
-    },
-    {
-     "entity": "Nagasaki",
-     "x": "within 3 weeks",
-     "field": "relative_value",
-     "value": 0.6286,
-     "note": "share of Nagasaki total"
-    }
-   ],
-   "accept": [
-    "Within 3 weeks is the largest category for both cities.",
-    "About 0.63 of each city's deaths were in the within-3-weeks bucket.",
-    "Hiroshima has 204 dots and Nagasaki has 132 dots in the within-3-weeks category, the biggest bucket in each city."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The within-3-weeks category must be visibly the largest of the three timing categories for each city or for the combined total."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Instant deaths are a minority, about 0.28 of all deaths: Hiroshima 90 of 324 dots and Nagasaki 60 of 210 dots; combined 150 of 534 dots.",
+   "claim": "Most deaths occurred within three weeks; instant deaths were a minority and later deaths were smallest.",
    "basis": [
     {
      "entity": "Hiroshima",
-     "x": "instantly",
      "field": "value",
-     "value": 90,
-     "note": "instant deaths"
+     "value": "90",
+     "unit": "dots"
     },
     {
      "entity": "Hiroshima",
-     "x": "instantly",
-     "field": "relative_value",
-     "value": 0.2778,
-     "note": "instant share of Hiroshima total"
-    },
-    {
-     "entity": "Nagasaki",
-     "x": "instantly",
      "field": "value",
-     "value": 60,
-     "note": "instant deaths"
+     "value": "204",
+     "unit": "dots"
+    },
+    {
+     "entity": "Hiroshima",
+     "field": "value",
+     "value": "30",
+     "unit": "dots"
     },
     {
      "entity": "Nagasaki",
-     "x": "instantly",
-     "field": "relative_value",
-     "value": 0.2857,
-     "note": "instant share of Nagasaki total"
+     "field": "value",
+     "value": "60",
+     "unit": "dots"
+    },
+    {
+     "entity": "Nagasaki",
+     "field": "value",
+     "value": "132",
+     "unit": "dots"
+    },
+    {
+     "entity": "Nagasaki",
+     "field": "value",
+     "value": "18",
+     "unit": "dots"
     }
    ],
    "accept": [
-    "Only a minority of deaths were instant.",
-    "Instant deaths were about 0.28 of each city's total.",
-    "Hiroshima 90 dots and Nagasaki 60 dots were instant; together 150 of 534 dots."
+    "six dot groups are present",
+    "within-three-weeks is largest"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The instant category must appear smaller than the within-3-weeks category and less than half of the total."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "comparison",
-   "must_be_visualized": true,
-   "claim": "Deaths after 3 weeks are the smallest portion, about 0.09 of combined deaths: Hiroshima 30 of 324 dots, Nagasaki 18 of 210 dots, combined 48 of 534 dots.",
-   "basis": [
-    {
-     "entity": "Hiroshima",
-     "x": "3+ weeks",
-     "field": "value",
-     "value": 30,
-     "note": "after-3-weeks deaths"
-    },
-    {
-     "entity": "Hiroshima",
-     "x": "3+ weeks",
-     "field": "relative_value",
-     "value": 0.0926,
-     "note": "share of Hiroshima total"
-    },
-    {
-     "entity": "Nagasaki",
-     "x": "3+ weeks",
-     "field": "value",
-     "value": 18,
-     "note": "after-3-weeks deaths"
-    },
-    {
-     "entity": "Nagasaki",
-     "x": "3+ weeks",
-     "field": "relative_value",
-     "value": 0.0857,
-     "note": "share of Nagasaki total"
-    }
-   ],
-   "accept": [
-    "Deaths after 3 weeks were a small portion.",
-    "The 3+ weeks category is the smallest in both cities.",
-    "About 0.09 of combined deaths were after 3 weeks (48 of 534 dots)."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The 3+ weeks category must be visibly the smallest among the timing categories."
-  },
-  {
-   "id": "U4",
-   "requirement_id": "R4",
-   "unit_kind": "threshold_or_crossing",
-   "must_be_visualized": true,
-   "claim": "Combining instant deaths with the within-3-weeks bucket, about 0.91 of all deaths occurred within the first three weeks: Hiroshima 294 of 324 dots, Nagasaki 192 of 210 dots, combined 486 of 534 dots.",
-   "basis": [
-    {
-     "entity": "Hiroshima",
-     "x": "instantly",
-     "field": "value",
-     "value": 90,
-     "note": "part of first-three-weeks total"
-    },
-    {
-     "entity": "Hiroshima",
-     "x": "within 3 weeks",
-     "field": "value",
-     "value": 204,
-     "note": "part of first-three-weeks total"
-    },
-    {
-     "entity": "Nagasaki",
-     "x": "instantly",
-     "field": "value",
-     "value": 60,
-     "note": "part of first-three-weeks total"
-    },
-    {
-     "entity": "Nagasaki",
-     "x": "within 3 weeks",
-     "field": "value",
-     "value": 132,
-     "note": "part of first-three-weeks total"
-    }
-   ],
-   "accept": [
-    "About nine-tenths of deaths occurred within the first three weeks when instant and within-3-weeks are combined.",
-    "Instant plus within-3-weeks totals 486 of 534 dots, about 0.91.",
-    "For Hiroshima, 294 of 324 dots; for Nagasaki, 192 of 210 dots were within the first three weeks."
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must make the combined first-three-weeks share apparent, not only the separate instant and within-3-weeks buckets."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.25,
-  "U2": 0.25,
-  "U3": 0.25,
-  "U4": 0.25
+  "U1": 1.0
  },
- "optional_valid": [
-  "Hiroshima's total is larger than Nagasaki's (324 vs 210 dots, about 1.5 times as many), but the intent does not require this city-total comparison.",
-  "The timing distribution is nearly the same in both cities (instant about 0.28, within 3 weeks about 0.63, 3+ weeks about 0.09).",
-  "The 3+ weeks bucket can be described as later/after-effects, but the table only labels it '3+ weeks'."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 6,
   "required_states": [],
   "required_marks_per_state": {},
@@ -250,26 +86,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

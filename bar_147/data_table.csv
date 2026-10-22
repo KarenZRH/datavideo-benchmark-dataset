@@ -1,6 +1,6 @@
 entity,metric,value,unit,label,role
-High income,value,0.5353,relative,,bar
-Upper middle income,value,0.1367,relative,,bar
-Lower middle income,value,0.0535,relative,,bar
-Lower income,value,0.0353,relative,,bar
-Covax,value,0.1253,relative,,bar
+High income,confirmed_vaccine_doses,4.7,billion doses,,bar
+Upper middle income,confirmed_vaccine_doses,1.2,billion doses,,bar
+Covax,confirmed_vaccine_doses,1.1,billion doses,,bar
+Lower middle income,confirmed_vaccine_doses,0.47,billion doses,,bar
+Lower income,confirmed_vaccine_doses,0.31,billion doses,,bar

@@ -1,11 +1,11 @@
 {
  "clip_id": "bar_64",
  "version": "g1_r_u_v1",
- "intent": "To explain the global prevalence of lactose intolerance and the biological mechanism behind it.",
+ "intent": "Show that most of the world's population is lactose intolerant after infancy.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the 65% global prevalence of lactose intolerance obligatory in the video?",
+   "question": "What share of the world population is lactose intolerant?",
    "relation": "single",
    "unit_ids": [
     "U1"
@@ -16,28 +16,34 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Lactose intolerance affects 65% of the global population.",
+   "claim": "About 65% of the world population is lactose intolerant after infancy, versus about 35% who remain lactose tolerant.",
    "basis": [
     {
      "entity": "Lactose Intolerant",
-     "x": "Lactose Intolerant",
-     "field": "value",
-     "value": 65,
-     "note": "Table value 65 with unit %"
+     "field": "world_population",
+     "value": 65.0,
+     "unit": "%"
+    },
+    {
+     "entity": "Lactose-Tolerant",
+     "field": "world_population",
+     "value": 35.0,
+     "unit": "%"
     }
    ],
    "accept": [
-    "Worldwide, about 65% of the population is lactose intolerant.",
-    "Lactose intolerance has a global prevalence of 65%.",
-    "Roughly two-thirds of people worldwide are lactose intolerant."
+    "both groups are shown",
+    "the intolerant portion is about 65%",
+    "the two shares form one complete whole"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "reversing 65% and 35%",
+    "omitting either group",
+    "reporting a share above 100%"
    ],
-   "evidence": "The chart must show the Lactose Intolerant category with a label, value, or mark at 65% (or the equivalent 0.65 share of the whole)."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -48,7 +54,7 @@
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
@@ -57,12 +63,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }

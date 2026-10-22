@@ -5,34 +5,10 @@
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the rising series' increase required to show the uptick?",
+   "question": "What does the selected chart show?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Should this decline be shown as stagnant or declining?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Is the flat series required to show stagnation?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
-   ]
-  },
-  {
-   "id": "R4",
-   "question": "Is the widening gap required to show the divide?",
-   "relation": "single",
-   "unit_ids": [
-    "U4"
    ]
   }
  ],
@@ -40,151 +16,284 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "One confidence series rises from Jan '19 to Nov '20, about 0.098 to 0.143 on relative scale.",
+   "claim": "Confidence in scientists rises overall but partisan differences widen, with Democrats increasing and Republicans declining.",
    "basis": [
     {
-     "entity": "rising series",
-     "x": "Jan '19",
-     "field": "relative_value",
-     "value": 0.0976,
-     "note": "first occurrence"
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "52",
+     "unit": "%",
+     "series": "A fair amount"
     },
     {
-     "entity": "rising series",
-     "x": "Nov '20",
-     "field": "relative_value",
-     "value": 0.1425,
-     "note": "first occurrence"
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "35",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "46",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "43",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "45",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "40",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "56",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "32",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "54",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "31",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "55",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "26",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "50",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "37",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "39",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "53",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "36",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Medical scientists",
+     "field": "public_confidence",
+     "value": "54",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "51",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "35",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "48",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "39",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "45",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "39",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "55",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "27",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "58",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "27",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "55",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "22",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "48",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "43",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "39",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "52",
+     "unit": "%",
+     "series": "A great deal"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "37",
+     "unit": "%",
+     "series": "A fair amount"
+    },
+    {
+     "entity": "Scientists",
+     "field": "public_confidence",
+     "value": "55",
+     "unit": "%",
+     "series": "A great deal"
     }
    ],
    "accept": [
-    "increases from about 0.10 to about 0.14",
-    "rises across the period",
-    "the rising series is higher in Nov '20 than Jan '19"
+    "all36 source rows are present",
+    "Democratic and Republican trends differ"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "omitting a required series",
+    "reversing the values",
+    "using fabricated values"
    ],
-   "evidence": "The rising series must appear higher in Nov '20 than in Jan '19."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "Another confidence series declines from Jan '19 to Nov '20, about 0.084 to 0.069.",
-   "basis": [
-    {
-     "entity": "declining series",
-     "x": "Jan '19",
-     "field": "relative_value",
-     "value": 0.0844,
-     "note": "first occurrence"
-    },
-    {
-     "entity": "declining series",
-     "x": "Nov '20",
-     "field": "relative_value",
-     "value": 0.0686,
-     "note": "first occurrence"
-    }
-   ],
-   "accept": [
-    "declines from about 0.08 to about 0.07",
-    "drops over the period",
-    "the declining series is lower in Nov '20 than Jan '19"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The declining series must appear lower in Nov '20 than in Jan '19."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "trend_or_order",
-   "must_be_visualized": true,
-   "claim": "A second series in the flat/declining group stays roughly unchanged, about 0.148 to 0.145.",
-   "basis": [
-    {
-     "entity": "flat series",
-     "x": "Jan '19",
-     "field": "relative_value",
-     "value": 0.1478,
-     "note": "first occurrence"
-    },
-    {
-     "entity": "flat series",
-     "x": "Nov '20",
-     "field": "relative_value",
-     "value": 0.1451,
-     "note": "first occurrence"
-    }
-   ],
-   "accept": [
-    "remains around 0.15",
-    "changes little across the period",
-    "stays roughly flat from Jan '19 to Nov '20"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The flat series must have similar relative height in Jan '19 and Nov '20."
-  },
-  {
-   "id": "U4",
-   "requirement_id": "R4",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The gap between the rising series and the declining series widens from about 0.013 to about 0.074.",
-   "basis": [
-    {
-     "entity": "gap Jan '19",
-     "x": "Jan '19",
-     "field": "relative_value",
-     "value": 0.0132,
-     "note": "0.0976 - 0.0844"
-    },
-    {
-     "entity": "gap Nov '20",
-     "x": "Nov '20",
-     "field": "relative_value",
-     "value": 0.0739,
-     "note": "0.1425 - 0.0686"
-    }
-   ],
-   "accept": [
-    "divide widens from about 0.01 to about 0.07",
-    "the two series become more separated",
-    "difference grows over the period"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The separation between the rising and declining series must be larger in Nov '20 than Jan '19."
+   "evidence": "The selected keyframe and plotted data encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.25,
-  "U2": 0.25,
-  "U3": 0.25,
-  "U4": 0.25
+  "U1": 1.0
  },
- "optional_valid": [
-  "The rising group's second series declines from about 0.132 to 0.095.",
-  "The absolute highest relative value overall is about 0.148 in Jan '19."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 36,
   "required_states": [],
   "required_marks_per_state": {},
@@ -193,26 +302,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "manual_specific_fix_2026-10-22"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
- "approved_at": null,
- "clip_hardcase": {
-  "is_hardcase": true,
-  "type": "no_explicit_bar_mark_in_reference_svg",
-  "unit_ids": [],
-  "reason": "The reference SVG has no explicit data-role=bar mark, so visual-unit reconstruction needs manual review."
- },
- "hardcases": [
-  {
-   "unit_id": null,
-   "type": "no_explicit_bar_mark_in_reference_svg",
-   "handling": "Requires human visual inspection before semantic scoring."
-  }
- ]
+ "approved_at": null
 }

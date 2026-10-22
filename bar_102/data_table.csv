@@ -1,5 +1,5 @@
 entity,metric,value,unit,label,role
-Toutiao,top_startup_valuations,1.000,,,bar
-Uber,top_startup_valuations,0.950,,,bar
-Didi,top_startup_valuations,0.710,,,bar
-WeWork,top_startup_valuations,0.560,,,bar
+Toutiao,top_startup_valuations,1.000,relative,,bar
+Uber,top_startup_valuations,0.950,relative,,bar
+Didi,top_startup_valuations,0.710,relative,,bar
+WeWork,top_startup_valuations,0.560,relative,,bar

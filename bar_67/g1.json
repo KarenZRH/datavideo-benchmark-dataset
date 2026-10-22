@@ -1,22 +1,14 @@
 {
  "clip_id": "bar_67",
  "version": "g1_r_u_v1",
- "intent": "To illustrate the financial impact of pirate attacks on shipping companies between 2013 and 2018.",
+ "intent": "Show the annual financial loss caused by piracy, using $8.3 billion as the 2013 maximum and $4.9 billion as the 2017 minimum.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Is the 2017 minimum and 2018 rebound required, or can a simplified decline-only trend be accepted?",
+   "question": "What are the yearly financial losses from piracy?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Is the full-period net change required, or is the year-by-year trend sufficient?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
    ]
   }
  ],
@@ -24,126 +16,69 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "trend_or_order",
+   "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "The main trend is a general decline from 2013 to 2017, followed by a rebound in 2018; 2017 is the lowest year in the series.",
+   "claim": "The annual piracy cost is $8.3B in 2013, declines to $4.9B by 2017, and rebounds to about $5.8B in 2018.",
    "basis": [
     {
      "entity": "2013",
-     "x": "2013",
-     "field": "value",
-     "value": 1.0,
-     "note": "start of decline"
+     "field": "annual_piracy_cost",
+     "value": 8.3,
+     "unit": "billion USD"
     },
     {
      "entity": "2014",
-     "x": "2014",
-     "field": "value",
-     "value": 0.952,
-     "note": "lower than 2013"
+     "field": "annual_piracy_cost",
+     "value": 7.8,
+     "unit": "billion USD"
     },
     {
      "entity": "2015",
-     "x": "2015",
-     "field": "value",
-     "value": 0.905,
-     "note": "lower than 2014"
+     "field": "annual_piracy_cost",
+     "value": 7.2,
+     "unit": "billion USD"
     },
     {
      "entity": "2016",
-     "x": "2016",
-     "field": "value",
-     "value": 0.746,
-     "note": "lower than 2015"
+     "field": "annual_piracy_cost",
+     "value": 5.4,
+     "unit": "billion USD"
     },
     {
      "entity": "2017",
-     "x": "2017",
-     "field": "value",
-     "value": 0.698,
-     "note": "lowest value"
+     "field": "annual_piracy_cost",
+     "value": 4.9,
+     "unit": "billion USD"
     },
     {
      "entity": "2018",
-     "x": "2018",
-     "field": "value",
-     "value": 0.778,
-     "note": "higher than 2017"
+     "field": "annual_piracy_cost",
+     "value": 5.8,
+     "unit": "billion USD"
     }
    ],
    "accept": [
-    "Values generally fall from 2013 to 2017, then rise in 2018",
-    "2013 is highest at 1.000 and 2017 is lowest at 0.698",
-    "The series declines for four consecutive years before an uptick in 2018"
+    "six yearly monetary bars are present",
+    "2013 is $8.3B and 2017 is $4.9B",
+    "2018 rebounds above 2017"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "leaving all values relative",
+    "omitting the 2018 rebound",
+    "reversing the maximum and minimum years"
    ],
-   "evidence": "The chart must show a descending sequence from 2013 to 2017 and a visible uptick in 2018."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "From 2013 to 2018, the main value declines by 0.222 (about 22.2%), and the relative value declines by 0.1172 (also about 22.2%).",
-   "basis": [
-    {
-     "entity": "2013",
-     "x": "2013",
-     "field": "value",
-     "value": 1.0,
-     "note": "baseline"
-    },
-    {
-     "entity": "2018",
-     "x": "2018",
-     "field": "value",
-     "value": 0.778,
-     "note": "endpoint"
-    },
-    {
-     "entity": "2013",
-     "x": "2013",
-     "field": "relative_value",
-     "value": 0.5278,
-     "note": "baseline"
-    },
-    {
-     "entity": "2018",
-     "x": "2018",
-     "field": "relative_value",
-     "value": 0.4106,
-     "note": "endpoint"
-    }
-   ],
-   "accept": [
-    "2018 is 0.222 lower than 2013, a 22.2% decrease",
-    "From 1.000 to 0.778 is about a 22% drop",
-    "Relative value falls from 0.5278 to 0.4106, down about 22%"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The chart must make it possible to compare the 2013 and 2018 endpoints and show the net change over the full period."
+   "evidence": "The selected keyframe and plotted marks encode this relation."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 1.0
  },
- "optional_valid": [
-  "The relative_value series follows the same overall shape: 0.5278, 0.5026, 0.4775, 0.3937, 0.3686, 0.4106.",
-  "2012 is not in the table, so the video should not imply a value before 2013.",
-  "The main value in 2014 is 0.952 and in 2015 is 0.905; each is lower than the prior year."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar data rows",
   "required_data_rows": 6,
   "required_states": [],
   "required_marks_per_state": {},
@@ -152,11 +87,16 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "semantic_reaudit_required"
+  "batch_64_83_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
+ "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",
  "approved_by": null,
  "approved_at": null

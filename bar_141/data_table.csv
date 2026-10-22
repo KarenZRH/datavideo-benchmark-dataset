@@ -1,7 +1,7 @@
 entity,series,metric,value,unit,label,role
-29,Is generally,value,0.1042,relative,,bar
-70,Unfairly favors,value,0.2516,relative,,bar
-50,Is generally,value,0.1797,relative,,bar
-50,Unfairly favors,value,0.1797,relative,,bar
-12,Is generally,value,0.0431,relative,,bar
-86,Unfairly favors,value,0.3091,relative,,bar
+All adults,Is generally fair,perceived_economic_fairness,29,%,,bar
+All adults,Unfairly favors powerful interests,perceived_economic_fairness,70,%,,bar
+Republican/Lean Rep,Is generally fair,perceived_economic_fairness,50,%,,bar
+Republican/Lean Rep,Unfairly favors powerful interests,perceived_economic_fairness,50,%,,bar
+Democrat/Lean Dem,Is generally fair,perceived_economic_fairness,12,%,,bar
+Democrat/Lean Dem,Unfairly favors powerful interests,perceived_economic_fairness,86,%,,bar

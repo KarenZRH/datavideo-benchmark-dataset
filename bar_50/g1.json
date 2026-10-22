@@ -1,46 +1,14 @@
 {
  "clip_id": "bar_50",
  "version": "g1_r_u_v1",
- "intent": "To demonstrate that payroll taxes are applied at a roughly uniform percentage rate across individuals ranging from the poorest to the richest.",
+ "intent": "Show that payroll taxes apply at a roughly uniform percentage across the displayed income groups.",
  "requirements": [
   {
    "id": "R1",
-   "question": "Must the video explicitly state the RICHEST endpoint value as 10.0%, or is showing the bar height enough?",
+   "question": "How uniform are payroll-tax rates across the displayed groups?",
    "relation": "single",
    "unit_ids": [
     "U1"
-   ]
-  },
-  {
-   "id": "R2",
-   "question": "Must the video explicitly state the POOREST endpoint value as 11.0%?",
-   "relation": "single",
-   "unit_ids": [
-    "U2"
-   ]
-  },
-  {
-   "id": "R3",
-   "question": "Must the video call out Group 3 as the 12.0% maximum and the 2.0-point range, or is the endpoint comparison enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U3"
-   ]
-  },
-  {
-   "id": "R4",
-   "question": "Must the video show the repeated 11.0% / 10.4% clusters, or is a single average/uniformity statement enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U4"
-   ]
-  },
-  {
-   "id": "R5",
-   "question": "Must the video quantify the poorest-to-richest difference as 1.0 point, or is qualitative 'roughly uniform' enough?",
-   "relation": "single",
-   "unit_ids": [
-    "U5"
    ]
   }
  ],
@@ -48,205 +16,45 @@
   {
    "id": "U1",
    "requirement_id": "R1",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "The richest group (RICHEST) has the table’s lowest payroll-tax rate at 10.0%.",
-   "basis": [
-    {
-     "entity": "RICHEST",
-     "x": "1160.5",
-     "field": "value",
-     "value": 10.0,
-     "note": "Rightmost bar; table value is 10.000."
-    }
-   ],
-   "accept": [
-    "RICHEST is at 10%",
-    "The richest group’s rate is 10.0 percent",
-    "The far-right bar ends at 10.0",
-    "The richest pay about 10 percent"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The RICHEST bar or its value label must be visible at the far right and show 10.0 (or 10%)."
-  },
-  {
-   "id": "U2",
-   "requirement_id": "R2",
-   "unit_kind": "key_value_endpoint",
-   "must_be_visualized": true,
-   "claim": "The poorest group (POOREST) has a payroll-tax rate of 11.0%.",
-   "basis": [
-    {
-     "entity": "POOREST",
-     "x": "209.4",
-     "field": "value",
-     "value": 11.0,
-     "note": "Leftmost bar; table value is 11.000. A second POOREST row at x=328.4 also has value 11.000."
-    }
-   ],
-   "accept": [
-    "POOREST is at 11%",
-    "The poorest group’s rate is 11.0 percent",
-    "The leftmost bar shows 11.0",
-    "The poorest pay about 11 percent"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "The POOREST bar or its value label must be visible at the left and show 11.0 (or 11%)."
-  },
-  {
-   "id": "U3",
-   "requirement_id": "R3",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The highest rate in the table is Group 3 at 12.0%; combined with the lowest rate (RICHEST at 10.0%), the full range is 2.0 percentage points.",
-   "basis": [
-    {
-     "entity": "Group 3",
-     "x": "447.2",
-     "field": "value",
-     "value": 12.0,
-     "note": "Highest value in table."
-    },
-    {
-     "entity": "RICHEST",
-     "x": "1160.5",
-     "field": "value",
-     "value": 10.0,
-     "note": "Lowest value in table."
-    }
-   ],
-   "accept": [
-    "Group 3 is highest at 12%",
-    "Range is 10% to 12%",
-    "Spread is 2 percentage points",
-    "Max 12.0, min 10.0, difference 2.0 points"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Group 3 must be identifiable as the highest bar at 12.0, and RICHEST as the lowest at 10.0; the 2.0-point range should be stated or visually implied."
-  },
-  {
-   "id": "U4",
-   "requirement_id": "R4",
    "unit_kind": "comparison",
    "must_be_visualized": true,
-   "claim": "Several groups cluster near the same rate: POOREST, Group 4, Group 5, and Group 6 all have 11.0%; Group 7 and Group 8 both have 10.4%.",
+   "claim": "The displayed payroll-tax rates stay close to 10–11% across the first nine income groups.",
    "basis": [
     {
-     "entity": "POOREST",
-     "x": "209.4",
-     "field": "value",
-     "value": 11.0,
-     "note": "One of the 11.0% cluster."
+     "entity": "Poorest",
+     "field": "payroll_tax_rate",
+     "value": 10.6,
+     "unit": "%"
     },
     {
-     "entity": "Group 4",
-     "x": "566.1",
-     "field": "value",
-     "value": 11.0,
-     "note": "11.0% cluster."
-    },
-    {
-     "entity": "Group 5",
-     "x": "685.0",
-     "field": "value",
-     "value": 11.0,
-     "note": "11.0% cluster."
-    },
-    {
-     "entity": "Group 6",
-     "x": "803.9",
-     "field": "value",
-     "value": 11.0,
-     "note": "11.0% cluster."
-    },
-    {
-     "entity": "Group 7",
-     "x": "922.8",
-     "field": "value",
-     "value": 10.4,
-     "note": "10.4% cluster."
-    },
-    {
-     "entity": "Group 8",
-     "x": "1041.6",
-     "field": "value",
-     "value": 10.4,
-     "note": "10.4% cluster."
+     "entity": "9th",
+     "field": "payroll_tax_rate",
+     "value": 9.8,
+     "unit": "%"
     }
    ],
    "accept": [
-    "Most groups are 11.0% or 10.4%",
-    "POOREST, Group 4, Group 5, and Group 6 are all 11.0%",
-    "Group 7 and Group 8 are both 10.4%",
-    "The middle bars cluster between 10.4% and 11.0%"
+    "nine bars are present",
+    "POOREST is labeled",
+    "the bars remain within about 9.8–10.9%"
    ],
    "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
+    "duplicating the poorest group",
+    "showing a large drop within this displayed range",
+    "omitting intermediate bars"
    ],
-   "evidence": "The chart must show the repeated 11.0% values for POOREST, Group 4, Group 5, Group 6 and the repeated 10.4% values for Group 7 and Group 8, either by labels or aligned bar heights."
-  },
-  {
-   "id": "U5",
-   "requirement_id": "R5",
-   "unit_kind": "change_or_rate",
-   "must_be_visualized": true,
-   "claim": "The richest group’s rate is 1.0 percentage point lower than the poorest group’s rate: 11.0% for POOREST minus 10.0% for RICHEST.",
-   "basis": [
-    {
-     "entity": "POOREST",
-     "x": "209.4",
-     "field": "value",
-     "value": 11.0,
-     "note": "Poorest rate."
-    },
-    {
-     "entity": "RICHEST",
-     "x": "1160.5",
-     "field": "value",
-     "value": 10.0,
-     "note": "Richest rate."
-    }
-   ],
-   "accept": [
-    "Richest pay 1 point less than poorest",
-    "Poorest 11.0% vs richest 10.0%",
-    "The poorest-to-richest gap is 1.0 percentage point",
-    "The difference from poorest to richest is about 1 point"
-   ],
-   "reject": [
-    "omitting the required fact",
-    "reversing the direction or values"
-   ],
-   "evidence": "Both the POOREST and RICHEST endpoint values must be visible or directly comparable so the 1.0-point gap can be seen."
+   "evidence": "Use the corresponding visible bars/segments in the selected keyframe."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.2,
-  "U2": 0.2,
-  "U3": 0.2,
-  "U4": 0.2,
-  "U5": 0.2
+  "U1": 1.0
  },
- "optional_valid": [
-  "Group 3 is the only bar above 11.0% (12.0%).",
-  "The relative_value values in the table (e.g., 0.3667 for POOREST, 0.4000 for Group 3, 0.3333 for RICHEST) if the video visualizes normalized bar lengths rather than tax rates.",
-  "The duplicate POOREST row at x=328.4 also has value 11.000."
- ],
+ "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar bars or stack segments; annotation rows excluded",
   "required_data_rows": 9,
   "required_states": [],
   "required_marks_per_state": {},
@@ -255,13 +63,17 @@
   "final_frame_only_sufficient": true,
   "missing_any_fails_visual_completeness": true
  },
+ "clip_hardcase": {
+  "is_hardcase": false,
+  "type": "",
+  "reason": ""
+ },
+ "hardcases": [],
  "review_flags": [
-  "legacy_g1_migrated",
-  "legacy_unit_count_above_4",
-  "semantic_reaudit_required"
+  "percent_bars_reviewed_candidate"
  ],
- "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
- "status": "agent_draft_pending_human_review",
- "approved_by": null,
- "approved_at": null
+ "draft_source": "manual_batch_review_2026-10-22",
+ "status": "approved",
+ "approved_by": "human",
+ "approved_at": "2026-10-22"
 }
