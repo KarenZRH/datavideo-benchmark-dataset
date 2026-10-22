@@ -1,15 +1,26 @@
 {
  "clip_id": "bar_34",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that uninsured Americans are most likely to skip medication because of cost, while even insured Americans rank second and above every other compared country.",
  "requirements": [
   {
    "id": "R1",
    "question": "Which group is most likely to skip medication because of cost?",
    "relation": "single",
-   "unit_ids": ["U1"],
+   "unit_ids": [
+    "U1"
+   ],
    "scope": {
-    "entities": ["United Kingdom", "Germany", "France", "Australia", "Switzerland", "Canada", "Insured United States", "Uninsured United States"],
+    "entities": [
+     "United Kingdom",
+     "Germany",
+     "France",
+     "Australia",
+     "Switzerland",
+     "Canada",
+     "Insured United States",
+     "Uninsured United States"
+    ],
     "measure": "share skipping prescriptions or doses because of cost"
    }
   },
@@ -17,9 +28,19 @@
    "id": "R2",
    "question": "How does the insured U.S. rate compare with the other countries?",
    "relation": "single",
-   "unit_ids": ["U2"],
+   "unit_ids": [
+    "U2"
+   ],
    "scope": {
-    "entities": ["United Kingdom", "Germany", "France", "Australia", "Switzerland", "Canada", "Insured United States"],
+    "entities": [
+     "United Kingdom",
+     "Germany",
+     "France",
+     "Australia",
+     "Switzerland",
+     "Canada",
+     "Insured United States"
+    ],
     "measure": "share skipping prescriptions or doses because of cost"
    }
   }
@@ -42,7 +63,65 @@
     "the U.S. groups are omitted",
     "the comparison is presented without the cost-related condition"
    ],
-   "evidence": "Eight bars share a percentage scale; the Uninsured United States bar is visibly the tallest."
+   "evidence": "Eight bars share a percentage scale; the Uninsured United States bar is visibly the tallest.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "2.137",
+     "unit": "%",
+     "entity": "United Kingdom",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "3.155",
+     "unit": "%",
+     "entity": "Germany",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "4.173",
+     "unit": "%",
+     "entity": "France",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "6.107",
+     "unit": "%",
+     "entity": "Australia",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "9.059",
+     "unit": "%",
+     "entity": "Switzerland",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "10.076",
+     "unit": "%",
+     "entity": "Canada",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "20.051",
+     "unit": "%",
+     "entity": "Insured United States",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "33.453",
+     "unit": "%",
+     "entity": "Uninsured United States",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -61,11 +140,72 @@
     "Canada or another comparison country is omitted",
     "the 20.1% value is assigned to the uninsured group"
    ],
-   "evidence": "The insured U.S. bar is the second-tallest and remains about twice as high as Canada's comparison bar."
+   "evidence": "The insured U.S. bar is the second-tallest and remains about twice as high as Canada's comparison bar.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "2.137",
+     "unit": "%",
+     "entity": "United Kingdom",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "3.155",
+     "unit": "%",
+     "entity": "Germany",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "4.173",
+     "unit": "%",
+     "entity": "France",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "6.107",
+     "unit": "%",
+     "entity": "Australia",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "9.059",
+     "unit": "%",
+     "entity": "Switzerland",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "10.076",
+     "unit": "%",
+     "entity": "Canada",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "20.051",
+     "unit": "%",
+     "entity": "Insured United States",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    },
+    {
+     "field": "value",
+     "value": "33.453",
+     "unit": "%",
+     "entity": "Uninsured United States",
+     "metric": "skipped_prescriptions_or_doses_due_to_cost"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
- "unit_weights": {"U1": 0.5, "U2": 0.5},
+ "unit_weights": {
+  "U1": 0.5,
+  "U2": 0.5
+ },
  "optional_valid": [
   "The chart concerns cost-related skipping of prescriptions or doses, not all medication nonadherence."
  ],
@@ -83,5 +223,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

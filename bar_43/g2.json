@@ -1,0 +1,62 @@
+{
+ "clip_id": "bar_43",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_43",
+  "family": "bar",
+  "sub_type": "stacked_100",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar bars or stack segments; annotation rows excluded",
+  "required_data_rows": 4,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "White | Registered | voter_registration",
+    "White | Couldn't vote | voter_registration",
+    "Nonwhite | Registered | voter_registration",
+    "Nonwhite | Couldn't vote | voter_registration"
+   ],
+   "assertion": {
+    "greater": "White | Registered | voter_registration",
+    "greater_value": 74.0,
+    "lesser": "White | Couldn't vote | voter_registration",
+    "lesser_value": 26.0,
+    "delta": 48.0,
+    "ratio": 2.846154,
+    "expected_order": [
+     "White | Registered | voter_registration",
+     "Nonwhite | Couldn't vote | voter_registration",
+     "Nonwhite | Registered | voter_registration",
+     "White | Couldn't vote | voter_registration"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_14",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that Sub-Saharan Africa's birth rate has fallen since 1960 but remains much higher than East Asia, North America, and the European Union.",
  "requirements": [
   {
@@ -38,7 +38,29 @@
     "no change",
     "wrong endpoint values"
    ],
-   "evidence": "The Sub-Saharan Africa bar falls from 6.6 to 4.7 across the two frames."
+   "evidence": "The Sub-Saharan Africa bar falls from 6.6 to 4.7 across the two frames.",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "6.6",
+     "unit": "births per woman",
+     "entity": "Sub-Saharan Africa",
+     "x": "1960",
+     "metric": "births_per_woman",
+     "label": "6.6"
+    },
+    {
+     "field": "value",
+     "value": "4.7",
+     "unit": "births per woman",
+     "entity": "Sub-Saharan Africa",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "4.7"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -54,7 +76,47 @@
     "missing a region",
     "wrong 2017 values"
    ],
-   "evidence": "In the 2017 frame the Sub-Saharan Africa bar is much longer than the other three."
+   "evidence": "In the 2017 frame the Sub-Saharan Africa bar is much longer than the other three.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "4.7",
+     "unit": "births per woman",
+     "entity": "Sub-Saharan Africa",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "4.7"
+    },
+    {
+     "field": "value",
+     "value": "1.8",
+     "unit": "births per woman",
+     "entity": "East Asia",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "1.8"
+    },
+    {
+     "field": "value",
+     "value": "1.7",
+     "unit": "births per woman",
+     "entity": "North America",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "1.7"
+    },
+    {
+     "field": "value",
+     "value": "1.6",
+     "unit": "births per woman",
+     "entity": "European Union",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "1.6"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -86,5 +148,8 @@
   },
   "check_full_timeline": true,
   "final_frame_only_sufficient": false
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

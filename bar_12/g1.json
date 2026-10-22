@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_12",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show how much UKIP membership surged between July and August 2018.",
  "requirements": [
   {
@@ -36,7 +36,37 @@
     "3,200% instead of 3,200 members",
     "wrong months"
    ],
-   "evidence": "The August bar is 15% taller than July, and the +15% / 3,200 callout is visible."
+   "evidence": "The August bar is 15% taller than July, and the +15% / 3,200 callout is visible.",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "1.00",
+     "unit": "index (July = 1.0)",
+     "entity": "UKIP",
+     "x": "July 2018",
+     "metric": "membership_index"
+    },
+    {
+     "field": "value",
+     "value": "1.15",
+     "unit": "index (July = 1.0)",
+     "entity": "UKIP",
+     "x": "August 2018",
+     "metric": "membership_index",
+     "label": "+15%"
+    },
+    {
+     "field": "value",
+     "value": "3200",
+     "unit": "members",
+     "entity": "UKIP",
+     "x": "August 2018",
+     "metric": "new_members",
+     "label": "3,200 new members"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -60,5 +90,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

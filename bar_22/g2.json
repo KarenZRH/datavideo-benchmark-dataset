@@ -1,0 +1,110 @@
+{
+ "clip_id": "bar_22",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_22",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 6,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Cashier | net_worth",
+    "Working mom | net_worth",
+    "Office clerk | net_worth",
+    "Nurse | net_worth",
+    "Teacher | net_worth",
+    "Accountant | net_worth"
+   ],
+   "assertion": {
+    "greater": "Accountant | net_worth",
+    "greater_value": 110000.0,
+    "lesser": "Cashier | net_worth",
+    "lesser_value": -4000.0,
+    "delta": 114000.0,
+    "ratio": null,
+    "expected_order": [
+     "Accountant | net_worth",
+     "Teacher | net_worth",
+     "Nurse | net_worth",
+     "Office clerk | net_worth",
+     "Working mom | net_worth",
+     "Cashier | net_worth"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "evidence_type": "value_or_readable_label",
+   "required_marks": [
+    "Ultra-rich households | net_worth"
+   ],
+   "assertion": {
+    "marks": [
+     "Ultra-rich households | net_worth"
+    ],
+    "expected": [
+     {
+      "mark": "Ultra-rich households | net_worth",
+      "label": "net worth far beyond the displayed axis",
+      "value": ""
+     }
+    ]
+   },
+   "accepted_routes": [
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "evidence_type": "not_required",
+   "required_marks": [
+    "Ultra-rich households | net_worth"
+   ],
+   "assertion": {
+    "required": false,
+    "reason": "narrative-only unit"
+   },
+   "accepted_routes": [
+    "narration"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

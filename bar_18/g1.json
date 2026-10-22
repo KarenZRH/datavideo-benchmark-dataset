@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_18",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that sub-Saharan Africa's population could quadruple between 2021 and 2100.",
  "requirements": [
   {
@@ -36,7 +36,27 @@
     "wrong multiplier",
     "treating the value as 4 million"
    ],
-   "evidence": "The dot matrix grows from 100 dots to 400 dots (each dot = 10 million)."
+   "evidence": "The dot matrix grows from 100 dots to 400 dots (each dot = 10 million).",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "1",
+     "unit": "billion",
+     "x": "2021",
+     "metric": "population",
+     "label": "1 billion"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "billion",
+     "x": "2100",
+     "metric": "population",
+     "label": "4 billion"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -61,5 +81,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

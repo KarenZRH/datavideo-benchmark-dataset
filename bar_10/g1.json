@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_10",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that Bangladesh has the lowest life expectancy among the three, far below the United States and somewhat below South Korea.",
  "requirements": [
   {
@@ -37,7 +37,32 @@
     "missing the United States or South Korea",
     "wrong endpoint values"
    ],
-   "evidence": "Three bars: Bangladesh is the shortest, the US the tallest."
+   "evidence": "Three bars: Bangladesh is the shortest, the US the tallest.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "71",
+     "unit": "years",
+     "entity": "United States",
+     "metric": "life_expectancy"
+    },
+    {
+     "field": "value",
+     "value": "52",
+     "unit": "years",
+     "entity": "South Korea",
+     "metric": "life_expectancy"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "years",
+     "entity": "Bangladesh",
+     "metric": "life_expectancy"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -61,5 +86,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

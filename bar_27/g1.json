@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_27",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that median SAT scores rise steadily as family income increases across the seven income brackets.",
  "requirements": [
   {
@@ -40,7 +40,65 @@
     "reversing the income order",
     "claiming that the displayed data establish a causal effect of income on SAT scores; the source only shows an association"
    ],
-   "evidence": "Seven horizontal bars are present for the seven income brackets, and every successive bar is longer than the previous one."
+   "evidence": "Seven horizontal bars are present for the seven income brackets, and every successive bar is longer than the previous one.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "890",
+     "unit": "SAT points",
+     "entity": "Less than $20,000",
+     "metric": "median_sat_score",
+     "label": "890"
+    },
+    {
+     "field": "value",
+     "value": "946",
+     "unit": "SAT points",
+     "entity": "$40,000",
+     "metric": "median_sat_score",
+     "label": "946"
+    },
+    {
+     "field": "value",
+     "value": "994",
+     "unit": "SAT points",
+     "entity": "$60,000",
+     "metric": "median_sat_score",
+     "label": "994"
+    },
+    {
+     "field": "value",
+     "value": "1006",
+     "unit": "SAT points",
+     "entity": "$80,000",
+     "metric": "median_sat_score",
+     "label": "1006"
+    },
+    {
+     "field": "value",
+     "value": "1054",
+     "unit": "SAT points",
+     "entity": "$100,000",
+     "metric": "median_sat_score",
+     "label": "1054"
+    },
+    {
+     "field": "value",
+     "value": "1103",
+     "unit": "SAT points",
+     "entity": "$140,000",
+     "metric": "median_sat_score",
+     "label": "1103"
+    },
+    {
+     "field": "value",
+     "value": "1150",
+     "unit": "SAT points",
+     "entity": "More than $200,000",
+     "metric": "median_sat_score",
+     "label": "1150"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -64,5 +122,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

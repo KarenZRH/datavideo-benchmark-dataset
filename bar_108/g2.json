@@ -1,0 +1,121 @@
+{
+ "clip_id": "bar_108",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_108",
+  "family": "bar",
+  "sub_type": "grouped",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "Pfizer/BioNTech | Months since last shot | value",
+    "Moderna | Months since last shot | value"
+   ],
+   "assertion": {
+    "greater": "Pfizer/BioNTech | Months since last shot | value",
+    "greater_value": 6.0,
+    "lesser": "Moderna | Months since last shot | value",
+    "lesser_value": 6.0,
+    "delta": 0.0,
+    "ratio": 1.0,
+    "expected_order": [
+     "Pfizer/BioNTech | Months since last shot | value",
+     "Moderna | Months since last shot | value"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "evidence_type": "mark_value",
+   "required_marks": [
+    "Johnson & Johnson | Months since last shot | value"
+   ],
+   "assertion": {
+    "marks": [
+     {
+      "mark": "Johnson & Johnson | Months since last shot | value",
+      "expected": 2.0
+     }
+    ],
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "evidence_type": "mark_value",
+   "required_marks": [
+    "Pfizer/BioNTech | two weeks until fully effective | value",
+    "Moderna | two weeks until fully effective | value",
+    "AstraZeneca | two weeks until fully effective | value",
+    "Johnson & Johnson | two weeks until fully effective | value"
+   ],
+   "assertion": {
+    "marks": [
+     {
+      "mark": "Pfizer/BioNTech | two weeks until fully effective | value",
+      "expected": 0.55
+     },
+     {
+      "mark": "Moderna | two weeks until fully effective | value",
+      "expected": 0.55
+     },
+     {
+      "mark": "AstraZeneca | two weeks until fully effective | value",
+      "expected": 0.55
+     },
+     {
+      "mark": "Johnson & Johnson | two weeks until fully effective | value",
+      "expected": 0.7
+     }
+    ],
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

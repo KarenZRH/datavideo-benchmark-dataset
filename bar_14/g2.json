@@ -1,0 +1,103 @@
+{
+ "clip_id": "bar_14",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_14",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal",
+  "time_behavior": "frame"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 8,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "state_sequence",
+  "required_states": [
+   "1960",
+   "2017"
+  ],
+  "required_marks_per_state": {
+   "1960": 4,
+   "2017": 4
+  },
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "evidence_type": "endpoint_change",
+   "required_marks": [
+    "Sub-Saharan Africa | 1960 | births_per_woman",
+    "Sub-Saharan Africa | 2017 | births_per_woman"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Sub-Saharan Africa | 1960 | births_per_woman",
+      "value": 6.6
+     },
+     {
+      "mark": "Sub-Saharan Africa | 2017 | births_per_woman",
+      "value": 4.7
+     }
+    ],
+    "direction": "decreasing",
+    "start_value": 6.6,
+    "end_value": 4.7,
+    "delta": -1.9,
+    "ratio": 0.712121,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Sub-Saharan Africa | 2017 | births_per_woman",
+    "East Asia | 2017 | births_per_woman",
+    "North America | 2017 | births_per_woman",
+    "European Union | 2017 | births_per_woman"
+   ],
+   "assertion": {
+    "greater": "Sub-Saharan Africa | 2017 | births_per_woman",
+    "greater_value": 4.7,
+    "lesser": "European Union | 2017 | births_per_woman",
+    "lesser_value": 1.6,
+    "delta": 3.1,
+    "ratio": 2.9375,
+    "expected_order": [
+     "Sub-Saharan Africa | 2017 | births_per_woman",
+     "East Asia | 2017 | births_per_woman",
+     "North America | 2017 | births_per_woman",
+     "European Union | 2017 | births_per_woman"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

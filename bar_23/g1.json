@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_23",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Present the 2016 presidential election results for all 50 states as vote-share distributions among Clinton, Trump, and other candidates.",
  "requirements": [
   {
@@ -35,7 +35,1209 @@
     "a state's three shares do not sum to 100%",
     "wrong candidate-to-segment mapping"
    ],
-   "evidence": "The chart shows 50 complete 100% stacked columns in alphabetical state order with the three candidate-share segments."
+   "evidence": "The chart shows 50 complete 100% stacked columns in alphabetical state order with the three candidate-share segments.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "34",
+     "unit": "%",
+     "entity": "Alabama",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "Alabama",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "62",
+     "unit": "%",
+     "entity": "Alabama",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "37",
+     "unit": "%",
+     "entity": "Alaska",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "12",
+     "unit": "%",
+     "entity": "Alaska",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "51",
+     "unit": "%",
+     "entity": "Alaska",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "45",
+     "unit": "%",
+     "entity": "Arizona",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Arizona",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "49",
+     "unit": "%",
+     "entity": "Arizona",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "34",
+     "unit": "%",
+     "entity": "Arkansas",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Arkansas",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "60",
+     "unit": "%",
+     "entity": "Arkansas",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "62",
+     "unit": "%",
+     "entity": "California",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "California",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "32",
+     "unit": "%",
+     "entity": "California",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "48",
+     "unit": "%",
+     "entity": "Colorado",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "9",
+     "unit": "%",
+     "entity": "Colorado",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "43",
+     "unit": "%",
+     "entity": "Colorado",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "54",
+     "unit": "%",
+     "entity": "Connecticut",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Connecticut",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "41",
+     "unit": "%",
+     "entity": "Connecticut",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "53",
+     "unit": "%",
+     "entity": "Delaware",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Delaware",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "42",
+     "unit": "%",
+     "entity": "Delaware",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "Florida",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "Florida",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "49",
+     "unit": "%",
+     "entity": "Florida",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "46",
+     "unit": "%",
+     "entity": "Georgia",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "3",
+     "unit": "%",
+     "entity": "Georgia",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "51",
+     "unit": "%",
+     "entity": "Georgia",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "62",
+     "unit": "%",
+     "entity": "Hawaii",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "8",
+     "unit": "%",
+     "entity": "Hawaii",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "30",
+     "unit": "%",
+     "entity": "Hawaii",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "27",
+     "unit": "%",
+     "entity": "Idaho",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "14",
+     "unit": "%",
+     "entity": "Idaho",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "59",
+     "unit": "%",
+     "entity": "Idaho",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "56",
+     "unit": "%",
+     "entity": "Illinois",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Illinois",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "39",
+     "unit": "%",
+     "entity": "Illinois",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "38",
+     "unit": "%",
+     "entity": "Indiana",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Indiana",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "57",
+     "unit": "%",
+     "entity": "Indiana",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "42",
+     "unit": "%",
+     "entity": "Iowa",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "7",
+     "unit": "%",
+     "entity": "Iowa",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "51",
+     "unit": "%",
+     "entity": "Iowa",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "36",
+     "unit": "%",
+     "entity": "Kansas",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "7",
+     "unit": "%",
+     "entity": "Kansas",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "57",
+     "unit": "%",
+     "entity": "Kansas",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "33",
+     "unit": "%",
+     "entity": "Kentucky",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "Kentucky",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "63",
+     "unit": "%",
+     "entity": "Kentucky",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "38",
+     "unit": "%",
+     "entity": "Louisiana",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "Louisiana",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "58",
+     "unit": "%",
+     "entity": "Louisiana",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "48",
+     "unit": "%",
+     "entity": "Maine",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "7",
+     "unit": "%",
+     "entity": "Maine",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "45",
+     "unit": "%",
+     "entity": "Maine",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "60",
+     "unit": "%",
+     "entity": "Maryland",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Maryland",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "34",
+     "unit": "%",
+     "entity": "Maryland",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "60",
+     "unit": "%",
+     "entity": "Massachusetts",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "7",
+     "unit": "%",
+     "entity": "Massachusetts",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "33",
+     "unit": "%",
+     "entity": "Massachusetts",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "Michigan",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Michigan",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "Michigan",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "Minnesota",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "8",
+     "unit": "%",
+     "entity": "Minnesota",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "45",
+     "unit": "%",
+     "entity": "Minnesota",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "40",
+     "unit": "%",
+     "entity": "Mississippi",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "%",
+     "entity": "Mississippi",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "58",
+     "unit": "%",
+     "entity": "Mississippi",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "38",
+     "unit": "%",
+     "entity": "Missouri",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Missouri",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "57",
+     "unit": "%",
+     "entity": "Missouri",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "36",
+     "unit": "%",
+     "entity": "Montana",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "8",
+     "unit": "%",
+     "entity": "Montana",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "56",
+     "unit": "%",
+     "entity": "Montana",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "34",
+     "unit": "%",
+     "entity": "Nebraska",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "7",
+     "unit": "%",
+     "entity": "Nebraska",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "59",
+     "unit": "%",
+     "entity": "Nebraska",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "48",
+     "unit": "%",
+     "entity": "Nevada",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Nevada",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "46",
+     "unit": "%",
+     "entity": "Nevada",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "New Hampshire",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "New Hampshire",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "New Hampshire",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "55",
+     "unit": "%",
+     "entity": "New Jersey",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "New Jersey",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "41",
+     "unit": "%",
+     "entity": "New Jersey",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "48",
+     "unit": "%",
+     "entity": "New Mexico",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "12",
+     "unit": "%",
+     "entity": "New Mexico",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "40",
+     "unit": "%",
+     "entity": "New Mexico",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "59",
+     "unit": "%",
+     "entity": "New York",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "New York",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "37",
+     "unit": "%",
+     "entity": "New York",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "46",
+     "unit": "%",
+     "entity": "North Carolina",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "North Carolina",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "50",
+     "unit": "%",
+     "entity": "North Carolina",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "27",
+     "unit": "%",
+     "entity": "North Dakota",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "10",
+     "unit": "%",
+     "entity": "North Dakota",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "63",
+     "unit": "%",
+     "entity": "North Dakota",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "43",
+     "unit": "%",
+     "entity": "Ohio",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Ohio",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "52",
+     "unit": "%",
+     "entity": "Ohio",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "29",
+     "unit": "%",
+     "entity": "Oklahoma",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Oklahoma",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "65",
+     "unit": "%",
+     "entity": "Oklahoma",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "50",
+     "unit": "%",
+     "entity": "Oregon",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "11",
+     "unit": "%",
+     "entity": "Oregon",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "39",
+     "unit": "%",
+     "entity": "Oregon",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "Pennsylvania",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Pennsylvania",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "48",
+     "unit": "%",
+     "entity": "Pennsylvania",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "55",
+     "unit": "%",
+     "entity": "Rhode Island",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Rhode Island",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "39",
+     "unit": "%",
+     "entity": "Rhode Island",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "41",
+     "unit": "%",
+     "entity": "South Carolina",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "South Carolina",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "55",
+     "unit": "%",
+     "entity": "South Carolina",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "32",
+     "unit": "%",
+     "entity": "South Dakota",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "South Dakota",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "62",
+     "unit": "%",
+     "entity": "South Dakota",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "35",
+     "unit": "%",
+     "entity": "Tennessee",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "Tennessee",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "61",
+     "unit": "%",
+     "entity": "Tennessee",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "43",
+     "unit": "%",
+     "entity": "Texas",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "Texas",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "52",
+     "unit": "%",
+     "entity": "Texas",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "28",
+     "unit": "%",
+     "entity": "Utah",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "26",
+     "unit": "%",
+     "entity": "Utah",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "46",
+     "unit": "%",
+     "entity": "Utah",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "61",
+     "unit": "%",
+     "entity": "Vermont",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "9",
+     "unit": "%",
+     "entity": "Vermont",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "30",
+     "unit": "%",
+     "entity": "Vermont",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "50",
+     "unit": "%",
+     "entity": "Virginia",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Virginia",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "44",
+     "unit": "%",
+     "entity": "Virginia",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "54",
+     "unit": "%",
+     "entity": "Washington",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "8",
+     "unit": "%",
+     "entity": "Washington",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "38",
+     "unit": "%",
+     "entity": "Washington",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "26",
+     "unit": "%",
+     "entity": "West Virginia",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "West Virginia",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "69",
+     "unit": "%",
+     "entity": "West Virginia",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "Wisconsin",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "Wisconsin",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "47",
+     "unit": "%",
+     "entity": "Wisconsin",
+     "series": "Trump",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "22",
+     "unit": "%",
+     "entity": "Wyoming",
+     "series": "Clinton",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "10",
+     "unit": "%",
+     "entity": "Wyoming",
+     "series": "Other",
+     "metric": "vote_share"
+    },
+    {
+     "field": "value",
+     "value": "68",
+     "unit": "%",
+     "entity": "Wyoming",
+     "series": "Trump",
+     "metric": "vote_share"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -61,5 +1263,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

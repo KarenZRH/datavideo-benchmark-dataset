@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_11",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that cycling's fatality risk per distance is about as low as walking's and far below motorcycling's.",
  "requirements": [
   {
@@ -37,7 +37,25 @@
     "missing walkers",
     "wrong relative values"
    ],
-   "evidence": "The cyclist and walker bars are close in length."
+   "evidence": "The cyclist and walker bars are close in length.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "0.40",
+     "unit": "relative",
+     "entity": "Walkers",
+     "metric": "relative_fatality_rate"
+    },
+    {
+     "field": "value",
+     "value": "0.33",
+     "unit": "relative",
+     "entity": "Cyclists",
+     "metric": "relative_fatality_rate"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -53,7 +71,25 @@
     "saying cyclists are higher",
     "wrong relative values"
    ],
-   "evidence": "The motorcyclist bar is about three times the cyclist bar."
+   "evidence": "The motorcyclist bar is about three times the cyclist bar.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "1.00",
+     "unit": "relative",
+     "entity": "Motorcyclists",
+     "metric": "relative_fatality_rate"
+    },
+    {
+     "field": "value",
+     "value": "0.33",
+     "unit": "relative",
+     "entity": "Cyclists",
+     "metric": "relative_fatality_rate"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -78,5 +114,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

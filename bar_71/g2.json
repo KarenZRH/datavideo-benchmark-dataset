@@ -1,0 +1,86 @@
+{
+ "clip_id": "bar_71",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_71",
+  "family": "bar",
+  "sub_type": "stacked",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 16,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "2015 | Online Store | value",
+    "2015 | 3rd Party Retail | value",
+    "2015 | Subscriptions | value",
+    "2015 | AWS | value",
+    "2016 | Online Store | value",
+    "2016 | 3rd Party Retail | value",
+    "2016 | Subscriptions | value",
+    "2016 | AWS | value",
+    "2017 | Online Store | value",
+    "2017 | 3rd Party Retail | value",
+    "2017 | Subscriptions | value",
+    "2017 | AWS | value",
+    "2018 | Online Store | value",
+    "2018 | 3rd Party Retail | value",
+    "2018 | Subscriptions | value",
+    "2018 | AWS | value"
+   ],
+   "assertion": {
+    "greater": "2015 | Online Store | value",
+    "greater_value": 0.65,
+    "lesser": "2016 | Subscriptions | value",
+    "lesser_value": 0.03,
+    "delta": 0.62,
+    "ratio": 21.666667,
+    "expected_order": [
+     "2015 | Online Store | value",
+     "2018 | Online Store | value",
+     "2017 | Online Store | value",
+     "2016 | Online Store | value",
+     "2016 | 3rd Party Retail | value",
+     "2017 | 3rd Party Retail | value",
+     "2015 | 3rd Party Retail | value",
+     "2018 | 3rd Party Retail | value",
+     "2016 | AWS | value",
+     "2015 | AWS | value",
+     "2018 | AWS | value",
+     "2017 | AWS | value",
+     "2017 | Subscriptions | value",
+     "2015 | Subscriptions | value",
+     "2018 | Subscriptions | value",
+     "2016 | Subscriptions | value"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "clip_id": "bar_62",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_62",
+  "family": "bar",
+  "sub_type": "grouped",
+  "orientation": "horizontal",
+  "panel_count": 3
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar segments",
+  "required_data_rows": 15,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "DAIRY | emissions | environmental_impact_relative_to_dairy",
+    "RICE | emissions | environmental_impact_relative_to_dairy",
+    "SOY | emissions | environmental_impact_relative_to_dairy",
+    "OAT | emissions | environmental_impact_relative_to_dairy",
+    "ALMOND | emissions | environmental_impact_relative_to_dairy",
+    "DAIRY | land_use | environmental_impact_relative_to_dairy",
+    "RICE | land_use | environmental_impact_relative_to_dairy",
+    "SOY | land_use | environmental_impact_relative_to_dairy",
+    "OAT | land_use | environmental_impact_relative_to_dairy",
+    "ALMOND | land_use | environmental_impact_relative_to_dairy",
+    "DAIRY | water_use | environmental_impact_relative_to_dairy",
+    "RICE | water_use | environmental_impact_relative_to_dairy",
+    "SOY | water_use | environmental_impact_relative_to_dairy",
+    "OAT | water_use | environmental_impact_relative_to_dairy",
+    "ALMOND | water_use | environmental_impact_relative_to_dairy"
+   ],
+   "assertion": {
+    "greater": "DAIRY | emissions | environmental_impact_relative_to_dairy",
+    "greater_value": 1.0,
+    "lesser": "SOY | land_use | environmental_impact_relative_to_dairy",
+    "lesser_value": 0.05,
+    "delta": 0.95,
+    "ratio": 20.0,
+    "expected_order": [
+     "DAIRY | emissions | environmental_impact_relative_to_dairy",
+     "DAIRY | land_use | environmental_impact_relative_to_dairy",
+     "DAIRY | water_use | environmental_impact_relative_to_dairy",
+     "ALMOND | water_use | environmental_impact_relative_to_dairy",
+     "RICE | water_use | environmental_impact_relative_to_dairy",
+     "RICE | emissions | environmental_impact_relative_to_dairy",
+     "SOY | emissions | environmental_impact_relative_to_dairy",
+     "OAT | land_use | environmental_impact_relative_to_dairy",
+     "ALMOND | land_use | environmental_impact_relative_to_dairy",
+     "OAT | emissions | environmental_impact_relative_to_dairy",
+     "ALMOND | emissions | environmental_impact_relative_to_dairy",
+     "SOY | water_use | environmental_impact_relative_to_dairy",
+     "OAT | water_use | environmental_impact_relative_to_dairy",
+     "RICE | land_use | environmental_impact_relative_to_dairy",
+     "SOY | land_use | environmental_impact_relative_to_dairy"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

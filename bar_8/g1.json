@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_8",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that annual private school fees take about half of an average earner's annual income, making private schooling hard to afford.",
  "requirements": [
   {
@@ -38,7 +38,27 @@
     "wrong endpoint values",
     "the income bar is the smaller one"
    ],
-   "evidence": "Two bars: School fees about half the length of Average income."
+   "evidence": "Two bars: School fees about half the length of Average income.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "16000",
+     "unit": "pounds",
+     "entity": "School fees",
+     "metric": "annual_amount",
+     "label": "£16,000"
+    },
+    {
+     "field": "value",
+     "value": "28400",
+     "unit": "pounds",
+     "entity": "Average income",
+     "metric": "annual_amount",
+     "label": "£28,400"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -62,5 +82,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

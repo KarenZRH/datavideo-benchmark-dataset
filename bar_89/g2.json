@@ -1,0 +1,366 @@
+{
+ "clip_id": "bar_89",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_89",
+  "family": "bar",
+  "sub_type": "population_pyramid",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 40,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "evidence_type": "complete_composition",
+   "required_marks": [
+    "95-99 | Male | ethiopia",
+    "95-99 | Female | ethiopia",
+    "90-95 | Male | ethiopia",
+    "90-95 | Female | ethiopia",
+    "85-89 | Male | ethiopia",
+    "85-89 | Female | ethiopia",
+    "80-84 | Male | ethiopia",
+    "80-84 | Female | ethiopia",
+    "75-79 | Male | ethiopia",
+    "75-79 | Female | ethiopia",
+    "70-74 | Male | ethiopia",
+    "70-74 | Female | ethiopia",
+    "65-69 | Male | ethiopia",
+    "65-69 | Female | ethiopia",
+    "60-64 | Male | ethiopia",
+    "60-64 | Female | ethiopia",
+    "55-59 | Male | ethiopia",
+    "55-59 | Female | ethiopia",
+    "50-54 | Male | ethiopia",
+    "50-54 | Female | ethiopia",
+    "45-49 | Male | ethiopia",
+    "45-49 | Female | ethiopia",
+    "40-44 | Male | ethiopia",
+    "40-44 | Female | ethiopia",
+    "35-39 | Male | ethiopia",
+    "35-39 | Female | ethiopia",
+    "30-34 | Male | ethiopia",
+    "30-34 | Female | ethiopia",
+    "25-29 | Male | ethiopia",
+    "25-29 | Female | ethiopia",
+    "20-24 | Male | ethiopia",
+    "20-24 | Female | ethiopia",
+    "15-19 | Male | ethiopia",
+    "15-19 | Female | ethiopia",
+    "10-14 | Male | ethiopia",
+    "10-14 | Female | ethiopia",
+    "5-9 | Male | ethiopia",
+    "5-9 | Female | ethiopia",
+    "0-4 | Male | ethiopia",
+    "0-4 | Female | ethiopia"
+   ],
+   "assertion": {
+    "compositions": [
+     {
+      "entity": "95-99",
+      "segments": [
+       {
+        "mark": "95-99 | Male | ethiopia",
+        "value": 0.0083
+       },
+       {
+        "mark": "95-99 | Female | ethiopia",
+        "value": 0.008715
+       }
+      ],
+      "total": 0.017015
+     },
+     {
+      "entity": "90-95",
+      "segments": [
+       {
+        "mark": "90-95 | Male | ethiopia",
+        "value": 0.0248
+       },
+       {
+        "mark": "90-95 | Female | ethiopia",
+        "value": 0.028245
+       }
+      ],
+      "total": 0.053045
+     },
+     {
+      "entity": "85-89",
+      "segments": [
+       {
+        "mark": "85-89 | Male | ethiopia",
+        "value": 0.0455
+       },
+       {
+        "mark": "85-89 | Female | ethiopia",
+        "value": 0.049875
+       }
+      ],
+      "total": 0.095375
+     },
+     {
+      "entity": "80-84",
+      "segments": [
+       {
+        "mark": "80-84 | Male | ethiopia",
+        "value": 0.0703
+       },
+       {
+        "mark": "80-84 | Female | ethiopia",
+        "value": 0.073815
+       }
+      ],
+      "total": 0.144115
+     },
+     {
+      "entity": "75-79",
+      "segments": [
+       {
+        "mark": "75-79 | Male | ethiopia",
+        "value": 0.0992
+       },
+       {
+        "mark": "75-79 | Female | ethiopia",
+        "value": 0.10416
+       }
+      ],
+      "total": 0.20336
+     },
+     {
+      "entity": "70-74",
+      "segments": [
+       {
+        "mark": "70-74 | Male | ethiopia",
+        "value": 0.1323
+       },
+       {
+        "mark": "70-74 | Female | ethiopia",
+        "value": 0.138915
+       }
+      ],
+      "total": 0.271215
+     },
+     {
+      "entity": "65-69",
+      "segments": [
+       {
+        "mark": "65-69 | Male | ethiopia",
+        "value": 0.1695
+       },
+       {
+        "mark": "65-69 | Female | ethiopia",
+        "value": 0.177975
+       }
+      ],
+      "total": 0.347475
+     },
+     {
+      "entity": "60-64",
+      "segments": [
+       {
+        "mark": "60-64 | Male | ethiopia",
+        "value": 0.2109
+       },
+       {
+        "mark": "60-64 | Female | ethiopia",
+        "value": 0.221445
+       }
+      ],
+      "total": 0.432345
+     },
+     {
+      "entity": "55-59",
+      "segments": [
+       {
+        "mark": "55-59 | Male | ethiopia",
+        "value": 0.2522
+       },
+       {
+        "mark": "55-59 | Female | ethiopia",
+        "value": 0.267015
+       }
+      ],
+      "total": 0.519215
+     },
+     {
+      "entity": "50-54",
+      "segments": [
+       {
+        "mark": "50-54 | Male | ethiopia",
+        "value": 0.2977
+       },
+       {
+        "mark": "50-54 | Female | ethiopia",
+        "value": 0.31689
+       }
+      ],
+      "total": 0.61459
+     },
+     {
+      "entity": "45-49",
+      "segments": [
+       {
+        "mark": "45-49 | Male | ethiopia",
+        "value": 0.3473
+       },
+       {
+        "mark": "45-49 | Female | ethiopia",
+        "value": 0.36897
+       }
+      ],
+      "total": 0.71627
+     },
+     {
+      "entity": "40-44",
+      "segments": [
+       {
+        "mark": "40-44 | Male | ethiopia",
+        "value": 0.3969
+       },
+       {
+        "mark": "40-44 | Female | ethiopia",
+        "value": 0.421155
+       }
+      ],
+      "total": 0.818055
+     },
+     {
+      "entity": "35-39",
+      "segments": [
+       {
+        "mark": "35-39 | Male | ethiopia",
+        "value": 0.4643
+       },
+       {
+        "mark": "35-39 | Female | ethiopia",
+        "value": 0.49182
+       }
+      ],
+      "total": 0.95612
+     },
+     {
+      "entity": "30-34",
+      "segments": [
+       {
+        "mark": "30-34 | Male | ethiopia",
+        "value": 0.5351
+       },
+       {
+        "mark": "30-34 | Female | ethiopia",
+        "value": 0.566265
+       }
+      ],
+      "total": 1.101365
+     },
+     {
+      "entity": "25-29",
+      "segments": [
+       {
+        "mark": "25-29 | Male | ethiopia",
+        "value": 0.6119
+       },
+       {
+        "mark": "25-29 | Female | ethiopia",
+        "value": 0.646905
+       }
+      ],
+      "total": 1.258805
+     },
+     {
+      "entity": "20-24",
+      "segments": [
+       {
+        "mark": "20-24 | Male | ethiopia",
+        "value": 0.6946
+       },
+       {
+        "mark": "20-24 | Female | ethiopia",
+        "value": 0.73374
+       }
+      ],
+      "total": 1.42834
+     },
+     {
+      "entity": "15-19",
+      "segments": [
+       {
+        "mark": "15-19 | Male | ethiopia",
+        "value": 0.7832
+       },
+       {
+        "mark": "15-19 | Female | ethiopia",
+        "value": 0.82677
+       }
+      ],
+      "total": 1.60997
+     },
+     {
+      "entity": "10-14",
+      "segments": [
+       {
+        "mark": "10-14 | Male | ethiopia",
+        "value": 0.8777
+       },
+       {
+        "mark": "10-14 | Female | ethiopia",
+        "value": 0.925995
+       }
+      ],
+      "total": 1.803695
+     },
+     {
+      "entity": "5-9",
+      "segments": [
+       {
+        "mark": "5-9 | Male | ethiopia",
+        "value": 0.9545
+       },
+       {
+        "mark": "5-9 | Female | ethiopia",
+        "value": 1.00663
+       }
+      ],
+      "total": 1.96113
+     },
+     {
+      "entity": "0-4",
+      "segments": [
+       {
+        "mark": "0-4 | Male | ethiopia",
+        "value": 0.9959
+       },
+       {
+        "mark": "0-4 | Female | ethiopia",
+        "value": 1.05
+       }
+      ],
+      "total": 2.0459
+     }
+    ],
+    "expected_total": null,
+    "tolerance": 0.05
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

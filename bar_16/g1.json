@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_16",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the human population quadrupled over the century before 2019.",
  "requirements": [
   {
@@ -36,7 +36,27 @@
     "wrong endpoint values",
     "a multiplier other than about 4"
    ],
-   "evidence": "The single bar grows from about 1.9 to 7.7 on the 1-8 axis."
+   "evidence": "The single bar grows from about 1.9 to 7.7 on the 1-8 axis.",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "1.9",
+     "unit": "billion",
+     "year": "1919",
+     "metric": "population",
+     "label": "about 1.9"
+    },
+    {
+     "field": "value",
+     "value": "7.7",
+     "unit": "billion",
+     "year": "2019",
+     "metric": "population",
+     "label": "7.7"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -66,5 +86,8 @@
   },
   "check_full_timeline": true,
   "final_frame_only_sufficient": false
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

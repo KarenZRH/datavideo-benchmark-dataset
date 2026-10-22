@@ -1,0 +1,59 @@
+{
+ "clip_id": "bar_15",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_15",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "evidence_type": "value_or_readable_label",
+   "required_marks": [
+    "People flagged for far-right activity | 2016-17 | baseline",
+    "People flagged for far-right activity | 2017-18 | relative_change"
+   ],
+   "assertion": {
+    "marks": [
+     "People flagged for far-right activity | 2016-17 | baseline",
+     "People flagged for far-right activity | 2017-18 | relative_change"
+    ],
+    "expected": [
+     {
+      "mark": "People flagged for far-right activity | 2016-17 | baseline",
+      "label": "baseline",
+      "value": ""
+     },
+     {
+      "mark": "People flagged for far-right activity | 2017-18 | relative_change",
+      "label": "more than a third",
+      "value": "33.3"
+     }
+    ]
+   },
+   "accepted_routes": [
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

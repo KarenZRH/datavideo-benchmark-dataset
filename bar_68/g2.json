@@ -1,0 +1,82 @@
+{
+ "clip_id": "bar_68",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_68",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 6,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "2013 | annual_piracy_cost",
+    "2014 | annual_piracy_cost",
+    "2015 | annual_piracy_cost",
+    "2016 | annual_piracy_cost",
+    "2017 | annual_piracy_cost",
+    "2018 | annual_piracy_cost"
+   ],
+   "assertion": {
+    "greater": "2013 | annual_piracy_cost",
+    "greater_value": 8.3,
+    "lesser": "2018 | annual_piracy_cost",
+    "lesser_value": 4.9,
+    "delta": 3.4,
+    "ratio": 1.693878,
+    "expected_order": [
+     "2013 | annual_piracy_cost",
+     "2014 | annual_piracy_cost",
+     "2015 | annual_piracy_cost",
+     "2016 | annual_piracy_cost",
+     "2017 | annual_piracy_cost",
+     "2018 | annual_piracy_cost"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "evidence_type": "not_required",
+   "required_marks": [],
+   "assertion": {
+    "required": false,
+    "reason": "narrative-only unit"
+   },
+   "accepted_routes": [
+    "narration"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

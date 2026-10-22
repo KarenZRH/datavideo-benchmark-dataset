@@ -1,0 +1,72 @@
+{
+ "clip_id": "bar_59",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_59",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar segments",
+  "required_data_rows": 9,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Detroit | black_population_loss_2000_2010",
+    "Chicago | black_population_loss_2000_2010",
+    "New Orleans | black_population_loss_2000_2010",
+    "New York | black_population_loss_2000_2010",
+    "Los Angeles | black_population_loss_2000_2010",
+    "Washington, DC | black_population_loss_2000_2010",
+    "Oakland | black_population_loss_2000_2010",
+    "Cleveland | black_population_loss_2000_2010",
+    "Atlanta | black_population_loss_2000_2010"
+   ],
+   "assertion": {
+    "greater": "Detroit | black_population_loss_2000_2010",
+    "greater_value": 1.0,
+    "lesser": "Atlanta | black_population_loss_2000_2010",
+    "lesser_value": 0.154,
+    "delta": 0.846,
+    "ratio": 6.493506,
+    "expected_order": [
+     "Detroit | black_population_loss_2000_2010",
+     "Chicago | black_population_loss_2000_2010",
+     "New Orleans | black_population_loss_2000_2010",
+     "New York | black_population_loss_2000_2010",
+     "Los Angeles | black_population_loss_2000_2010",
+     "Washington, DC | black_population_loss_2000_2010",
+     "Oakland | black_population_loss_2000_2010",
+     "Cleveland | black_population_loss_2000_2010",
+     "Atlanta | black_population_loss_2000_2010"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

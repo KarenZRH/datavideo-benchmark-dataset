@@ -1,0 +1,66 @@
+{
+ "clip_id": "bar_141",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_141",
+  "family": "bar",
+  "sub_type": "grouped",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar rows",
+  "required_data_rows": 6,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "All adults | Is generally fair | perceived_economic_fairness",
+    "All adults | Unfairly favors powerful interests | perceived_economic_fairness",
+    "Republican/Lean Rep | Is generally fair | perceived_economic_fairness",
+    "Republican/Lean Rep | Unfairly favors powerful interests | perceived_economic_fairness",
+    "Democrat/Lean Dem | Is generally fair | perceived_economic_fairness",
+    "Democrat/Lean Dem | Unfairly favors powerful interests | perceived_economic_fairness"
+   ],
+   "assertion": {
+    "greater": "Democrat/Lean Dem | Unfairly favors powerful interests | perceived_economic_fairness",
+    "greater_value": 86.0,
+    "lesser": "Democrat/Lean Dem | Is generally fair | perceived_economic_fairness",
+    "lesser_value": 12.0,
+    "delta": 74.0,
+    "ratio": 7.166667,
+    "expected_order": [
+     "Democrat/Lean Dem | Unfairly favors powerful interests | perceived_economic_fairness",
+     "All adults | Unfairly favors powerful interests | perceived_economic_fairness",
+     "Republican/Lean Rep | Is generally fair | perceived_economic_fairness",
+     "Republican/Lean Rep | Unfairly favors powerful interests | perceived_economic_fairness",
+     "All adults | Is generally fair | perceived_economic_fairness",
+     "Democrat/Lean Dem | Is generally fair | perceived_economic_fairness"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

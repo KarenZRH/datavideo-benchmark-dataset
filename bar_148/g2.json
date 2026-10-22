@@ -1,0 +1,78 @@
+{
+ "clip_id": "bar_148",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_148",
+  "family": "bar",
+  "sub_type": "grouped",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 12,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Bottom fifth | Labor income | income_share",
+    "Second fifth | Labor income | income_share",
+    "Third fifth | Labor income | income_share",
+    "Fourth fifth | Labor income | income_share",
+    "Top fifth | Labor income | income_share",
+    "Top 1% | Labor income | income_share",
+    "Bottom fifth | Investment income | income_share",
+    "Second fifth | Investment income | income_share",
+    "Third fifth | Investment income | income_share",
+    "Fourth fifth | Investment income | income_share",
+    "Top fifth | Investment income | income_share",
+    "Top 1% | Investment income | income_share"
+   ],
+   "assertion": {
+    "greater": "Second fifth | Labor income | income_share",
+    "greater_value": 85.0,
+    "lesser": "Second fifth | Investment income | income_share",
+    "lesser_value": 15.0,
+    "delta": 70.0,
+    "ratio": 5.666667,
+    "expected_order": [
+     "Second fifth | Labor income | income_share",
+     "Bottom fifth | Labor income | income_share",
+     "Third fifth | Labor income | income_share",
+     "Fourth fifth | Labor income | income_share",
+     "Top 1% | Investment income | income_share",
+     "Top fifth | Labor income | income_share",
+     "Top fifth | Investment income | income_share",
+     "Top 1% | Labor income | income_share",
+     "Fourth fifth | Investment income | income_share",
+     "Bottom fifth | Investment income | income_share",
+     "Third fifth | Investment income | income_share",
+     "Second fifth | Investment income | income_share"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

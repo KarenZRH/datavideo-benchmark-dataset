@@ -1,0 +1,68 @@
+{
+ "clip_id": "bar_29",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_29",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 7,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Australia | monthly_price",
+    "France | monthly_price",
+    "Germany | monthly_price",
+    "Norway | monthly_price",
+    "United Kingdom | monthly_price",
+    "Canada | monthly_price",
+    "United States | monthly_price"
+   ],
+   "assertion": {
+    "greater": "United States | monthly_price",
+    "greater_value": 318.863,
+    "lesser": "Norway | monthly_price",
+    "lesser_value": 36.812,
+    "delta": 282.051,
+    "ratio": 8.661931,
+    "expected_order": [
+     "United States | monthly_price",
+     "Canada | monthly_price",
+     "United Kingdom | monthly_price",
+     "Germany | monthly_price",
+     "France | monthly_price",
+     "Australia | monthly_price",
+     "Norway | monthly_price"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

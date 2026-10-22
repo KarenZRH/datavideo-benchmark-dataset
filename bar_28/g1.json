@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_28",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Explain how Warren's proposed wealth tax rises across wealth thresholds while affecting only the wealthiest Americans and raising substantial federal revenue.",
  "requirements": [
   {
@@ -65,7 +65,45 @@
     "showing 3% below $60 million or 2% above $1 billion",
     "treating 2% and 3% as dollar amounts"
    ],
-   "evidence": "A single vertical wealth bar rises from $60 million to $1.9 billion; dashed threshold lines link $60 million to 2% and $1 billion to 3%."
+   "evidence": "A single vertical wealth bar rises from $60 million to $1.9 billion; dashed threshold lines link $60 million to 2% and $1 billion to 3%.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "0.06",
+     "unit": "billion USD",
+     "entity": "Illustrative wealth",
+     "x": "Initial state",
+     "metric": "wealth_level",
+     "label": "$60 million"
+    },
+    {
+     "field": "value",
+     "value": "1.9",
+     "unit": "billion USD",
+     "entity": "Illustrative wealth",
+     "x": "Final state",
+     "metric": "wealth_level",
+     "label": "$1.9 billion"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "%",
+     "entity": "Tax rate",
+     "x": "$60 million threshold",
+     "metric": "wealth_tax_rate",
+     "label": "2%"
+    },
+    {
+     "field": "value",
+     "value": "3",
+     "unit": "%",
+     "entity": "Tax rate",
+     "x": "$1 billion threshold",
+     "metric": "wealth_tax_rate",
+     "label": "3%"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -84,7 +122,17 @@
     "treating 0.05% as 5%",
     "claiming the chart visually proves a population share not encoded in its marks"
    ],
-   "evidence": "This fact comes from the narration and is recorded as a table annotation; it is not directly encoded in the source chart."
+   "evidence": "This fact comes from the narration and is recorded as a table annotation; it is not directly encoded in the source chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "0.05",
+     "unit": "%",
+     "entity": "Top 0.05% of Americans",
+     "metric": "population_share",
+     "label": "0.05%"
+    }
+   ]
   },
   {
    "id": "U3",
@@ -104,7 +152,17 @@
     "claiming the chart directly displays $200 billion",
     "treating $200 billion as an annual tax rate"
    ],
-   "evidence": "This revenue figure comes from the narration and is recorded as a table annotation; it is not directly encoded in the source chart."
+   "evidence": "This revenue figure comes from the narration and is recorded as a table annotation; it is not directly encoded in the source chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "200",
+     "unit": "billion USD",
+     "entity": "Federal revenue",
+     "metric": "potential_revenue",
+     "label": "$200 billion"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -151,5 +209,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

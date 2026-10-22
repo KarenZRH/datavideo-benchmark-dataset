@@ -1,0 +1,114 @@
+{
+ "clip_id": "bar_28",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_28",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical",
+  "time_behavior": "frame"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "state_sequence",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "required_states": [
+   "Initial state",
+   "Final state"
+  ],
+  "required_marks_per_state": {
+   "Initial state": 1,
+   "Final state": 1
+  },
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "threshold_or_crossing",
+   "must_be_visualized": true,
+   "evidence_type": "threshold_marks",
+   "required_marks": [
+    "Illustrative wealth | Initial state | wealth_level",
+    "Illustrative wealth | Final state | wealth_level",
+    "Tax rate | $60 million threshold | wealth_tax_rate",
+    "Tax rate | $1 billion threshold | wealth_tax_rate"
+   ],
+   "assertion": {
+    "wealth_levels": [
+     {
+      "label": "$60 million",
+      "value": 0.06
+     },
+     {
+      "label": "$1.9 billion",
+      "value": 1.9
+     }
+    ],
+    "tax_rates": [
+     {
+      "label": "2%",
+      "value": 2.0
+     },
+     {
+      "label": "3%",
+      "value": 3.0
+     }
+    ],
+    "expected_threshold_rates": {
+     "$60 million": 2,
+     "$1 billion": 3
+    },
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "evidence_type": "not_required",
+   "required_marks": [
+    "Top 0.05% of Americans | population_share"
+   ],
+   "assertion": {
+    "required": false,
+    "reason": "narrative-only unit"
+   },
+   "accepted_routes": [
+    "narration"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "narrative_claim",
+   "must_be_visualized": false,
+   "evidence_type": "not_required",
+   "required_marks": [
+    "Federal revenue | potential_revenue"
+   ],
+   "assertion": {
+    "required": false,
+    "reason": "narrative-only unit"
+   },
+   "accepted_routes": [
+    "narration"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

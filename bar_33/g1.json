@@ -1,15 +1,28 @@
 {
  "clip_id": "bar_33",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the United States has the highest per-capita retail prescription drug spending among the ten compared countries.",
  "requirements": [
   {
    "id": "R1",
    "question": "Which compared country has the highest per-capita retail prescription drug spending?",
    "relation": "single",
-   "unit_ids": ["U1"],
+   "unit_ids": [
+    "U1"
+   ],
    "scope": {
-    "entities": ["Sweden", "Norway", "Netherlands", "Australia", "United Kingdom", "France", "Canada", "Germany", "Switzerland", "United States"],
+    "entities": [
+     "Sweden",
+     "Norway",
+     "Netherlands",
+     "Australia",
+     "United Kingdom",
+     "France",
+     "Canada",
+     "Germany",
+     "Switzerland",
+     "United States"
+    ],
     "measure": "retail prescription drug spending per capita"
    }
   }
@@ -32,11 +45,85 @@
     "omitting the United States or a compared country",
     "describing the U.S. as below another country"
    ],
-   "evidence": "Ten country bars share one per-capita spending scale, with the U.S. bar visibly tallest."
+   "evidence": "Ten country bars share one per-capita spending scale, with the U.S. bar visibly tallest.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "347.938",
+     "unit": "USD per capita",
+     "entity": "Sweden",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "396.907",
+     "unit": "USD per capita",
+     "entity": "Norway",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "417.526",
+     "unit": "USD per capita",
+     "entity": "Netherlands",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "427.835",
+     "unit": "USD per capita",
+     "entity": "Australia",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "497.423",
+     "unit": "USD per capita",
+     "entity": "United Kingdom",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "546.154",
+     "unit": "USD per capita",
+     "entity": "France",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "669.231",
+     "unit": "USD per capita",
+     "entity": "Canada",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "687.179",
+     "unit": "USD per capita",
+     "entity": "Germany",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "776.923",
+     "unit": "USD per capita",
+     "entity": "Switzerland",
+     "metric": "retail_prescription_spending_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "1012.85",
+     "unit": "USD per capita",
+     "entity": "United States",
+     "metric": "retail_prescription_spending_per_capita"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
- "unit_weights": {"U1": 1.0},
+ "unit_weights": {
+  "U1": 1.0
+ },
  "optional_valid": [
   "The narration says 'anyone else in the world', but the chart supplies evidence for only the ten compared countries."
  ],
@@ -54,5 +141,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

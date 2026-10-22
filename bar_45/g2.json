@@ -1,0 +1,132 @@
+{
+ "clip_id": "bar_45",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_45",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar bars or stack segments; annotation rows excluded",
+  "required_data_rows": 11,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "Richest 10% | income_tax_rate",
+    "400 Richest | income_tax_rate"
+   ],
+   "assertion": {
+    "greater": "Richest 10% | income_tax_rate",
+    "greater_value": 18.0,
+    "lesser": "400 Richest | income_tax_rate",
+    "lesser_value": 10.0,
+    "delta": 8.0,
+    "ratio": 1.8,
+    "expected_order": [
+     "Richest 10% | income_tax_rate",
+     "400 Richest | income_tax_rate"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "evidence_type": "monotonic_order",
+   "required_marks": [
+    "Poorest 10% | income_tax_rate",
+    "Second 10% | income_tax_rate",
+    "Third 10% | income_tax_rate",
+    "Fourth 10% | income_tax_rate",
+    "Fifth 10% | income_tax_rate",
+    "Sixth 10% | income_tax_rate",
+    "Seventh 10% | income_tax_rate",
+    "Eighth 10% | income_tax_rate",
+    "Ninth 10% | income_tax_rate",
+    "Richest 10% | income_tax_rate"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Poorest 10% | income_tax_rate",
+      "value": 1.0
+     },
+     {
+      "mark": "Second 10% | income_tax_rate",
+      "value": 1.0
+     },
+     {
+      "mark": "Third 10% | income_tax_rate",
+      "value": 3.0
+     },
+     {
+      "mark": "Fourth 10% | income_tax_rate",
+      "value": 4.0
+     },
+     {
+      "mark": "Fifth 10% | income_tax_rate",
+      "value": 6.0
+     },
+     {
+      "mark": "Sixth 10% | income_tax_rate",
+      "value": 7.0
+     },
+     {
+      "mark": "Seventh 10% | income_tax_rate",
+      "value": 8.0
+     },
+     {
+      "mark": "Eighth 10% | income_tax_rate",
+      "value": 10.0
+     },
+     {
+      "mark": "Ninth 10% | income_tax_rate",
+      "value": 12.0
+     },
+     {
+      "mark": "Richest 10% | income_tax_rate",
+      "value": 18.0
+     }
+    ],
+    "direction": "increasing",
+    "start_value": 1.0,
+    "end_value": 18.0,
+    "delta": 17.0,
+    "ratio": 18.0,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

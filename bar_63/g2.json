@@ -1,0 +1,58 @@
+{
+ "clip_id": "bar_63",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_63",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar segments",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "DISPENSARY | estimated_sales_volume",
+    "MEDICAL | estimated_sales_volume"
+   ],
+   "assertion": {
+    "greater": "MEDICAL | estimated_sales_volume",
+    "greater_value": 55.0,
+    "lesser": "DISPENSARY | estimated_sales_volume",
+    "lesser_value": 18.4,
+    "delta": 36.6,
+    "ratio": 2.98913,
+    "expected_order": [
+     "MEDICAL | estimated_sales_volume",
+     "DISPENSARY | estimated_sales_volume"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

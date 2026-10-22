@@ -1,0 +1,82 @@
+{
+ "clip_id": "bar_5",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_5",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "private schools | share_paying_business_rates",
+    "state schools | share_paying_business_rates"
+   ],
+   "assertion": {
+    "greater": "state schools | share_paying_business_rates",
+    "greater_value": 100.0,
+    "lesser": "private schools | share_paying_business_rates",
+    "lesser_value": 0.0,
+    "delta": 100.0,
+    "ratio": null,
+    "expected_order": [
+     "state schools | share_paying_business_rates",
+     "private schools | share_paying_business_rates"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "evidence_type": "mark_value",
+   "required_marks": [
+    "private schools | additional_revenue"
+   ],
+   "assertion": {
+    "marks": [
+     {
+      "mark": "private schools | additional_revenue",
+      "expected": 105.0
+     }
+    ],
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "clip_id": "bar_150",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_150",
+  "family": "bar",
+  "sub_type": "stacked",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar rows",
+  "required_data_rows": 16,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Medical scientists | A great deal | public_confidence",
+    "Medical scientists | A fair amount | public_confidence",
+    "Scientists | A great deal | public_confidence",
+    "Scientists | A fair amount | public_confidence",
+    "The military | A great deal | public_confidence",
+    "The military | A fair amount | public_confidence",
+    "K-12 public school principals | A great deal | public_confidence",
+    "K-12 public school principals | A fair amount | public_confidence",
+    "Religious leaders | A great deal | public_confidence",
+    "Religious leaders | A fair amount | public_confidence",
+    "Business leaders | A great deal | public_confidence",
+    "Business leaders | A fair amount | public_confidence",
+    "Journalists | A great deal | public_confidence",
+    "Journalists | A fair amount | public_confidence",
+    "Elected officials | A great deal | public_confidence",
+    "Elected officials | A fair amount | public_confidence"
+   ],
+   "assertion": {
+    "greater": "Medical scientists | A fair amount | public_confidence",
+    "greater_value": 85.0,
+    "lesser": "Elected officials | A great deal | public_confidence",
+    "lesser_value": 4.0,
+    "delta": 81.0,
+    "ratio": 21.25,
+    "expected_order": [
+     "Medical scientists | A fair amount | public_confidence",
+     "Scientists | A fair amount | public_confidence",
+     "The military | A fair amount | public_confidence",
+     "K-12 public school principals | A fair amount | public_confidence",
+     "Religious leaders | A fair amount | public_confidence",
+     "Business leaders | A fair amount | public_confidence",
+     "Journalists | A fair amount | public_confidence",
+     "Medical scientists | A great deal | public_confidence",
+     "Scientists | A great deal | public_confidence",
+     "The military | A great deal | public_confidence",
+     "Elected officials | A fair amount | public_confidence",
+     "K-12 public school principals | A great deal | public_confidence",
+     "Religious leaders | A great deal | public_confidence",
+     "Journalists | A great deal | public_confidence",
+     "Business leaders | A great deal | public_confidence",
+     "Elected officials | A great deal | public_confidence"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

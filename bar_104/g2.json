@@ -1,0 +1,92 @@
+{
+ "clip_id": "bar_104",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_104",
+  "family": "bar",
+  "sub_type": "overlay_bar",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar rows",
+  "required_data_rows": 3,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "400 richest tax rate | 2008 | value",
+    "$100k-$200k earners tax rate | 2008 | value"
+   ],
+   "assertion": {
+    "greater": "$100k-$200k earners tax rate | 2008 | value",
+    "greater_value": 25.0,
+    "lesser": "400 richest tax rate | 2008 | value",
+    "lesser_value": 18.1,
+    "delta": 6.9,
+    "ratio": 1.381215,
+    "expected_order": [
+     "$100k-$200k earners tax rate | 2008 | value",
+     "400 richest tax rate | 2008 | value"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "evidence_type": "endpoint_change",
+   "required_marks": [
+    "400 richest tax rate | 2001 | value",
+    "400 richest tax rate | 2008 | value"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "400 richest tax rate | 2001 | value",
+      "value": 23.0
+     },
+     {
+      "mark": "400 richest tax rate | 2008 | value",
+      "value": 18.1
+     }
+    ],
+    "direction": "decreasing",
+    "start_value": 23.0,
+    "end_value": 18.1,
+    "delta": -4.9,
+    "ratio": 0.786957,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

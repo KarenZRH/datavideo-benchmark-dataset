@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_2",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that between 1990 and 2017, Sub-Saharan Africa's illiteracy rate fell more slowly, in proportional terms, than in Latin America & Caribbean, East Asia & Pacific, and the European Union.",
  "requirements": [
   {
@@ -55,7 +55,83 @@
     "reversing any direction",
     "any wrong value"
    ],
-   "evidence": "Four endpoint pairs or four declines are visible."
+   "evidence": "Four endpoint pairs or four declines are visible.",
+   "unit_kind": "trend_or_change",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "48",
+     "unit": "%",
+     "entity": "Sub-Saharan Africa",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "48%"
+    },
+    {
+     "field": "value",
+     "value": "15.5",
+     "unit": "%",
+     "entity": "Latin America & Caribbean",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "15.5%"
+    },
+    {
+     "field": "value",
+     "value": "18",
+     "unit": "%",
+     "entity": "East Asia & Pacific",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "18%"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "%",
+     "entity": "European Union",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "2%"
+    },
+    {
+     "field": "value",
+     "value": "36.1",
+     "unit": "%",
+     "entity": "Sub-Saharan Africa",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "36.1%"
+    },
+    {
+     "field": "value",
+     "value": "6.9",
+     "unit": "%",
+     "entity": "Latin America & Caribbean",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "6.9%"
+    },
+    {
+     "field": "value",
+     "value": "5.1",
+     "unit": "%",
+     "entity": "East Asia & Pacific",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "5.1%"
+    },
+    {
+     "field": "value",
+     "value": "1",
+     "unit": "%",
+     "entity": "European Union",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "1%"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -71,7 +147,83 @@
     "Sub-Saharan Africa improved fastest",
     "reversing the relative ranking"
    ],
-   "evidence": "Four relative declines, or a visual that shows Sub-Saharan Africa improved proportionally least."
+   "evidence": "Four relative declines, or a visual that shows Sub-Saharan Africa improved proportionally least.",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "48",
+     "unit": "%",
+     "entity": "Sub-Saharan Africa",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "48%"
+    },
+    {
+     "field": "value",
+     "value": "15.5",
+     "unit": "%",
+     "entity": "Latin America & Caribbean",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "15.5%"
+    },
+    {
+     "field": "value",
+     "value": "18",
+     "unit": "%",
+     "entity": "East Asia & Pacific",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "18%"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "%",
+     "entity": "European Union",
+     "x": "1990",
+     "metric": "illiteracy_rate",
+     "label": "2%"
+    },
+    {
+     "field": "value",
+     "value": "36.1",
+     "unit": "%",
+     "entity": "Sub-Saharan Africa",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "36.1%"
+    },
+    {
+     "field": "value",
+     "value": "6.9",
+     "unit": "%",
+     "entity": "Latin America & Caribbean",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "6.9%"
+    },
+    {
+     "field": "value",
+     "value": "5.1",
+     "unit": "%",
+     "entity": "East Asia & Pacific",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "5.1%"
+    },
+    {
+     "field": "value",
+     "value": "1",
+     "unit": "%",
+     "entity": "European Union",
+     "x": "2017",
+     "metric": "illiteracy_rate",
+     "label": "1%"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -99,5 +251,8 @@
   },
   "check_full_timeline": true,
   "final_frame_only_sufficient": false
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

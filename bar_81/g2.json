@@ -1,0 +1,58 @@
+{
+ "clip_id": "bar_81",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_81",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 2,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "CONGOLESE DEATHS | congolese_killed_1885_1908",
+    "BELGIAN POPULATION 1890 | congolese_killed_1885_1908"
+   ],
+   "assertion": {
+    "greater": "CONGOLESE DEATHS | congolese_killed_1885_1908",
+    "greater_value": 1.0,
+    "lesser": "BELGIAN POPULATION 1890 | congolese_killed_1885_1908",
+    "lesser_value": 0.74,
+    "delta": 0.26,
+    "ratio": 1.351351,
+    "expected_order": [
+     "CONGOLESE DEATHS | congolese_killed_1885_1908",
+     "BELGIAN POPULATION 1890 | congolese_killed_1885_1908"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

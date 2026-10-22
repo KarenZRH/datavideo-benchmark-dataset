@@ -1,15 +1,25 @@
 {
  "clip_id": "bar_32",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the monthly price of the cholesterol drug Crestor is higher in the United States than in six other developed countries.",
  "requirements": [
   {
    "id": "R1",
    "question": "How does the monthly Crestor price in the United States compare with six other countries?",
    "relation": "single",
-   "unit_ids": ["U1"],
+   "unit_ids": [
+    "U1"
+   ],
    "scope": {
-    "entities": ["United States", "Germany", "Canada", "United Kingdom", "France", "Norway", "Australia"],
+    "entities": [
+     "United States",
+     "Germany",
+     "Canada",
+     "United Kingdom",
+     "France",
+     "Norway",
+     "Australia"
+    ],
     "measure": "monthly Crestor price"
    }
   }
@@ -32,11 +42,64 @@
     "monthly prices are described as annual prices",
     "the U.S. or a comparison country is omitted"
    ],
-   "evidence": "Seven country bars share one dollar scale; the U.S. bar is more than six times the tallest comparison bar."
+   "evidence": "Seven country bars share one dollar scale; the U.S. bar is more than six times the tallest comparison bar.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "230.946",
+     "unit": "USD per month",
+     "entity": "United States",
+     "metric": "monthly_price_crestor"
+    },
+    {
+     "field": "value",
+     "value": "37.789",
+     "unit": "USD per month",
+     "entity": "Germany",
+     "metric": "monthly_price_crestor"
+    },
+    {
+     "field": "value",
+     "value": "32.391",
+     "unit": "USD per month",
+     "entity": "Canada",
+     "metric": "monthly_price_crestor"
+    },
+    {
+     "field": "value",
+     "value": "26.221",
+     "unit": "USD per month",
+     "entity": "United Kingdom",
+     "metric": "monthly_price_crestor"
+    },
+    {
+     "field": "value",
+     "value": "20.051",
+     "unit": "USD per month",
+     "entity": "France",
+     "metric": "monthly_price_crestor"
+    },
+    {
+     "field": "value",
+     "value": "20.051",
+     "unit": "USD per month",
+     "entity": "Norway",
+     "metric": "monthly_price_crestor"
+    },
+    {
+     "field": "value",
+     "value": "7.712",
+     "unit": "USD per month",
+     "entity": "Australia",
+     "metric": "monthly_price_crestor"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
- "unit_weights": {"U1": 1.0},
+ "unit_weights": {
+  "U1": 1.0
+ },
  "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
@@ -52,5 +115,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

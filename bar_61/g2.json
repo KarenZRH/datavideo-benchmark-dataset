@@ -1,0 +1,66 @@
+{
+ "clip_id": "bar_61",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_61",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar segments",
+  "required_data_rows": 6,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "1960s | annual_job_creation_share",
+    "1970s | annual_job_creation_share",
+    "1980s | annual_job_creation_share",
+    "1990s | annual_job_creation_share",
+    "2000-7* | annual_job_creation_share",
+    "2000s* | annual_job_creation_share"
+   ],
+   "assertion": {
+    "greater": "1960s | annual_job_creation_share",
+    "greater_value": 30.0,
+    "lesser": "2000s* | annual_job_creation_share",
+    "lesser_value": 1.0,
+    "delta": 29.0,
+    "ratio": 30.0,
+    "expected_order": [
+     "1960s | annual_job_creation_share",
+     "1970s | annual_job_creation_share",
+     "1980s | annual_job_creation_share",
+     "1990s | annual_job_creation_share",
+     "2000-7* | annual_job_creation_share",
+     "2000s* | annual_job_creation_share"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

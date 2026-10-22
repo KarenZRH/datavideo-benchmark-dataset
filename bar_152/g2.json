@@ -1,0 +1,72 @@
+{
+ "clip_id": "bar_152",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_152",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 9,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "2008 | reported_rape_cases",
+    "2009 | reported_rape_cases",
+    "2010 | reported_rape_cases",
+    "2011 | reported_rape_cases",
+    "2012 | reported_rape_cases",
+    "2013 | reported_rape_cases",
+    "2014 | reported_rape_cases",
+    "2015 | reported_rape_cases",
+    "2016 | reported_rape_cases"
+   ],
+   "assertion": {
+    "greater": "2016 | reported_rape_cases",
+    "greater_value": 37500.0,
+    "lesser": "2009 | reported_rape_cases",
+    "lesser_value": 19500.0,
+    "delta": 18000.0,
+    "ratio": 1.923077,
+    "expected_order": [
+     "2016 | reported_rape_cases",
+     "2014 | reported_rape_cases",
+     "2015 | reported_rape_cases",
+     "2013 | reported_rape_cases",
+     "2012 | reported_rape_cases",
+     "2011 | reported_rape_cases",
+     "2010 | reported_rape_cases",
+     "2008 | reported_rape_cases",
+     "2009 | reported_rape_cases"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

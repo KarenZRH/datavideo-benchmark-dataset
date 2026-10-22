@@ -1,0 +1,62 @@
+{
+ "clip_id": "bar_41",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_41",
+  "family": "bar",
+  "sub_type": "grouped",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar bars or stack segments; annotation rows excluded",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "2011 | AM | 2011 | katy_freeway_travel_time",
+    "2011 | PM | 2011 | katy_freeway_travel_time",
+    "2014 | AM | 2014 | katy_freeway_travel_time",
+    "2014 | PM | 2014 | katy_freeway_travel_time"
+   ],
+   "assertion": {
+    "greater": "2014 | PM | 2014 | katy_freeway_travel_time",
+    "greater_value": 64.0,
+    "lesser": "2011 | PM | 2011 | katy_freeway_travel_time",
+    "lesser_value": 42.0,
+    "delta": 22.0,
+    "ratio": 1.52381,
+    "expected_order": [
+     "2014 | PM | 2014 | katy_freeway_travel_time",
+     "2014 | AM | 2014 | katy_freeway_travel_time",
+     "2011 | AM | 2011 | katy_freeway_travel_time",
+     "2011 | PM | 2011 | katy_freeway_travel_time"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

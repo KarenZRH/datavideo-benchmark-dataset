@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_21",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that a potential source of government revenue could fully cover free public college and food assistance several times, while nearly meeting the higher cost of an ambitious child-poverty reduction plan.",
  "requirements": [
   {
@@ -54,7 +54,35 @@
     "free public college consumes the entire $200 billion",
     "the revenue cannot cover free public college"
    ],
-   "evidence": "The table identifies a $200 billion revenue baseline and a relative college cost of 1.0."
+   "evidence": "The table identifies a $200 billion revenue baseline and a relative college cost of 1.0.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "1.0",
+     "unit": "relative",
+     "entity": "Free public college",
+     "series": "Sanders plan",
+     "metric": "spending_cost_relative_to_college"
+    },
+    {
+     "field": "value",
+     "value": "200",
+     "unit": "billion USD",
+     "entity": "Government revenue",
+     "metric": "available_revenue",
+     "label": "$200 billion"
+    },
+    {
+     "field": "value",
+     "value": "3",
+     "unit": "times",
+     "entity": "Free public college",
+     "series": "Sanders plan",
+     "metric": "coverage_multiple"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -69,7 +97,35 @@
     "the revenue cannot cover food assistance",
     "food assistance has the largest funding requirement"
    ],
-   "evidence": "Food assistance has a relative spending cost of 1.5, between free public college and the child-poverty plan."
+   "evidence": "Food assistance has a relative spending cost of 1.5, between free public college and the child-poverty plan.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "1.5",
+     "unit": "relative",
+     "entity": "Food assistance",
+     "series": "Like food stamps",
+     "metric": "spending_cost_relative_to_college"
+    },
+    {
+     "field": "value",
+     "value": "200",
+     "unit": "billion USD",
+     "entity": "Government revenue",
+     "metric": "available_revenue",
+     "label": "$200 billion"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "times",
+     "entity": "Food assistance",
+     "series": "Like food stamps",
+     "metric": "coverage_multiple"
+    }
+   ]
   },
   {
    "id": "U3",
@@ -85,7 +141,27 @@
     "the revenue cuts child poverty by exactly 60%",
     "the revenue covers only a small fraction of the plan"
    ],
-   "evidence": "The child-poverty plan has the largest relative spending cost, while the narrative describes the revenue as getting close to its cost."
+   "evidence": "The child-poverty plan has the largest relative spending cost, while the narrative describes the revenue as getting close to its cost.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "4.5",
+     "unit": "relative",
+     "entity": "Cut child poverty 60%",
+     "series": "Bennet-Brown plan",
+     "metric": "spending_cost_relative_to_college"
+    },
+    {
+     "field": "value",
+     "value": "200",
+     "unit": "billion USD",
+     "entity": "Government revenue",
+     "metric": "available_revenue",
+     "label": "$200 billion"
+    }
+   ]
   },
   {
    "id": "U4",
@@ -100,7 +176,35 @@
     "food assistance is the most expensive",
     "the three requirements are equal"
    ],
-   "evidence": "The bar-cost values are 4.5 for the child-poverty plan, 1.5 for food assistance, and 1.0 for free public college."
+   "evidence": "The bar-cost values are 4.5 for the child-poverty plan, 1.5 for food assistance, and 1.0 for free public college.",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "1.0",
+     "unit": "relative",
+     "entity": "Free public college",
+     "series": "Sanders plan",
+     "metric": "spending_cost_relative_to_college"
+    },
+    {
+     "field": "value",
+     "value": "1.5",
+     "unit": "relative",
+     "entity": "Food assistance",
+     "series": "Like food stamps",
+     "metric": "spending_cost_relative_to_college"
+    },
+    {
+     "field": "value",
+     "value": "4.5",
+     "unit": "relative",
+     "entity": "Cut child poverty 60%",
+     "series": "Bennet-Brown plan",
+     "metric": "spending_cost_relative_to_college"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -128,5 +232,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

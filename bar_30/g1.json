@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_30",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the monthly price of the hepatitis C drug Sovaldi is higher in the United States than in five other developed countries.",
  "requirements": [
   {
@@ -41,7 +41,51 @@
     "omitting the United States or any comparison country",
     "saying the U.S. price is lower than the other countries"
    ],
-   "evidence": "Six country bars share the same vertical dollar scale; the U.S. bar is clearly the tallest."
+   "evidence": "Six country bars share the same vertical dollar scale; the U.S. bar is clearly the tallest.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "13805",
+     "unit": "USD per month",
+     "entity": "Norway",
+     "metric": "monthly_price_sovaldi"
+    },
+    {
+     "field": "value",
+     "value": "14859",
+     "unit": "USD per month",
+     "entity": "Canada",
+     "metric": "monthly_price_sovaldi"
+    },
+    {
+     "field": "value",
+     "value": "15228",
+     "unit": "USD per month",
+     "entity": "France",
+     "metric": "monthly_price_sovaldi"
+    },
+    {
+     "field": "value",
+     "value": "15966",
+     "unit": "USD per month",
+     "entity": "United Kingdom",
+     "metric": "monthly_price_sovaldi"
+    },
+    {
+     "field": "value",
+     "value": "17073",
+     "unit": "USD per month",
+     "entity": "Germany",
+     "metric": "monthly_price_sovaldi"
+    },
+    {
+     "field": "value",
+     "value": "29883",
+     "unit": "USD per month",
+     "entity": "United States",
+     "metric": "monthly_price_sovaldi"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -65,5 +109,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

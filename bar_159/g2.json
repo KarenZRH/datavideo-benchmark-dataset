@@ -1,0 +1,70 @@
+{
+ "clip_id": "bar_159",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_159",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar rows",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "SGP | pisa_score",
+    "JPN | pisa_score",
+    "KOR | pisa_score",
+    "FIN | pisa_score",
+    "NZL | pisa_score",
+    "UK | pisa_score",
+    "USA | pisa_score",
+    "OECD | pisa_score"
+   ],
+   "assertion": {
+    "greater": "SGP | pisa_score",
+    "greater_value": 1669.0,
+    "lesser": "OECD | pisa_score",
+    "lesser_value": 1465.0,
+    "delta": 204.0,
+    "ratio": 1.139249,
+    "expected_order": [
+     "SGP | pisa_score",
+     "JPN | pisa_score",
+     "KOR | pisa_score",
+     "FIN | pisa_score",
+     "NZL | pisa_score",
+     "UK | pisa_score",
+     "USA | pisa_score",
+     "OECD | pisa_score"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

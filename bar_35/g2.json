@@ -1,0 +1,119 @@
+{
+ "clip_id": "bar_35",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_35",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 3,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "evidence_type": "complete_composition",
+   "required_marks": [
+    "Released Pretrial | released-pretrial | value"
+   ],
+   "assertion": {
+    "compositions": [
+     {
+      "entity": "Released Pretrial",
+      "segments": [
+       {
+        "mark": "Released Pretrial | released-pretrial | value",
+        "value": 94.0
+       }
+      ],
+      "total": 94.0
+     }
+    ],
+    "expected_total": null,
+    "tolerance": 0.05
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "evidence_type": "complete_composition",
+   "required_marks": [
+    "Returned for Every Court Date | returned-for-every-court-date | value"
+   ],
+   "assertion": {
+    "compositions": [
+     {
+      "entity": "Returned for Every Court Date",
+      "segments": [
+       {
+        "mark": "Returned for Every Court Date | returned-for-every-court-date | value",
+        "value": 88.0
+       }
+      ],
+      "total": 88.0
+     }
+    ],
+    "expected_total": null,
+    "tolerance": 0.05
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "evidence_type": "complete_composition",
+   "required_marks": [
+    "Not Arrested Pretrial | not-arrested-pretrial | value"
+   ],
+   "assertion": {
+    "compositions": [
+     {
+      "entity": "Not Arrested Pretrial",
+      "segments": [
+       {
+        "mark": "Not Arrested Pretrial | not-arrested-pretrial | value",
+        "value": 86.0
+       }
+      ],
+      "total": 86.0
+     }
+    ],
+    "expected_total": null,
+    "tolerance": 0.05
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

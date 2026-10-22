@@ -1,15 +1,25 @@
 {
  "clip_id": "bar_31",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the monthly price of the arthritis drug Humira is higher in the United States than in six other developed countries.",
  "requirements": [
   {
    "id": "R1",
    "question": "How does the monthly Humira price in the United States compare with six other countries?",
    "relation": "single",
-   "unit_ids": ["U1"],
+   "unit_ids": [
+    "U1"
+   ],
    "scope": {
-    "entities": ["Norway", "France", "United Kingdom", "Canada", "Australia", "Germany", "United States"],
+    "entities": [
+     "Norway",
+     "France",
+     "United Kingdom",
+     "Canada",
+     "Australia",
+     "Germany",
+     "United States"
+    ],
     "measure": "monthly Humira price"
    }
   }
@@ -32,11 +42,64 @@
     "monthly prices are described as annual prices",
     "the U.S. or a comparison country is omitted"
    ],
-   "evidence": "Seven country bars share one dollar scale; the U.S. bar is substantially taller than all the others."
+   "evidence": "Seven country bars share one dollar scale; the U.S. bar is substantially taller than all the others.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "894.602",
+     "unit": "USD per month",
+     "entity": "Norway",
+     "metric": "monthly_price_humira"
+    },
+    {
+     "field": "value",
+     "value": "956.298",
+     "unit": "USD per month",
+     "entity": "France",
+     "metric": "monthly_price_humira"
+    },
+    {
+     "field": "value",
+     "value": "1149.1",
+     "unit": "USD per month",
+     "entity": "United Kingdom",
+     "metric": "monthly_price_humira"
+    },
+    {
+     "field": "value",
+     "value": "1156.81",
+     "unit": "USD per month",
+     "entity": "Canada",
+     "metric": "monthly_price_humira"
+    },
+    {
+     "field": "value",
+     "value": "1218.51",
+     "unit": "USD per month",
+     "entity": "Australia",
+     "metric": "monthly_price_humira"
+    },
+    {
+     "field": "value",
+     "value": "1726.34",
+     "unit": "USD per month",
+     "entity": "Germany",
+     "metric": "monthly_price_humira"
+    },
+    {
+     "field": "value",
+     "value": "3300",
+     "unit": "USD per month",
+     "entity": "United States",
+     "metric": "monthly_price_humira"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
- "unit_weights": {"U1": 1.0},
+ "unit_weights": {
+  "U1": 1.0
+ },
  "optional_valid": [
   "The narration says Humera, while the chart title identifies the drug as Humira."
  ],
@@ -54,5 +117,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

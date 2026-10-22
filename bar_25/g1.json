@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_25",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the average highest mathematics course completed by high school graduates was higher in 2004 than in 1982.",
  "requirements": [
   {
@@ -41,7 +41,23 @@
     "reversing the two years",
     "omitting the 2004 bar or misplacing it below the Algebra II level"
    ],
-   "evidence": "Both bars are present on the same ordinal y-axis: the 1982 bar sits between Algebra I and Algebra II, while the taller 2004 bar reaches near Trigonometry/Algebra III."
+   "evidence": "Both bars are present on the same ordinal y-axis: the 1982 bar sits between Algebra I and Algebra II, while the taller 2004 bar reaches near Trigonometry/Algebra III.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "2.7",
+     "unit": "ordinal level",
+     "x": "1982",
+     "metric": "mean_highest_math_level"
+    },
+    {
+     "field": "value",
+     "value": "3.65",
+     "unit": "ordinal level",
+     "x": "2004",
+     "metric": "mean_highest_math_level"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -65,5 +81,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

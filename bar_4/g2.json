@@ -1,0 +1,88 @@
+{
+ "clip_id": "bar_4",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_4",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal",
+  "time_behavior": "frame"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 5,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "state_sequence",
+  "required_states": [
+   "1950",
+   "1954",
+   "1992",
+   "2012",
+   "2017"
+  ],
+  "required_marks_per_state": {
+   "1950": 1,
+   "1954": 1,
+   "1992": 1,
+   "2012": 1,
+   "2017": 1
+  },
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_change",
+   "must_be_visualized": true,
+   "evidence_type": "endpoint_change",
+   "required_marks": [
+    "1950 | childhood_mortality",
+    "1954 | childhood_mortality",
+    "1992 | childhood_mortality",
+    "2012 | childhood_mortality",
+    "2017 | childhood_mortality"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "1950 | childhood_mortality",
+      "value": 32.0
+     },
+     {
+      "mark": "1954 | childhood_mortality",
+      "value": 30.3
+     },
+     {
+      "mark": "1992 | childhood_mortality",
+      "value": 16.5
+     },
+     {
+      "mark": "2012 | childhood_mortality",
+      "value": 9.1
+     },
+     {
+      "mark": "2017 | childhood_mortality",
+      "value": 7.5
+     }
+    ],
+    "direction": "decreasing",
+    "start_value": 32.0,
+    "end_value": 7.5,
+    "delta": -24.5,
+    "ratio": 0.234375,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

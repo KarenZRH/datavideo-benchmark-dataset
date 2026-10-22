@@ -1,38 +1,38 @@
 clip,status,units,hardcase,review_flags,intent
-bar_1,approved,4,False,,"Compare the travel time to the Moon by car, Boeing 747, and spacecraft: report each duration and how the three compare."
-bar_2,approved,2,False,,"Show that between 1990 and 2017, Sub-Saharan Africa's illiteracy rate fell more slowly, in proportional terms, than in Latin America & Caribbean, East Asia & Pacific, and the European Union."
-bar_3,approved,1,False,,"Show how cyclists' and drivers' traffic-law compliance rates compare, and convey how close the two groups are."
-bar_4,approved,1,False,,"Show how Africa's childhood mortality changed from 1950 to 2017, and convey that Africa made considerable progress in reducing it over time."
-bar_5,approved,2,False,,"Compare private and state schools on paying business rates, and convey the potential annual revenue from requiring private schools to pay as state schools do."
-bar_6,approved,2,False,,"Show that people in transit-oriented developments drive less and use public transit, biking, and walking more than the national average."
-bar_7,approved,1,False,,"Show the substantial rise in the contraceptive use rate between 1975 and 2019, driven by distribution reaching remote areas."
-bar_8,approved,1,False,,"Show that annual private school fees take about half of an average earner's annual income, making private schooling hard to afford."
-bar_9,approved,1,False,,"Show that Bangladesh's per capita income is among the lowest in the world, far below the United States and South Korea."
-bar_10,approved,1,False,,"Show that Bangladesh has the lowest life expectancy among the three, far below the United States and somewhat below South Korea."
-bar_11,approved,2,False,,Show that cycling's fatality risk per distance is about as low as walking's and far below motorcycling's.
-bar_12,approved,1,False,,Show how much UKIP membership surged between July and August 2018.
-bar_13,approved,1,False,,"Show how the initial population projection overshot the actual level, and convey the uncertainty in the forecasts."
-bar_14,approved,2,False,,"Show that Sub-Saharan Africa's birth rate has fallen since 1960 but remains much higher than East Asia, North America, and the European Union."
-bar_15,approved,1,False,,Show that the number of people flagged for far-right activity rose by more than a third between 2016-17 and 2017-18.
-bar_16,approved,1,False,,Show that the human population quadrupled over the century before 2019.
-bar_17,approved,1,False,,"Show that most Americans need a car to get to work, making transportation the second-largest share of household expenditures in 2019, behind housing."
-bar_18,approved,1,False,,Show that sub-Saharan Africa's population could quadruple between 2021 and 2100.
-bar_19,approved,1,False,,"Show the extreme temperature range on Mercury, driven by its lack of atmosphere and orbital dynamics."
-bar_20,approved,1,False,,Show that letting families choose their number of children would substantially reduce the projected 2100 population.
-bar_21,approved,4,False,,"Show that a potential source of government revenue could fully cover free public college and food assistance several times, while nearly meeting the higher cost of an ambitious child-poverty reduction plan."
-bar_22,approved,3,False,,"Show that a wealth tax could finance programs helping millions because wealth is extremely concentrated among the ultra-rich, while ordinary occupations have little or negative net worth."
-bar_23,approved,1,False,,"Present the 2016 presidential election results for all 50 states as vote-share distributions among Clinton, Trump, and other candidates."
-bar_24,approved,1,False,,Show how the number of students taking the SAT increased dramatically from 1941 to the present.
-bar_25,approved,1,False,,Show that the average highest mathematics course completed by high school graduates was higher in 2004 than in 1982.
-bar_26,approved,1,False,,Show that the share of colleges giving considerable importance to SAT scores increased between 1993 and 2005.
-bar_27,approved,1,False,,Show that median SAT scores rise steadily as family income increases across the seven income brackets.
-bar_28,approved,3,True,,Explain how Warren's proposed wealth tax rises across wealth thresholds while affecting only the wealthiest Americans and raising substantial federal revenue.
-bar_29,approved,1,False,,Show that the monthly price of the Advair asthma inhaler is much higher in the United States than in six other developed countries.
-bar_30,approved,1,False,,Show that the monthly price of the hepatitis C drug Sovaldi is higher in the United States than in five other developed countries.
-bar_31,approved,1,False,,Show that the monthly price of the arthritis drug Humira is higher in the United States than in six other developed countries.
-bar_32,approved,1,False,,Show that the monthly price of the cholesterol drug Crestor is higher in the United States than in six other developed countries.
-bar_33,approved,1,False,,Show that the United States has the highest per-capita retail prescription drug spending among the ten compared countries.
-bar_34,approved,2,False,,"Show that uninsured Americans are most likely to skip medication because of cost, while even insured Americans rank second and above every other compared country."
+bar_1,approved,4,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Compare the travel time to the Moon by car, Boeing 747, and spacecraft: report each duration and how the three compare."
+bar_2,approved,2,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that between 1990 and 2017, Sub-Saharan Africa's illiteracy rate fell more slowly, in proportional terms, than in Latin America & Caribbean, East Asia & Pacific, and the European Union."
+bar_3,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show how cyclists' and drivers' traffic-law compliance rates compare, and convey how close the two groups are."
+bar_4,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show how Africa's childhood mortality changed from 1950 to 2017, and convey that Africa made considerable progress in reducing it over time."
+bar_5,approved,2,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Compare private and state schools on paying business rates, and convey the potential annual revenue from requiring private schools to pay as state schools do."
+bar_6,approved,2,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that people in transit-oriented developments drive less and use public transit, biking, and walking more than the national average."
+bar_7,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show the substantial rise in the contraceptive use rate between 1975 and 2019, driven by distribution reaching remote areas."
+bar_8,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that annual private school fees take about half of an average earner's annual income, making private schooling hard to afford."
+bar_9,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that Bangladesh's per capita income is among the lowest in the world, far below the United States and South Korea."
+bar_10,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that Bangladesh has the lowest life expectancy among the three, far below the United States and somewhat below South Korea."
+bar_11,approved,2,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that cycling's fatality risk per distance is about as low as walking's and far below motorcycling's.
+bar_12,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show how much UKIP membership surged between July and August 2018.
+bar_13,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show how the initial population projection overshot the actual level, and convey the uncertainty in the forecasts."
+bar_14,approved,2,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that Sub-Saharan Africa's birth rate has fallen since 1960 but remains much higher than East Asia, North America, and the European Union."
+bar_15,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the number of people flagged for far-right activity rose by more than a third between 2016-17 and 2017-18.
+bar_16,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the human population quadrupled over the century before 2019.
+bar_17,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that most Americans need a car to get to work, making transportation the second-largest share of household expenditures in 2019, behind housing."
+bar_18,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that sub-Saharan Africa's population could quadruple between 2021 and 2100.
+bar_19,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show the extreme temperature range on Mercury, driven by its lack of atmosphere and orbital dynamics."
+bar_20,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that letting families choose their number of children would substantially reduce the projected 2100 population.
+bar_21,approved,4,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that a potential source of government revenue could fully cover free public college and food assistance several times, while nearly meeting the higher cost of an ambitious child-poverty reduction plan."
+bar_22,approved,3,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that a wealth tax could finance programs helping millions because wealth is extremely concentrated among the ultra-rich, while ordinary occupations have little or negative net worth."
+bar_23,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Present the 2016 presidential election results for all 50 states as vote-share distributions among Clinton, Trump, and other candidates."
+bar_24,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show how the number of students taking the SAT increased dramatically from 1941 to the present.
+bar_25,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the average highest mathematics course completed by high school graduates was higher in 2004 than in 1982.
+bar_26,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the share of colleges giving considerable importance to SAT scores increased between 1993 and 2005.
+bar_27,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that median SAT scores rise steadily as family income increases across the seven income brackets.
+bar_28,approved,3,True,human_confirmed_semantics_auto_format_backfill_2026-10-22,Explain how Warren's proposed wealth tax rises across wealth thresholds while affecting only the wealthiest Americans and raising substantial federal revenue.
+bar_29,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the monthly price of the Advair asthma inhaler is much higher in the United States than in six other developed countries.
+bar_30,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the monthly price of the hepatitis C drug Sovaldi is higher in the United States than in five other developed countries.
+bar_31,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the monthly price of the arthritis drug Humira is higher in the United States than in six other developed countries.
+bar_32,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the monthly price of the cholesterol drug Crestor is higher in the United States than in six other developed countries.
+bar_33,approved,1,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,Show that the United States has the highest per-capita retail prescription drug spending among the ten compared countries.
+bar_34,approved,2,False,human_confirmed_semantics_auto_format_backfill_2026-10-22,"Show that uninsured Americans are most likely to skip medication because of cost, while even insured Americans rank second and above every other compared country."
 bar_35,approved,3,False,legacy_g1_migrated|semantic_reaudit_required,To validate the use of objective standards in pretrial decisions by presenting encouraging data on defendant compliance and public safety.
 bar_36,approved,1,False,legacy_intent_migrated|semantic_reaudit_required,"Show that among Southern Black residents, those with some college had the highest net migration rate by education level."
 bar_37,approved,1,False,legacy_intent_migrated|semantic_reaudit_required,Show that the monthly price of the insulin Lantus is much higher in the United States than in six other developed countries.

@@ -1,0 +1,74 @@
+{
+ "clip_id": "bar_33",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_33",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 10,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Sweden | retail_prescription_spending_per_capita",
+    "Norway | retail_prescription_spending_per_capita",
+    "Netherlands | retail_prescription_spending_per_capita",
+    "Australia | retail_prescription_spending_per_capita",
+    "United Kingdom | retail_prescription_spending_per_capita",
+    "France | retail_prescription_spending_per_capita",
+    "Canada | retail_prescription_spending_per_capita",
+    "Germany | retail_prescription_spending_per_capita",
+    "Switzerland | retail_prescription_spending_per_capita",
+    "United States | retail_prescription_spending_per_capita"
+   ],
+   "assertion": {
+    "greater": "United States | retail_prescription_spending_per_capita",
+    "greater_value": 1012.85,
+    "lesser": "Sweden | retail_prescription_spending_per_capita",
+    "lesser_value": 347.938,
+    "delta": 664.912,
+    "ratio": 2.911007,
+    "expected_order": [
+     "United States | retail_prescription_spending_per_capita",
+     "Switzerland | retail_prescription_spending_per_capita",
+     "Germany | retail_prescription_spending_per_capita",
+     "Canada | retail_prescription_spending_per_capita",
+     "France | retail_prescription_spending_per_capita",
+     "United Kingdom | retail_prescription_spending_per_capita",
+     "Australia | retail_prescription_spending_per_capita",
+     "Netherlands | retail_prescription_spending_per_capita",
+     "Norway | retail_prescription_spending_per_capita",
+     "Sweden | retail_prescription_spending_per_capita"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

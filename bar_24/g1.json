@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_24",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show how the number of students taking the SAT increased dramatically from 1941 to the present.",
  "requirements": [
   {
@@ -46,7 +46,44 @@
     "reversing any time point",
     "claiming the number is exactly the same at every displayed time"
    ],
-   "evidence": "All five bars must be present: 1941, 1950, 1960, 1974, and Now. The first bar is almost invisible at 10,000 but cannot be omitted."
+   "evidence": "All five bars must be present: 1941, 1950, 1960, 1974, and Now. The first bar is almost invisible at 10,000 but cannot be omitted.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "10000",
+     "unit": "students",
+     "x": "1941",
+     "metric": "students_taking_sat"
+    },
+    {
+     "field": "value",
+     "value": "80000",
+     "unit": "students",
+     "x": "1950",
+     "metric": "students_taking_sat"
+    },
+    {
+     "field": "value",
+     "value": "800000",
+     "unit": "students",
+     "x": "1960",
+     "metric": "students_taking_sat"
+    },
+    {
+     "field": "value",
+     "value": "1000000",
+     "unit": "students",
+     "x": "1974",
+     "metric": "students_taking_sat"
+    },
+    {
+     "field": "value",
+     "value": "2000000",
+     "unit": "students",
+     "x": "Now",
+     "metric": "students_taking_sat"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -71,5 +108,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

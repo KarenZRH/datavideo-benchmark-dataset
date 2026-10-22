@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_29",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the monthly price of the Advair asthma inhaler is much higher in the United States than in six other developed countries.",
  "requirements": [
   {
@@ -42,7 +42,58 @@
     "omitting the United States or any comparison country",
     "describing the U.S. price as only slightly higher than the others"
    ],
-   "evidence": "Seven country bars share the same vertical dollar scale; the U.S. bar is much taller than all six comparison bars."
+   "evidence": "Seven country bars share the same vertical dollar scale; the U.S. bar is much taller than all six comparison bars.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "42.316",
+     "unit": "USD per month",
+     "entity": "Australia",
+     "metric": "monthly_price"
+    },
+    {
+     "field": "value",
+     "value": "47.821",
+     "unit": "USD per month",
+     "entity": "France",
+     "metric": "monthly_price"
+    },
+    {
+     "field": "value",
+     "value": "49.885",
+     "unit": "USD per month",
+     "entity": "Germany",
+     "metric": "monthly_price"
+    },
+    {
+     "field": "value",
+     "value": "36.812",
+     "unit": "USD per month",
+     "entity": "Norway",
+     "metric": "monthly_price"
+    },
+    {
+     "field": "value",
+     "value": "58.142",
+     "unit": "USD per month",
+     "entity": "United Kingdom",
+     "metric": "monthly_price"
+    },
+    {
+     "field": "value",
+     "value": "82.225",
+     "unit": "USD per month",
+     "entity": "Canada",
+     "metric": "monthly_price"
+    },
+    {
+     "field": "value",
+     "value": "318.863",
+     "unit": "USD per month",
+     "entity": "United States",
+     "metric": "monthly_price"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -66,5 +117,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

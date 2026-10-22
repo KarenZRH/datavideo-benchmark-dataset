@@ -1,0 +1,88 @@
+{
+ "clip_id": "bar_39",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_39",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 1,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "threshold_or_crossing",
+   "must_be_visualized": true,
+   "evidence_type": "threshold_marks",
+   "required_marks": [
+    "First $50 million | marginal_tax_rate",
+    "$50 million to $1 billion | marginal_tax_rate",
+    "Above $1 billion | marginal_tax_rate"
+   ],
+   "assertion": {
+    "marks": [
+     {
+      "mark": "First $50 million | marginal_tax_rate",
+      "value": 0.0,
+      "label": "0%"
+     },
+     {
+      "mark": "$50 million to $1 billion | marginal_tax_rate",
+      "value": 2.0,
+      "label": "2%"
+     },
+     {
+      "mark": "Above $1 billion | marginal_tax_rate",
+      "value": 3.0,
+      "label": "3%"
+     }
+    ],
+    "relation": "distinguish values on opposite sides of the stated thresholds",
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "evidence_type": "mark_value",
+   "required_marks": [
+    "$2 billion estate | tax_due"
+   ],
+   "assertion": {
+    "marks": [
+     {
+      "mark": "$2 billion estate | tax_due",
+      "expected": 49.0
+     }
+    ],
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

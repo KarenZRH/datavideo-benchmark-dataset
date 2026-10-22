@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_17",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that most Americans need a car to get to work, making transportation the second-largest share of household expenditures in 2019, behind housing.",
  "requirements": [
   {
@@ -34,7 +34,26 @@
     "Housing is not the largest",
     "wrong shares for these two"
    ],
-   "evidence": "Housing is the longest bar and Transportation the second-longest."
+   "evidence": "Housing is the longest bar and Transportation the second-longest.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "33",
+     "unit": "%",
+     "entity": "Housing",
+     "metric": "share_of_expenditures"
+    },
+    {
+     "field": "value",
+     "value": "17",
+     "unit": "%",
+     "entity": "Transportation",
+     "metric": "share_of_expenditures",
+     "label": "17%"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -59,5 +78,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_13",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show how the initial population projection overshot the actual level, and convey the uncertainty in the forecasts.",
  "requirements": [
   {
@@ -37,7 +37,27 @@
     "the gap is 5.6 or 3.2 rather than 2.4",
     "treating the two stages as simultaneous bars"
    ],
-   "evidence": "The animated bar rises above 5 billion and then falls to about 3 billion."
+   "evidence": "The animated bar rises above 5 billion and then falls to about 3 billion.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "5.6",
+     "unit": "billion",
+     "x": "Initial projection",
+     "metric": "population",
+     "label": "above 5 billion"
+    },
+    {
+     "field": "value",
+     "value": "3.2",
+     "unit": "billion",
+     "x": "Actual",
+     "metric": "population",
+     "label": "around 3 billion"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -67,5 +87,8 @@
   },
   "check_full_timeline": true,
   "final_frame_only_sufficient": false
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

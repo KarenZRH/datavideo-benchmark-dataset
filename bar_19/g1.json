@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_19",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show the extreme temperature range on Mercury, driven by its lack of atmosphere and orbital dynamics.",
  "requirements": [
   {
@@ -35,7 +35,27 @@
     "missing the negative side",
     "treating 0°C as a data point"
    ],
-   "evidence": "One range bar spans from -173°C to 437°C with a 0°C reference."
+   "evidence": "One range bar spans from -173°C to 437°C with a 0°C reference.",
+   "unit_kind": "range_or_span",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "-173",
+     "unit": "°C",
+     "entity": "Mercury",
+     "metric": "minimum_temperature",
+     "label": "-173 °C"
+    },
+    {
+     "field": "value",
+     "value": "437",
+     "unit": "°C",
+     "entity": "Mercury",
+     "metric": "maximum_temperature",
+     "label": "437 °C"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -59,5 +79,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

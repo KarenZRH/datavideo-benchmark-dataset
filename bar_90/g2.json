@@ -1,0 +1,366 @@
+{
+ "clip_id": "bar_90",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_90",
+  "family": "bar",
+  "sub_type": "population_pyramid",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 40,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "share_or_composition",
+   "must_be_visualized": true,
+   "evidence_type": "complete_composition",
+   "required_marks": [
+    "95-99 | Male | israel",
+    "95-99 | Female | israel",
+    "90-95 | Male | israel",
+    "90-95 | Female | israel",
+    "85-89 | Male | israel",
+    "85-89 | Female | israel",
+    "80-84 | Male | israel",
+    "80-84 | Female | israel",
+    "75-79 | Male | israel",
+    "75-79 | Female | israel",
+    "70-74 | Male | israel",
+    "70-74 | Female | israel",
+    "65-69 | Male | israel",
+    "65-69 | Female | israel",
+    "60-64 | Male | israel",
+    "60-64 | Female | israel",
+    "55-59 | Male | israel",
+    "55-59 | Female | israel",
+    "50-54 | Male | israel",
+    "50-54 | Female | israel",
+    "45-49 | Male | israel",
+    "45-49 | Female | israel",
+    "40-44 | Male | israel",
+    "40-44 | Female | israel",
+    "35-39 | Male | israel",
+    "35-39 | Female | israel",
+    "30-34 | Male | israel",
+    "30-34 | Female | israel",
+    "25-29 | Male | israel",
+    "25-29 | Female | israel",
+    "20-24 | Male | israel",
+    "20-24 | Female | israel",
+    "15-19 | Male | israel",
+    "15-19 | Female | israel",
+    "10-14 | Male | israel",
+    "10-14 | Female | israel",
+    "5-9 | Male | israel",
+    "5-9 | Female | israel",
+    "0-4 | Male | israel",
+    "0-4 | Female | israel"
+   ],
+   "assertion": {
+    "compositions": [
+     {
+      "entity": "95-99",
+      "segments": [
+       {
+        "mark": "95-99 | Male | israel",
+        "value": 0.0118
+       },
+       {
+        "mark": "95-99 | Female | israel",
+        "value": 0.01239
+       }
+      ],
+      "total": 0.02419
+     },
+     {
+      "entity": "90-95",
+      "segments": [
+       {
+        "mark": "90-95 | Male | israel",
+        "value": 0.0353
+       },
+       {
+        "mark": "90-95 | Female | israel",
+        "value": 0.04011
+       }
+      ],
+      "total": 0.07541
+     },
+     {
+      "entity": "85-89",
+      "segments": [
+       {
+        "mark": "85-89 | Male | israel",
+        "value": 0.0647
+       },
+       {
+        "mark": "85-89 | Female | israel",
+        "value": 0.07098
+       }
+      ],
+      "total": 0.13568
+     },
+     {
+      "entity": "80-84",
+      "segments": [
+       {
+        "mark": "80-84 | Male | israel",
+        "value": 0.1
+       },
+       {
+        "mark": "80-84 | Female | israel",
+        "value": 0.105
+       }
+      ],
+      "total": 0.205
+     },
+     {
+      "entity": "75-79",
+      "segments": [
+       {
+        "mark": "75-79 | Male | israel",
+        "value": 0.1412
+       },
+       {
+        "mark": "75-79 | Female | israel",
+        "value": 0.14826
+       }
+      ],
+      "total": 0.28946
+     },
+     {
+      "entity": "70-74",
+      "segments": [
+       {
+        "mark": "70-74 | Male | israel",
+        "value": 0.1882
+       },
+       {
+        "mark": "70-74 | Female | israel",
+        "value": 0.19761
+       }
+      ],
+      "total": 0.38581
+     },
+     {
+      "entity": "65-69",
+      "segments": [
+       {
+        "mark": "65-69 | Male | israel",
+        "value": 0.2412
+       },
+       {
+        "mark": "65-69 | Female | israel",
+        "value": 0.25326
+       }
+      ],
+      "total": 0.49446
+     },
+     {
+      "entity": "60-64",
+      "segments": [
+       {
+        "mark": "60-64 | Male | israel",
+        "value": 0.3
+       },
+       {
+        "mark": "60-64 | Female | israel",
+        "value": 0.315
+       }
+      ],
+      "total": 0.615
+     },
+     {
+      "entity": "55-59",
+      "segments": [
+       {
+        "mark": "55-59 | Male | israel",
+        "value": 0.3588
+       },
+       {
+        "mark": "55-59 | Female | israel",
+        "value": 0.37989
+       }
+      ],
+      "total": 0.73869
+     },
+     {
+      "entity": "50-54",
+      "segments": [
+       {
+        "mark": "50-54 | Male | israel",
+        "value": 0.4235
+       },
+       {
+        "mark": "50-54 | Female | israel",
+        "value": 0.45087
+       }
+      ],
+      "total": 0.87437
+     },
+     {
+      "entity": "45-49",
+      "segments": [
+       {
+        "mark": "45-49 | Male | israel",
+        "value": 0.4941
+       },
+       {
+        "mark": "45-49 | Female | israel",
+        "value": 0.525
+       }
+      ],
+      "total": 1.0191
+     },
+     {
+      "entity": "40-44",
+      "segments": [
+       {
+        "mark": "40-44 | Male | israel",
+        "value": 0.5647
+       },
+       {
+        "mark": "40-44 | Female | israel",
+        "value": 0.59913
+       }
+      ],
+      "total": 1.16383
+     },
+     {
+      "entity": "35-39",
+      "segments": [
+       {
+        "mark": "35-39 | Male | israel",
+        "value": 0.6353
+       },
+       {
+        "mark": "35-39 | Female | israel",
+        "value": 0.67326
+       }
+      ],
+      "total": 1.30856
+     },
+     {
+      "entity": "30-34",
+      "segments": [
+       {
+        "mark": "30-34 | Male | israel",
+        "value": 0.7059
+       },
+       {
+        "mark": "30-34 | Female | israel",
+        "value": 0.74739
+       }
+      ],
+      "total": 1.45329
+     },
+     {
+      "entity": "25-29",
+      "segments": [
+       {
+        "mark": "25-29 | Male | israel",
+        "value": 0.7765
+       },
+       {
+        "mark": "25-29 | Female | israel",
+        "value": 0.82152
+       }
+      ],
+      "total": 1.59802
+     },
+     {
+      "entity": "20-24",
+      "segments": [
+       {
+        "mark": "20-24 | Male | israel",
+        "value": 0.8412
+       },
+       {
+        "mark": "20-24 | Female | israel",
+        "value": 0.889455
+       }
+      ],
+      "total": 1.730655
+     },
+     {
+      "entity": "15-19",
+      "segments": [
+       {
+        "mark": "15-19 | Male | israel",
+        "value": 0.8941
+       },
+       {
+        "mark": "15-19 | Female | israel",
+        "value": 0.945
+       }
+      ],
+      "total": 1.8391
+     },
+     {
+      "entity": "10-14",
+      "segments": [
+       {
+        "mark": "10-14 | Male | israel",
+        "value": 0.9353
+       },
+       {
+        "mark": "10-14 | Female | israel",
+        "value": 0.98826
+       }
+      ],
+      "total": 1.92356
+     },
+     {
+      "entity": "5-9",
+      "segments": [
+       {
+        "mark": "5-9 | Male | israel",
+        "value": 0.9706
+       },
+       {
+        "mark": "5-9 | Female | israel",
+        "value": 1.02533
+       }
+      ],
+      "total": 1.99593
+     },
+     {
+      "entity": "0-4",
+      "segments": [
+       {
+        "mark": "0-4 | Male | israel",
+        "value": 0.9941
+       },
+       {
+        "mark": "0-4 | Female | israel",
+        "value": 1.05
+       }
+      ],
+      "total": 2.0441
+     }
+    ],
+    "expected_total": null,
+    "tolerance": 0.05
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

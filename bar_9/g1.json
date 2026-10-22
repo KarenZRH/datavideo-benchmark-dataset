@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_9",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that Bangladesh's per capita income is among the lowest in the world, far below the United States and South Korea.",
  "requirements": [
   {
@@ -36,7 +36,32 @@
     "missing South Korea or the United States",
     "wrong endpoint values"
    ],
-   "evidence": "Three bars: Bangladesh is the shortest, the US the longest."
+   "evidence": "Three bars: Bangladesh is the shortest, the US the longest.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "16500",
+     "unit": "US dollars",
+     "entity": "United States",
+     "metric": "gdp_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "1500",
+     "unit": "US dollars",
+     "entity": "South Korea",
+     "metric": "gdp_per_capita"
+    },
+    {
+     "field": "value",
+     "value": "750",
+     "unit": "US dollars",
+     "entity": "Bangladesh",
+     "metric": "gdp_per_capita"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -60,5 +85,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

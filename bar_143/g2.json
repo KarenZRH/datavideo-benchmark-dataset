@@ -1,0 +1,102 @@
+{
+ "clip_id": "bar_143",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_143",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows",
+  "required_data_rows": 24,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Trump | Democrats | presidential_approval",
+    "Trump | Republicans | presidential_approval",
+    "Obama | Democrats | presidential_approval",
+    "Obama | Republicans | presidential_approval",
+    "G.W. Bush | Democrats | presidential_approval",
+    "G.W. Bush | Republicans | presidential_approval",
+    "Clinton | Democrats | presidential_approval",
+    "Clinton | Republicans | presidential_approval",
+    "G.H.W. Bush | Democrats | presidential_approval",
+    "G.H.W. Bush | Republicans | presidential_approval",
+    "Reagan | Democrats | presidential_approval",
+    "Reagan | Republicans | presidential_approval",
+    "Carter | Democrats | presidential_approval",
+    "Carter | Republicans | presidential_approval",
+    "Ford | Democrats | presidential_approval",
+    "Ford | Republicans | presidential_approval",
+    "Nixon | Democrats | presidential_approval",
+    "Nixon | Republicans | presidential_approval",
+    "Johnson | Democrats | presidential_approval",
+    "Johnson | Republicans | presidential_approval",
+    "Kennedy | Democrats | presidential_approval",
+    "Kennedy | Republicans | presidential_approval",
+    "Eisenhower | Democrats | presidential_approval",
+    "Eisenhower | Republicans | presidential_approval"
+   ],
+   "assertion": {
+    "greater": "Eisenhower | Republicans | presidential_approval",
+    "greater_value": 88.0,
+    "lesser": "Trump | Democrats | presidential_approval",
+    "lesser_value": 7.0,
+    "delta": 81.0,
+    "ratio": 12.571429,
+    "expected_order": [
+     "Eisenhower | Republicans | presidential_approval",
+     "Trump | Republicans | presidential_approval",
+     "Kennedy | Republicans | presidential_approval",
+     "Reagan | Republicans | presidential_approval",
+     "G.H.W. Bush | Republicans | presidential_approval",
+     "Obama | Democrats | presidential_approval",
+     "G.W. Bush | Republicans | presidential_approval",
+     "Clinton | Democrats | presidential_approval",
+     "Nixon | Republicans | presidential_approval",
+     "Johnson | Democrats | presidential_approval",
+     "Ford | Republicans | presidential_approval",
+     "Carter | Democrats | presidential_approval",
+     "Kennedy | Democrats | presidential_approval",
+     "Eisenhower | Democrats | presidential_approval",
+     "G.H.W. Bush | Democrats | presidential_approval",
+     "Johnson | Republicans | presidential_approval",
+     "Ford | Democrats | presidential_approval",
+     "Nixon | Democrats | presidential_approval",
+     "Reagan | Democrats | presidential_approval",
+     "Carter | Republicans | presidential_approval",
+     "Clinton | Republicans | presidential_approval",
+     "G.W. Bush | Democrats | presidential_approval",
+     "Obama | Republicans | presidential_approval",
+     "Trump | Democrats | presidential_approval"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": true
+  }
+ ]
+}

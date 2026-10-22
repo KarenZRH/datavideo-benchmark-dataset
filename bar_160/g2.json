@@ -1,0 +1,70 @@
+{
+ "clip_id": "bar_160",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_160",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar rows",
+  "required_data_rows": 8,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Finland | teacher_to_college_graduate_pay_ratio",
+    "Germany | teacher_to_college_graduate_pay_ratio",
+    "Israel | teacher_to_college_graduate_pay_ratio",
+    "Australia | teacher_to_college_graduate_pay_ratio",
+    "United Kingdom | teacher_to_college_graduate_pay_ratio",
+    "New Zealand | teacher_to_college_graduate_pay_ratio",
+    "OECD | teacher_to_college_graduate_pay_ratio",
+    "United States | teacher_to_college_graduate_pay_ratio"
+   ],
+   "assertion": {
+    "greater": "Germany | teacher_to_college_graduate_pay_ratio",
+    "greater_value": 1.0,
+    "lesser": "United States | teacher_to_college_graduate_pay_ratio",
+    "lesser_value": 0.65,
+    "delta": 0.35,
+    "ratio": 1.538462,
+    "expected_order": [
+     "Germany | teacher_to_college_graduate_pay_ratio",
+     "Finland | teacher_to_college_graduate_pay_ratio",
+     "Israel | teacher_to_college_graduate_pay_ratio",
+     "Australia | teacher_to_college_graduate_pay_ratio",
+     "United Kingdom | teacher_to_college_graduate_pay_ratio",
+     "New Zealand | teacher_to_college_graduate_pay_ratio",
+     "OECD | teacher_to_college_graduate_pay_ratio",
+     "United States | teacher_to_college_graduate_pay_ratio"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

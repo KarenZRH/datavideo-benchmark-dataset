@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_20",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that letting families choose their number of children would substantially reduce the projected 2100 population.",
  "requirements": [
   {
@@ -35,7 +35,27 @@
     "2.8 to 4.0 (reversed)",
     "wrong endpoints or percentage"
    ],
-   "evidence": "The dot matrix shrinks from about 400 dots to about 280."
+   "evidence": "The dot matrix shrinks from about 400 dots to about 280.",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "4.0",
+     "unit": "billion",
+     "x": "Baseline projection",
+     "metric": "population",
+     "label": "4.0 billion"
+    },
+    {
+     "field": "value",
+     "value": "2.8",
+     "unit": "billion",
+     "x": "With family choice",
+     "metric": "population",
+     "label": "2.8 billion"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -65,5 +85,8 @@
   },
   "check_full_timeline": true,
   "final_frame_only_sufficient": false
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

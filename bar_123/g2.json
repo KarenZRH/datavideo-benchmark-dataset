@@ -1,0 +1,116 @@
+{
+ "clip_id": "bar_123",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_123",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 64,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "evidence_type": "endpoint_change",
+   "required_marks": [
+    "military spending | 1950 | value",
+    "military spending | 2013 | value"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "military spending | 1950 | value",
+      "value": 85.0
+     },
+     {
+      "mark": "military spending | 2013 | value",
+      "value": 580.0
+     }
+    ],
+    "direction": "increasing",
+    "start_value": 85.0,
+    "end_value": 580.0,
+    "delta": 495.0,
+    "ratio": 6.823529,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_extreme",
+   "must_be_visualized": true,
+   "evidence_type": "extremum_mark",
+   "required_marks": [
+    "military spending | 2009 | value"
+   ],
+   "assertion": {
+    "mark": "military spending | 2009 | value",
+    "extreme": "max",
+    "expected": 720.0,
+    "compared_set": "all numeric data rows",
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "evidence_type": "endpoint_change",
+   "required_marks": [
+    "military spending | 2009 | value",
+    "military spending | 2013 | value"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "military spending | 2009 | value",
+      "value": 720.0
+     },
+     {
+      "mark": "military spending | 2013 | value",
+      "value": 580.0
+     }
+    ],
+    "direction": "decreasing",
+    "start_value": 720.0,
+    "end_value": 580.0,
+    "delta": -140.0,
+    "ratio": 0.805556,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

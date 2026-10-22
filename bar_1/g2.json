@@ -1,0 +1,129 @@
+{
+ "clip_id": "bar_1",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_1",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 3,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "evidence_type": "value_or_readable_label",
+   "required_marks": [
+    "CAR | travel_days"
+   ],
+   "assertion": {
+    "marks": [
+     "CAR | travel_days"
+    ],
+    "expected": [
+     {
+      "mark": "CAR | travel_days",
+      "label": "a lot of time",
+      "value": ""
+     }
+    ]
+   },
+   "accepted_routes": [
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "evidence_type": "mark_value",
+   "required_marks": [
+    "BOING 747 | travel_days"
+   ],
+   "assertion": {
+    "marks": [
+     {
+      "mark": "BOING 747 | travel_days",
+      "expected": 28.0
+     }
+    ],
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U3",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "evidence_type": "mark_value",
+   "required_marks": [
+    "SPACESHIP | travel_days"
+   ],
+   "assertion": {
+    "marks": [
+     {
+      "mark": "SPACESHIP | travel_days",
+      "expected": 2.0
+     }
+    ],
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U4",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "evidence_type": "ordered_marks_with_readable_label",
+   "required_marks": [
+    "CAR | travel_days",
+    "BOING 747 | travel_days",
+    "SPACESHIP | travel_days"
+   ],
+   "assertion": {
+    "expected_order": [
+     "CAR | travel_days",
+     "BOING 747 | travel_days",
+     "SPACESHIP | travel_days"
+    ],
+    "qualitative_label": {
+     "mark": "CAR | travel_days",
+     "expected_label": "a lot of time"
+    },
+    "tolerance": 0
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

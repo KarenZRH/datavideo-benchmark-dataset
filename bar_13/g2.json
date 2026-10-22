@@ -1,0 +1,65 @@
+{
+ "clip_id": "bar_13",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_13",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "vertical",
+  "time_behavior": "frame"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 2,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "state_sequence",
+  "required_states": [
+   "Initial projection",
+   "Actual"
+  ],
+  "required_marks_per_state": {
+   "Initial projection": 1,
+   "Actual": 1
+  },
+  "check_full_timeline": true,
+  "final_frame_only_sufficient": false
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "Initial projection | population",
+    "Actual | population"
+   ],
+   "assertion": {
+    "greater": "Initial projection | population",
+    "greater_value": 5.6,
+    "lesser": "Actual | population",
+    "lesser_value": 3.2,
+    "delta": 2.4,
+    "ratio": 1.75,
+    "expected_order": [
+     "Initial projection | population",
+     "Actual | population"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

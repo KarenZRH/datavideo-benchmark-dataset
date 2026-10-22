@@ -1,0 +1,98 @@
+{
+ "clip_id": "bar_6",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_6",
+  "family": "bar",
+  "sub_type": "grouped",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 8,
+  "evaluated_in": "G2_visual_completeness",
+  "missing_any_fails_visual_completeness": true,
+  "mode": "static_all_at_once",
+  "required_states": [],
+  "required_marks_per_state": {},
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "pair_comparison",
+   "required_marks": [
+    "Car | National average | share_of_trips",
+    "Car | Transit-oriented developments | share_of_trips"
+   ],
+   "assertion": {
+    "greater": "Car | National average | share_of_trips",
+    "greater_value": 90.0,
+    "lesser": "Car | Transit-oriented developments | share_of_trips",
+    "lesser_value": 45.0,
+    "delta": 45.0,
+    "ratio": 2.0,
+    "expected_order": [
+     "Car | National average | share_of_trips",
+     "Car | Transit-oriented developments | share_of_trips"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "Public transit | National average | share_of_trips",
+    "Public transit | Transit-oriented developments | share_of_trips",
+    "Bike | National average | share_of_trips",
+    "Bike | Transit-oriented developments | share_of_trips",
+    "Walk | National average | share_of_trips",
+    "Walk | Transit-oriented developments | share_of_trips"
+   ],
+   "assertion": {
+    "greater": "Public transit | Transit-oriented developments | share_of_trips",
+    "greater_value": 30.0,
+    "lesser": "Bike | National average | share_of_trips",
+    "lesser_value": 1.0,
+    "delta": 29.0,
+    "ratio": 30.0,
+    "expected_order": [
+     "Public transit | Transit-oriented developments | share_of_trips",
+     "Walk | Transit-oriented developments | share_of_trips",
+     "Public transit | National average | share_of_trips",
+     "Bike | Transit-oriented developments | share_of_trips",
+     "Walk | National average | share_of_trips",
+     "Bike | National average | share_of_trips"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

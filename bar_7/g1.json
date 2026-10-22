@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_7",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show the substantial rise in the contraceptive use rate between 1975 and 2019, driven by distribution reaching remote areas.",
  "requirements": [
   {
@@ -35,7 +35,27 @@
     "only the 2019 value with no change",
     "wrong endpoint values"
    ],
-   "evidence": "The single bar animates from 8% to 76% (or both endpoints are shown)."
+   "evidence": "The single bar animates from 8% to 76% (or both endpoints are shown).",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "8",
+     "unit": "%",
+     "x": "1975",
+     "metric": "contraceptive_use",
+     "label": "8%"
+    },
+    {
+     "field": "value",
+     "value": "76",
+     "unit": "%",
+     "x": "2019",
+     "metric": "contraceptive_use",
+     "label": "76%"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -66,5 +86,8 @@
   },
   "check_full_timeline": true,
   "final_frame_only_sufficient": false
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

@@ -1,0 +1,98 @@
+{
+ "clip_id": "bar_142",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_142",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all role=bar data rows; annotation rows excluded",
+  "required_data_rows": 5,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "evidence_type": "monotonic_order",
+   "required_marks": [
+    "66 | relative_value",
+    "62 | relative_value"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "66 | relative_value",
+      "value": 0.3197
+     },
+     {
+      "mark": "62 | relative_value",
+      "value": 0.3003
+     }
+    ],
+    "direction": "decreasing",
+    "start_value": 0.3197,
+    "end_value": 0.3003,
+    "delta": -0.0194,
+    "ratio": 0.939318,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U2",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "evidence_type": "ranked_comparison",
+   "required_marks": [
+    "66 | relative_value",
+    "62 | relative_value",
+    "52 | relative_value",
+    "46 | relative_value",
+    "13 | relative_value"
+   ],
+   "assertion": {
+    "greater": "66 | relative_value",
+    "greater_value": 0.3197,
+    "lesser": "13 | relative_value",
+    "lesser_value": 0.063,
+    "delta": 0.2567,
+    "ratio": 5.074603,
+    "expected_order": [
+     "66 | relative_value",
+     "62 | relative_value",
+     "52 | relative_value",
+     "46 | relative_value",
+     "13 | relative_value"
+    ],
+    "tolerance": {
+     "value": 0.02,
+     "ratio": 0.05
+    }
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

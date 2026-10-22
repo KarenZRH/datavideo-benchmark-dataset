@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_15",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the number of people flagged for far-right activity rose by more than a third between 2016-17 and 2017-18.",
  "requirements": [
   {
@@ -36,7 +36,29 @@
     "an invented absolute count (e.g. exactly 1,400 people)",
     "missing one of the two periods"
    ],
-   "evidence": "Two bars: 2017-18 is at least one-third taller than 2016-17."
+   "evidence": "Two bars: 2017-18 is at least one-third taller than 2016-17.",
+   "unit_kind": "change_or_rate",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "",
+     "unit": "index",
+     "entity": "People flagged for far-right activity",
+     "x": "2016-17",
+     "metric": "baseline",
+     "label": "baseline"
+    },
+    {
+     "field": "value",
+     "value": "33.3",
+     "unit": "percent",
+     "entity": "People flagged for far-right activity",
+     "x": "2017-18",
+     "metric": "relative_change",
+     "label": "more than a third"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -60,5 +82,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

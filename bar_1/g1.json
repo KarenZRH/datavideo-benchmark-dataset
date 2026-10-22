@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_1",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Compare the travel time to the Moon by car, Boeing 747, and spacecraft: report each duration and how the three compare.",
  "requirements": [
   {
@@ -51,7 +51,19 @@
    "reject": [
     "Inventing a numeric number of days for CAR"
    ],
-   "evidence": "The CAR row/label shows 'a lot of time'."
+   "evidence": "The CAR row/label shows 'a lot of time'.",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "",
+     "unit": "days",
+     "entity": "CAR",
+     "metric": "travel_days",
+     "label": "a lot of time"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -64,7 +76,19 @@
    "reject": [
     "Any other value"
    ],
-   "evidence": "The BOING 747 row/label shows 28 days."
+   "evidence": "The BOING 747 row/label shows 28 days.",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "28",
+     "unit": "days",
+     "entity": "BOING 747",
+     "metric": "travel_days",
+     "label": "28 days"
+    }
+   ]
   },
   {
    "id": "U3",
@@ -77,7 +101,19 @@
    "reject": [
     "Any other value"
    ],
-   "evidence": "The SPACESHIP row/label shows 2 days."
+   "evidence": "The SPACESHIP row/label shows 2 days.",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "days",
+     "entity": "SPACESHIP",
+     "metric": "travel_days",
+     "label": "two full days"
+    }
+   ]
   },
   {
    "id": "U4",
@@ -93,7 +129,35 @@
     "Comparing only BOING 747 and SPACESHIP while omitting CAR",
     "Saying CAR is the fastest"
    ],
-   "evidence": "Bar lengths or a written comparison support the full order."
+   "evidence": "Bar lengths or a written comparison support the full order.",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "",
+     "unit": "days",
+     "entity": "CAR",
+     "metric": "travel_days",
+     "label": "a lot of time"
+    },
+    {
+     "field": "value",
+     "value": "28",
+     "unit": "days",
+     "entity": "BOING 747",
+     "metric": "travel_days",
+     "label": "28 days"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "days",
+     "entity": "SPACESHIP",
+     "metric": "travel_days",
+     "label": "two full days"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -117,5 +181,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

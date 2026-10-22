@@ -1,0 +1,85 @@
+{
+ "clip_id": "bar_27",
+ "family": "bar",
+ "version": "g2_visual_evidence_v1",
+ "source": "auto-derived from human-confirmed g1.json + data_table.csv",
+ "chart_input": {
+  "clip_id": "bar_27",
+  "family": "bar",
+  "sub_type": "simple",
+  "orientation": "horizontal"
+ },
+ "completeness": {
+  "required": true,
+  "mode": "static_all_at_once",
+  "selection": "all data rows because the table has no role column",
+  "required_data_rows": 7,
+  "required_states": [],
+  "required_marks_per_state": {},
+  "evaluated_in": "G2_visual_completeness",
+  "check_full_timeline": false,
+  "final_frame_only_sufficient": true,
+  "missing_any_fails_visual_completeness": true
+ },
+ "unit_evidence": [
+  {
+   "unit_id": "U1",
+   "unit_kind": "trend_or_order",
+   "must_be_visualized": true,
+   "evidence_type": "monotonic_order",
+   "required_marks": [
+    "Less than $20,000 | median_sat_score",
+    "$40,000 | median_sat_score",
+    "$60,000 | median_sat_score",
+    "$80,000 | median_sat_score",
+    "$100,000 | median_sat_score",
+    "$140,000 | median_sat_score",
+    "More than $200,000 | median_sat_score"
+   ],
+   "assertion": {
+    "sequence": [
+     {
+      "mark": "Less than $20,000 | median_sat_score",
+      "value": 890.0
+     },
+     {
+      "mark": "$40,000 | median_sat_score",
+      "value": 946.0
+     },
+     {
+      "mark": "$60,000 | median_sat_score",
+      "value": 994.0
+     },
+     {
+      "mark": "$80,000 | median_sat_score",
+      "value": 1006.0
+     },
+     {
+      "mark": "$100,000 | median_sat_score",
+      "value": 1054.0
+     },
+     {
+      "mark": "$140,000 | median_sat_score",
+      "value": 1103.0
+     },
+     {
+      "mark": "More than $200,000 | median_sat_score",
+      "value": 1150.0
+     }
+    ],
+    "direction": "increasing",
+    "start_value": 890.0,
+    "end_value": 1150.0,
+    "delta": 260.0,
+    "ratio": 1.292135,
+    "tolerance": 0.02
+   },
+   "accepted_routes": [
+    "geometry",
+    "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  }
+ ]
+}

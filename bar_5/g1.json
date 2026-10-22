@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_5",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Compare private and state schools on paying business rates, and convey the potential annual revenue from requiring private schools to pay as state schools do.",
  "requirements": [
   {
@@ -51,7 +51,27 @@
     "missing one of the two groups",
     "saying both pay the same"
    ],
-   "evidence": "Two bars: private at 0% and state at 100%."
+   "evidence": "Two bars: private at 0% and state at 100%.",
+   "unit_kind": "comparison",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "0",
+     "unit": "%",
+     "entity": "private schools",
+     "metric": "share_paying_business_rates",
+     "label": "0%"
+    },
+    {
+     "field": "value",
+     "value": "100",
+     "unit": "%",
+     "entity": "state schools",
+     "metric": "share_paying_business_rates",
+     "label": "100%"
+    }
+   ]
   },
   {
    "id": "U2",
@@ -68,7 +88,19 @@
     "£105k",
     "a revenue figure without the £105m value"
    ],
-   "evidence": "The £105m annotation is visible (not a bar)."
+   "evidence": "The £105m annotation is visible (not a bar).",
+   "unit_kind": "key_value_endpoint",
+   "must_be_visualized": true,
+   "basis": [
+    {
+     "field": "value",
+     "value": "105",
+     "unit": "£m",
+     "entity": "private schools",
+     "metric": "additional_revenue",
+     "label": "£105m"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -90,5 +122,8 @@
   "required_marks_per_state": {},
   "check_full_timeline": false,
   "final_frame_only_sufficient": true
- }
+ },
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

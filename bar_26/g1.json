@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_26",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v2",
  "intent": "Show that the share of colleges giving considerable importance to SAT scores increased between 1993 and 2005.",
  "requirements": [
   {
@@ -41,7 +41,27 @@
     "describing the smaller 41% or 54% segments as considerable importance",
     "reversing the two years"
    ],
-   "evidence": "The blue considerable-importance segment in each complete 100% stacked bar grows from 46% in 1993 to 59% in 2005."
+   "evidence": "The blue considerable-importance segment in each complete 100% stacked bar grows from 46% in 1993 to 59% in 2005.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "46",
+     "unit": "%",
+     "series": "Considerable importance",
+     "x": "1993",
+     "metric": "share_of_colleges",
+     "label": "46%"
+    },
+    {
+     "field": "value",
+     "value": "59",
+     "unit": "%",
+     "series": "Considerable importance",
+     "x": "2005",
+     "metric": "share_of_colleges",
+     "label": "59%"
+    }
+   ]
   }
  ],
  "weight_mode": "uniform_over_units",
@@ -63,5 +83,8 @@
  },
  "status": "approved",
  "approved_by": "human",
- "approved_at": "2026-10-22"
+ "approved_at": "2026-10-22",
+ "review_flags": [
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+ ]
 }

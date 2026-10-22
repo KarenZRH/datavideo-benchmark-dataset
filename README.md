@@ -18,6 +18,8 @@
 | `data_table.csv` | 审核后的数据表，是生成端的公开输入 |
 | `intent.json` | 一句话公开 intent；保留 `narrative_goal`（叙事目标）和溯源字段 |
 | `g1.json` | G1：要求（R）+ 单元（U）+ 权重 |
+| `g2.json` | G2：逐 U 的机器可检查视觉证据条件；bar 全量已生成 |
+| `g3.json` | G3：绑定生成旁白的时间政策；bar 全量已生成草稿 |
 | `chart_spec.json` | 完整图型 spec，供 review、G2、审计使用 |
 | `input_spec.json` | 精简 spec，只给生成模型：family / sub_type / orientation（动画图多一个 time_behavior） |
 | `narration.jsonl` | ASR 句子与时间戳 |
@@ -25,6 +27,10 @@
 | `keyframe.png` | 参考关键帧 |
 
 bar 家族已统一迁移到 `g1.json`；当前根目录只保留审核后的数据和索引文件。
+`bar_1`–`bar_34` 的已确认语义已补齐到 `g1_r_u_v2`，claim、accept/reject、权重和
+approved 状态未改动。G2 由 G1 basis、数据表和图表 spec 自动生成；复杂图形或
+多系列聚合中需要专门几何规则的项目在 `g2.json` 内保留 `needs_review=true`。
+G3 的窗口和停顿阈值仍是待 G4 校准的草稿策略。
 
 ## 2. 审核顺序：表 → intent → G1
 
