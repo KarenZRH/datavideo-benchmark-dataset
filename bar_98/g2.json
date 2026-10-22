@@ -12,14 +12,15 @@
  "completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows",
+  "selection": "all role=bar rows",
   "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -50,6 +51,28 @@
    "accepted_routes": [
     "geometry",
     "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "Cats | pet_population",
+    "Dogs | pet_population"
+   ],
+   "assertion": {
+    "required_data_rows": 2,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": false

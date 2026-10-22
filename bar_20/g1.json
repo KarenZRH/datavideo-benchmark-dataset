@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_20",
- "version": "g1_r_u_v2",
+ "version": "g1_r_u_v3",
  "intent": "Show that letting families choose their number of children would substantially reduce the projected 2100 population.",
  "requirements": [
   {
@@ -16,6 +16,26 @@
     ],
     "measure": "population in billions",
     "time": "2100"
+   }
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all data rows (table has no role column)",
+    "required_data_rows": 2,
+    "required_states": [
+     "Baseline projection",
+     "With family choice"
+    ],
+    "required_marks_per_state": {
+     "Baseline projection": 1,
+     "With family choice": 1
+    }
    }
   }
  ],
@@ -56,11 +76,48 @@
      "label": "2.8 billion"
     }
    ]
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "Every declared state shows all required bar marks or stacked segments: Baseline projection=1, With family choice=1.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "4.0",
+     "unit": "billion",
+     "x": "Baseline projection",
+     "metric": "population",
+     "label": "4.0 billion"
+    },
+    {
+     "field": "value",
+     "value": "2.8",
+     "unit": "billion",
+     "x": "With family choice",
+     "metric": "population",
+     "label": "2.8 billion"
+    }
+   ],
+   "accept": [
+    "all 2 required data marks are visible",
+    "every required bar is present",
+    "every declared state shows its complete required mark set"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 1.0
+  "U1": 0.5,
+  "U_COMPLETE": 0.5
  },
  "optional_valid": [
   "The keyframe at 2.75s shows an intermediate 3.3 billion before the final 2.8 billion."
@@ -70,9 +127,9 @@
  "approved_at": "2026-10-21",
  "g0_data_completeness": {
   "required": true,
-  "selection": "all data rows because the table has no role column",
+  "selection": "all data rows (table has no role column)",
   "required_data_rows": 2,
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "missing_any_fails_visual_completeness": true,
   "mode": "state_sequence",
   "required_states": [
@@ -84,9 +141,11 @@
    "With family choice": 1
   },
   "check_full_timeline": true,
-  "final_frame_only_sufficient": false
+  "final_frame_only_sufficient": false,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
-  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22",
+  "completeness_as_g1_unit_2026-10-22"
  ]
 }

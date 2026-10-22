@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_133",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "To illustrate that the perceived risk of full-scale war is currently lower than it was during the Cold War.",
  "requirements": [
   {
@@ -26,6 +26,20 @@
    "unit_ids": [
     "U3"
    ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 38,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -137,31 +151,358 @@
     "reversing the direction or values"
    ],
    "evidence": "The chart must show both the 2015 Russia value and the 1990 Russia value so their ratio is visible."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 38 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "0.0965",
+     "unit": "relative",
+     "entity": "2015",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0927",
+     "unit": "relative",
+     "entity": "2015",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0038",
+     "unit": "relative",
+     "entity": "USA",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1026",
+     "unit": "relative",
+     "entity": "2010",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1451",
+     "unit": "relative",
+     "entity": "2010",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0025",
+     "unit": "relative",
+     "entity": "Russia",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1076",
+     "unit": "relative",
+     "entity": "2005",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1967",
+     "unit": "relative",
+     "entity": "2005",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0030",
+     "unit": "relative",
+     "entity": "Other",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1130",
+     "unit": "relative",
+     "entity": "2000",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2443",
+     "unit": "relative",
+     "entity": "2000",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0073",
+     "unit": "relative",
+     "entity": "2015",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1373",
+     "unit": "relative",
+     "entity": "1995",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.3157",
+     "unit": "relative",
+     "entity": "2010",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0046",
+     "unit": "relative",
+     "entity": "2005",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1430",
+     "unit": "relative",
+     "entity": "1990",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.4289",
+     "unit": "relative",
+     "entity": "2000",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0057",
+     "unit": "relative",
+     "entity": "1995",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2573",
+     "unit": "relative",
+     "entity": "1985",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.4504",
+     "unit": "relative",
+     "entity": "1990",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0072",
+     "unit": "relative",
+     "entity": "1985",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2799",
+     "unit": "relative",
+     "entity": "1980",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.3499",
+     "unit": "relative",
+     "entity": "1980",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0063",
+     "unit": "relative",
+     "entity": "1975",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.3290",
+     "unit": "relative",
+     "entity": "1975",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2230",
+     "unit": "relative",
+     "entity": "1970",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0055",
+     "unit": "relative",
+     "entity": "1965",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.3108",
+     "unit": "relative",
+     "entity": "1970",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1351",
+     "unit": "relative",
+     "entity": "1960",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0045",
+     "unit": "relative",
+     "entity": "1955",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.3693",
+     "unit": "relative",
+     "entity": "1965",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0766",
+     "unit": "relative",
+     "entity": "1950",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0045",
+     "unit": "relative",
+     "entity": "1945",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2302",
+     "unit": "relative",
+     "entity": "1960",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0200",
+     "unit": "relative",
+     "entity": "1940",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0460",
+     "unit": "relative",
+     "entity": "1955",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0040",
+     "unit": "relative",
+     "entity": "1955",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0214",
+     "unit": "relative",
+     "entity": "1950",
+     "series": "USA",
+     "metric": "value"
+    }
+   ],
+   "accept": [
+    "all 38 required data marks are visible",
+    "every grouped bar and every stacked segment is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U_COMPLETE": 0.25
  },
  "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 38,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
   "legacy_g1_migrated",
   "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "semantic_reaudit_required",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "approved",

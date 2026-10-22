@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_38",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "Show that a small projected fertility gap would lead to hundreds of millions fewer people and a lower global population in 2100.",
  "requirements": [
   {
@@ -10,6 +10,20 @@
    "unit_ids": [
     "U1"
    ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 2,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -20,8 +34,16 @@
    "must_be_visualized": true,
    "claim": "The projected 2100 global population is 3.6 billion, and a 0.4 billion gap represents 400 million fewer people against the 4.0 billion reference total.",
    "basis": [
-    {"entity": "World population in 2100", "field": "value", "value": 3.6},
-    {"entity": "Projected reduction", "field": "value", "value": 0.4}
+    {
+     "entity": "World population in 2100",
+     "field": "value",
+     "value": 3.6
+    },
+    {
+     "entity": "Projected reduction",
+     "field": "value",
+     "value": 0.4
+    }
    ],
    "accept": [
     "3.6 billion people remain in the 2100 projection",
@@ -35,11 +57,48 @@
     "either the population total or the reduction is omitted"
    ],
    "evidence": "The chart shows a 3.6 billion bar plus a 0.4 billion gap under a 4.0 billion bracket, with readable value labels."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 2 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "3.6",
+     "unit": "billion",
+     "entity": "World population in 2100",
+     "metric": "projected_population",
+     "label": "3.6 billion"
+    },
+    {
+     "field": "value",
+     "value": "0.4",
+     "unit": "billion",
+     "entity": "Projected reduction",
+     "metric": "population_reduction",
+     "label": "0.4 billion"
+    }
+   ],
+   "accept": [
+    "all 2 required data marks are visible",
+    "every required bar is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 1.0
+  "U1": 0.5,
+  "U_COMPLETE": 0.5
  },
  "optional_valid": [
   "The 0.4 billion reduction is about one-ninth of the 3.6 billion projected population.",
@@ -48,18 +107,20 @@
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
   "legacy_intent_migrated",
-  "semantic_reaudit_required"
+  "semantic_reaudit_required",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "manual_review_draft_2026-10-22",
  "status": "approved",

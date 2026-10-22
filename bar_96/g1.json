@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_96",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "Show the Shia majority and Sunni minority in Iraq after the power transition.",
  "requirements": [
   {
@@ -10,6 +10,20 @@
    "unit_ids": [
     "U1"
    ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 2,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -43,24 +57,60 @@
     "claiming Sunni is the majority"
    ],
    "evidence": "The selected keyframe and plotted marks encode this relation."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 2 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "63.000",
+     "unit": "%",
+     "entity": "SHIA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "20.000",
+     "unit": "%",
+     "entity": "SUNNI",
+     "metric": "value"
+    }
+   ],
+   "accept": [
+    "all 2 required data marks are visible",
+    "every required bar is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 1.0
+  "U1": 0.5,
+  "U_COMPLETE": 0.5
  },
  "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows",
+  "selection": "all role=bar rows",
   "required_data_rows": 2,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "clip_hardcase": {
   "is_hardcase": false,
@@ -69,7 +119,8 @@
  },
  "hardcases": [],
  "review_flags": [
-  "batch_84_105_reviewed_candidate"
+  "batch_84_105_reviewed_candidate",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "manual_batch_review_2026-10-22",
  "status": "approved",

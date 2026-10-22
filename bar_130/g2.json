@@ -12,14 +12,15 @@
  "completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 44,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -160,6 +161,70 @@
    "accepted_routes": [
     "geometry",
     "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "2015 | USA | value",
+    "2015 | Russia | value",
+    "2015 | Other | value",
+    "2015 | DISARMAMENT | value",
+    "2010 | USA | value",
+    "2010 | Russia | value",
+    "2010 | Other | value",
+    "2010 | DISARMAMENT | value",
+    "2005 | USA | value",
+    "2005 | Russia | value",
+    "2005 | Other | value",
+    "2005 | DISARMAMENT | value",
+    "2000 | USA | value",
+    "2000 | Russia | value",
+    "2000 | Other | value",
+    "2000 | DISARMAMENT | value",
+    "1995 | USA | value",
+    "1995 | Russia | value",
+    "1995 | Other | value",
+    "1995 | DISARMAMENT | value",
+    "1990 | USA | value",
+    "1990 | Russia | value",
+    "1990 | Other | value",
+    "1990 | DISARMAMENT | value",
+    "1985 | USA | value",
+    "1985 | Russia | value",
+    "1985 | Other | value",
+    "1980 | USA | value",
+    "1980 | Russia | value",
+    "1980 | Other | value",
+    "1975 | USA | value",
+    "1975 | Russia | value",
+    "1975 | Other | value",
+    "1970 | USA | value",
+    "1970 | Russia | value",
+    "1970 | Other | value",
+    "1965 | USA | value",
+    "1965 | Russia | value",
+    "1965 | Other | value",
+    "1960 | USA | value",
+    "1960 | Russia | value",
+    "1955 | USA | value",
+    "1955 | Russia | value",
+    "1950 | USA | value"
+   ],
+   "assertion": {
+    "required_data_rows": 44,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": false

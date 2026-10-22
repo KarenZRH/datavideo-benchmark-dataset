@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_22",
- "version": "g1_r_u_v2",
+ "version": "g1_r_u_v3",
  "intent": "Show that a wealth tax could finance programs helping millions because wealth is extremely concentrated among the ultra-rich, while ordinary occupations have little or negative net worth.",
  "requirements": [
   {
@@ -37,6 +37,20 @@
      "Ultra-rich households"
     ],
     "measure": "wealth-tax target and potential program funding"
+   }
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 6,
+    "required_states": [],
+    "required_marks_per_state": {}
    }
   }
  ],
@@ -168,13 +182,82 @@
      "label": "net worth far beyond the displayed axis"
     }
    ]
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 6 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "-4000",
+     "unit": "USD",
+     "entity": "Cashier",
+     "metric": "net_worth",
+     "label": "Net worth: -$4,000"
+    },
+    {
+     "field": "value",
+     "value": "1000",
+     "unit": "USD",
+     "entity": "Working mom",
+     "metric": "net_worth",
+     "label": "Net worth: $1,000"
+    },
+    {
+     "field": "value",
+     "value": "2000",
+     "unit": "USD",
+     "entity": "Office clerk",
+     "metric": "net_worth",
+     "label": "Net worth: $2,000"
+    },
+    {
+     "field": "value",
+     "value": "26000",
+     "unit": "USD",
+     "entity": "Nurse",
+     "metric": "net_worth",
+     "label": "Net worth: $26,000"
+    },
+    {
+     "field": "value",
+     "value": "32000",
+     "unit": "USD",
+     "entity": "Teacher",
+     "metric": "net_worth",
+     "label": "Net worth: $32,000"
+    },
+    {
+     "field": "value",
+     "value": "110000",
+     "unit": "USD",
+     "entity": "Accountant",
+     "metric": "net_worth",
+     "label": "Net worth: $110,000"
+    }
+   ],
+   "accept": [
+    "all 6 required data marks are visible",
+    "every required bar is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333,
-  "U2": 0.3333333333,
-  "U3": 0.3333333334
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U_COMPLETE": 0.25
  },
  "optional_valid": [
   "Do not invent an exact value for the ultra-rich group; the source only shows that its wealth is far beyond the displayed scale."
@@ -191,17 +274,19 @@
  "approved_at": "2026-10-21",
  "g0_data_completeness": {
   "required": true,
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 6,
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "missing_any_fails_visual_completeness": true,
   "mode": "static_all_at_once",
   "required_states": [],
   "required_marks_per_state": {},
   "check_full_timeline": false,
-  "final_frame_only_sufficient": true
+  "final_frame_only_sufficient": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
-  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22",
+  "completeness_as_g1_unit_2026-10-22"
  ]
 }

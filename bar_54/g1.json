@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_54",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "Show that, after combining five major tax types, the overall US tax burden is much flatter than income taxes alone, and the richest group pays a smaller share than the poorest.",
  "requirements": [
   {
@@ -18,6 +18,20 @@
    "unit_ids": [
     "U2"
    ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 46,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -254,25 +268,417 @@
     "omitting the Richest stack"
    ],
    "evidence": "The selected keyframe and the plotted bars/segments encode this relation."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 46 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "1",
+     "unit": "%",
+     "entity": "Poorest",
+     "series": "Income taxes",
+     "metric": "share_of_income",
+     "label": "Poorest"
+    },
+    {
+     "field": "value",
+     "value": "1",
+     "unit": "%",
+     "entity": "2nd",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "3",
+     "unit": "%",
+     "entity": "3rd",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "4",
+     "unit": "%",
+     "entity": "4th",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "5th",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "7",
+     "unit": "%",
+     "entity": "6th",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "8",
+     "unit": "%",
+     "entity": "7th",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10",
+     "unit": "%",
+     "entity": "8th",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "12",
+     "unit": "%",
+     "entity": "9th",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "18",
+     "unit": "%",
+     "entity": "10th",
+     "series": "Income taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10",
+     "unit": "%",
+     "entity": "Richest",
+     "series": "Income taxes",
+     "metric": "share_of_income",
+     "label": "Richest"
+    },
+    {
+     "field": "value",
+     "value": "1",
+     "unit": "%",
+     "entity": "Poorest",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "1.3",
+     "unit": "%",
+     "entity": "2nd",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "1.5",
+     "unit": "%",
+     "entity": "3rd",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "%",
+     "entity": "4th",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "2.2",
+     "unit": "%",
+     "entity": "5th",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "2.6",
+     "unit": "%",
+     "entity": "6th",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "3",
+     "unit": "%",
+     "entity": "7th",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "3.2",
+     "unit": "%",
+     "entity": "8th",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "3.7",
+     "unit": "%",
+     "entity": "9th",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "9.2",
+     "unit": "%",
+     "entity": "10th",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.5",
+     "unit": "%",
+     "entity": "Richest",
+     "series": "Corporate and property taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "0.3",
+     "unit": "%",
+     "entity": "10th",
+     "series": "Estate taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "0.8",
+     "unit": "%",
+     "entity": "Richest",
+     "series": "Estate taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.6",
+     "unit": "%",
+     "entity": "Poorest",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.9",
+     "unit": "%",
+     "entity": "2nd",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.9",
+     "unit": "%",
+     "entity": "3rd",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.4",
+     "unit": "%",
+     "entity": "4th",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.4",
+     "unit": "%",
+     "entity": "5th",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.4",
+     "unit": "%",
+     "entity": "6th",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.4",
+     "unit": "%",
+     "entity": "7th",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "10.4",
+     "unit": "%",
+     "entity": "8th",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "9.8",
+     "unit": "%",
+     "entity": "9th",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "1",
+     "unit": "%",
+     "entity": "10th",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "0.4",
+     "unit": "%",
+     "entity": "Richest",
+     "series": "Payroll taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "12.5",
+     "unit": "%",
+     "entity": "Poorest",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "11",
+     "unit": "%",
+     "entity": "2nd",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "9.5",
+     "unit": "%",
+     "entity": "3rd",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "8",
+     "unit": "%",
+     "entity": "4th",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "7",
+     "unit": "%",
+     "entity": "5th",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "6.5",
+     "unit": "%",
+     "entity": "6th",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "6",
+     "unit": "%",
+     "entity": "7th",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "5",
+     "unit": "%",
+     "entity": "8th",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "4.5",
+     "unit": "%",
+     "entity": "9th",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "3",
+     "unit": "%",
+     "entity": "10th",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    },
+    {
+     "field": "value",
+     "value": "2",
+     "unit": "%",
+     "entity": "Richest",
+     "series": "Consumption taxes",
+     "metric": "share_of_income"
+    }
+   ],
+   "accept": [
+    "all 46 required data marks are visible",
+    "every grouped bar and every stacked segment is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 0.3333333333,
+  "U2": 0.3333333333,
+  "U_COMPLETE": 0.3333333333
  },
  "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar segments",
+  "selection": "all role=bar rows",
   "required_data_rows": 46,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "clip_hardcase": {
   "is_hardcase": false,
@@ -281,7 +687,8 @@
  },
  "hardcases": [],
  "review_flags": [
-  "batch_52_63_reviewed_candidate"
+  "batch_52_63_reviewed_candidate",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "manual_batch_review_2026-10-22",
  "status": "approved",

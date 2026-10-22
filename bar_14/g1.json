@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_14",
- "version": "g1_r_u_v2",
+ "version": "g1_r_u_v3",
  "intent": "Show that Sub-Saharan Africa's birth rate has fallen since 1960 but remains much higher than East Asia, North America, and the European Union.",
  "requirements": [
   {
@@ -20,6 +20,26 @@
     ],
     "measure": "births per woman",
     "time": "1960-2017"
+   }
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all data rows (table has no role column)",
+    "required_data_rows": 8,
+    "required_states": [
+     "1960",
+     "2017"
+    ],
+    "required_marks_per_state": {
+     "1960": 4,
+     "2017": 4
+    }
    }
   }
  ],
@@ -117,12 +137,105 @@
      "label": "1.6"
     }
    ]
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "Every declared state shows all required bar marks or stacked segments: 1960=4, 2017=4.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "6.6",
+     "unit": "births per woman",
+     "entity": "Sub-Saharan Africa",
+     "x": "1960",
+     "metric": "births_per_woman",
+     "label": "6.6"
+    },
+    {
+     "field": "value",
+     "value": "5.4",
+     "unit": "births per woman",
+     "entity": "East Asia",
+     "x": "1960",
+     "metric": "births_per_woman",
+     "label": "5.4"
+    },
+    {
+     "field": "value",
+     "value": "3.6",
+     "unit": "births per woman",
+     "entity": "North America",
+     "x": "1960",
+     "metric": "births_per_woman",
+     "label": "3.6"
+    },
+    {
+     "field": "value",
+     "value": "2.5",
+     "unit": "births per woman",
+     "entity": "European Union",
+     "x": "1960",
+     "metric": "births_per_woman",
+     "label": "2.5"
+    },
+    {
+     "field": "value",
+     "value": "4.7",
+     "unit": "births per woman",
+     "entity": "Sub-Saharan Africa",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "4.7"
+    },
+    {
+     "field": "value",
+     "value": "1.8",
+     "unit": "births per woman",
+     "entity": "East Asia",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "1.8"
+    },
+    {
+     "field": "value",
+     "value": "1.7",
+     "unit": "births per woman",
+     "entity": "North America",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "1.7"
+    },
+    {
+     "field": "value",
+     "value": "1.6",
+     "unit": "births per woman",
+     "entity": "European Union",
+     "x": "2017",
+     "metric": "births_per_woman",
+     "label": "1.6"
+    }
+   ],
+   "accept": [
+    "all 8 required data marks are visible",
+    "every required bar is present",
+    "every declared state shows its complete required mark set"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 0.3333333333,
+  "U2": 0.3333333333,
+  "U_COMPLETE": 0.3333333333
  },
  "optional_valid": [
   "Other regions' changes: East Asia 5.4->1.8, North America 3.6->1.7, European Union 2.5->1.6",
@@ -133,9 +246,9 @@
  "approved_at": "2026-10-21",
  "g0_data_completeness": {
   "required": true,
-  "selection": "all data rows because the table has no role column",
+  "selection": "all data rows (table has no role column)",
   "required_data_rows": 8,
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "missing_any_fails_visual_completeness": true,
   "mode": "state_sequence",
   "required_states": [
@@ -147,9 +260,11 @@
    "2017": 4
   },
   "check_full_timeline": true,
-  "final_frame_only_sufficient": false
+  "final_frame_only_sufficient": false,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
-  "human_confirmed_semantics_auto_format_backfill_2026-10-22"
+  "human_confirmed_semantics_auto_format_backfill_2026-10-22",
+  "completeness_as_g1_unit_2026-10-22"
  ]
 }

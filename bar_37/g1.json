@@ -1,13 +1,29 @@
 {
  "clip_id": "bar_37",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "Show that the monthly price of the insulin Lantus is much higher in the United States than in six other developed countries.",
  "requirements": [
   {
    "id": "R1",
    "question": "How does the monthly Lantus price in the United States compare with the six other countries?",
    "relation": "single",
-   "unit_ids": ["U1"]
+   "unit_ids": [
+    "U1"
+   ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all data rows (table has no role column)",
+    "required_data_rows": 7,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -18,9 +34,21 @@
    "must_be_visualized": true,
    "claim": "The United States has the highest monthly Lantus price at about $359, compared with about $55 to $74 in the six other countries; even Canada's highest comparison price is under one-fifth of the U.S. price.",
    "basis": [
-    {"entity": "United States", "field": "value", "value": 359.492},
-    {"entity": "Canada", "field": "value", "value": 73.968},
-    {"entity": "Norway", "field": "value", "value": 55.39}
+    {
+     "entity": "United States",
+     "field": "value",
+     "value": 359.492
+    },
+    {
+     "entity": "Canada",
+     "field": "value",
+     "value": 73.968
+    },
+    {
+     "entity": "Norway",
+     "field": "value",
+     "value": 55.39
+    }
    ],
    "accept": [
     "the United States has the tallest bar and the highest price",
@@ -34,11 +62,81 @@
     "the U.S. or a comparison country is omitted"
    ],
    "evidence": "Seven country bars share one monthly-dollar scale; the U.S. bar is substantially taller than all six comparison bars."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 7 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "359.492",
+     "unit": "USD per month",
+     "entity": "United States",
+     "metric": "monthly_price_lantus_insulin"
+    },
+    {
+     "field": "value",
+     "value": "73.968",
+     "unit": "USD per month",
+     "entity": "Canada",
+     "metric": "monthly_price_lantus_insulin"
+    },
+    {
+     "field": "value",
+     "value": "71.216",
+     "unit": "USD per month",
+     "entity": "United Kingdom",
+     "metric": "monthly_price_lantus_insulin"
+    },
+    {
+     "field": "value",
+     "value": "68.463",
+     "unit": "USD per month",
+     "entity": "Germany",
+     "metric": "monthly_price_lantus_insulin"
+    },
+    {
+     "field": "value",
+     "value": "63.647",
+     "unit": "USD per month",
+     "entity": "Australia",
+     "metric": "monthly_price_lantus_insulin"
+    },
+    {
+     "field": "value",
+     "value": "58.142",
+     "unit": "USD per month",
+     "entity": "France",
+     "metric": "monthly_price_lantus_insulin"
+    },
+    {
+     "field": "value",
+     "value": "55.39",
+     "unit": "USD per month",
+     "entity": "Norway",
+     "metric": "monthly_price_lantus_insulin"
+    }
+   ],
+   "accept": [
+    "all 7 required data marks are visible",
+    "every required bar is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 1.0
+  "U1": 0.5,
+  "U_COMPLETE": 0.5
  },
  "optional_valid": [
   "Norway is the lowest-priced country at about $55.39 per month.",
@@ -47,18 +145,20 @@
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all data rows because the table has no role column",
+  "selection": "all data rows (table has no role column)",
   "required_data_rows": 7,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
   "legacy_intent_migrated",
-  "semantic_reaudit_required"
+  "semantic_reaudit_required",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "manual_review_draft_2026-10-22",
  "status": "approved",

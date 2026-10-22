@@ -14,9 +14,9 @@
  },
  "completeness": {
   "required": true,
-  "selection": "all data rows because the table has no role column",
+  "selection": "all data rows (table has no role column)",
   "required_data_rows": 2,
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "missing_any_fails_visual_completeness": true,
   "mode": "state_sequence",
   "required_states": [
@@ -28,7 +28,8 @@
    "With family choice": 1
   },
   "check_full_timeline": true,
-  "final_frame_only_sufficient": false
+  "final_frame_only_sufficient": false,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -61,6 +62,34 @@
    "accepted_routes": [
     "geometry",
     "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "Baseline projection | population",
+    "With family choice | population"
+   ],
+   "assertion": {
+    "required_data_rows": 2,
+    "mode": "state_sequence",
+    "required_states": [
+     "Baseline projection",
+     "With family choice"
+    ],
+    "required_marks_per_state": {
+     "Baseline projection": 1,
+     "With family choice": 1
+    },
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": false

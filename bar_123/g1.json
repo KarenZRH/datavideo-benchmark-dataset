@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_123",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "To illustrate the historical trend of U.S. military spending since World War II.",
  "requirements": [
   {
@@ -26,6 +26,20 @@
    "unit_ids": [
     "U3"
    ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 64,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -120,13 +134,546 @@
     "reversing the direction or values"
    ],
    "evidence": "The 2009 peak and 2013 endpoint must both be visible and linked by a descending segment or annotation."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 64 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "85",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1950",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "95",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1951",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "430",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1952",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "340",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1953",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "230",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1954",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "195",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1955",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "190",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1956",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "215",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1957",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "225",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1958",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "245",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1959",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "255",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1960",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "265",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1961",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "280",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1962",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "285",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1963",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "290",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1964",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "315",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1965",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "325",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1966",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "395",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1967",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "400",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1968",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "375",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1969",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "360",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1970",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "320",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1971",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "310",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1972",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "305",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1973",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "300",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1974",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "305",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1975",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "315",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1976",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "320",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1977",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "330",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1978",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "340",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1979",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "350",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1980",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "385",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1981",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "425",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1982",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "485",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1983",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "530",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1984",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "515",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1985",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "495",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1986",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "480",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1987",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "465",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1988",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "445",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1989",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "420",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1990",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "400",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1991",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "390",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1992",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "370",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1993",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "355",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1994",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "350",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1995",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "355",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1996",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "360",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1997",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "360",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1998",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "370",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "1999",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "380",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2000",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "405",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2001",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "430",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2002",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "480",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2003",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "535",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2004",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "555",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2005",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "595",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2006",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "640",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2007",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "685",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2008",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "720",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2009",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "715",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2010",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "695",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2011",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "650",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2012",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "580",
+     "unit": "billion_2014USD",
+     "entity": "military spending",
+     "x": "2013",
+     "metric": "value"
+    }
+   ],
+   "accept": [
+    "all 64 required data marks are visible",
+    "every required bar is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U_COMPLETE": 0.25
  },
  "optional_valid": [
   "Threshold crossings: spending first exceeds 500 billion in 1984 (530) and first exceeds 700 billion in 2009 (720).",
@@ -136,19 +683,21 @@
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 64,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
   "legacy_g1_migrated",
   "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "semantic_reaudit_required",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "approved",

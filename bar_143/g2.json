@@ -12,14 +12,15 @@
  "completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows",
+  "selection": "all role=bar rows",
   "required_data_rows": 24,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -97,6 +98,50 @@
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": true
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "Trump | Democrats | presidential_approval",
+    "Trump | Republicans | presidential_approval",
+    "Obama | Democrats | presidential_approval",
+    "Obama | Republicans | presidential_approval",
+    "G.W. Bush | Democrats | presidential_approval",
+    "G.W. Bush | Republicans | presidential_approval",
+    "Clinton | Democrats | presidential_approval",
+    "Clinton | Republicans | presidential_approval",
+    "G.H.W. Bush | Democrats | presidential_approval",
+    "G.H.W. Bush | Republicans | presidential_approval",
+    "Reagan | Democrats | presidential_approval",
+    "Reagan | Republicans | presidential_approval",
+    "Carter | Democrats | presidential_approval",
+    "Carter | Republicans | presidential_approval",
+    "Ford | Democrats | presidential_approval",
+    "Ford | Republicans | presidential_approval",
+    "Nixon | Democrats | presidential_approval",
+    "Nixon | Republicans | presidential_approval",
+    "Johnson | Democrats | presidential_approval",
+    "Johnson | Republicans | presidential_approval",
+    "Kennedy | Democrats | presidential_approval",
+    "Kennedy | Republicans | presidential_approval",
+    "Eisenhower | Democrats | presidential_approval",
+    "Eisenhower | Republicans | presidential_approval"
+   ],
+   "assertion": {
+    "required_data_rows": 24,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
   }
  ]
 }

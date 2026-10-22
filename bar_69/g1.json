@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_69",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "Compare the nominal GDP of the United States, the European Union as a 28-country aggregate, China, and Japan.",
  "requirements": [
   {
@@ -18,6 +18,20 @@
    "unit_ids": [
     "U2"
    ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 4,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -83,25 +97,75 @@
    "evidence": "Narration-only context; do not invent a chart mark for it.",
    "hardcase": true,
    "hardcase_reason": "This consequence or prediction is stated in narration but has no direct chart mark."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 4 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "18.500",
+     "unit": "trillion USD",
+     "entity": "USA",
+     "metric": "gdp"
+    },
+    {
+     "field": "value",
+     "value": "15.400",
+     "unit": "trillion USD",
+     "entity": "European Union",
+     "metric": "gdp"
+    },
+    {
+     "field": "value",
+     "value": "11.800",
+     "unit": "trillion USD",
+     "entity": "China",
+     "metric": "gdp"
+    },
+    {
+     "field": "value",
+     "value": "4.800",
+     "unit": "trillion USD",
+     "entity": "Japan",
+     "metric": "gdp"
+    }
+   ],
+   "accept": [
+    "all 4 required data marks are visible",
+    "every required bar is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.5,
-  "U2": 0.5
+  "U1": 0.3333333333,
+  "U2": 0.3333333333,
+  "U_COMPLETE": 0.3333333333
  },
  "optional_valid": [],
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows",
+  "selection": "all role=bar rows",
   "required_data_rows": 4,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "clip_hardcase": {
   "is_hardcase": true,
@@ -116,7 +180,8 @@
   }
  ],
  "review_flags": [
-  "batch_64_83_reviewed_candidate"
+  "batch_64_83_reviewed_candidate",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "manual_batch_review_2026-10-22",
  "status": "agent_draft_pending_human_review",

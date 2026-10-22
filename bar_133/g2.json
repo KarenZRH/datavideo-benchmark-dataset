@@ -12,14 +12,15 @@
  "completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 38,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -110,6 +111,64 @@
    "accepted_routes": [
     "geometry",
     "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "2015 | USA | value",
+    "2015 | Russia | value",
+    "USA | Other | value",
+    "2010 | USA | value",
+    "2010 | Russia | value @ row 4",
+    "Russia | Other | value",
+    "2005 | USA | value",
+    "2005 | Russia | value",
+    "Other | Other | value",
+    "2000 | USA | value",
+    "2000 | Russia | value @ row 10",
+    "2015 | Other | value",
+    "1995 | USA | value",
+    "2010 | Russia | value @ row 13",
+    "2005 | Other | value",
+    "1990 | USA | value",
+    "2000 | Russia | value @ row 16",
+    "1995 | Other | value",
+    "1985 | USA | value",
+    "1990 | Russia | value",
+    "1985 | Other | value",
+    "1980 | USA | value",
+    "1980 | Russia | value",
+    "1975 | Other | value",
+    "1975 | USA | value",
+    "1970 | Russia | value",
+    "1965 | Other | value",
+    "1970 | USA | value",
+    "1960 | Russia | value",
+    "1955 | Other | value",
+    "1965 | USA | value",
+    "1950 | Russia | value",
+    "1945 | Other | value",
+    "1960 | USA | value",
+    "1940 | Russia | value",
+    "1955 | USA | value",
+    "1955 | Russia | value",
+    "1950 | USA | value"
+   ],
+   "assertion": {
+    "required_data_rows": 38,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": false

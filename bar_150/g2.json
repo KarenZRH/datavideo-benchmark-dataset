@@ -16,10 +16,11 @@
   "required_data_rows": 16,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -81,6 +82,42 @@
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": true
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "Medical scientists | A great deal | public_confidence",
+    "Medical scientists | A fair amount | public_confidence",
+    "Scientists | A great deal | public_confidence",
+    "Scientists | A fair amount | public_confidence",
+    "The military | A great deal | public_confidence",
+    "The military | A fair amount | public_confidence",
+    "K-12 public school principals | A great deal | public_confidence",
+    "K-12 public school principals | A fair amount | public_confidence",
+    "Religious leaders | A great deal | public_confidence",
+    "Religious leaders | A fair amount | public_confidence",
+    "Business leaders | A great deal | public_confidence",
+    "Business leaders | A fair amount | public_confidence",
+    "Journalists | A great deal | public_confidence",
+    "Journalists | A fair amount | public_confidence",
+    "Elected officials | A great deal | public_confidence",
+    "Elected officials | A fair amount | public_confidence"
+   ],
+   "assertion": {
+    "required_data_rows": 16,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
   }
  ]
 }

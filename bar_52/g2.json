@@ -12,14 +12,15 @@
  "completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar segments",
+  "selection": "all role=bar rows",
   "required_data_rows": 35,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -139,6 +140,61 @@
    },
    "accepted_routes": [
     "narration"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "Poorest | Income taxes | share_of_income",
+    "2nd | Income taxes | share_of_income",
+    "3rd | Income taxes | share_of_income",
+    "4th | Income taxes | share_of_income",
+    "5th | Income taxes | share_of_income",
+    "6th | Income taxes | share_of_income",
+    "7th | Income taxes | share_of_income",
+    "8th | Income taxes | share_of_income",
+    "9th | Income taxes | share_of_income",
+    "10th | Income taxes | share_of_income",
+    "Richest | Income taxes | share_of_income",
+    "Poorest | Corporate and property taxes | share_of_income",
+    "2nd | Corporate and property taxes | share_of_income",
+    "3rd | Corporate and property taxes | share_of_income",
+    "4th | Corporate and property taxes | share_of_income",
+    "5th | Corporate and property taxes | share_of_income",
+    "6th | Corporate and property taxes | share_of_income",
+    "7th | Corporate and property taxes | share_of_income",
+    "8th | Corporate and property taxes | share_of_income",
+    "9th | Corporate and property taxes | share_of_income",
+    "10th | Corporate and property taxes | share_of_income",
+    "Richest | Corporate and property taxes | share_of_income",
+    "10th | Estate taxes | share_of_income",
+    "Richest | Estate taxes | share_of_income",
+    "Poorest | Payroll taxes | share_of_income",
+    "2nd | Payroll taxes | share_of_income",
+    "3rd | Payroll taxes | share_of_income",
+    "4th | Payroll taxes | share_of_income",
+    "5th | Payroll taxes | share_of_income",
+    "6th | Payroll taxes | share_of_income",
+    "7th | Payroll taxes | share_of_income",
+    "8th | Payroll taxes | share_of_income",
+    "9th | Payroll taxes | share_of_income",
+    "10th | Payroll taxes | share_of_income",
+    "Richest | Payroll taxes | share_of_income"
+   ],
+   "assertion": {
+    "required_data_rows": 35,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": false

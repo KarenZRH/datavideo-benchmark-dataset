@@ -12,14 +12,15 @@
  "completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar bars or stack segments; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 11,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -124,6 +125,37 @@
    "accepted_routes": [
     "geometry",
     "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "Poorest 10% | income_tax_rate",
+    "Second 10% | income_tax_rate",
+    "Third 10% | income_tax_rate",
+    "Fourth 10% | income_tax_rate",
+    "Fifth 10% | income_tax_rate",
+    "Sixth 10% | income_tax_rate",
+    "Seventh 10% | income_tax_rate",
+    "Eighth 10% | income_tax_rate",
+    "Ninth 10% | income_tax_rate",
+    "Richest 10% | income_tax_rate",
+    "400 Richest | income_tax_rate"
+   ],
+   "assertion": {
+    "required_data_rows": 11,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": false

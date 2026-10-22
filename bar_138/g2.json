@@ -12,14 +12,15 @@
  "completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 32,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "unit_evidence": [
   {
@@ -125,6 +126,58 @@
    "accepted_routes": [
     "geometry",
     "readable_label"
+   ],
+   "completeness_ref": "g0_data_completeness",
+   "needs_review": false
+  },
+  {
+   "unit_id": "U_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "evidence_type": "complete_mark_set",
+   "required_marks": [
+    "Feb 20 | Local | value @ row 0",
+    "Feb 20 | Local | value @ row 1",
+    "Feb 20 | Local | value @ row 2",
+    "Feb 20 | Local | value @ row 3",
+    "27 Feb 20 | Imported | value @ row 4",
+    "27 Feb 20 | Imported | value @ row 5",
+    "27 Feb 20 | Local | value @ row 6",
+    "27 Feb 20 | Local | value @ row 7",
+    "27 Feb 20 | Imported | value @ row 8",
+    "27 Feb 20 | Local | value @ row 9",
+    "09 Mar 20 | Local | value @ row 10",
+    "09 Mar 20 | Imported | value @ row 11",
+    "09 Mar 20 | Local | value @ row 12",
+    "09 Mar 20 | Imported | value @ row 13",
+    "09 Mar 20 | Local | value @ row 14",
+    "09 Mar 20 | Imported | value @ row 15",
+    "09 Mar 20 | Imported | value @ row 16",
+    "09 Mar 20 | Imported | value @ row 17",
+    "09 Mar 20 | Imported | value @ row 18",
+    "17 Mar 20 | Imported | value @ row 19",
+    "17 Mar 20 | Local | value @ row 20",
+    "17 Mar 20 | Imported | value @ row 21",
+    "17 Mar 20 | Imported | value @ row 22",
+    "17 Mar 20 | Imported | value @ row 23",
+    "17 Mar 20 | Imported | value @ row 24",
+    "17 Mar 20 | Local | value @ row 25",
+    "17 Mar 20 | Imported | value @ row 26",
+    "25 Mar 20 | Local | value @ row 27",
+    "25 Mar 20 | Imported | value @ row 28",
+    "25 Mar 20 | Imported | value @ row 29",
+    "25 Mar 20 | Imported | value @ row 30",
+    "25 Mar 20 | Local | value @ row 31"
+   ],
+   "assertion": {
+    "required_data_rows": 32,
+    "mode": "static_all_at_once",
+    "required_states": [],
+    "required_marks_per_state": {},
+    "all_required_marks_must_be_present": true
+   },
+   "accepted_routes": [
+    "geometry"
    ],
    "completeness_ref": "g0_data_completeness",
    "needs_review": false

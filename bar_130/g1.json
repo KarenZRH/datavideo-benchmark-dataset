@@ -1,6 +1,6 @@
 {
  "clip_id": "bar_130",
- "version": "g1_r_u_v1",
+ "version": "g1_r_u_v3",
  "intent": "To illustrate the trend of nuclear disarmament following the Cold War and explain how the reduction in nuclear arsenals lowers the potential human cost of nuclear conflict.",
  "requirements": [
   {
@@ -26,6 +26,20 @@
    "unit_ids": [
     "U3"
    ]
+  },
+  {
+   "id": "R_COMPLETE",
+   "question": "Are all data marks declared by G0 present in the required state or states?",
+   "relation": "single",
+   "unit_ids": [
+    "U_COMPLETE"
+   ],
+   "scope": {
+    "selection": "all role=bar rows",
+    "required_data_rows": 44,
+    "required_states": [],
+    "required_marks_per_state": {}
+   }
   }
  ],
  "units": [
@@ -183,13 +197,386 @@
     "reversing the direction or values"
    ],
    "evidence": "The chart must make the combined USA plus Russia share visibly shrink from 1990 to 2015, ending at 0.2646."
+  },
+  {
+   "id": "U_COMPLETE",
+   "requirement_id": "R_COMPLETE",
+   "unit_kind": "visual_completeness",
+   "must_be_visualized": true,
+   "claim": "All 44 required bar marks or stacked segments appear in the final chart.",
+   "basis": [
+    {
+     "field": "value",
+     "value": "0.135",
+     "unit": "relative",
+     "entity": "2015",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1296",
+     "unit": "relative",
+     "entity": "2015",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0054",
+     "unit": "relative",
+     "entity": "2015",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.7301",
+     "unit": "relative",
+     "entity": "2015",
+     "series": "DISARMAMENT",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1435",
+     "unit": "relative",
+     "entity": "2010",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.203",
+     "unit": "relative",
+     "entity": "2010",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0035",
+     "unit": "relative",
+     "entity": "2010",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.6501",
+     "unit": "relative",
+     "entity": "2010",
+     "series": "DISARMAMENT",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1505",
+     "unit": "relative",
+     "entity": "2005",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2752",
+     "unit": "relative",
+     "entity": "2005",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0043",
+     "unit": "relative",
+     "entity": "2005",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.5701",
+     "unit": "relative",
+     "entity": "2005",
+     "series": "DISARMAMENT",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.1581",
+     "unit": "relative",
+     "entity": "2000",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.3417",
+     "unit": "relative",
+     "entity": "2000",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0102",
+     "unit": "relative",
+     "entity": "2000",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.49",
+     "unit": "relative",
+     "entity": "2000",
+     "series": "DISARMAMENT",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.192",
+     "unit": "relative",
+     "entity": "1995",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.4416",
+     "unit": "relative",
+     "entity": "1995",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0064",
+     "unit": "relative",
+     "entity": "1995",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.36",
+     "unit": "relative",
+     "entity": "1995",
+     "series": "DISARMAMENT",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2",
+     "unit": "relative",
+     "entity": "1990",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.6",
+     "unit": "relative",
+     "entity": "1990",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.008",
+     "unit": "relative",
+     "entity": "1990",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.192",
+     "unit": "relative",
+     "entity": "1990",
+     "series": "DISARMAMENT",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.36",
+     "unit": "relative",
+     "entity": "1985",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.63",
+     "unit": "relative",
+     "entity": "1985",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0101",
+     "unit": "relative",
+     "entity": "1985",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.44",
+     "unit": "relative",
+     "entity": "1980",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.55",
+     "unit": "relative",
+     "entity": "1980",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0099",
+     "unit": "relative",
+     "entity": "1980",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.59",
+     "unit": "relative",
+     "entity": "1975",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.4",
+     "unit": "relative",
+     "entity": "1975",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0099",
+     "unit": "relative",
+     "entity": "1975",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.69",
+     "unit": "relative",
+     "entity": "1970",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.2999",
+     "unit": "relative",
+     "entity": "1970",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0101",
+     "unit": "relative",
+     "entity": "1970",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.8199",
+     "unit": "relative",
+     "entity": "1965",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.17",
+     "unit": "relative",
+     "entity": "1965",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0101",
+     "unit": "relative",
+     "entity": "1965",
+     "series": "Other",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.92",
+     "unit": "relative",
+     "entity": "1960",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.08",
+     "unit": "relative",
+     "entity": "1960",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.9203",
+     "unit": "relative",
+     "entity": "1955",
+     "series": "USA",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "0.0797",
+     "unit": "relative",
+     "entity": "1955",
+     "series": "Russia",
+     "metric": "value"
+    },
+    {
+     "field": "value",
+     "value": "1.0",
+     "unit": "relative",
+     "entity": "1950",
+     "series": "USA",
+     "metric": "value"
+    }
+   ],
+   "accept": [
+    "all 44 required data marks are visible",
+    "every grouped bar and every stacked segment is present",
+    "the complete required mark set is present in the final chart"
+   ],
+   "reject": [
+    "omitting any required bar or stacked segment",
+    "showing only selected endpoint bars",
+    "replacing missing marks with a summary total or subtitle"
+   ],
+   "evidence": "G0 data-row coverage is rendered as a complete set of identifiable bar marks."
   }
  ],
  "weight_mode": "uniform_over_units",
  "unit_weights": {
-  "U1": 0.3333333333333333,
-  "U2": 0.3333333333333333,
-  "U3": 0.3333333333333333
+  "U1": 0.25,
+  "U2": 0.25,
+  "U3": 0.25,
+  "U_COMPLETE": 0.25
  },
  "optional_valid": [
   "Early USA dominance: USA relative_value is 0.92 in 1960, 0.9203 in 1955, and 1.0 in 1950.",
@@ -199,19 +586,21 @@
  "g0_data_completeness": {
   "required": true,
   "mode": "static_all_at_once",
-  "selection": "all role=bar data rows; annotation rows excluded",
+  "selection": "all role=bar rows",
   "required_data_rows": 44,
   "required_states": [],
   "required_marks_per_state": {},
-  "evaluated_in": "G2_visual_completeness",
+  "evaluated_in": "G1_U_COMPLETE_and_G2_mark_presence",
   "check_full_timeline": false,
   "final_frame_only_sufficient": true,
-  "missing_any_fails_visual_completeness": true
+  "missing_any_fails_visual_completeness": true,
+  "g1_unit_id": "U_COMPLETE"
  },
  "review_flags": [
   "legacy_g1_migrated",
   "no_explicit_bar_mark_found",
-  "semantic_reaudit_required"
+  "semantic_reaudit_required",
+  "completeness_as_g1_unit_2026-10-22"
  ],
  "draft_source": "legacy_g1_draft_b2_migrated_2026-10-22",
  "status": "approved",
